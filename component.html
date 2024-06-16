@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>서부내륙고속도로 통합운영단말</title>
   <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css">
   <link rel="stylesheet" href="css/prism.css">
   <script src="js/jquery.min.js"></script>
   <script src="js/tui-time-picker.js"></script>
@@ -13,7 +14,6 @@
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/swiper.js"></script>
   <script src="js/aos.js"></script>
-  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css">
   <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
   <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
   <script src="js/ui.js"></script>
@@ -49,10 +49,78 @@
           <li><a href="#">작업 및 유지보수 이력 관리</a></li>
         </ul>
         <ul id="utilmenu">
-          <li><a href="#" class="s-ico notify w-label"><span>고윤정님</span></a></li>
+          <li><a href="#" class="s-ico notify w-label new"><span>고윤정님</span></a></li>
           <li><a href="#" class="s-ico bookmark"></a></li>
           <li><a href="#" class="s-ico logout"></a></li>
         </ul>
+        <div class="bookmark-area">
+          <ul>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">RWIS 제어기 기초정보관리</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기 최대 10개</span>
+              </a>
+            </li>
+          </ul>
+          <div class="bookmark-item">
+            <a href="#" class="btn-text">즐겨찾기 관리 <span class="s-ico arrow"></span></a>
+            <a href="#" class="s-ico close gray"></a>
+          </div>
+        </div><!-- .bookmark-area -->
       </div>
     </div><!--#header -->
     <div id="container" class="ver-lnb">
@@ -75,8 +143,9 @@
             <a href="" class="s-ico arrow-r"></a>
           </div>
         </div><!-- .content-top -->
-        <div class="content-area c-scrollbar">
+        <div class="content-area">
           <div class="content-inner">
+            <div class="content-frame c-scrollbar">
             
             <div class="section">
               <h2>Popup</h2>
@@ -91,22 +160,79 @@
 
 <div class="popup-wrap z-anim mfp-hide" id="popup-anim-1" style="max-width: 720px;">
   <div class="con-wrap">
-    <h3 class="tit">popup-anim-1</h3>
-    <a href="#" class="b-mfp-close">팝업닫기</a>
+    <h3 class="tit">제보 접수</h3>
+    <ul class="info-list">
+      <li>
+        <dl>
+          <dt>
+            <span class="no">No <em>49</em></span>
+            <span class="date">알림 일시: 2024-10-25 12:11:56</span>
+          </dt>
+          <dd>
+            긴급전화 제보가 접수되었습니다. <br /><br />
+
+            위치: 평택방향 OOO터널 nn번 긴급전화 <br />
+            주소: OOO도 OOO시 OOO군 OOO읍 000-000
+          </dd>
+        </dl>
+      </li>
+    </ul>
+    <div class="btns-wrap center mt24">
+      <span class="btn-base gray b-mfp-close"><a href="#">닫기</a></span>
+      <span class="btn-base b-mfp-close"><a href="#">확인</a></span>
+    </div>
   </div>
 </div>
 
 <div class="popup-wrap mfp-hide" id="popup-anim-2" style="max-width: 720px;">
   <div class="con-wrap">
-    <h3 class="tit">popup-anim-2</h3>
-    222
+    <h3 class="tit">제보 접수</h3>
+    <ul class="info-list">
+      <li>
+        <dl>
+          <dt>
+            <span class="no">No <em>49</em></span>
+            <span class="date">알림 일시: 2024-10-25 12:11:56</span>
+          </dt>
+          <dd>
+            긴급전화 제보가 접수되었습니다. <br /><br />
+
+            위치: 평택방향 OOO터널 nn번 긴급전화 <br />
+            주소: OOO도 OOO시 OOO군 OOO읍 000-000
+          </dd>
+        </dl>
+      </li>
+    </ul>
+    <div class="btns-wrap center mt24">
+      <span class="btn-base gray b-mfp-close"><a href="#">닫기</a></span>
+      <span class="btn-base b-mfp-close"><a href="#">확인</a></span>
+    </div>
   </div>
 </div><!-- .popup-wrap -->
 
 <div class="popup-wrap mfp-hide" id="popup-anim-3" style="width: 560px;">
   <div class="con-wrap">
-    <h3 class="tit">popup-anim-3</h3>
-    333
+    <h3 class="tit">제보 접수</h3>
+    <ul class="info-list">
+      <li>
+        <dl>
+          <dt>
+            <span class="no">No <em>49</em></span>
+            <span class="date">알림 일시: 2024-10-25 12:11:56</span>
+          </dt>
+          <dd>
+            긴급전화 제보가 접수되었습니다. <br /><br />
+
+            위치: 평택방향 OOO터널 nn번 긴급전화 <br />
+            주소: OOO도 OOO시 OOO군 OOO읍 000-000
+          </dd>
+        </dl>
+      </li>
+    </ul>
+    <div class="btns-wrap center mt24">
+      <span class="btn-base gray b-mfp-close"><a href="#">닫기</a></span>
+      <span class="btn-base b-mfp-close"><a href="#">확인</a></span>
+    </div>
   </div>
 </div><!-- .popup-wrap -->
 
@@ -195,6 +321,100 @@
     </span>
   </li>
 </ul></div>
+<pre class="language-html"></pre>
+              </div>
+            </div><!-- .section -->
+
+            <div class="section">
+              <h2>Input - Counter</h2>
+
+              <div class="code-area">
+                <h3>기본형 - 최소1, 최대30, 기본값2 <button>코드 보기</button></h3>
+<div class="code-box"><span class="counter-base" data-min="1" data-max="30">
+  <button class="btn-minus">-</button>
+  <input type="text" value="2" readonly />
+  <button class="btn-plus">+</button>
+</span></div>
+<pre class="language-html"></pre>
+              </div>
+  
+              <div class="code-area">
+                <h3>기본형 - 최소2, 최대10, 기본값5 <button>코드 보기</button></h3>
+  <div class="code-box"><span class="counter-base" data-min="2" data-max="10">
+    <button class="btn-minus">-</button>
+    <input type="text" value="5" readonly />
+    <button class="btn-plus">+</button>
+  </span></div>
+  <pre class="language-html"></pre>
+              </div>
+            </div><!-- .section -->
+
+            <div class="section">
+              <h2>Register - VMS</h2>
+      
+              <div class="code-area">
+                <h3>타입1 - 5줄 <button>코드 보기</button></h3>
+<div class="code-box"><div class="register-wrap">
+  <ul>
+    <li>
+      <a href="#" class="s-ico close gray tp2"></a>
+      <span>VMS-N-038-VMS-N-038</span>
+    </li>
+    <li>
+      <a href="#" class="s-ico close gray tp2"></a>
+      <span>VMS-N-038</span>
+    </li>
+    <li>
+      <a href="#" class="s-ico close gray tp2"></a>
+      <span>VMS-N-038-VMS-N-038</span>
+    </li>
+    <li>
+      <a href="#" class="s-ico close gray tp2"></a>
+      <span>VMS-N-038</span>
+    </li>
+    <li>
+      <a href="#" class="s-ico close gray tp2"></a>
+      <span>VMS-N-038</span>
+    </li>
+    <li>
+      <a href="#" class="s-ico close gray tp2"></a>
+      <span>VMS-N-038</span>
+    </li>
+  </ul>
+</div></div>
+<pre class="language-html"></pre>
+              </div>
+
+              <div class="code-area">
+                <h3>타입2 - 2줄 <button>코드 보기</button></h3>
+<div class="code-box"><div class="register-wrap tp2">
+  <ul>
+    <li>
+      <a href="#" class="s-ico close gray tp2"></a>
+      <span>VMS-N-038-VMS-N-038</span>
+    </li>
+    <li>
+      <a href="#" class="s-ico close gray tp2"></a>
+      <span>VMS-N-038</span>
+    </li>
+    <li>
+      <a href="#" class="s-ico close gray tp2"></a>
+      <span>VMS-N-038-VMS-N-038</span>
+    </li>
+    <li>
+      <a href="#" class="s-ico close gray tp2"></a>
+      <span>VMS-N-038</span>
+    </li>
+    <li>
+      <a href="#" class="s-ico close gray tp2"></a>
+      <span>VMS-N-038</span>
+    </li>
+    <li>
+      <a href="#" class="s-ico close gray tp2"></a>
+      <span>VMS-N-038</span>
+    </li>
+  </ul>
+</div></div>
 <pre class="language-html"></pre>
               </div>
             </div><!-- .section -->
@@ -377,7 +597,7 @@
               <h2>Input - Wrap</h2>
       
               <div class="code-area">
-                <h3>Search <button>코드 보기</button></h3>
+                <h3>Search - Type 1 <button>코드 보기</button></h3>
 <div class="code-box"><div class="search-area">
   <div class="input-wrap input-datepicker">
     <span class="label">일자</span>
@@ -403,6 +623,100 @@
     <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico storage"></span>보관</em></a></span>
   </div>
 </div><!-- .search-area --></div>
+<pre class="language-html"></pre>
+              </div>
+
+              <div class="code-area">
+                <h3>Search - Type 2 <button>코드 보기</button></h3>
+<div class="code-box"><div class="search-area" style="width: 1608px;">
+  <div class="input-wrap input-datepicker">
+    <span class="label">기간</span>
+    <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom" style="width: 170px;">
+      <input id="startpicker-input1" type="text" aria-label="Date">
+      <span class="tui-ico-date"></span>
+      <div id="startpicker-container1" style="margin-left: -1px;"></div>
+    </div>
+    <span class="bridge">~</span>
+    <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom" style="width: 170px;">
+      <input id="endpicker-input1" type="text" aria-label="Date">
+      <span class="tui-ico-date"></span>
+      <div id="endpicker-container1" style="margin-left: -1px;"></div>
+    </div>
+
+    <div class="btns-wrap ml12">
+      <span class="btn-base gray on"><a href="#">1개월</a></span>
+      <span class="btn-base gray"><a href="#">3개월</a></span>
+      <span class="btn-base gray"><a href="#">6개월</a></span>
+      <span class="btn-base gray"><a href="#">12개월</a></span>
+    </div>
+
+    <span class="label">구분</span>
+    <select id="user_mobile_1" class="select-base" style="width: 110px;">
+      <option value="0" selected>전체</option>
+      <option value="1">02</option>
+      <option value="2">값2</option>
+      <option value="3">값3</option>
+    </select>
+
+    <span class="label">이름/ID</span>
+    <input type="text" class="input-base" placeholder="이름 또는 ID 검색" id="user_id" style="width: 200px" />
+
+    <span class="btn-base btn-ico ml8"><a href="#"><em><span class="s-ico search"></span>검색</em></a></span>
+  </div>
+  <div class="btns-wrap">
+    <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico download"></span>전체 다운로드</em></a></span>
+    <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico exceldown"></span>엑셀 다운로드</em></a></span>
+  </div>
+</div><!-- .search-area --></div>
+<pre class="language-html"></pre>
+              </div>
+
+              <div class="code-area">
+                <h3>Input + Button <button>코드 보기</button></h3>
+<div class="code-box"><div class="input-wrap" style="width: 406px;">
+  <div class="input-btn">
+    <input type="text" class="input-base" value="IDID" />
+    <span class="btn-base"><a href="#">중복확인</a></span>
+  </div>
+  <span class="s-valid normal">사용 가능한 아이디입니다.</span>
+</div></div>
+<pre class="language-html"></pre>
+              </div>
+
+              <div class="code-area">
+                <h3>연락처 <button>코드 보기</button></h3>
+<div class="code-box"><div class="input-wrap" style="width: 320px;">
+  <div class="input-mobile">
+    <select id="user_mobile_1" class="select-base">
+      <option value="0" selected>선택</option>
+      <option value="1">02</option>
+      <option value="2">값2</option>
+      <option value="3">값3</option>
+    </select>
+    <span class="bridge">-</span>
+    <input type="text" class="input-base" id="user_mobile_2" placeholder="0000" />
+    <span class="bridge">-</span>
+    <input type="text" class="input-base" id="user_mobile_3" placeholder="0000" />
+  </div>
+</div></div>
+<pre class="language-html"></pre>
+              </div>
+
+              <div class="code-area">
+                <h3>이메일 <button>코드 보기</button></h3>
+<div class="code-box"><div class="input-wrap" style="width: 635px;">
+  <div class="input-email">
+    <input type="text" class="input-base" id="user_email_1" placeholder="이메일 입력" />
+    <span class="bridge">@</span>
+    <input type="text" class="input-base" id="user_email_2" />
+    <select class="select-base" id="user_email_3">
+      <option value="0">선택</option>
+      <option value="1">값1</option>
+      <option value="2">값2</option>
+      <option value="3" selected>직접입력</option>
+    </select>
+  </div>
+</div></div>
 <pre class="language-html"></pre>
               </div>
             </div><!-- .section -->
@@ -485,78 +799,78 @@
 
               <div class="code-area">
                 <h3>Medium 24 - Default <button>코드 보기</button></h3>
-<div class="code-box ico-box"><span class="s-ico md cancel"></span>  
-<span class="s-ico md delete"></span>
-<span class="s-ico md modify"></span>  
-<span class="s-ico md list"></span>  
-<span class="s-ico md regist"></span>  
-<span class="s-ico md download"></span>  
-<span class="s-ico md exceldown"></span>  
-<span class="s-ico md excelup"></span>  
-<span class="s-ico md initialize"></span>  
-<span class="s-ico md reset"></span>  
-<span class="s-ico md search"></span>
-<span class="s-ico md save"></span>  
-<span class="s-ico md storage"></span>
-<span class="s-ico md edit"></span>  
-<span class="s-ico md transmission"></span>  
-<span class="s-ico md transmissionx"></span>  
-<span class="s-ico md broadcast"></span>  
-<span class="s-ico md poweron"></span>  
-<span class="s-ico md poweroff"></span>  
-<span class="s-ico md in"></span>  
-<span class="s-ico md out"></span>
-<span class="s-ico md repair"></span>
-<span class="s-ico md step"></span>
-<span class="s-ico md accept"></span>
-<span class="s-ico md acceptok"></span>
-<span class="s-ico md inspection"></span>
-<span class="s-ico md plan"></span>
-<span class="s-ico md cycle"></span>
-<span class="s-ico md cyclem"></span>
-<span class="s-ico md display"></span>
-<span class="s-ico md color"></span>
-<span class="s-ico md parameterup"></span>
-<span class="s-ico md parameterdown"></span>
+<div class="code-box ico-box"><span class="s-ico cancel"></span>  
+<span class="s-ico delete"></span>
+<span class="s-ico modify"></span>  
+<span class="s-ico list"></span>  
+<span class="s-ico regist"></span>  
+<span class="s-ico download"></span>  
+<span class="s-ico exceldown"></span>  
+<span class="s-ico excelup"></span>  
+<span class="s-ico initialize"></span>  
+<span class="s-ico reset"></span>  
+<span class="s-ico search"></span>
+<span class="s-ico save"></span>  
+<span class="s-ico storage"></span>
+<span class="s-ico edit"></span>  
+<span class="s-ico transmission"></span>  
+<span class="s-ico transmissionx"></span>  
+<span class="s-ico broadcast"></span>  
+<span class="s-ico poweron"></span>  
+<span class="s-ico poweroff"></span>  
+<span class="s-ico in"></span>  
+<span class="s-ico out"></span>
+<span class="s-ico repair"></span>
+<span class="s-ico step"></span>
+<span class="s-ico accept"></span>
+<span class="s-ico acceptok"></span>
+<span class="s-ico inspection"></span>
+<span class="s-ico plan"></span>
+<span class="s-ico cycle"></span>
+<span class="s-ico cyclem"></span>
+<span class="s-ico display"></span>
+<span class="s-ico color"></span>
+<span class="s-ico parameterup"></span>
+<span class="s-ico parameterdown"></span>
 </div>
 <pre class="language-html"></pre>
               </div>
 
               <div class="code-area">
                 <h3>Medium 24 - Disabled <button>코드 보기</button></h3>
-<div class="code-box ico-box"><span class="s-ico md disabled cancel"></span>  
-<span class="s-ico md disabled delete"></span>
-<span class="s-ico md disabled modify"></span>  
-<span class="s-ico md disabled list"></span>  
-<span class="s-ico md disabled regist"></span>  
-<span class="s-ico md disabled download"></span>  
-<span class="s-ico md disabled exceldown"></span>  
-<span class="s-ico md disabled excelup"></span>  
-<span class="s-ico md disabled initialize"></span>  
-<span class="s-ico md disabled reset"></span>  
-<span class="s-ico md disabled search"></span>
-<span class="s-ico md disabled save"></span>  
-<span class="s-ico md disabled storage"></span>
-<span class="s-ico md disabled edit"></span>  
-<span class="s-ico md disabled transmission"></span>  
-<span class="s-ico md disabled transmissionx"></span>  
-<span class="s-ico md disabled broadcast"></span>  
-<span class="s-ico md disabled poweron"></span>  
-<span class="s-ico md disabled poweroff"></span>  
-<span class="s-ico md disabled in"></span>  
-<span class="s-ico md disabled out"></span>
-<span class="s-ico md disabled repair"></span>
-<span class="s-ico md disabled step"></span>
-<span class="s-ico md disabled accept"></span>
-<span class="s-ico md disabled acceptok"></span>
-<span class="s-ico md disabled inspection"></span>
-<span class="s-ico md disabled plan"></span>
-<span class="s-ico md disabled cycle"></span>
-<span class="s-ico md disabled cyclem"></span>
-<span class="s-ico md disabled display"></span>
-<span class="s-ico md disabled color"></span>
-<span class="s-ico md disabled parameterup"></span>
-<span class="s-ico md disabled parameterdown"></span>
+<div class="code-box ico-box"><span class="s-ico disabled cancel"></span>  
+<span class="s-ico disabled delete"></span>
+<span class="s-ico disabled modify"></span>  
+<span class="s-ico disabled list"></span>  
+<span class="s-ico disabled regist"></span>  
+<span class="s-ico disabled download"></span>  
+<span class="s-ico disabled exceldown"></span>  
+<span class="s-ico disabled excelup"></span>  
+<span class="s-ico disabled initialize"></span>  
+<span class="s-ico disabled reset"></span>  
+<span class="s-ico disabled search"></span>
+<span class="s-ico disabled save"></span>  
+<span class="s-ico disabled storage"></span>
+<span class="s-ico disabled edit"></span>  
+<span class="s-ico disabled transmission"></span>  
+<span class="s-ico disabled transmissionx"></span>  
+<span class="s-ico disabled broadcast"></span>  
+<span class="s-ico disabled poweron"></span>  
+<span class="s-ico disabled poweroff"></span>  
+<span class="s-ico disabled in"></span>  
+<span class="s-ico disabled out"></span>
+<span class="s-ico disabled repair"></span>
+<span class="s-ico disabled step"></span>
+<span class="s-ico disabled accept"></span>
+<span class="s-ico disabled acceptok"></span>
+<span class="s-ico disabled inspection"></span>
+<span class="s-ico disabled plan"></span>
+<span class="s-ico disabled cycle"></span>
+<span class="s-ico disabled cyclem"></span>
+<span class="s-ico disabled display"></span>
+<span class="s-ico disabled color"></span>
+<span class="s-ico disabled parameterup"></span>
+<span class="s-ico disabled parameterdown"></span>
 </div>
 <pre class="language-html"></pre>
               </div>
@@ -584,7 +898,7 @@
       
               <div class="code-area">
                 <h3>타입1 <button>코드 보기</button></h3>
-<div class="code-box"><div style="position: relative; height:332px;" id="grid1-parent">
+<div class="code-box"><div style="position: relative; height:472px;" id="grid1-parent">
   <div class="cs-ax5grid" data-ax5grid="grid1" data-ax5grid-config="{}" style="height: 100%"></div>
 </div>
 
@@ -592,19 +906,7 @@
 
 <pre class="language-html"></pre>
               </div>
-
-              <div class="code-area">
-                <h3>타입2 <button>코드 보기</button></h3>
-<div class="code-box"><div style="position: relative; height:332px; margin-top: 16px;" id="grid2-parent">
-  <div class="cs-ax5grid" data-ax5grid="grid2" data-ax5grid-config="{}" style="height: 100%;"></div>
-</div>
-
-<script src="js/ax5uiGridSample.js"></script></div>
-
-<pre class="language-html"></pre>
-              </div>
             </div><!-- .section -->
-
 
             <div class="section">
               <h2>페이지네이션</h2>
@@ -633,12 +935,22 @@
               </div>
             </div><!-- .section -->
 
-
-          </div>
+            </div>
+            </div><!-- .content-frame-->
+          </div><!-- .content-inner -->
         </div><!-- .content-area -->
       </div><!-- .content-wrap -->
     </div><!-- #container -->
   </div><!-- #wrap -->
   <script src="js/prism.js"></script>
+  <script>
+    var qpopup = $.urlParam('popup');
+    if (qpopup) {
+      setTimeout(() => {
+        $(`[href*="#popup-anim-${qpopup}"]`).click();
+      }, 250);
+    }
+    
+  </script>
 </body>
 </html>
