@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>서부내륙고속도로 통합운영단말</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/aos.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrap" class="login-wrap">
+    <video class="login-video" autoplay loop muted>
+      <source src="./wihlogin_low_1920.mp4" type="video/mp4"></source>
+      <source src="./wihlogin_low_1920.mp4" type="video/ogg"></source>
+    </video>
+    <div class="login-area">
+      <div class="login-box">
+        <h1><a href="#"><img src="img/wih-logo-l.png" alt=""></a></h1>
+        <ul class="tab-base">
+          <li class="on"><a href="#tab1">통합운영단말</a></li>
+          <li><a href="#tab2">상황판</a></li>
+        </ul>
+        <ul class="input-form mt16">
+          <li>
+            <label for="user_id">아이디</label>
+            <div class="input-wrap">
+              <input type="text" class="input-base" placeholder="아이디를 입력하세요" id="user_id" />
+            </div>
+          </li>
+          <li>
+            <label for="user_password">비밀번호</label>
+            <div class="input-wrap">
+              <input type="password" class="input-base" placeholder="비밀번호를 입력하세요" id="user_password" />
+              <a href="#" class="s-ico password"></a>
+              <span class="s-valid" style="display: none;">아이디 또는 비밀번호가 일치하지 않습니다.</span>
+            </div>
+          </li>
+          <li class="mt16 pl64">
+            <ul class="chk-list">
+              <li>
+                <span class="chk-base">
+                  <input type="checkbox" id="chk-1" />
+                  <label for="chk-1">자동 로그인</label>
+                </span>
+              </li>
+              <li>
+                <span class="chk-base">
+                  <input type="checkbox" id="chk-2" />
+                  <label for="chk-2">아이디 저장</label>
+                </span>
+              </li>
+            </ul>
+          </li>
+          <li class="mt16">
+            <span class="btn-base lg"><a href="#">로그인</a></span>
+          </li>
+        </ul>
+        <div class="find-area">
+          <span class="label">아이디를 잊으셨습니까?</span>
+          <a href="#" class="btn">아이디 찾기</a>
+        </div>
+      </div><!-- .login-box -->
+      <dl class="login-copy">
+        <dt>관리자 문의 000-0000-0000</dt>
+        <dd>Copyright ⓒ Western Inland Highway Co.,LTD. All Right Reserved</dd>
+      </dl>
+    </div><!-- .login-area -->
+  </div><!-- #wrap -->
+
+  <script>
+    var query = $.urlParam('sample');
+	  if (query === 'valid') {
+      $('.input-wrap .s-valid').show();
+    }
+  </script>
+</body>
+</html>

@@ -117,16 +117,17 @@ var GUI = window.GUI || (function(){
         
       });
 
-      $('.lnb-list .s-ico.star').on('click', function(){
-        if (!$(this).hasClass('on')) {
-          $(this).addClass('on');
-        } else {
-          $(this).removeClass('on');
-        }
-      });
+      // $('.lnb-list .s-ico.star').on('click', function(){
+      //   if (!$(this).hasClass('on')) {
+      //     $(this).addClass('on');
+      //   } else {
+      //     $(this).removeClass('on');
+      //   }
+      // });
       $('.lnb-list > li > a.menu.toggle').on('click', function(e){
         e.preventDefault();
         if (!$(this).closest('li').hasClass('on')) {
+          $(this).closest('li').siblings().removeClass('on');
           $(this).closest('li').addClass('on');
         } else {
           $(this).closest('li').removeClass('on');

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>서부내륙고속도로 통합운영단말</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/aos.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrap" class="c-scrollbar">
+    <div id="header">
+      <h1><a href="#"><img src="img/wih-logo-io.png" alt=""></a></h1>
+      <div class="item-area">
+        <ul id="gnb" data-active="1">
+          <li><a href="#">시스템관리</a></li>
+          <li><a href="#">기초정보관리</a></li>
+          <li><a href="#">FTMS 제어</a></li>
+          <li><a href="#">운영관리</a></li>
+          <li><a href="#">상황관리</a></li>
+          <li><a href="#">모니터링</a></li>
+          <li><a href="#">이력조회</a></li>
+          <li><a href="#">통계조회</a></li>
+          <li><a href="#">현장장비 점검관리</a></li>
+          <li><a href="#">안전관리</a></li>
+          <li><a href="#">작업 및 유지보수 이력 관리</a></li>
+        </ul>
+        <ul id="utilmenu">
+          <li><a href="#" class="s-ico notify w-label new"><span>고윤정님</span></a></li>
+          <li><a href="#" class="s-ico bookmark"></a></li>
+          <li><a href="#" class="s-ico logout"></a></li>
+        </ul>
+        <div class="bookmark-area">
+          <ul>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">RWIS 제어기 기초정보관리</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기 최대 10개</span>
+              </a>
+            </li>
+          </ul>
+          <div class="bookmark-item">
+            <a href="#" class="btn-text">즐겨찾기 관리 <span class="s-ico arrow"></span></a>
+            <a href="#" class="s-ico close gray"></a>
+          </div>
+        </div><!-- .bookmark-area -->
+      </div>
+    </div><!--#header -->
+    <div id="container" class="ver-lnb">
+      <div class="left-wrap">
+        <h3 class="tit">시스템관리</h3>
+        <ul class="lnb-list">
+          <li class="on">
+            <a href="#" class="menu">운영자 목록</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">운영자 기본정보</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">운영자 접속 이력</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">메뉴 관리</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">즐겨찾기 관리</a>
+            <a href="#" class="s-ico star on"></a>
+          </li>
+        </ul>
+      </div><!-- .left-wrap -->
+      <div class="content-wrap">
+        <div class="content-top">
+          <div class="menu-area">
+            <a href="#" class="s-ico home"></a>
+            <div class="menu-swiper swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide on">
+                  <a href="#" class="label">운영자 목록</a>
+                  <a href="#" class="s-ico close"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="navi-area">
+            <a href="" class="s-ico arrow-l"></a>
+            <a href="" class="s-ico arrow-r"></a>
+          </div>
+        </div><!-- .content-top -->
+        <div class="content-area">
+          <div class="content-inner">
+            <div class="tit-area">
+              <p class="tit">운영자 계정 생성</p>
+              <div class="btns-wrap">
+                <span class="btn-base btn-ico gray"><a href="#"><em><span class="s-ico cancel"></span>취소</em></a></span>
+                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico save"></span>저장</em></a></span>
+              </div>
+            </div><!-- .tit-area -->
+            <div class="tip-wrap mt16">
+              <em class="ico"><img src="img/ico-badge-require.png" alt=""></em>
+              <span>필수항목</span>
+            </div>
+            <div class="content-frame mt8 c-scrollbar">
+              <div class="tb-wrap">
+                <table summary="운영자 정보 보기" class="tb-input">
+                  <colgroup>
+                    <col width="272" />
+                    <col width="*" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">아이디 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td>
+                        <div class="input-wrap" style="width: 406px;">
+                          <div class="input-btn">
+                            <input type="text" class="input-base" value="IDID" />
+                            <span class="btn-base"><a href="#">중복확인</a></span>
+                          </div>
+                          <span class="s-valid normal">사용 가능한 아이디입니다.</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">비밀번호 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td>
+                        <div class="input-wrap" style="width: 320px;">
+                          <input type="password" class="input-base error" placeholder="비밀번호를 입력하세요" id="user_password" value="12345678" />
+                          <a href="#" class="s-ico password"></a>
+                          <span class="s-valid">영문 대·소문자, 숫자, 특수문자 중 3가지 이상 포함되어야 합니다.</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">비밀번호 확인 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td>
+                        <div class="input-wrap" style="width: 320px;">
+                          <input type="password" class="input-base" id="user_password_check" />
+                          <a href="#" class="s-ico password"></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">이름 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td>
+                        <div class="input-wrap" style="width: 320px;">
+                          <input type="text" class="input-base" id="user_name" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">사번 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td>
+                        <div class="input-wrap" style="width: 320px;">
+                          <input type="text" class="input-base" id="user_cnum" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">부서명 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td>
+                        <div class="input-wrap" style="width: 320px;">
+                          <input type="text" class="input-base" id="user_part" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">연락처</th>
+                      <td>
+                        <div class="input-wrap" style="width: 320px;">
+                          <div class="input-mobile">
+                            <select id="user_mobile_1" class="select-base">
+                              <option value="0" selected>선택</option>
+                              <option value="1">02</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <span class="bridge">-</span>
+                            <input type="text" class="input-base" id="user_mobile_2" placeholder="0000" />
+                            <span class="bridge">-</span>
+                            <input type="text" class="input-base" id="user_mobile_3" placeholder="0000" />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">이메일</th>
+                      <td>
+                        <div class="input-wrap" style="width: 635px;">
+                          <div class="input-email">
+                            <input type="text" class="input-base" id="user_email_1" placeholder="이메일 입력" />
+                            <span class="bridge">@</span>
+                            <input type="text" class="input-base" id="user_email_2" />
+                            <select class="select-base" id="user_email_3">
+                              <option value="0">선택</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3" selected>직접입력</option>
+                            </select>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">관리자 구분</th>
+                      <td>
+                        <select id="user_admin_type" class="select-base" style="width: 200px;">
+                          <option value="0">관리자 구분</option>
+                          <option value="1">값1</option>
+                          <option value="2">값2</option>
+                          <option value="3">값3</option>
+                        </select>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div><!-- .content-frame -->
+          </div><!-- .content-inner -->
+        </div><!-- .content-area -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+  </div><!-- #wrap -->
+</body>
+</html>

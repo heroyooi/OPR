@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>서부내륙고속도로 통합운영단말</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/aos.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrap" class="c-scrollbar">
+    <div id="header">
+      <h1><a href="#"><img src="img/wih-logo-io.png" alt=""></a></h1>
+      <div class="item-area">
+        <ul id="gnb" data-active="2">
+          <li><a href="#">시스템관리</a></li>
+          <li><a href="#">기초정보관리</a></li>
+          <li><a href="#">FTMS 제어</a></li>
+          <li><a href="#">운영관리</a></li>
+          <li><a href="#">상황관리</a></li>
+          <li><a href="#">모니터링</a></li>
+          <li><a href="#">이력조회</a></li>
+          <li><a href="#">통계조회</a></li>
+          <li><a href="#">현장장비 점검관리</a></li>
+          <li><a href="#">안전관리</a></li>
+          <li><a href="#">작업 및 유지보수 이력 관리</a></li>
+        </ul>
+        <ul id="utilmenu">
+          <li><a href="#" class="s-ico notify w-label new"><span>고윤정님</span></a></li>
+          <li><a href="#" class="s-ico bookmark"></a></li>
+          <li><a href="#" class="s-ico logout"></a></li>
+        </ul>
+        <div class="bookmark-area">
+          <ul>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">RWIS 제어기 기초정보관리</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기 최대 10개</span>
+              </a>
+            </li>
+          </ul>
+          <div class="bookmark-item">
+            <a href="#" class="btn-text">즐겨찾기 관리 <span class="s-ico arrow"></span></a>
+            <a href="#" class="s-ico close gray"></a>
+          </div>
+        </div><!-- .bookmark-area -->
+      </div>
+    </div><!--#header -->
+    <div id="container">
+      <div class="content-wrap">
+        <div class="content-top">
+          <div class="menu-area">
+            <a href="#" class="s-ico home"></a>
+          </div>
+          <div class="navi-area">
+            <a href="" class="s-ico arrow-l disabled"></a>
+            <a href="" class="s-ico arrow-r disabled"></a>
+          </div>
+        </div><!-- .content-top -->
+        <div class="content-area">
+          <div class="left-area c-scrollbar">
+            <ul class="st-list">
+              <li>
+                <div class="st-l">
+                  <dl>
+                    <dt>운영 모드 현황</dt>
+                    <dd>자동</dd>
+                  </dl>
+                </div>
+                <div class="st-r"><img src="img/ico-mode.png" alt=""></div>
+              </li>
+              <li>
+                <div class="st-l">
+                  <dl>
+                    <dt>실시간 교통량</dt>
+                    <dd>233,834</dd>
+                  </dl>
+                </div>
+                <div class="st-r"><img src="img/ico-traffic.png" alt=""></div>
+              </li>
+              <li>
+                <div class="st-l">
+                  <dl>
+                    <dt>새로운 알림</dt>
+                    <dd>999</dd>
+                  </dl>
+                </div>
+                <div class="st-r"><img src="img/ico-notify.png" alt=""></div>
+              </li>
+              <li>
+                <div class="st-l">
+                  <dl>
+                    <dt>교통통제 현황</dt>
+                    <dd>1</dd>
+                  </dl>
+                </div>
+                <div class="st-r"><img src="img/ico-accrue.png" alt=""></div>
+              </li>
+              <li>
+                <div class="st-l">
+                  <dl>
+                    <dt>긴급전화 접수 현황</dt>
+                    <dd>0</dd>
+                  </dl>
+                </div>
+                <div class="st-r"><img src="img/ico-phone.png" alt=""></div>
+              </li>
+              <li>
+                <div class="st-l">
+                  <dl>
+                    <dt>특별상황 현황(예약)</dt>
+                    <dd>1</dd>
+                  </dl>
+                </div>
+                <div class="st-r"><img src="img/ico-schedule.png" alt=""></div>
+              </li>
+              <li>
+                <div class="st-l">
+                  <dl>
+                    <dt>돌발상황건수</dt>
+                    <dd>1/2</dd>
+                  </dl>
+                </div>
+                <div class="st-r"><img src="img/ico-break.png" alt=""></div>
+                <div class="progress-area">
+                  <span class="gage" style="width: 50%"></span>
+                </div>
+              </li>
+              <li>
+                <div class="st-l">
+                  <dl>
+                    <dt>시설물 수리 현황</dt>
+                    <dd>0/0</dd>
+                  </dl>
+                </div>
+                <div class="st-r"><img src="img/ico-repair.png" alt=""></div>
+                <div class="progress-area">
+                  <span class="gage" style="width: 0%"></span>
+                </div>
+              </li>
+              <li>
+                <div class="st-l">
+                  <dl>
+                    <dt>시설물 점검 현황</dt>
+                    <dd>2/10</dd>
+                  </dl>
+                </div>
+                <div class="st-r"><img src="img/ico-register.png" alt=""></div>
+                <div class="progress-area">
+                  <span class="gage" style="width: 20%"></span>
+                </div>
+              </li>
+            </ul>
+            <div class="st-table-area">
+              <div class="st-table">
+                <div class="label-wrap">
+                  <span class="label">정체 현황</span>
+                  <a href="#" class="s-ico more"></a>
+                </div>
+                <div class="tb-wrap">
+                  <table summary="정체 현황" class="tb-list">
+                    <colgroup>
+                      <col width="33.333%" />
+                      <col width="33.333%" />
+                      <col width="33.333%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">정체구간</th>
+                        <th scope="col">정체방향</th>
+                        <th scope="col">평균속도</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="st1">
+                        <td>OOOOO구간</td>
+                        <td>OOOOO방향</td>
+                        <td>
+                          <span class="status">100km/h</span>
+                        </td>
+                      </tr>
+                      <tr class="st3">
+                        <td>OOOOO구간</td>
+                        <td>OOOOO방향</td>
+                        <td>
+                          <span class="status">32km/h</span>
+                        </td>
+                      </tr>
+                      <tr class="st3">
+                        <td>OOOOO구간</td>
+                        <td>OOOOO방향</td>
+                        <td>
+                          <span class="status">20km/h</span>
+                        </td>
+                      </tr>
+                      <tr class="st1">
+                        <td>OOOOO구간</td>
+                        <td>OOOOO방향</td>
+                        <td>
+                          <span class="status">100km/h</span>
+                        </td>
+                      </tr>
+                      <tr class="st2">
+                        <td>OOOOO구간</td>
+                        <td>OOOOO방향</td>
+                        <td>
+                          <span class="status">44km/h</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="st-table">
+                <div class="label-wrap">
+                  <span class="label">시설물 상태</span>
+                  <a href="#" class="s-ico more"></a>
+                </div>
+                <ul class="col-list">
+                  <li>
+                    <span class="label">VDS</span>
+                    <span class="result">0/91</span>
+                  </li>
+                  <li>
+                    <span class="label">AVC</span>
+                    <span class="result">0/10</span>
+                  </li>
+                  <li>
+                    <span class="label">DSRC</span>
+                    <span class="result">0/91</span>
+                  </li>
+                  <li class="st3">
+                    <span class="label">CCTV</span>
+                    <span class="result">3/229</span>
+                  </li>
+                  <li class="st3">
+                    <span class="label">VMS</span>
+                    <span class="result">2/32</span>
+                  </li>
+                  <li>
+                    <span class="label">LCS</span>
+                    <span class="result">0/32</span>
+                  </li>
+                  <li>
+                    <span class="label">RWIS</span>
+                    <span class="result">0/2</span>
+                  </li>
+                  <li>
+                    <span class="label">RDO</span>
+                    <span class="result">0/2</span>
+                  </li>
+                  <li>
+                    <span class="label">FOGW</span>
+                    <span class="result">0/2</span>
+                  </li>
+                  <li>
+                    <span class="label">PRIS</span>
+                    <span class="result">0/2</span>
+                  </li>
+                  <li>
+                    <span class="label">긴급전화</span>
+                    <span class="result">0/48</span>
+                  </li>
+                  <li>
+                    <span class="label">갱구부 LED</span>
+                    <span class="result">0/2</span>
+                  </li>
+                  <li>
+                    <span class="label">터널 환기</span>
+                    <span class="result">0/0</span>
+                  </li>
+                  <li>
+                    <span class="label">터널 전력</span>
+                    <span class="result">0/0</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- .left-area -->
+          <div class="right-area c-scrollbar">
+            <div class="map-area" style="background-color: #000;">
+              <span class="warning-obj sm" style="position:absolute; left: 563px; top: 176px; display: none;"></span>
+              <span class="warning-obj" style="position:absolute; left: 473px; top: 199px; display: none;"></span>
+
+              <span class="s-ico cctv" style="position:absolute; left: 427px; top: 88px;"></span>
+              <span class="s-ico cctv" style="position:absolute; left: 497px; top: 86px;"></span>
+              <span class="s-ico cctv" style="position:absolute; left: 459px; top: 160px;"></span>
+              <span class="s-ico cctv" style="position:absolute; left: 562px; top: 135px;"></span>
+              <span class="s-ico cctv" style="position:absolute; left: 545px; top: 259px;"></span>
+              <span class="s-ico cctv" style="position:absolute; left: 447px; top: 299px;"></span>
+              <span class="s-ico cctv" style="position:absolute; left: 411px; top: 335px;"></span>
+              <span class="s-ico cctv" style="position:absolute; left: 490px; top: 340px;"></span>
+              <span class="s-ico cctv" style="position:absolute; left:392px; top:443px;"></span>
+              <span class="s-ico cctv" id="evt" style="position:absolute; left:449px; top:438px;"></span>
+              <span class="s-ico cctv" style="position:absolute; left:417px; top:572px;"></span>
+              <span class="s-ico cctv" style="position:absolute; left:475px; top:550px;"></span>
+              <span class="s-ico cctv" style="position:absolute; left:486px; bottom:8px;"></span>
+              <span class="s-ico cctv" style="position:absolute; left:541px; bottom:38px;"></span>
+              <div class="modal-wrap" id="modal1" style="width: 316px; left:304px; top:187px; display: none;">
+                <div class="modal-top">
+                  <span class="tit">아산분기점</span>
+                  <a href="#" class="s-ico close gray"></a>
+                </div>
+                <div class="modal-content">
+                  <img src="http://via.placeholder.com/300x202" alt="" />
+                </div>
+              </div>
+
+              <div class="modal-wrap tp2" id="modal2" style="width: 300px; left:554px; top:345px; display: none;">
+                <div class="modal-top">
+                  <ul class="modal-tab">
+                    <li class="on"><a href="#">일이삼사오육칠팔구십일이삼사오</a></li>
+                    <li><a href="#">평택방향</a></li>
+                  </ul>
+                  <a href="#" class="s-ico close gray"></a>
+                </div>
+                <div class="modal-content">
+                  <ul class="modal-list">
+                    <li>
+                      <span class="label">구분</span>
+                      <span class="result">본선</span>
+                    </li>
+                    <li>
+                      <span class="label">위치</span>
+                      <span class="result">예산 JCT 전방 예산 JCT 전방예산 JCT <br />전방예산 JCT 전방예산 JCT 전방</span>
+                    </li>
+                    <li>
+                      <span class="label">발생</span>
+                      <span class="result">2024-10-25 00:00:00</span>
+                    </li>
+                    <li>
+                      <span class="label">종료</span>
+                      <span class="result">-</span>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="map-navi">
+                <a href="#" class="s-ico plus"></a>
+                <a href="#" class="s-ico minus"></a>
+              </div>
+              <div class="toast-area" style="display: none;">
+                <div class="t-tab-wrap">
+                  <div class="t-tab-l">
+                    <a href="#" class="on">돌발 상황 <span class="num">10</span></a>
+                    <a href="#">장비이상 <span class="num">10</span></a>
+                    <a href="#">제보접수 <span class="num">10</span></a>
+                    <a href="#">고장 접수/처리 <span class="num">10</span></a>
+                    <a href="#">점검 주기 <span class="num">100</span></a>
+                  </div>
+                  <div class="t-tab-r">
+                    <a href="#">알림센터 보러가기 <span class="arrow"></span></a>
+                  </div>
+                </div>
+                <div class="toast">
+                  <div class="info-area">
+                    <span class="s-ico info"></span>
+                    <div class="info-box">
+                      <div class="info-top">
+                        <span class="tit">서부내륙 고속도로</span>
+                        <span class="time">30초 전</span>
+                      </div>
+                      <div class="info-content">장비 이상이 감지되었습니다.</div>
+                    </div>
+                  </div>
+                  <a href="#" class="s-ico close gray"></a>
+                </div>
+                <div class="toast">
+                  <div class="info-area">
+                    <span class="s-ico info"></span>
+                    <div class="info-box">
+                      <div class="info-top">
+                        <span class="tit">서부내륙 고속도로</span>
+                        <span class="time">1분 전</span>
+                      </div>
+                      <div class="info-content">돌발상황이 감지되었습니다.</div>
+                    </div>
+                  </div>
+                  <a href="#" class="s-ico close gray"></a>
+                </div>
+                <div class="toast">
+                  <div class="info-area">
+                    <span class="s-ico info"></span>
+                    <div class="info-box">
+                      <div class="info-top">
+                        <span class="tit">서부내륙 고속도로</span>
+                        <span class="time">3분 전</span>
+                      </div>
+                      <div class="info-content">돌발상황이 감지되었습니다. Text 1 line <br />돌발상황이 감지되었습니다. Text 2 line  이상 넘어가면 이상 넘어가면 이상 넘어가면 이상 넘어가면 이상 넘어가면 이상 넘어가면 이상 넘어가면 이상 넘어가면 이상 넘어가면 이상 넘어가면 이상 넘어가면 이상 넘어가면 이상 넘어가면 이상 넘어가면 이상 넘어가면 이상 넘어가면 이상 넘어가면 이상 넘어가면 이상 넘어가면 이상 넘어가면 이상 넘어가면 이상 넘어가면</div>
+                    </div>
+                  </div>
+                  <a href="#" class="s-ico close gray"></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- .right-area -->
+        </div><!-- .content-area -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+  </div><!-- #wrap -->
+
+  <script>
+    $('.s-ico.cctv').on('click', function(){
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+      } else {
+        $(this).removeClass('on');
+      }
+    });
+    $('.s-ico.cctv#evt').on('click', function(e){
+      e.preventDefault();
+      openModal('#modal1');
+    });
+    $('#modal1 .s-ico.close').on('click', function(e){
+      e.preventDefault();
+      $('.s-ico.cctv#evt').removeClass('on');
+    });
+    $('.t-tab-l a').on('click', function(e){
+      e.preventDefault();
+      $(this).addClass('on');
+      $(this).siblings().removeClass('on');
+    });
+    var query = $.urlParam('sample');
+	  if (query === 'toast') {
+      $('.map-area .toast-area').show();
+    } else if (query === 'toastcctv') {
+      $('.map-area .toast-area').show();
+    setTimeout(() => {
+      $('.s-ico.cctv#evt').click();
+    }, 250);
+    } else if (query === 'warning') {
+      $('.warning-obj').show();
+      openModal('#modal2');
+    }
+  </script>
+</body>
+</html>

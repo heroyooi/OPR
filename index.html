@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>퍼블리싱 - 코딩맵</title>
+  <link rel="stylesheet" type="text/css" href="./_guide/guide.css" />
+	<script type="text/javascript" src="./_guide/dtree.js"></script>
+</head>
+<body>
+  <div class="guide-wrapper">
+    <div id="content_guide_list">
+      <h1>퍼블리싱 진행표</h1>
+      <h2>진행 표시</h2>
+      <ul>
+  			<li><span style="color:#aeaeae;">■ 작업전</span></li>
+  			<li><span style="color:green;">■ 작업중</span></li>
+  			<li><span style="color:#5727ff;">■ 완료</span></li>
+  			<li><span style="color:#37b4e7;">■ 신규</span></li>
+  			<li><span style="color:#f55;">■ 수정</span></li>
+      </ul>
+      <span id="t_title"></span>
+    </div>
+    <div class="dtree">
+  		<div class="area_btn">
+  			<a href="javascript: b.openAll();"><img src="./_guide/img/btn_expand.gif" alt="Expand All" /></a>
+  			<a href="javascript: b.closeAll();"><img src="./_guide/img/btn_collapse.gif" alt="Collapse All" /></a>
+  		</div>
+  		<script type="text/javascript">
+			//<![CDATA[
+			b = new dTree('b');
+
+			b.add(0, -1, '운영단말 관리시스템 - 서부내륙');
+
+			b.add(1, 0, '01 LOGIN : 완료' );
+			b.add(1.011, 1, '1-1) OPR-WL-001','OPR-WL-001.html', '완료', '_blank');
+			b.add(1.012, 1, '1-2) OPR-WL-001 : 오류','OPR-WL-001.html?sample=valid', '완료', '_blank');
+
+			b.add(2, 0, '00 MAIN+알림센터 : (토스트팝업 UI제외) 완료' );
+			b.add(2.021, 2, '1-1) OPR-WL-002','OPR-WL-002.html', '완료', '_blank');
+			b.add(2.022, 2, '1-2) OPR-WL-003 : Pop-up Toast','OPR-WL-002.html?sample=toast', '완료', '_blank');
+			b.add(2.023, 2, '1-3) OPR-WL-003 : Toast/CCTV','OPR-WL-002.html?sample=toastcctv', '완료', '_blank');
+			b.add(2.024, 2, '1-4) OPR-WL-003 : Tootip 돌발정보','OPR-WL-002.html?sample=warning', '완료', '_blank');
+			b.add(2.031, 2, '2-1) OPR-WL-005','OPR-WL-005.html', '완료', '_blank');
+			b.add(2.032, 2, '2-2) OPR-WL-007','OPR-WL-005.html?popup=3', '완료', '_blank');
+
+			b.add(3, 0, '01 시스템관리 : 완료');
+			b.add(3.01, 3, '1) OPR-WL-011', 'OPR-WL-011.html', '완료', '_blank');
+			b.add(3.02, 3, '2) OPR-WL-013', 'OPR-WL-013.html', '완료', '_blank');
+			b.add(3.03, 3, '3) OPR-WL-014', 'OPR-WL-014.html', '완료', '_blank');
+			b.add(3.04, 3, '4) OPR-WL-016', 'OPR-WL-016.html', '완료', '_blank');
+			b.add(3.05, 3, '5) OPR-WL-017', 'OPR-WL-017.html', '완료', '_blank');
+			b.add(3.06, 3, '6) OPR-WL-019', 'OPR-WL-017.html?popup=3', '완료', '_blank');
+			b.add(3.07, 3, '7) OPR-WL-020', 'OPR-WL-020.html', '완료', '_blank');
+			b.add(3.08, 3, '8) OPR-WL-021', 'OPR-WL-021.html', '완료', '_blank');
+			b.add(3.09, 3, '9) OPR-WL-022', 'OPR-WL-022.html', '완료', '_blank');
+			b.add(3.10, 3, '10) OPR-WL-023', 'OPR-WL-023.html', '완료', '_blank');
+
+			b.add(4, 0, '02 기초정보관리  : 완료');
+			b.add(4.01, 4, '1) OPR-WL-024', 'OPR-WL-024.html', '완료', '_blank');
+			b.add(4.02, 4, '2) OPR-WL-025', 'OPR-WL-025.html', '완료', '_blank');
+			b.add(4.031, 4, '3-1) OPR-WL-026', 'OPR-WL-026.html', '완료', '_blank');
+			b.add(4.032, 4, '3-2) OPR-WL-027', 'OPR-WL-026.html?popup=addLink', '완료', '_blank');
+			b.add(4.041, 4, '4-1) OPR-WL-029', 'OPR-WL-029.html', '완료', '_blank');
+			b.add(4.042, 4, '4-2) OPR-WL-031', 'OPR-WL-029.html?popup=addVDS', '완료', '_blank');
+			b.add(4.05, 4, '5) OPR-WL-077', 'OPR-WL-077.html', '완료', '_blank');
+			b.add(4.06, 4, '6) OPR-WL-080', 'OPR-WL-080.html', '완료', '_blank');
+			b.add(4.07, 4, '7) OPR-WL-082', 'OPR-WL-082.html', '완료', '_blank');
+
+			b.add(5, 0, '03 FTMS 제어 : 확인중');
+			b.add(5.01, 5, '1) OPR-WL-132', 'OPR-WL-132.html', '완료', '_blank');
+			b.add(5.02, 5, '1) OPR-WL-133', 'OPR-WL-133.html', '완료', '_blank');
+			b.add(5.03, 5, '1) OPR-WL-142', 'OPR-WL-142.html', '완료', '_blank');
+
+			b.add(6, 0, '[4.운영관리](51)');
+
+			b.add(7, 0, '[5.상황관리](20)');
+
+			b.add(8, 0, '[6.모니터링](30)');
+
+			b.add(9, 0, '[7.이력조회](48)');
+
+			b.add(10, 0, '[8.통계조회](16)');
+
+			b.add(11, 0, '[9.현장장비 점건관리](63)');
+
+			b.add(12, 0, '[10.안전관리](11)');
+
+			b.add(13, 0, '[11.작업 및 유지보수 이력관리](42)');
+
+
+			b.add(14, 0, '14. 컴포넌트');  
+			b.add(14.01, 14, '1) 컴포넌트 가이드', 'component.html', '작업중', '_blank');
+			b.add(14.02, 14, '2) 슬라이드 메뉴 다수 케이스', 'OPR-WL-menu_sample.html', '완료', '_blank');
+			b.add(14.03, 14, '3) ax5ui 테이블 가이드', 'ax5ui.html', '완료', '_blank');
+			b.add(14.041, 14, '4-1) 테이블 리스트 페이지(OPR-WL-011)', 'OPR-WL-011.html', '완료', '_blank');
+			b.add(14.042, 14, '4-2) 테이블 리스트 페이지(OPR-WL-011) - 테이블 내부 스크롤 생성', 'OPR-WL-011_sample.html', '완료', '_blank');
+			b.add(14.051, 14, '5-1) 테이블 뷰 페이지(OPR-WL-013)', 'OPR-WL-013.html', '완료', '_blank');
+			b.add(14.052, 14, '5-2) 테이블 뷰 페이지(OPR-WL-013) - 컨텐츠 스크롤 생성', 'OPR-WL-013_sample.html', '완료', '_blank');
+
+			document.write(b);
+			//]]>
+  		</script>
+  	</div>
+  </div>
+</body>
+</html>
