@@ -538,7 +538,8 @@ input[type=number]::-webkit-outer-spin-button {
 .tb-wrap{border-radius:4px;overflow:hidden;}
 .tb-input{width:100%;table-layout:fixed;}
 .tb-input > tbody > tr > th, .tb-input > tbody > tr > td{padding:8px 12px;font-size:14px;line-height:21px;text-align:left;border-bottom:1px solid #212332;border-bottom:1px solid #212332;}
-.tb-input > tbody > tr > th{background-color:#3e4157;color:#778298;}
+.tb-input > tbody > tr > th{background-color:#3e4157;color:#778298;border-left:1px solid #212332;}
+.tb-input > tbody > tr > th:first-child{border-left:0;}
 .tb-input > tbody > tr > th.bl{border-left:1px solid #34364c;border-top:1px solid #34364c;}
 .tb-input > tbody > tr > th.bb{border-bottom:1px solid #34364c;}
 .tb-input > tbody > tr > th em.ico{display:inline-block;vertical-align:middle;position: relative;top:5px;}
