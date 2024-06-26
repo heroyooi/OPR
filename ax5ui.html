@@ -137,26 +137,5 @@
     </div><!-- #container -->
   </div><!-- #wrap -->
   <script src="js/prism.js"></script>
-  <script>
-    $(document).ready(function () {
-      $(document).on("mouseover", "[data-ax5grid-panel-scroll=body] span", function (e) {
-          const text = $(e.target).is("span") ? $(e.target).text() : $(e.target).children("span").text()
-          $(e.target).tooltip({
-              // track: true,
-              content: text,
-              items: "span",
-              position: {
-                  my: "center top+5",
-                  at: "center bottom"
-              }
-          }).tooltip("open");
-
-      })
-      $(document).on("mouseleave", "[data-ax5grid-panel-scroll=body] span", function (e) {
-          $(e.target).tooltip("close");
-          $(".ui-helper-hidden-accessible").remove();
-      })
-    });
-  </script>
 </body>
 </html>

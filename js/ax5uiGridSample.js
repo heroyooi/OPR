@@ -1,4 +1,41 @@
+/*var option1 = function($selector) {
+  return { 
+    target: $selector,
+    // showLineNumber: true,
+    // showRowSelector: true,
+    header: {
+      // align:'center',
+      columnHeight: 32,
+      selector: true,
+    },
+    // frozenColumnIndex: 13,
+    // frozenRowIndex: 2,
+    columns: columns1,
+    // footSum: [
+    //   [
+    //     { label: '검색결과가 없습니다.', colspan: 21, align: 'center' }
+    //   ]
+    // ],
+    body: {
+      columnHeight: 44,
+      // onDataChanged: function () {
+      //   if (this.key == 'isChecked') {
+      //     this.self.updateChildRows(this.dindex, {isChecked: this.item.isChecked});
+      //   }
+      //   else if (this.key == '__selected__'){
+      //     this.self.updateChildRows(this.dindex, {__selected__: this.item.__selected__});
+      //   }
+      // }
+    },
+    page: {
+      display: false,
+    },
+    // height: 174,
+  }
+}*/
+
 // http://ax5ui.axisj.com/ax5ui-grid/api/index.html
+
 var rowClass = function(item, type) {
   if (type == 1) {
     var state = 'row-state';
@@ -167,6 +204,19 @@ var data1_7 = [
   { isChecked: "N", column1: '42', column2: 'VDS-0050', column3: 'OO 지점 VDS 1', column4: '익산', column5: '4차로', column6: '30초', column7: '000', column8: '000', column9: '000', column10: '000', column11: '000', column12: '000', column13: '45 dm', column14: '18 dm', column15: '25대', column16: '175km/h', column17: '250dm', column18: '2024-10-25 14:23:35' },
   { isChecked: "N", column1: '41', column2: 'VDS-0050', column3: 'OO 지점 VDS 1', column4: '익산', column5: '4차로', column6: '30초', column7: '000', column8: '000', column9: '000', column10: '000', column11: '000', column12: '000', column13: '45 dm', column14: '18 dm', column15: '25대', column16: '175km/h', column17: '250dm', column18: '2024-10-25 14:23:35' },
   { isChecked: "N", column1: '40', column2: 'VDS-0050', column3: 'OO 지점 VDS 1', column4: '익산', column5: '4차로', column6: '30초', column7: '000', column8: '000', column9: '000', column10: '000', column11: '000', column12: '000', column13: '45 dm', column14: '18 dm', column15: '25대', column16: '175km/h', column17: '250dm', column18: '2024-10-25 14:23:35' },
+];
+
+var data1_8 = [
+  { isChecked: "N", column1: '50', column2: '2024-10-25 14:23:35', column3: '03VDE000112', column4: 'VDS-ZONE-0023', column5: 'X', column6: 'X', column7: 'X', column8: '운영자 확인', column9: '돌발' },
+  { isChecked: "N", column1: '49', column2: '2024-10-25 14:23:35', column3: '03VDE000112', column4: 'VDS-ZONE-0023', column5: 'X', column6: 'X', column7: 'X', column8: '운영자 확인', column9: '돌발' },
+  { isChecked: "N", column1: '48', column2: '2024-10-25 14:23:35', column3: '03VDE000112', column4: 'VDS-ZONE-0023', column5: 'X', column6: 'X', column7: 'X', column8: '운영자 확인', column9: '돌발' },
+  { isChecked: "N", column1: '47', column2: '2024-10-25 14:23:35', column3: '03VDE000112', column4: 'VDS-ZONE-0023', column5: 'X', column6: 'X', column7: 'O', column8: '운영자 확인', column9: '-' },
+  { isChecked: "N", column1: '46', column2: '2024-10-25 14:23:35', column3: '03VDE000112', column4: 'VDS-ZONE-0023', column5: 'O', column6: 'O', column7: 'O', column8: '돌발상황', column9: '돌발' },
+  { isChecked: "N", column1: '45', column2: '2024-10-25 14:23:35', column3: '03VDE000112', column4: 'VDS-ZONE-0023', column5: 'O', column6: 'O', column7: 'O', column8: '운영자 확인', column9: '돌발' },
+  { isChecked: "N", column1: '44', column2: '2024-10-25 14:23:35', column3: '03VDE000112', column4: 'VDS-ZONE-0023', column5: 'O', column6: 'O', column7: 'O', column8: '운영자 확인', column9: '돌발' },
+  { isChecked: "N", column1: '43', column2: '2024-10-25 14:23:35', column3: '03VDE000112', column4: 'VDS-ZONE-0023', column5: 'X', column6: 'X', column7: 'O', column8: '운영자 확인', column9: '돌발' },
+  { isChecked: "N", column1: '42', column2: '2024-10-25 14:23:35', column3: '03VDE000112', column4: 'VDS-ZONE-0023', column5: 'X', column6: 'X', column7: 'O', column8: '운영자 확인', column9: '돌발' },
+  { isChecked: "N", column1: '41', column2: '2024-10-25 14:23:35', column3: '03VDE000112', column4: 'VDS-ZONE-0023', column5: 'X', column6: 'X', column7: 'O', column8: '운영자 확인', column9: '돌발' },
 ];
 
 var columns1 = [
@@ -549,42 +599,93 @@ var columns1_7 = [
     sortable: true,
   },
 ];
-
-var option1 = function($selector) {
-  return { 
-    target: $selector,
-    // showLineNumber: true,
-    // showRowSelector: true,
-    header: {
-      // align:'center',
-      columnHeight: 32,
-      selector: true,
-    },
-    // frozenColumnIndex: 13,
-    // frozenRowIndex: 2,
-    columns: columns1,
-    // footSum: [
-    //   [
-    //     { label: '검색결과가 없습니다.', colspan: 21, align: 'center' }
-    //   ]
-    // ],
-    body: {
-      columnHeight: 44,
-      // onDataChanged: function () {
-      //   if (this.key == 'isChecked') {
-      //     this.self.updateChildRows(this.dindex, {isChecked: this.item.isChecked});
-      //   }
-      //   else if (this.key == '__selected__'){
-      //     this.self.updateChildRows(this.dindex, {__selected__: this.item.__selected__});
-      //   }
-      // }
-    },
-    page: {
-      display: false,
-    },
-    // height: 174,
-  }
-}
+var columns1_8 = [
+  checkColumns,
+  {
+    key: 'column1',
+    label: '순번',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column2',
+    label: '일시',
+    width: 270,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column3',
+    label: 'VDS ID',
+    width: 270,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column4',
+    label: '지점 ID',
+    width: 200,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column5',
+    label: 'APID검지',
+    width: 140,
+    align: "center",
+    sortable: true,
+    formatter: function() {
+      if (this.item.column5 == "X") {
+        return '<span class="s-ox"><img src="./img/ico-16-no.png" /></span>';
+      } else if (this.item.column5 == "O") {
+        return '<span class="s-ox"><img src="./img/ico-16-yes.png" /></span>';
+      }
+    }
+  },
+  {
+    key: 'column6',
+    label: 'EDS 검지',
+    width: 140,
+    align: "center",
+    sortable: true,
+    formatter: function() {
+      if (this.item.column6 == "X") {
+        return '<span class="s-ox"><img src="./img/ico-16-no.png" /></span>';
+      } else if (this.item.column6 == "O") {
+        return '<span class="s-ox"><img src="./img/ico-16-yes.png" /></span>';
+      }
+    }
+  },
+  {
+    key: 'column7',
+    label: 'DELOS 검지',
+    width: 140,
+    align: "center",
+    sortable: true,
+    formatter: function() {
+      if (this.item.column7 == "X") {
+        return '<span class="s-ox"><img src="./img/ico-16-no.png" /></span>';
+      } else if (this.item.column7 == "O") {
+        return '<span class="s-ox"><img src="./img/ico-16-yes.png" /></span>';
+      }
+    }
+  },
+  {
+    key: 'column8',
+    label: '판정 결과',
+    width: 140,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column9',
+    label: '대응',
+    width: 140,
+    align: "center",
+    sortable: true,
+  },
+];
 
 var data2 = [
   { column1: '로우데이터', column2: '로우데이터', column3: '로우데이터', state: 'red', column4: '로우 데이터' },
@@ -889,12 +990,13 @@ $(document.body).ready(function() {
   var $grid1_5 = $('[data-ax5grid="grid1_5"]');
   var $grid1_6 = $('[data-ax5grid="grid1_6"]');
   var $grid1_7 = $('[data-ax5grid="grid1_7"]');
+  var $grid1_8 = $('[data-ax5grid="grid1_8"]');
   
   var $grid2 = $('[data-ax5grid="grid2"]');
   var $grid3 = $('[data-ax5grid="grid3"]');
   var $grid4 = $('[data-ax5grid="grid4"]');
 
-  if ($grid1.length || $grid1_2.length || $grid1_3.length || $grid1_4.length || $grid1_5.length || $grid1_6.length || $grid1_7.length) {
+  if ($grid1.length || $grid1_2.length || $grid1_3.length || $grid1_4.length || $grid1_5.length || $grid1_6.length || $grid1_7.length || $grid1_8.length) {
     if ($grid1.length) {
       new ax5.ui.grid(getOptions($grid1, columns1)).setData(data1);
     } else if ($grid1_2.length) {
@@ -909,6 +1011,8 @@ $(document.body).ready(function() {
       new ax5.ui.grid(getOptions($grid1_6, columns1_6)).setData(data1_6);
     } else if ($grid1_7.length) {
       new ax5.ui.grid(getOptions($grid1_7, columns1_7)).setData(data1_7);
+    } else if ($grid1_8.length) {
+      new ax5.ui.grid(getOptions($grid1_8, columns1_8)).setData(data1_8);
     }
 
     $(document).on('click', '#chk-all', function() {
@@ -936,4 +1040,21 @@ $(document.body).ready(function() {
   if ($grid2.length) new ax5.ui.grid(option2($grid2)).setData(data2);
   if ($grid3.length) new ax5.ui.grid(option3($grid3)).setData(data3);
   if ($grid4.length) new ax5.ui.grid(option4($grid4)).setData(data4);
+
+  $(document).on("mouseover", "[data-ax5grid-panel-scroll=body] span", function (e) {
+    const text = $(e.target).is("span") ? $(e.target).text() : $(e.target).children("span").text()
+    $(e.target).tooltip({
+      // track: true,
+      content: text,
+      items: "span",
+      position: {
+          my: "center top+5",
+          at: "center bottom"
+      }
+    }).tooltip("open");
+  });
+  $(document).on("mouseleave", "[data-ax5grid-panel-scroll=body] span", function (e) {
+    $(e.target).tooltip("close");
+    $(".ui-helper-hidden-accessible").remove();
+  })
 });

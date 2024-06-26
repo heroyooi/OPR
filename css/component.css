@@ -326,6 +326,7 @@ input[type=number]::-webkit-outer-spin-button {
 .cs-ax5grid[data-ax5grid] .s-label {
   font-size: 14px;color:#fff;line-height:1.5;display:inline-block;padding:2px 8px;border-radius:16px;background-color:#923d48;
 }
+.cs-ax5grid[data-ax5grid] .s-ox img{vertical-align:middle;}
 .cs-ax5grid[data-ax5grid] .no-result {
   display: block;
   padding: 20px 0;
