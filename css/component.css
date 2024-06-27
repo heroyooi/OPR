@@ -64,7 +64,11 @@
 .s-ico.bookmark:hover,
 .s-ico.bookmark.on{background:url(../img/ico-24-bookmark-sel.png) 50% 50% no-repeat;}
 .s-ico.logout{background:url(../img/ico-24-logout-def.png) 50% 50% no-repeat;}
+.s-ico.logout:hover,
+.s-ico.logout.on{background:url(../img/ico-24-logout-sel.png) 50% 50% no-repeat;}
 .s-ico.home{background:url(../img/ico-16-home-def.png) 50% 50% no-repeat;}
+.s-ico.home:hover,
+.s-ico.home.on{background:url(../img/ico-16-home-sel.png) 50% 50% no-repeat;}
 .s-ico.arrow-l{background:url(../img/ico-16-arrowleft-def.png) 50% 50% no-repeat;}
 .s-ico.arrow-r{background:url(../img/ico-16-arrowright-def.png) 50% 50% no-repeat;}
 .s-ico.arrow-l.disabled, .s-ico.arrow-l.swiper-button-disabled{background:url(../img/ico-16-arrowleft-dis.png) 50% 50% no-repeat;cursor:default;pointer-events:none;}
@@ -312,7 +316,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .cs-ax5grid[data-ax5grid] .st-box {
   display: flex; align-items: center; justify-content: center;
-  font-size: 14px;font-weight: 600; height: 44px;
+  font-size: 14px;font-weight: 600; height: 42px;
 }
 .cs-ax5grid[data-ax5grid] .st-box.red {
   background-color: #46384b;color: #ef4345;
