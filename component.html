@@ -126,12 +126,7 @@
     <div id="container" class="ver-lnb">
       <div class="left-wrap">
         <h3 class="tit">컴포넌트 가이드</h3>
-        <ul class="lnb-list">
-          <li>
-            <a href="#" class="menu">체크박스</a>
-            <a href="#" class="s-ico star"></a>
-          </li>
-        </ul>
+        <ul class="lnb-list"></ul>
       </div><!-- .left-wrap -->
       <div class="content-wrap">
         <div class="content-top">
@@ -451,144 +446,156 @@
 </div></div>
 <pre class="language-html"></pre>
               </div>
+            </div><!-- .section-->
 
-              <div class="section">
-                <h2>Datepicker</h2>
+            <div class="section">
+              <h2>Textarea</h2>
+      
+              <div class="code-area">
+                <h3>기본형 <button>코드 보기</button></h3>
+<div class="code-box"><textarea class="textarea-base" placeholder="이미지 설명"></textarea></div>
+<pre class="language-html"></pre>
+              </div>
+            </div><!-- .section -->
+
+
+            <div class="section">
+              <h2>Datepicker</h2>
         
-                <div class="code-area" style="position: relative; z-index: 3;">
-                  <h3>타입1 <button>코드 보기</button></h3>
-        <div class="code-box"><div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
-          <input id="datepicker-input" type="text" aria-label="Date">
-          <span class="tui-ico-date"></span>
-          <div class="date_wrapper" id="general" style="margin-left: -1px;"></div>
-        </div></div>
-        <script>tui.DatePicker.localeTexts['customKey'] = {
-          titles: {
-              // days
-              DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-              // daysShort
-              D: ['일', '월', '화', '수', '목', '금', '토'],
-              // months
-              MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-              // monthsShort
-              MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
-          },
-          titleFormat: 'yyyy.MMM',
-          todayFormat: '오늘 : yyyy.MMMM.dd',
-          date: 'Date',
-          time: 'Time'
-        };
+              <div class="code-area" style="position: relative; z-index: 3;">
+                <h3>타입1 <button>코드 보기</button></h3>
+<div class="code-box"><div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+  <input id="datepicker-input" type="text" aria-label="Date">
+  <span class="tui-ico-date"></span>
+  <div class="date_wrapper" id="general" style="margin-left: -1px;"></div>
+</div></div>
+<script>tui.DatePicker.localeTexts['customKey'] = {
+  titles: {
+      // days
+      DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      // daysShort
+      D: ['일', '월', '화', '수', '목', '금', '토'],
+      // months
+      MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+      // monthsShort
+      MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+  },
+  titleFormat: 'yyyy.MMM',
+  todayFormat: '오늘 : yyyy.MMMM.dd',
+  date: 'Date',
+  time: 'Time'
+};
+
+var datepicker = new tui.DatePicker('.date_wrapper#general', {
+  language: 'customKey',
+  date: new Date(),
+  input: {
+    element: '#datepicker-input',
+    format: 'YYYY-MM-dd',
+  }
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
         
-        var datepicker = new tui.DatePicker('.date_wrapper#general', {
-          language: 'customKey',
-          date: new Date(),
-          input: {
-            element: '#datepicker-input',
-            format: 'YYYY-MM-dd',
-          }
-        });</script>
+              </div>
+      
+              <div class="code-area" style="position: relative; z-index: 2;">
+                <h3>타입1 - 비활성화 <button>코드 보기</button></h3>
+<div class="code-box"><div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+  <input id="datepicker-input-disabled" type="text" aria-label="Date" disabled>
+  <span class="tui-ico-date"></span>
+  <div class="date_wrapper" id="disabled" style="margin-left: -1px;"></div>
+</div></div>
+<script>tui.DatePicker.localeTexts['customKey'] = {
+  titles: {
+      // days
+      DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      // daysShort
+      D: ['일', '월', '화', '수', '목', '금', '토'],
+      // months
+      MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+      // monthsShort
+      MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+  },
+  titleFormat: 'yyyy.MMM',
+  todayFormat: '오늘 : yyyy.MMMM.dd',
+  date: 'Date',
+  time: 'Time'
+};
+
+var datepicker = new tui.DatePicker('.date_wrapper#disabled', {
+  language: 'customKey',
+  date: new Date(),
+  input: {
+    element: '#datepicker-input-disabled',
+    format: 'YYYY-MM-dd',
+  }
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
         
-        <pre class="language-html"></pre>
-        <pre class="language-javascript"></pre>
-        
-                </div>
-        
-                <div class="code-area" style="position: relative; z-index: 2;">
-                  <h3>타입1 - 비활성화 <button>코드 보기</button></h3>
-        <div class="code-box"><div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
-          <input id="datepicker-input-disabled" type="text" aria-label="Date" disabled>
-          <span class="tui-ico-date"></span>
-          <div class="date_wrapper" id="disabled" style="margin-left: -1px;"></div>
-        </div></div>
-        <script>tui.DatePicker.localeTexts['customKey'] = {
-          titles: {
-              // days
-              DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-              // daysShort
-              D: ['일', '월', '화', '수', '목', '금', '토'],
-              // months
-              MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-              // monthsShort
-              MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
-          },
-          titleFormat: 'yyyy.MMM',
-          todayFormat: '오늘 : yyyy.MMMM.dd',
-          date: 'Date',
-          time: 'Time'
-        };
-        
-        var datepicker = new tui.DatePicker('.date_wrapper#disabled', {
-          language: 'customKey',
-          date: new Date(),
-          input: {
-            element: '#datepicker-input-disabled',
-            format: 'YYYY-MM-dd',
-          }
-        });</script>
-        
-        <pre class="language-html"></pre>
-        <pre class="language-javascript"></pre>
-        
-                </div>
-        
-                <div class="code-area" style="position: relative; z-index: 1;">
-                  <h3>타입2 <button>코드 보기</button></h3>
-        <div class="code-box"><div class="input-wrap input-datepicker">
-          <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
-            <input id="startpicker-input1" type="text" aria-label="Date">
-            <span class="tui-ico-date"></span>
-            <div id="startpicker-container1" style="margin-left: -1px;"></div>
-          </div>
-          <span class="bridge">~</span>
-          <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
-            <input id="endpicker-input1" type="text" aria-label="Date">
-            <span class="tui-ico-date"></span>
-            <div id="endpicker-container1" style="margin-left: -1px;"></div>
-          </div>
-        </div></div>
-        <script>tui.DatePicker.localeTexts['customKey'] = {
-          titles: {
-              // days
-              DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-              // daysShort
-              D: ['일', '월', '화', '수', '목', '금', '토'],
-              // months
-              MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-              // monthsShort
-              MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
-          },
-          titleFormat: 'yyyy.MMM',
-          todayFormat: '오늘 : yyyy.MMMM.dd',
-          date: 'Date',
-          time: 'Time'
-        };
-        
-        var today1 = new Date();
-        var picker1 = tui.DatePicker.createRangePicker({
-          language: 'customKey',
-          startpicker: {
-            date: today1,
-            input: '#startpicker-input1',
-            container: '#startpicker-container1'
-          },
-          endpicker: {
-            date: today1,
-            input: '#endpicker-input1',
-            container: '#endpicker-container1'
-          },
-          selectableRanges: [
-            [today1, new Date(today1.getFullYear() + 1, today1.getMonth(), today1.getDate())]
-          ],
-          format: 'YYYY-MM-dd',
-          // showAlways: true,
-        });
-        
-        picker1.on('change:end', () => {
-            console.log(123);
-        }); </script>
-        
-        <pre class="language-html"></pre>
-        <pre class="language-javascript"></pre>
+              </div>
+      
+              <div class="code-area" style="position: relative; z-index: 1;">
+                <h3>타입2 <button>코드 보기</button></h3>
+<div class="code-box"><div class="input-wrap input-datepicker">
+  <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+    <input id="startpicker-input1" type="text" aria-label="Date">
+    <span class="tui-ico-date"></span>
+    <div id="startpicker-container1" style="margin-left: -1px;"></div>
+  </div>
+  <span class="bridge">~</span>
+  <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+    <input id="endpicker-input1" type="text" aria-label="Date">
+    <span class="tui-ico-date"></span>
+    <div id="endpicker-container1" style="margin-left: -1px;"></div>
+  </div>
+</div></div>
+<script>tui.DatePicker.localeTexts['customKey'] = {
+  titles: {
+      // days
+      DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      // daysShort
+      D: ['일', '월', '화', '수', '목', '금', '토'],
+      // months
+      MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+      // monthsShort
+      MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+  },
+  titleFormat: 'yyyy.MMM',
+  todayFormat: '오늘 : yyyy.MMMM.dd',
+  date: 'Date',
+  time: 'Time'
+};
+
+var today1 = new Date();
+var picker1 = tui.DatePicker.createRangePicker({
+  language: 'customKey',
+  startpicker: {
+    date: today1,
+    input: '#startpicker-input1',
+    container: '#startpicker-container1'
+  },
+  endpicker: {
+    date: today1,
+    input: '#endpicker-input1',
+    container: '#endpicker-container1'
+  },
+  selectableRanges: [
+    [today1, new Date(today1.getFullYear() + 1, today1.getMonth(), today1.getDate())]
+  ],
+  format: 'YYYY-MM-dd',
+  // showAlways: true,
+});
+
+picker1.on('change:end', () => {
+    console.log(123);
+}); </script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
         
               </div>
             </div><!-- .section -->
@@ -681,6 +688,23 @@
   <span class="s-valid normal">사용 가능한 아이디입니다.</span>
 </div></div>
 <pre class="language-html"></pre>
+              </div>
+
+              <div class="code-area">
+                <h3>Input + File <button>코드 보기</button></h3>
+<div class="code-box"><div class="input-wrap">
+  <div class="input-btn input-file">
+    <input type="text" class="input-base" readonly />
+    <input type="file" />
+    <span class="btn-base"><a href="#">파일 찾기</a></span>
+  </div>
+</div></div>
+<script>$('.input-file input[type="file"]').on('change', function(){
+  var fileValue = this.value.split('\\');  
+  $(this).closest('.input-file').find('.input-base').val(fileValue[fileValue.length-1]);
+});</script>
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
               </div>
 
               <div class="code-area">
@@ -935,7 +959,68 @@
               </div>
             </div><!-- .section -->
 
-            </div>
+            <div class="section">
+              <h2>기타</h2>
+      
+              <div class="code-area">
+                <h3>VMS 기본 메시지 등록 아이템 <button>코드 보기</button></h3>
+<div class="code-box"><div class="vms-area">
+  <div class="item">
+    <div class="input-wrap vms">
+      <select class="select-base sm" style="width: 112px;">
+        <option value="0">오브젝트</option>
+        <option value="1">값1</option>
+        <option value="2">값2</option>
+        <option value="3">값3</option>
+      </select>
+      <div class="color-picker">
+        <a href="#" class="c-ffffff"></a>
+        <a href="#" class="c-000000"></a>
+        <a href="#" class="c-ff00ff"></a>
+        <a href="#" class="c-0000ff"></a>
+        <a href="#" class="c-00ffff "></a>
+        <a href="#" class="c-ffc000"></a>
+        <a href="#" class="c-00ff00"></a>
+        <a href="#" class="c-ff0000"></a>
+        <a href="#" class="c-signal"></a>
+      </div>
+    </div>
+    <div class="input-wrap vms">
+      <select class="select-base sm" style="width: 112px;">
+        <option value="0">고딕</option>
+        <option value="1">값1</option>
+        <option value="2">값2</option>
+        <option value="3">값3</option>
+      </select>
+      <select class="select-base sm" style="width: 78px;">
+        <option value="0">20</option>
+        <option value="1">값1</option>
+        <option value="2">값2</option>
+        <option value="3">값3</option>
+      </select>
+      <div class="font-picker">
+        <div class="item">
+          <a href="#" class="f-bold"></a>
+        </div>
+        <span class="line"></span>
+        <div class="item">
+          <a href="#" class="f-circle"></a>
+          <a href="#" class="f-triangle"></a>
+          <a href="#" class="f-square"></a>
+          <a href="#" class="f-arrow"></a>
+          <a href="#" class="f-circleline"></a>
+          <a href="#" class="f-circleban"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+<pre class="language-html"></pre>
+              </div>
+            </div><!-- .section -->
+
+
+
             </div><!-- .content-frame-->
           </div><!-- .content-inner -->
         </div><!-- .content-area -->
@@ -950,7 +1035,25 @@
         $(`[href*="#popup-anim-${qpopup}"]`).click();
       }, 250);
     }
-    
+    var _array = [];
+    $('.content-frame .section').each(function(){
+      _array.push($(this).offset().top - 170);
+      $('.lnb-list').append(`<li><a href="#" class="menu">${$(this).children('h2').text()}</a><a href="#" class="s-ico star"></a></li>`);
+    });
+    $('.lnb-list > li').on('click', function(e){
+      e.preventDefault();
+      $('.content-frame').animate({ scrollTop: _array[$(this).index()] }, 300);
+    });
+
+    $('.content-frame').on('load scroll', function(){
+      var scTop = $(this).scrollTop();
+      for (let i = 0; i < _array.length; i++) {
+        if (scTop >= _array[i] && scTop < _array[i+1]) {
+          $('.lnb-list > li.on').removeClass('on');
+          $('.lnb-list > li').eq(i).addClass('on');
+        }
+      }
+    });
   </script>
 </body>
 </html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>서부내륙고속도로 통합운영단말</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/aos.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrap" class="c-scrollbar">
+    <div id="header">
+      <h1><a href="#"><img src="img/wih-logo-io.png" alt=""></a></h1>
+      <div class="item-area">
+        <ul id="gnb" data-active="4">
+          <li><a href="#">시스템관리</a></li>
+          <li><a href="#">기초정보관리</a></li>
+          <li><a href="#">FTMS 제어</a></li>
+          <li><a href="#">운영관리</a></li>
+          <li><a href="#">상황관리</a></li>
+          <li><a href="#">모니터링</a></li>
+          <li><a href="#">이력조회</a></li>
+          <li><a href="#">통계조회</a></li>
+          <li><a href="#">현장장비 점검관리</a></li>
+          <li><a href="#">안전관리</a></li>
+          <li><a href="#">작업 및 유지보수 이력 관리</a></li>
+        </ul>
+        <ul id="utilmenu">
+          <li><a href="#" class="s-ico notify w-label new"><span>고윤정님</span></a></li>
+          <li><a href="#" class="s-ico bookmark"></a></li>
+          <li><a href="#" class="s-ico logout"></a></li>
+        </ul>
+        <div class="bookmark-area">
+          <ul>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">RWIS 제어기 기초정보관리</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기 최대 10개</span>
+              </a>
+            </li>
+          </ul>
+          <div class="bookmark-item">
+            <a href="#" class="btn-text">즐겨찾기 관리 <span class="s-ico arrow"></span></a>
+            <a href="#" class="s-ico close gray"></a>
+          </div>
+        </div><!-- .bookmark-area -->
+      </div>
+    </div><!--#header -->
+    <div id="container" class="ver-lnb">
+      <div class="left-wrap">
+        <h3 class="tit">운영관리</h3>
+        <ul class="lnb-list">
+          <li class="on">
+            <a href="#" class="menu toggle">VMS 운영</a>
+            <ul>
+              <li>
+                <a href="#" class="menu">VMS 이미지 기초정보 관리</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+              <li>
+                <a href="#" class="menu">VMS 메시지 기초정보 관리</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+              <li class="on">
+                <a href="#" class="menu">VMS 기본 메시지 관리</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+              <li>
+                <a href="#" class="menu">VMS 표출 메시지 관리</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+              <li>
+                <a href="#" class="menu">VMS 표출 스케줄 관리</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+              <li>
+                <a href="#" class="menu">VMS 대응 메시지 관리</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+              <li>
+                <a href="#" class="menu">VMS 수동 메시지 표출</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu toggle">LCS 운영</a>
+            <ul>
+              <li>
+                <a href="#" class="menu">서브 메뉴</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu toggle">DSRC 운영</a>
+            <ul>
+              <li>
+                <a href="#" class="menu">서브 메뉴</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu toggle">안개경고주의 운영</a>
+            <ul>
+              <li>
+                <a href="#" class="menu">서브 메뉴</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu toggle">갱구부 LED 운영</a>
+            <ul>
+              <li>
+                <a href="#" class="menu">서브 메뉴</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- .left-wrap -->
+      <div class="content-wrap">
+        <div class="content-top">
+          <div class="menu-area">
+            <a href="#" class="s-ico home"></a>
+            <div class="menu-swiper swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" class="label">VDS 리셋 및 파라미터 제어</a>
+                  <a href="#" class="s-ico close"></a>
+                </div>
+                <div class="swiper-slide on">
+                  <a href="#" class="label">VMS 이미지 기초정보 관리</a>
+                  <a href="#" class="s-ico close"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="navi-area">
+            <a href="" class="s-ico arrow-l"></a>
+            <a href="" class="s-ico arrow-r"></a>
+          </div>
+        </div><!-- .content-top -->
+        <div class="content-area">
+          <div class="content-inner">
+            <div class="tit-area">
+              <p class="tit">VMS 기본 메시지 등록</p>
+              <div class="btns-wrap">
+                <span class="btn-base btn-ico gray"><a href="#"><em><span class="s-ico cancel"></span>취소</em></a></span>
+                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico save2"></span>저장</em></a></span>
+              </div>
+            </div>
+            <div class="content-frame-wrap vms">
+              <div class="content-frame c-scrollbar">
+                <div class="vms-area">
+                  <div class="item">
+                    <div class="input-wrap vms">
+                      <select class="select-base sm" style="width: 112px;">
+                        <option value="0">오브젝트</option>
+                        <option value="1">값1</option>
+                        <option value="2">값2</option>
+                        <option value="3">값3</option>
+                      </select>
+                      <div class="color-picker">
+                        <a href="#" class="c-ffffff"><span></span></a>
+                        <a href="#" class="c-000000"><span></span></a>
+                        <a href="#" class="c-ff00ff"><span></span></a>
+                        <a href="#" class="c-0000ff"><span></span></a>
+                        <a href="#" class="c-00ffff "><span></span></a>
+                        <a href="#" class="c-ffc000"><span></span></a>
+                        <a href="#" class="c-00ff00"><span></span></a>
+                        <a href="#" class="c-ff0000"><span></span></a>
+                        <a href="#" class="c-signal"><span></span></a>
+                      </div>
+                    </div>
+                    <div class="input-wrap vms">
+                      <select class="select-base sm" style="width: 112px;">
+                        <option value="0">고딕</option>
+                        <option value="1">값1</option>
+                        <option value="2">값2</option>
+                        <option value="3">값3</option>
+                      </select>
+                      <select class="select-base sm" style="width: 78px;">
+                        <option value="0">20</option>
+                        <option value="1">값1</option>
+                        <option value="2">값2</option>
+                        <option value="3">값3</option>
+                      </select>
+                      <div class="font-picker">
+                        <div class="item">
+                          <a href="#" class="f-bold"><span></span></a>
+                        </div>
+                        <span class="line"></span>
+                        <div class="item">
+                          <a href="#" class="f-circle"><span></span></a>
+                          <a href="#" class="f-triangle"><span></span></a>
+                          <a href="#" class="f-square"><span></span></a>
+                          <a href="#" class="f-arrow"><span></span></a>
+                          <a href="#" class="f-circleline"><span></span></a>
+                          <a href="#" class="f-circleban"><span></span></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="inner">
+                    <ul class="grid-list">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+              </div><!-- .content-frame -->
+              <div class="content-obj">
+                <div class="tip-wrap">
+                  <em class="ico"><img src="img/ico-badge-require.png" alt=""></em>
+                  <span>필수항목</span>
+                </div>
+                <div class="content-frame c-scrollbar mt8">
+                  <div class="tb-wrap">
+                    <table summary="운영자 정보 보기" class="tb-input">
+                      <colgroup>
+                        <col width="160" />
+                        <col width="*" />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row">폼 유형 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                          <td>
+                            <ul class="chk-list">
+                              <li>
+                                <span class="chk-base">
+                                  <input type="checkbox" id="chk-form-1">
+                                  <label for="chk-form-1">텍스트</label>
+                                </span>
+                              </li>
+                              <li>
+                                <span class="chk-base">
+                                  <input type="checkbox" id="chk-form-2">
+                                  <label for="chk-form-2">이미지</label>
+                                </span>
+                              </li>
+                              <li>
+                                <span class="chk-base">
+                                  <input type="checkbox" id="chk-form-3">
+                                  <label for="chk-form-3">오브젝트</label>
+                                </span>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">폼 명 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                          <td>
+                            <div class="input-wrap">
+                              <input type="text" class="input-base" placeholder="입력" />
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">VMS 유형 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                          <td>
+                            <div class="input-wrap select-group" style="width: 408px;">
+                              <select class="select-base">
+                                <option value="0">유형 선택</option>
+                                <option value="1">값1</option>
+                                <option value="2">값2</option>
+                                <option value="3">값3</option>
+                              </select>
+                              <select class="select-base">
+                                <option value="0">세부 유형 선택</option>
+                                <option value="1">값1</option>
+                                <option value="2">값2</option>
+                                <option value="3">값3</option>
+                              </select>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">시나리오 유형 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                          <td>
+                            <select class="select-base" style="width: 408px;">
+                              <option value="0">유형 선택</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">메시지 유형 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                          <td>
+                            <select class="select-base" style="width: 408px;">
+                              <option value="0">유형 선택</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">정보 단위 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                          <td>
+                            <select class="select-base" style="width: 200px;">
+                              <option value="0">유형 선택</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">fill-in 메시지</th>
+                          <td>
+                            <div class="input-wrap">
+                              <div class="input-btn">
+                                <input type="text" class="input-base autocomplete" placeholder="변수내용 또는 메시지 키워드 입력" />
+                                <span class="btn-base auto"><a href="#">Fill-in 메시지 검색</a></span>
+                              </div>
+                              <div class="auto-layer" style="display: none;">
+                                <ul>
+                                  <li><a href="javascript:void(0);">안</a></li>
+                                  <li><a href="javascript:void(0);">안개주의</a></li>
+                                  <li><a href="javascript:void(0);">안전운전</a></li>
+                                  <li><a href="javascript:void(0);">안전띠를 착용합시다</a></li>
+                                  <li><a href="javascript:void(0);">안종IC</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <ul class="message-list" style="display: none;">
+                              <li>안종IC</li>
+                              <li>소요시간</li>
+                              <li>안전띠를착용합시다</li>
+                              <li>키둬드 자동완성 무제한 등록가능</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">직접 입력 메시지</th>
+                          <td>
+                            <div class="input-wrap">
+                              <div class="input-btn">
+                                <input type="text" class="input-base" placeholder="직접 작성할 메시지 입력" />
+                                <span class="btn-base auto"><a href="#">메시지 추가</a></span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">VMS 이미지</th>
+                          <td>
+                            <div class="input-wrap">
+                              <div class="input-btn input-file">
+                                <input type="text" class="input-base" readonly disabled placeholder="VMS 이미지 ID 표출" />
+                                <input type="file" />
+                                <span class="btn-base disabled"><a href="#">이미지찾기</a></span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">VMS 제공구간 ID</th>
+                          <td>
+                            <textarea class="textarea-base" placeholder="VMS 제공구간 ID" disabled></textarea>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div><!-- .content-frame -->
+              </div><!-- .content-obj -->
+            </div><!-- .content-frame-wrap -->
+          </div><!-- .content-inner -->
+        </div><!-- .content-area -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+
+    <div style="position: relative; height: 252px; opacity: 0;" id="grid-parent">
+      <div class="cs-ax5grid" data-ax5grid="grid1_12" data-ax5grid-config="{}" style="height: 100%"></div>
+    </div>
+
+    <div class="popup-wrap mfp-hide" id="popup-add-vms" style="width: 700px;">
+      <div class="con-wrap">
+        <h3 class="tit">VMS 폼 추가</h3>
+        <div class="add-form-area">
+          <ul class="grid-list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="search-area mt16">
+          <div class="input-wrap input-search">
+            <select class="select-base" style="width: 150px;">
+              <option value="0">선택</option>
+              <option value="1" selected>폼ID</option>
+              <option value="2">값2</option>
+              <option value="3">값3</option>
+            </select>
+            <input type="text" class="input-base" placeholder="키워드 입력" />
+            <span class="btn-base btn-search"><a href="#"><span class="s-ico search"></span></a></span>
+            <span class="btn-base btn-edit"><a href="#">폼 수정</a></span>
+          </div>
+        </div>
+        <div id="destination" class="mt16"></div>
+        <div class="total-wrap mt12">
+          <div class="total">
+            <span class="label">총</span>
+            <span class="count">50</span>
+            <span class="unit">건</span>
+          </div>
+          <div class="paging-area">
+            <a href="#" class="btn-first disabled"></a>
+            <a href="#" class="btn-prev disabled"></a>
+            <div class="paging">
+              <input class="current" type="text" value="1" />
+              <span class="line">/</span>
+              <span class="num">19</span>
+            </div>
+            <a href="#" class="btn-next"></a>
+            <a href="#" class="btn-last"></a>
+          </div>
+        </div><!-- .total-wrap -->
+        <div class="btns-wrap center mt24">
+          <span class="btn-base gray b-mfp-close"><a href="#">취소</a></span>
+          <span class="btn-base b-mfp-close"><a href="#">저장</a></span>
+        </div>
+      </div>
+    </div><!-- .popup-wrap -->
+  </div><!-- #wrap -->
+
+  <script src="js/ax5uiGridSample.js"></script>
+  <script>
+    $('.input-file input[type="file"]').on('change', function(){
+      var fileValue = this.value.split('\\');  
+      $(this).closest('.input-file').find('.input-base').val(fileValue[fileValue.length-1]);
+    });
+    
+    $('.input-base.autocomplete').on('keyup focus', function(){
+      if ($(this).val().indexOf('안') != -1) {
+        $(this).closest('.input-wrap').find('.auto-layer').show();
+      } else {
+        $(this).closest('.input-wrap').find('.auto-layer').hide();
+      }
+    });
+
+    $('.auto-layer li a').on('click', function(e){
+      e.preventDefault();
+      $('.input-base.autocomplete').val($(this).text());
+      $('.auto-layer').hide();
+    });
+
+    $('.input-wrap.vms .color-picker a[class*="c-"], .input-wrap.vms .font-picker a[class*="f-"]').on('click', function(){
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+      } else {
+        $(this).removeClass('on');
+      }
+    })
+
+    var qsample = $.urlParam('sample');
+    var qpopup = $.urlParam('popup');
+    if (qsample === 'autocomplete') {
+      $('.input-base.autocomplete').val('안 ').focus();
+    } else if (qsample === 'result') {
+      $('.message-list').show();
+    }
+    if (qpopup === 'addVms') {
+      setTimeout(() => {
+        $.magnificPopup.open(getOptionsAnim('#popup-add-vms', false));
+        $('#grid-parent').appendTo('#destination').css('opacity', 1);
+      }, 250);
+    }
+  </script>
+
+</body>
+</html>
