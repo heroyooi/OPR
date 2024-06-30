@@ -228,15 +228,15 @@
                         <option value="3">값3</option>
                       </select>
                       <div class="color-picker">
-                        <a href="#" class="c-ffffff"></a>
-                        <a href="#" class="c-000000"></a>
-                        <a href="#" class="c-ff00ff"></a>
-                        <a href="#" class="c-0000ff"></a>
-                        <a href="#" class="c-00ffff "></a>
-                        <a href="#" class="c-ffc000"></a>
-                        <a href="#" class="c-00ff00"></a>
-                        <a href="#" class="c-ff0000"></a>
-                        <a href="#" class="c-signal"></a>
+                        <a href="#" class="c-ffffff"><span></span></a>
+                        <a href="#" class="c-000000"><span></span></a>
+                        <a href="#" class="c-ff00ff"><span></span></a>
+                        <a href="#" class="c-0000ff"><span></span></a>
+                        <a href="#" class="c-00ffff "><span></span></a>
+                        <a href="#" class="c-ffc000"><span></span></a>
+                        <a href="#" class="c-00ff00"><span></span></a>
+                        <a href="#" class="c-ff0000"><span></span></a>
+                        <a href="#" class="c-signal"><span></span></a>
                       </div>
                     </div>
                     <div class="input-wrap vms">
@@ -254,16 +254,16 @@
                       </select>
                       <div class="font-picker">
                         <div class="item">
-                          <a href="#" class="f-bold"></a>
+                          <a href="#" class="f-bold"><span></span></a>
                         </div>
                         <span class="line"></span>
                         <div class="item">
-                          <a href="#" class="f-circle"></a>
-                          <a href="#" class="f-triangle"></a>
-                          <a href="#" class="f-square"></a>
-                          <a href="#" class="f-arrow"></a>
-                          <a href="#" class="f-circleline"></a>
-                          <a href="#" class="f-circleban"></a>
+                          <a href="#" class="f-circle"><span></span></a>
+                          <a href="#" class="f-triangle"><span></span></a>
+                          <a href="#" class="f-square"><span></span></a>
+                          <a href="#" class="f-arrow"><span></span></a>
+                          <a href="#" class="f-circleline"><span></span></a>
+                          <a href="#" class="f-circleban"><span></span></a>
                         </div>
                       </div>
                     </div>
@@ -473,6 +473,20 @@
           $(this).closest('.input-wrap').find('.auto-layer').show();
         } else {
           $(this).closest('.input-wrap').find('.auto-layer').hide();
+        }
+      });
+
+      $('.auto-layer li a').on('click', function(e){
+        e.preventDefault();
+        $('.input-base.autocomplete').val($(this).text());
+        $('.auto-layer').hide();
+      });
+
+      $('.input-wrap.vms .color-picker a[class*="c-"], .input-wrap.vms .font-picker a[class*="f-"]').on('click', function(){
+        if (!$(this).hasClass('on')) {
+          $(this).addClass('on');
+        } else {
+          $(this).removeClass('on');
         }
       });
 
