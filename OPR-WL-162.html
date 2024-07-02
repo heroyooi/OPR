@@ -269,27 +269,51 @@
                     </div>
                   </div>
                   <div class="inner">
-                    <ul class="grid-list">
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
+                    <ul class="grid-list type-2x10">
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                    </ul>
+
+                    <ul class="grid-list type-3x13" style="display: none;">
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                    </ul>
+
+                    <ul class="grid-list type-4x25" style="display: none;">
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                    </ul>
+
+                    <ul class="grid-list type-6x7" style="display: none;">
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                    </ul>
+
+                    <ul class="grid-list type-9x10" style="display: none;">
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+                    </ul>
+
+                    <ul class="grid-list type-1x8" style="display: none;">
+                      <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li> 
+                    </ul>
+
+                    <ul class="grid-list type-1x2" style="display: none;">
+                      <li></li><li></li>
                     </ul>
                   </div>
                 </div>
@@ -558,8 +582,13 @@
       }
     });
 
+    var qtype = $.urlParam('type');
     var qsample = $.urlParam('sample');
     var qpopup = $.urlParam('popup');
+    if (qtype) {
+      $('.grid-list').hide();
+      $('.grid-list.type-'+qtype).show();
+    }
     if (qsample === 'autocomplete') {
       $('.input-base.autocomplete').val('안 ').focus();
     } else if (qsample === 'result') {

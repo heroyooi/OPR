@@ -52,6 +52,7 @@ var GUI = window.GUI || (function(){
       var _ = $this;
       var csSelectUI = _.find('.select-box');
       var tabUI = _.find('.tab-base');
+      var inputUI = _.find('.input-base');
       var countUI = _.find('.counter-base');
       var popupUI = _.find('.popup-wrap');
       var csPopupUI = _.find('.cs-popup-wrap');
@@ -105,6 +106,14 @@ var GUI = window.GUI || (function(){
       //   menuSwiper.slideNext();
       // });
 
+      if (inputUI.length) {
+        inputUI.each(function(){
+          if ($(this).val() != '') {
+            $(this).addClass('is-value')
+          }
+        })
+      }
+
       $('.input-wrap .s-ico.password').on('click', function(){
         var _input = $(this).closest('.input-wrap');
         if (!_input.hasClass('active')) {
@@ -114,7 +123,6 @@ var GUI = window.GUI || (function(){
           _input.removeClass('active');
           _input.find('.input-base').attr('type', 'password').focus();
         }
-        
       });
 
       // $('.lnb-list .s-ico.star').on('click', function(){

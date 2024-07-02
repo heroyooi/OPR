@@ -201,6 +201,9 @@
 .input-base.w-full{width:100%;}
 .input-base:focus{border-color:#00bbfe;}
 .input-base:disabled{border: solid 1px #3e4157;background-color: #34374c;}
+.input-base.is-value:disabled{background-color: #3e4157;}
+.input-base.is-value:disabled:focus{background-color:rgba(26, 194, 255, 0.15);border:1px solid #3e4157;}
+
 .s-valid{font-size:13px;font-weight:600;line-height:20px;color:#ef4345;display:block;}
 .s-valid.normal{color:#b2bbce;}
 .input-base.error{border-color:#ef4345;}

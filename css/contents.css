@@ -44,9 +44,36 @@
 .vms-area > .item .input-wrap:first-child{margin-top:0;}
 .vms-area > .inner{padding:16px;min-height:520px;display:flex;justify-content:center;align-items:center;}
 .grid-list{display:flex;border:1px solid #34374c;flex-wrap:wrap;width:100%;}
-.grid-list li{width:10%;height:50px;background-color:#000;border-left:1px solid #34374c;border-top:1px solid #34374c;}
-.grid-list li:nth-child(10n + 1){border-left:0;}
-.grid-list li:nth-child(n+0):nth-child(-n+10){border-top:0;}
+.grid-list li{background-color:#000;border-left:1px solid #34374c;border-top:1px solid #34374c;}
+
+.grid-list.type-2x10 li{height:50px;width:10%;}
+.grid-list.type-2x10 li:nth-child(10n + 1){border-left:0;}
+.grid-list.type-2x10 li:nth-child(n+0):nth-child(-n+10){border-top:0;}
+
+.grid-list.type-3x13 li{height:37px;width:7.6923%;}
+.grid-list.type-3x13 li:nth-child(13n + 1){border-left:0;}
+.grid-list.type-3x13 li:nth-child(n+0):nth-child(-n+13){border-top:0;}
+
+.grid-list.type-4x25 li{height:20px;width:4%;}
+.grid-list.type-4x25 li:nth-child(25n + 1){border-left:0;}
+.grid-list.type-4x25 li:nth-child(n+0):nth-child(-n+25){border-top:0;}
+
+.grid-list.type-6x7 li{height:70px;width:14.2857%;}
+.grid-list.type-6x7 li:nth-child(7n + 1){border-left:0;}
+.grid-list.type-6x7 li:nth-child(n+0):nth-child(-n+7){border-top:0;}
+
+.grid-list.type-9x10 li{height:50px;width:10%;}
+.grid-list.type-9x10 li:nth-child(10n + 1){border-left:0;}
+.grid-list.type-9x10 li:nth-child(n+0):nth-child(-n+10){border-top:0;}
+
+.grid-list.type-1x8 li{height:60px;width:12.5%;}
+.grid-list.type-1x8 li:nth-child(8n + 1){border-left:0;}
+.grid-list.type-1x8 li:nth-child(n+0):nth-child(-n+8){border-top:0;}
+
+.grid-list.type-1x2 li{height:244px;width:50%;}
+.grid-list.type-1x2 li:nth-child(2n + 1){border-left:0;}
+.grid-list.type-1x2 li:nth-child(n+0):nth-child(-n+2){border-top:0;}
+
 .add-form-area{background-color:#212332;padding:16px;border-radius:4px;height:272px;display:flex;justify-content:center;align-items:center;}
 .add-form-area .grid-list{width:240px;}
 .add-form-area .grid-list li{height:24px;}
