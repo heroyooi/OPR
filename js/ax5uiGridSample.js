@@ -57,30 +57,39 @@ var rowClass = function(item, type) {
 }
 
 var checkColumns = {
+  // key: "isChecked",
+  // label: `<span class="chk-base chk-only">
+  //   <input type="checkbox" id="chk-all" />
+  //   <label for="chk-all">전체 체크박스</label>
+  // </span>`,
+  // width: 50,
+  // sortable: false,
+  // align: "center",
+  // // editor: {
+  //   //   type: "checkbox",
+  //   //   config: { height: 17, trueValue: "Y", falseValue: "N" }
+  //   // },
+  // formatter: function() {
+  //   if (this.item.isChecked === 'Y') {
+  //     return `<span class="chk-base chk-only">
+  //       <input type="checkbox" id="chk-${this.item.__index}" class="row-checkbox" checked />
+  //       <label for="chk-${this.item.__index}">체크박스${this.item.__index}</label>
+  //     </span>`;
+  //   } else {
+  //     return `<span class="chk-base chk-only">
+  //       <input type="checkbox" id="chk-${this.item.__index}" class="row-checkbox" />
+  //       <label for="chk-${this.item.__index}">체크박스${this.item.__index}</label>
+  //     </span>`;
+  //   }
+  // }
   key: "isChecked",
-  label: `<span class="chk-base chk-only">
-    <input type="checkbox" id="chk-all" />
-    <label for="chk-all">전체 체크박스</label>
-  </span>`,
+  label: `<input type="checkbox" id="chk-all" />`,
   width: 50,
   sortable: false,
   align: "center",
-  // editor: {
-    //   type: "checkbox",
-    //   config: { height: 17, trueValue: "Y", falseValue: "N" }
-    // },
-  formatter: function() {
-    if (this.item.isChecked === 'Y') {
-      return `<span class="chk-base chk-only">
-        <input type="checkbox" id="chk-${this.item.__index}" class="row-checkbox" checked />
-        <label for="chk-${this.item.__index}">체크박스${this.item.__index}</label>
-      </span>`;
-    } else {
-      return `<span class="chk-base chk-only">
-        <input type="checkbox" id="chk-${this.item.__index}" class="row-checkbox" />
-        <label for="chk-${this.item.__index}">체크박스${this.item.__index}</label>
-      </span>`;
-    }
+  editor: {
+    type: "checkbox",
+    config: { height: 20, trueValue: "Y", falseValue: "N" }
   }
 };
 

@@ -340,6 +340,16 @@ input[type=number]::-webkit-outer-spin-button {
 .cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="body"] [data-ax5grid-panel][data-ax5grid-panel="bottom-body"],
 .cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="body"] [data-ax5grid-panel][data-ax5grid-panel="bottom-left-body"]{border-top:1px solid #e7eaee;}
 
+/* ax5grid - checkbox (built-in) */
+.cs-ax5grid[data-ax5grid] input[type="radio"], .cs-ax5grid[data-ax5grid] input[type="checkbox"]{margin:0;}
+.cs-ax5grid[data-ax5grid] input[type="checkbox"]{width:20px;height:20px;-webkit-appearance:none;}
+.cs-ax5grid[data-ax5grid] input[type="checkbox"]:focus{outline:none;}
+.cs-ax5grid[data-ax5grid] input[type="checkbox"],
+.cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="body"] [data-ax5grid-panel] table tr td [data-ax5grid-cellHolder] [data-ax5grid-editor="checkbox"]{background:url(../img/check-def.png) 0 0 no-repeat;border:0;vertical-align:middle;}
+.cs-ax5grid[data-ax5grid] input[type="checkbox"]:checked,
+.cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="body"] [data-ax5grid-panel] table tr td [data-ax5grid-cellHolder] [data-ax5grid-editor="checkbox"][data-ax5grid-checked="true"]{background:url(../img/check-sel.png) 0 0 no-repeat;}
+.cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="body"] [data-ax5grid-panel] table tr td [data-ax5grid-cellHolder] [data-ax5grid-editor="checkbox"][data-ax5grid-checked="true"]:after{display:none;}
+
 /* ax5grid - bug */
 .cs-ax5grid.tp2[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="header"]{background-image: none;}
 .cs-ax5grid.tp2[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="header"] [data-ax5grid-panel]{width:300px !important;}
