@@ -629,7 +629,7 @@ input[type=number]::-webkit-outer-spin-button {
 .tb-input > tbody > tr > th.bb{border-bottom:1px solid #34364c;}
 .tb-input > tbody > tr > th em.ico{display:inline-block;vertical-align:middle;position: relative;top:5px;}
 .tb-input > tbody > tr > th em.primary{font-weight:inherit;color:#19b2e8;}
-.tb-input > tbody > tr > td{background-color:#34374c;color:#fff;border-left:1px solid #212332;}
+.tb-input > tbody > tr > td{background-color:#34374c;color:#fff;border-left:1px solid #212332;height:44px;}
 .tb-input.tb-center > tbody > tr > td{text-align:center;}
 .tb-input.tp2 > tbody > tr > th{background-color:#34374c;padding:8px 12px;}
 .tb-input.tp2 > tbody > tr > td{border-left:0;padding:8px 12px 8px 8px;}
@@ -657,7 +657,7 @@ input[type=number]::-webkit-outer-spin-button {
 .tb-div-foot{display:flex;}
 
 /* counter */
-.counter-base{display:inline-block;font-size:0;padding:8.5px 16px;background-color: #3e4157;border-radius:4px;position:relative;vertical-align:middle;border:1px solid #495367;width:110px;}
+.counter-base{display:inline-block;font-size:0;padding:9px 16px 8px;background-color: #3e4157;border-radius:4px;position:relative;vertical-align:middle;border:1px solid #495367;width:110px;}
 .counter-base input{font-size:14px;font-weight:600;color:#778298;background-color:transparent;border:0;width:100%;}
 .counter-base input.active{color:#b2bbce;}
 .counter-base button{font-size:0;background-position:0 0;background-repeat:no-repeat;width:16px;height:9px;position:absolute;right:8px;}

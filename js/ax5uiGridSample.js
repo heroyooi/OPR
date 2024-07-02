@@ -275,6 +275,12 @@ var data1_12 = [
   { isChecked: "N", column1: '41', column2: 'VMS-FORM-0050', column3: '텍스트+오브젝트', column4: '도형-예산구간소통정보', column5: '문자식 2단 10열' },
 ];
 
+var data1_13 = [
+  { isChecked: "N", column1: '3', column2: '아산만 방조제', column3: 'FOGW-0003', column4: '관심', column5: '250m초과', column6: '규정속도', column7: 'OFF', column8: 'OFF', column9: '점멸', column10: '자동' },
+  { isChecked: "N", column1: '2', column2: '아산만 방조제', column3: 'FOGW-0003', column4: '주의', column5: '250m초과', column6: '규정속도', column7: 'OFF', column8: 'OFF', column9: '점멸', column10: '자동' },
+  { isChecked: "N", column1: '1', column2: '아산만 방조제', column3: 'FOGW-0003', column4: '경계', column5: '250m초과', column6: '규정속도', column7: 'OFF', column8: 'OFF', column9: '점멸', column10: '자동' },
+];
+
 var columns1 = [
   checkColumns,
   {
@@ -933,6 +939,96 @@ var columns1_12 = [
   },
 ];
 
+var columns1_13 = [
+  checkColumns,
+  {
+    key: 'column1',
+    label: '순번',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column2',
+    label: 'ID',
+    width: 240,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column3',
+    label: '지점명',
+    width: 240,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column4',
+    label: '단계',
+    width: 120,
+    align: "center",
+    sortable: true,
+    formatter: function() {
+      if (this.value == '경계') {
+        return '<span class="st-box red">3: ' + this.value + '</span>';
+      } else if (this.value == '주의') {
+        return '<span class="st-box orange">2: ' + this.value + '</span>';
+      } else if (this.value == '관심') {
+        return '<span class="st-box green">1: ' + this.value + '</span>';
+      }
+    }
+  },
+  {
+    key: 'column5',
+    label: '시정거리',
+    width: 120,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column6',
+    label: '속도제한',
+    width: 120,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column7',
+    label: '통행제한',
+    width: 120,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column8',
+    label: '사이렌',
+    width: 120,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column9',
+    label: '안내방송',
+    width: 120,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column10',
+    label: '안개등',
+    width: 120,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column10',
+    label: '구분',
+    width: 120,
+    align: "center",
+    sortable: true,
+  },
+];
+
 var data2 = [
   { column1: '로우데이터', column2: '로우데이터', column3: '로우데이터', state: 'red', column4: '로우 데이터' },
   { column1: '로우데이터', column2: '로우데이터', column3: '라벨', column3Type: 'label', state: 'orange', column4: '로우 데이터' },
@@ -1241,12 +1337,13 @@ $(document.body).ready(function() {
   var $grid1_10 = $('[data-ax5grid="grid1_10"]');
   var $grid1_11 = $('[data-ax5grid="grid1_11"]');
   var $grid1_12 = $('[data-ax5grid="grid1_12"]');
+  var $grid1_13 = $('[data-ax5grid="grid1_13"]');
   
   var $grid2 = $('[data-ax5grid="grid2"]');
   var $grid3 = $('[data-ax5grid="grid3"]');
   var $grid4 = $('[data-ax5grid="grid4"]');
 
-  if ($grid1.length || $grid1_2.length || $grid1_3.length || $grid1_4.length || $grid1_5.length || $grid1_6.length || $grid1_7.length || $grid1_8.length || $grid1_9.length || $grid1_10.length || $grid1_11.length || $grid1_12.length) {
+  if ($grid1.length || $grid1_2.length || $grid1_3.length || $grid1_4.length || $grid1_5.length || $grid1_6.length || $grid1_7.length || $grid1_8.length || $grid1_9.length || $grid1_10.length || $grid1_11.length || $grid1_12.length || $grid1_13.length) {
     if ($grid1.length) {
       new ax5.ui.grid(getOptions($grid1, columns1)).setData(data1);
     } else if ($grid1_2.length) {
@@ -1271,6 +1368,8 @@ $(document.body).ready(function() {
       new ax5.ui.grid(getOptions($grid1_11, columns1_11)).setData(data1_11);
     } else if ($grid1_12.length) {
       new ax5.ui.grid(getOptions($grid1_12, columns1_12)).setData(data1_12);
+    } else if ($grid1_13.length) {
+      new ax5.ui.grid(getOptions($grid1_13, columns1_13)).setData(data1_13);
     }
 
     $(document).on('click', '#chk-all', function() {
