@@ -159,7 +159,37 @@ var GUI = window.GUI || (function(){
       $('.register-wrap li .close').on('click', function(e){
         e.preventDefault();
         $(this).closest('li').remove();
-      })
+      });
+
+      $('.map-area .s-ico').each(function(index){
+        // $(this).data('ico', index);
+        var main = 1;
+        var sub = 1;
+        var $info = $(this).find('.s-info');
+        
+        function icoHide() {
+          if (main && sub) {
+            $info.hide();
+          }
+        }
+        
+        $(this).on('mouseenter', function(){
+          main = 0;
+          $('.map-area .s-info').hide();
+          $info.show();
+        });
+        $info.on('mouseenter', function(){
+          sub = 0;
+        });
+        $(this).on('mouseleave', function(){
+          main = 1;
+          setTimeout(icoHide, 300);
+        });
+        $info.on('mouseleave', function(){
+          sub = 1;
+          setTimeout(icoHide, 300);
+        });
+      });
 
       if (tabUI.length) {
         tabUI.each(function(){

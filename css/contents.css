@@ -37,3 +37,16 @@
 .chk-manage{border-radius:4px;overflow:hidden;min-height:100%;background-color:#34374c;}
 .chk-manage > li > dl > dt{font-size:14px;line-height:21px;padding:5.5px 10px;text-align:center;background-color:#3e4157;border-bottom:1px solid #2a2d3e;color:#778298;}
 .chk-manage > li > dl > dd{padding:4px 0;} 
+
+.vms-area{background-color:#212332;border-radius:4px;}
+.vms-area > .item{padding:16px;border-bottom:1px solid #2a2d3e;}
+.vms-area > .item .input-wrap{margin-top:12px;}
+.vms-area > .item .input-wrap:first-child{margin-top:0;}
+.vms-area > .inner{padding:16px;min-height:520px;display:flex;justify-content:center;align-items:center;}
+.grid-list{display:flex;border:1px solid #34374c;flex-wrap:wrap;width:100%;}
+.grid-list li{width:10%;height:50px;background-color:#000;border-left:1px solid #34374c;border-top:1px solid #34374c;}
+.grid-list li:nth-child(10n + 1){border-left:0;}
+.grid-list li:nth-child(n+0):nth-child(-n+10){border-top:0;}
+.add-form-area{background-color:#212332;padding:16px;border-radius:4px;height:272px;display:flex;justify-content:center;align-items:center;}
+.add-form-area .grid-list{width:240px;}
+.add-form-area .grid-list li{height:24px;}
