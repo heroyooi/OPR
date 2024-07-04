@@ -155,6 +155,7 @@
 .input-wrap.flex{display:flex;justify-content:space-between;align-items:center;}
 .input-wrap.flex .input-l{display:flex;align-items:center;}
 .input-wrap.select-group{display:flex;gap:0 8px;}
+.input-wrap.flex .input-l .radio-base + .counter-base{margin-left:16px;}
 
 .input-wrap.vms{display:flex;gap:0 8px;align-items:center;}
 .input-wrap.vms .color-picker{display:flex;gap:0 2px;padding:6px 8px;background-color:#34374c;border-radius:4px;}
@@ -475,9 +476,11 @@ input[type=number]::-webkit-outer-spin-button {
 .btns-wrap{display:flex;gap:0 8px;}
 .btns-wrap.center{justify-content:center;}
 .btns-wrap.right{justify-content:end;}
-.btn-switch{display:inline-block;width:36px;height:18px;background:url(../img/ico-switch-off.png) 0 0 no-repeat;vertical-align:middle;}
+.btn-switch{display:inline-block;width:36px;height:18px;background:url(../img/ico-switch-off.png) 0 0 no-repeat;vertical-align:middle;cursor:pointer;}
 .btn-switch.on{background:url(../img/ico-switch-on.png) 0 0 no-repeat;}
 .btn-base.btn-search > *{padding:8px;}
+.switch-area{display:flex;align-items:center;gap:0 8px;}
+.switch-area .label{font-size:14px;font-weight:600;line-height:1.5;color:#b2bbce;}
 
 .progress-area{width:100%;height:4px;background-color:#34374c;position:absolute;left:0;bottom:0;}
 .progress-area .gage{display:inline-block;position: absolute;background-color:#00bbfe;height:100%;}
@@ -599,6 +602,7 @@ input[type=number]::-webkit-outer-spin-button {
 .popup-wrap button.mfp-arrow{width:24px;height:24px;background:url(../img/ico-24-close.png) 50% 50% no-repeat;top:20px;right:20px;font-size:0;}
 [class*=popup-wrap] .con-wrap{position:relative;color:#fff;padding:20px;}
 [class*=popup-wrap] .con-wrap .tit{font-size:16px;font-weight:bold;color:#b2bbce;line-height:1.5;margin-bottom:24px;}
+[class*=popup-wrap] .con-wrap .tit em{font-weight:inherit;color:#19b2e8;}
 
 .info-list > li{background-color: #34374c;border-radius:4px;color:#778298;font-size:14px;line-height:1.5;font-weight:600;}
 .info-list > li dt{padding:11.5px 12px;border-bottom:1px solid #212332;display:flex;justify-content:space-between;align-items:center;}

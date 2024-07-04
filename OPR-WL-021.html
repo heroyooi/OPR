@@ -430,15 +430,15 @@
   
   <script>
     $('.tb-list .btn-switch').on('click', function(e){
-        e.preventDefault();
-        if (!$(this).hasClass('on')) {
-          $(this).addClass('on');
-          $(this).closest('tr').find('td .txt').addClass('on');
-        } else {
-          $(this).removeClass('on');
-          $(this).closest('tr').find('td .txt').removeClass('on');
-        }
-      });
+      e.preventDefault();
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+        $(this).closest('tr').find('td .txt').addClass('on');
+      } else {
+        $(this).removeClass('on');
+        $(this).closest('tr').find('td .txt').removeClass('on');
+      }
+    });
   </script>
 </body>
 </html>

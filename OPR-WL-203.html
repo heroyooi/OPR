@@ -248,25 +248,119 @@
                           <td>230m</td>
                         </tr>
                         <tr>
-                          <th scope="row">단계별 안개등 광도</th>
+                          <th scope="row">운영구분 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                          <td>
+                            <div class="switch-area">
+                              <span class="label">수동</span>
+                              <span class="btn-switch on"></span>
+                              <span class="label">자동</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row" rowspan="4">단계별 안개등 광도 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                          <td>
+                            <span class="radio-base">
+                              <input type="radio" id="radio-type-1" name="radio-type" />
+                              <label for="radio-type-1">관심</label>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
                           <td>
                             <div class="input-wrap flex">
                               <div class="input-l">
+                                <span class="radio-base">
+                                  <input type="radio" id="radio-type-2" name="radio-type" />
+                                  <label for="radio-type-2">주의</label>
+                                </span>
                                 <span class="counter-base" style="width: 180px;">
                                   <button class="btn-minus">-</button>
-                                  <input type="text" value="30" readonly />
+                                  <input type="text" value="80" readonly />
                                   <button class="btn-plus">+</button>
                                 </span>
-                                <span class="unit">초</span>
                               </div>
                               <div class="input-r">
-                                <span class="unit">기본값: 30초</span>
+                                <span class="unit">90 cd 이상</span>
                               </div>
                             </div>
                           </td>
                         </tr>
-
-                        
+                        <tr>
+                          <td>
+                            <div class="input-wrap flex">
+                              <div class="input-l">
+                                <span class="radio-base">
+                                  <input type="radio" id="radio-type-3" name="radio-type" />
+                                  <label for="radio-type-3">경계</label>
+                                </span>
+                                <span class="counter-base" style="width: 180px;">
+                                  <button class="btn-minus">-</button>
+                                  <input type="text" value="540" readonly />
+                                  <button class="btn-plus">+</button>
+                                </span>
+                              </div>
+                              <div class="input-r">
+                                <span class="unit">540 cd 이상</span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="input-wrap flex">
+                              <div class="input-l">
+                                <span class="radio-base">
+                                  <input type="radio" id="radio-type-4" name="radio-type" />
+                                  <label for="radio-type-4">심각</label>
+                                </span>
+                                <span class="counter-base" style="width: 180px;">
+                                  <button class="btn-minus">-</button>
+                                  <input type="text" value="3200" readonly />
+                                  <button class="btn-plus">+</button>
+                                </span>
+                              </div>
+                              <div class="input-r">
+                                <span class="unit">3200 cd 이상</span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">운영수단 선택 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                          <td>
+                            <ul class="chk-list">
+                              <li>
+                                <span class="chk-base">
+                                  <input type="checkbox" id="chk-type-1" checked />
+                                  <label for="chk-type-1">사이렌</label>
+                                </span>
+                              </li>
+                              <li>
+                                <span class="chk-base">
+                                  <input type="checkbox" id="chk-type-2" checked />
+                                  <label for="chk-type-2">안내방송</label>
+                                </span>
+                              </li>
+                              <li>
+                                <span class="chk-base">
+                                  <input type="checkbox" id="chk-type-3" />
+                                  <label for="chk-type-3">안개등</label>
+                                </span>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">안개등 점등/점멸</th>
+                          <td>
+                            <div class="switch-area">
+                              <span class="label">점멸</span>
+                              <span class="btn-switch on"></span>
+                              <span class="label">점등</span>
+                            </div>
+                          </td>
+                        </tr>
                       </tbody>
                     </table>
                   </div>
@@ -305,6 +399,15 @@
     </div><!-- .popup-wrap -->
   </div><!-- #wrap -->
   
-  <script src="js/ax5uiGridSample.js"></script>
+  <script>
+    $('.btn-switch').on('click', function(e){
+      e.preventDefault();
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+      } else {
+        $(this).removeClass('on');
+      }
+    });
+  </script>
 </body>
 </html>

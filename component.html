@@ -321,6 +321,37 @@
             </div><!-- .section -->
 
             <div class="section">
+              <h2>Switch</h2>
+      
+              <div class="code-area">
+                <h3>기본형 <button>코드 보기</button></h3>
+<div class="code-box"><span class="btn-switch on"></span></div>
+
+<pre class="language-html"></pre>
+              </div>
+
+              <div class="code-area">
+                <h3>라벨형 <button>코드 보기</button></h3>
+<div class="code-box"><div class="switch-area">
+  <span class="label">수동</span>
+  <span class="btn-switch on"></span>
+  <span class="label">자동</span>
+</div></div>
+<script>$('.btn-switch').on('click', function(e){
+  e.preventDefault();
+  if (!$(this).hasClass('on')) {
+    $(this).addClass('on');
+  } else {
+    $(this).removeClass('on');
+  }
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+              </div>
+            </div><!-- .section -->
+
+            <div class="section">
               <h2>Input - Counter</h2>
 
               <div class="code-area">
@@ -974,15 +1005,15 @@ picker1.on('change:end', () => {
         <option value="3">값3</option>
       </select>
       <div class="color-picker">
-        <a href="#" class="c-ffffff"></a>
-        <a href="#" class="c-000000"></a>
-        <a href="#" class="c-ff00ff"></a>
-        <a href="#" class="c-0000ff"></a>
-        <a href="#" class="c-00ffff "></a>
-        <a href="#" class="c-ffc000"></a>
-        <a href="#" class="c-00ff00"></a>
-        <a href="#" class="c-ff0000"></a>
-        <a href="#" class="c-signal"></a>
+        <a href="#" class="c-ffffff"><span></span></a>
+        <a href="#" class="c-000000"><span></span></a>
+        <a href="#" class="c-ff00ff"><span></span></a>
+        <a href="#" class="c-0000ff"><span></span></a>
+        <a href="#" class="c-00ffff "><span></span></a>
+        <a href="#" class="c-ffc000"><span></span></a>
+        <a href="#" class="c-00ff00"><span></span></a>
+        <a href="#" class="c-ff0000"><span></span></a>
+        <a href="#" class="c-signal"><span></span></a>
       </div>
     </div>
     <div class="input-wrap vms">
@@ -1000,16 +1031,16 @@ picker1.on('change:end', () => {
       </select>
       <div class="font-picker">
         <div class="item">
-          <a href="#" class="f-bold"></a>
+          <a href="#" class="f-bold"><span></span></a>
         </div>
         <span class="line"></span>
         <div class="item">
-          <a href="#" class="f-circle"></a>
-          <a href="#" class="f-triangle"></a>
-          <a href="#" class="f-square"></a>
-          <a href="#" class="f-arrow"></a>
-          <a href="#" class="f-circleline"></a>
-          <a href="#" class="f-circleban"></a>
+          <a href="#" class="f-circle"><span></span></a>
+          <a href="#" class="f-triangle"><span></span></a>
+          <a href="#" class="f-square"><span></span></a>
+          <a href="#" class="f-arrow"><span></span></a>
+          <a href="#" class="f-circleline"><span></span></a>
+          <a href="#" class="f-circleban"><span></span></a>
         </div>
       </div>
     </div>

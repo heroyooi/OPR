@@ -77,3 +77,14 @@
 .add-form-area{background-color:#212332;padding:16px;border-radius:4px;height:272px;display:flex;justify-content:center;align-items:center;}
 .add-form-area .grid-list{width:240px;}
 .add-form-area .grid-list li{height:24px;}
+
+
+.record-list > li{display:flex;padding:19px 31px;border-radius:4px;background-color:#34374c;border: 1px solid #34374c;margin-top:8px;gap:0 24px;font-size:14px;font-weight:600;line-height:1.5;align-items:center;cursor:pointer;}
+.record-list > li:first-child{margin-top:0;}
+.record-list > li:hover, .record-list > li.on{border: 1px solid #1ac2ff;
+  background-color: #304c67;}
+.record-list > li .label{padding:4px 12px;border-radius: 4px;display:block;flex-shrink:0;height:29px;}
+.record-list > li .label.type-1{background-color: rgba(26, 194, 255, 0.5);}
+.record-list > li .label.type-2{background-color: rgba(11, 190, 53, 0.3);}
+.record-list > li .result > span{display:block;}
+.record-list > li .result .local{font-size:16px;font-weight:700;margin-top:4px;}

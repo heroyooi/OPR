@@ -281,6 +281,19 @@ var data1_13 = [
   { isChecked: "N", column1: '1', column2: '아산만 방조제', column3: 'FOGW-0003', column4: '경계', column5: '250m초과', column6: '규정속도', column7: 'OFF', column8: 'OFF', column9: '점멸', column10: '자동' },
 ];
 
+var data1_14 = [
+  { isChecked: "N", column1: '50', column2: '20241025-01-S-002', column3: '교통사고', column4: '익산', column5: '임시저장', column6: '2024-10-25 14:23:35' },
+  { isChecked: "N", column1: '49', column2: '20241025-01-S-002', column3: '교통사고', column4: '익산', column5: '접수', column6: '2024-10-25 14:23:35' },
+  { isChecked: "N", column1: '48', column2: '20241025-01-S-002', column3: '교통사고', column4: '익산', column5: '접수', column6: '2024-10-25 14:23:35' },
+  { isChecked: "N", column1: '47', column2: '20241025-01-S-002', column3: '교통사고', column4: '평택', column5: '접수', column6: '2024-10-25 14:23:35' },
+  { isChecked: "N", column1: '46', column2: '20241025-01-S-002', column3: '교통사고', column4: '평택', column5: '접수', column6: '2024-10-25 14:23:35' },
+  { isChecked: "N", column1: '45', column2: '20241025-01-S-002', column3: '교통사고', column4: '평택', column5: '접수', column6: '2024-10-25 14:23:35' },
+  { isChecked: "N", column1: '44', column2: '20241025-01-S-002', column3: '교통사고', column4: '평택', column5: '접수', column6: '2024-10-25 14:23:35' },
+  { isChecked: "N", column1: '43', column2: '20241025-01-S-002', column3: '교통사고', column4: '평택', column5: '접수', column6: '2024-10-25 14:23:35' },
+  { isChecked: "N", column1: '42', column2: '20241025-01-S-002', column3: '교통사고', column4: '평택', column5: '접수', column6: '2024-10-25 14:23:35' },
+  { isChecked: "N", column1: '41', column2: '20241025-01-S-002', column3: '교통사고', column4: '평택', column5: '접수', column6: '2024-10-25 14:23:35' },
+];
+
 var columns1 = [
   checkColumns,
   {
@@ -1028,6 +1041,51 @@ var columns1_13 = [
     sortable: true,
   },
 ];
+var columns1_14 = [
+  checkColumns,
+  {
+    key: 'column1',
+    label: '순번',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column2',
+    label: '돌발 ID',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column3',
+    label: '돌발 유형',
+    width: 150,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column4',
+    label: '방향',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column5',
+    label: '진행상태',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column6',
+    label: '발생 일시',
+    width: '*',
+    align: "center",
+    sortable: true,
+  },
+];
 
 var data2 = [
   { column1: '로우데이터', column2: '로우데이터', column3: '로우데이터', state: 'red', column4: '로우 데이터' },
@@ -1338,12 +1396,13 @@ $(document.body).ready(function() {
   var $grid1_11 = $('[data-ax5grid="grid1_11"]');
   var $grid1_12 = $('[data-ax5grid="grid1_12"]');
   var $grid1_13 = $('[data-ax5grid="grid1_13"]');
+  var $grid1_14 = $('[data-ax5grid="grid1_14"]');
   
   var $grid2 = $('[data-ax5grid="grid2"]');
   var $grid3 = $('[data-ax5grid="grid3"]');
   var $grid4 = $('[data-ax5grid="grid4"]');
 
-  if ($grid1.length || $grid1_2.length || $grid1_3.length || $grid1_4.length || $grid1_5.length || $grid1_6.length || $grid1_7.length || $grid1_8.length || $grid1_9.length || $grid1_10.length || $grid1_11.length || $grid1_12.length || $grid1_13.length) {
+  if ($grid1.length || $grid1_2.length || $grid1_3.length || $grid1_4.length || $grid1_5.length || $grid1_6.length || $grid1_7.length || $grid1_8.length || $grid1_9.length || $grid1_10.length || $grid1_11.length || $grid1_12.length || $grid1_13.length || $grid1_14.length) {
     if ($grid1.length) {
       new ax5.ui.grid(getOptions($grid1, columns1)).setData(data1);
     } else if ($grid1_2.length) {
@@ -1370,6 +1429,8 @@ $(document.body).ready(function() {
       new ax5.ui.grid(getOptions($grid1_12, columns1_12)).setData(data1_12);
     } else if ($grid1_13.length) {
       new ax5.ui.grid(getOptions($grid1_13, columns1_13)).setData(data1_13);
+    } else if ($grid1_14.length) {
+      new ax5.ui.grid(getOptions($grid1_14, columns1_14)).setData(data1_14);
     }
 
     $(document).on('click', '#chk-all', function() {
