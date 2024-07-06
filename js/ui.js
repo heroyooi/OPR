@@ -57,6 +57,18 @@ var GUI = window.GUI || (function(){
       var popupUI = _.find('.popup-wrap');
       var csPopupUI = _.find('.cs-popup-wrap');
 
+      $('.btns-wrap.evt .btn-base').on('click', function(e){
+        e.preventDefault();
+        if ($(this).hasClass('disabled')) {
+          return;
+        }
+        if (!$(this).hasClass('on')) {
+          $(this).addClass('on');
+        } else {
+          $(this).removeClass('on');
+        }
+      });
+
       if ($('#gnb').data('active')) {
         var activeIndex = $('#gnb').data('active');
         $('#gnb > li').eq(activeIndex - 1).addClass('on');
@@ -381,7 +393,7 @@ var GUI = window.GUI || (function(){
 
         // OPR-WL-206.html?popup=record
         $popup_frame.each(function(){
-          $(this).css('height', $(window).height() - _pop_pd - _pop_title - _pop_btn);
+          $(this).css('max-height', $(window).height() - _pop_pd - _pop_title - _pop_btn);
         });
       });
     }

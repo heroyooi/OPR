@@ -29,6 +29,11 @@
 .search-area{position: relative;z-index:1;display:flex;justify-content:space-between;gap:0 10px;}
 .tit-area{position: relative;display:flex;align-items:center;justify-content:space-between;gap:0 10px;}
 .tit-area .tit{font-size:16px;font-weight:600;color:#b2bbce;}
+.tit-area .label-tit{display:flex;gap:0 8px;align-items:center;}
+.tit-area .label-tit .label{font-size:14px;font-weight:600;color:#fff;display:inline-block;padding:4px 12px;border-radius:4px;line-height:1.5;}
+.tit-area .label-tit .label.type-1{background-color:#695736;}
+.tit-area .label-tit .label.type-2{background-color:#653340;}
+.tit-area .label-tit .label.type-3{background-color:#26526e;}
 .tip-wrap{text-align:right;}
 .tip-wrap .ico, .tip-wrap span{display:inline-block;vertical-align:middle;}
 .tip-wrap .ico{position:relative;top:3px;}
@@ -87,4 +92,6 @@
 .record-list > li .label.type-1{background-color: rgba(26, 194, 255, 0.5);}
 .record-list > li .label.type-2{background-color: rgba(11, 190, 53, 0.3);}
 .record-list > li .result > span{display:block;}
-.record-list > li .result .local{font-size:16px;font-weight:700;margin-top:4px;}
+.record-list > li .result .local{font-size:16px;font-weight:700;}
+.record-list > li .result .local + .date,
+.record-list > li .result .date + .local{margin-top:4px;}

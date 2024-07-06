@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-body{width:100%;overflow:hidden;}
+body{width:100%;/*overflow:hidden;*/}
 #wrap{min-width:1825px;background-color:#212332;height:100vh;overflow-y:auto;}
 
 /* login */
@@ -64,10 +64,10 @@ body{width:100%;overflow:hidden;}
 .content-frame-wrap > .content-frame,
 .content-frame-wrap > .content-obj{width:50%;}
 .content-frame-wrap > .content-obj{margin-top:16px;}
-.content-frame-wrap .btns-wrap{width:40px;display:flex;flex-direction:column;justify-content:center;gap:8px 0;}
-.content-frame-wrap .btns-wrap > a{display:block;width:40px;height:40px;background-color:rgba(26, 194, 255, 0.5);background-repeat:no-repeat;background-position:50% 50%;border-radius:4px;}
-.content-frame-wrap .btns-wrap > a.btn-in{background-image:url(../img/ico-24-in-def.png);}
-.content-frame-wrap .btns-wrap > a.btn-out{background-image:url(../img/ico-24-out-def.png);}
+.content-frame-wrap > .btns-wrap{width:40px;display:flex;flex-direction:column;justify-content:center;gap:8px 0;}
+.content-frame-wrap > .btns-wrap > a{display:block;width:40px;height:40px;background-color:rgba(26, 194, 255, 0.5);background-repeat:no-repeat;background-position:50% 50%;border-radius:4px;}
+.content-frame-wrap > .btns-wrap > a.btn-in{background-image:url(../img/ico-24-in-def.png);}
+.content-frame-wrap > .btns-wrap > a.btn-out{background-image:url(../img/ico-24-out-def.png);}
 .content-frame-wrap.vms{gap:0 20px;}
 .content-frame-wrap.vms > .content-frame:nth-child(1){width:520px;flex-shrink:0;}
 .content-frame-wrap.vms > .content-frame:nth-child(2),
