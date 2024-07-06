@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-body{width:100%;/*overflow:hidden;*/}
+body{width:100%;overflow:hidden;}
 #wrap{min-width:1825px;background-color:#212332;height:100vh;overflow-y:auto;}
 
 /* login */
@@ -72,6 +72,10 @@ body{width:100%;/*overflow:hidden;*/}
 .content-frame-wrap.vms > .content-frame:nth-child(1){width:520px;flex-shrink:0;}
 .content-frame-wrap.vms > .content-frame:nth-child(2),
 .content-frame-wrap.vms > .content-obj:nth-child(2){flex-grow:1;}
+
+.content-frame-wrap.ftms{gap:0 20px;}
+.content-frame-wrap.ftms > .content-frame:nth-child(1){width:180px;flex-shrink:0;}
+.content-frame-wrap.ftms > .content-frame:nth-child(2){flex-grow:1;}
 
 #container.ver-lnb{display:flex;gap:0 20px;}
 #container.ver-lnb .content-wrap{flex-grow:1;}

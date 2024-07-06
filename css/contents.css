@@ -95,3 +95,11 @@
 .record-list > li .result .local{font-size:16px;font-weight:700;}
 .record-list > li .result .local + .date,
 .record-list > li .result .date + .local{margin-top:4px;}
+
+.btn-list{width:180px;}
+.btn-list > li{margin-top:8px;}
+.btn-list > li:first-child{margin-top:0;}
+.btn-list > li .btn-base{width:100%;}
+
+.btn-list.col2{width:100%;display:flex;gap:8px;flex-wrap:wrap;}
+.btn-list.col2 > li {width:calc(50% - 4px);margin-top:0;}

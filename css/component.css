@@ -86,6 +86,7 @@
 .s-ico.choice{background:url(../img/ico-16-choice.png) 50% 50% no-repeat;width:16px;height:16px;}
 .s-ico.none{background:url(../img/ico-16-none.png) 50% 50% no-repeat;width:16px;height:16px;}
 .s-ico.poi{background:url(../img/ico-bg_poi-point.png) 50% 50% no-repeat;width:26px;height:31px;}
+.s-ico.details{background:url(../img/ico-16-details-def.png) 50% 50% no-repeat;width:16px;height:17px;}
 
 .s-ico.w-label{font-size:14px;font-weight:600;line-height:1.5;color:#b2bbce;width:auto;position: relative;}
 .s-ico.w-label::before{content:'';width:24px;height:24px;}
@@ -495,14 +496,16 @@ input[type=number]::-webkit-outer-spin-button {
 /* table */
 .tb-list{width:100%;table-layout:fixed;}
 .tb-list th, .tb-list td{font-size:14px;font-weight:600;line-height:1.5;border-bottom:1px solid #212332;}
-.tb-list th{color:#778298;text-align:left;background-color:#3e4157;padding:5.5px 4px;}
-.tb-list td{padding:11px 4px;color:#b2bbce;background-color:#34374c;}
+.tb-list th{color:#778298;text-align:left;background-color:#3e4157;padding:5.5px 4px;padding:5.5px 16px;}
+.tb-list td{padding:11px;color:#b2bbce;background-color:#34374c;}
 .tb-list th:first-child{border-top-left-radius:4px;}
 .tb-list th:last-child{border-top-right-radius:4px;}
-.tb-list th:first-child,
+/* .tb-list th:first-child,
 .tb-list td:first-child{padding-left:16px;}
 .tb-list th:last-child,
-.tb-list td:last-child{padding-right:16px;}
+.tb-list td:last-child{padding-right:16px;} */
+.tb-list th.b-line{border-bottom:1px solid #34374c;}
+.tb-list th.bl, .tb-list td.bl{border-left:1px solid #212332;}
 .tb-list td .status::before{content:'';display:inline-block;width:8px;height:8px;border-radius:4px;margin-right:4px;}
 .tb-list td .on{coloR:#fff;}
 .tb-list tr.st1 td{background-color:rgba(11, 190, 53, 0.1);color:#0bbe35;}
@@ -610,6 +613,7 @@ input[type=number]::-webkit-outer-spin-button {
 [class*=popup-wrap] .con-wrap{position:relative;color:#fff;padding:20px;}
 [class*=popup-wrap] .con-wrap .tit{font-size:16px;font-weight:bold;color:#b2bbce;line-height:1.5;margin-bottom:24px;}
 [class*=popup-wrap] .con-wrap .tit em{font-weight:inherit;color:#19b2e8;}
+[class*=popup-wrap] .con-wrap .s-tit{font-size:14px;font-weight:600;color:#778298;line-height:1.5;margin-bottom:8px;display:block;}
 
 .info-list > li{background-color: #34374c;border-radius:4px;color:#778298;font-size:14px;line-height:1.5;font-weight:600;}
 .info-list > li dt{padding:11.5px 12px;border-bottom:1px solid #212332;display:flex;justify-content:space-between;align-items:center;}

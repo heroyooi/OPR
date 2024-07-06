@@ -293,6 +293,30 @@ var data1_14 = [
   { isChecked: "N", column1: '42', column2: '20241025-01-S-002', column3: '교통사고', column4: '평택', column5: '접수', column6: '2024-10-25 14:23:35' },
   { isChecked: "N", column1: '41', column2: '20241025-01-S-002', column3: '교통사고', column4: '평택', column5: '접수', column6: '2024-10-25 14:23:35' },
 ];
+var data1_15 = [
+  { isChecked: "N", column1: '50', column2: '2024-10-25 14:23:35', column3: '월간', column4: '휴게소 주차정보', column5: 'VMS-N-0038', column6: '현덕 JCT', column7: '정상', column8: '-', column9: 'Y', column10: 'Ftms003' },
+  { isChecked: "N", column1: '49', column2: '2024-10-25 14:23:35', column3: '월간', column4: '휴게소 주차정보', column5: 'VMS-N-0038', column6: '현덕 JCT', column7: '정상', column8: '-', column9: 'Y', column10: 'Ftms003' },
+  { isChecked: "N", column1: '48', column2: '2024-10-25 14:23:35', column3: '월간', column4: '휴게소 주차정보', column5: 'VMS-N-0038', column6: '현덕 JCT', column7: '정상', column8: '-', column9: 'Y', column10: 'Ftms003' },
+  { isChecked: "N", column1: '47', column2: '2024-10-25 14:23:35', column3: '월간', column4: '갱구부 LED', column5: 'VMS-N-0038', column6: '현덕 JCT', column7: '정상', column8: '-', column9: 'Y', column10: 'Ftms003' },
+  { isChecked: "N", column1: '46', column2: '2024-10-25 14:23:35', column3: '월간', column4: '갱구부 LED', column5: 'VMS-N-0038', column6: '현덕 JCT', column7: '정상', column8: '1', column9: 'Y', column10: 'Ftms003' },
+  { isChecked: "N", column1: '45', column2: '2024-10-25 14:23:35', column3: '월간', column4: 'VMS', column5: 'VMS-N-0038', column6: '의좋은형제 휴게소', column7: '정상', column8: '1', column9: 'Y', column10: 'Ftms003' },
+  { isChecked: "N", column1: '44', column2: '2024-10-25 14:23:35', column3: '월간', column4: 'VMS', column5: 'VMS-N-0038', column6: '의좋은형제 휴게소', column7: '정상', column8: '1', column9: 'Y', column10: 'Ftms003' },
+  { isChecked: "N", column1: '43', column2: '2024-10-25 14:23:35', column3: '월간', column4: 'VMS', column5: 'VMS-N-0038', column6: '의좋은형제 휴게소', column7: '정상', column8: '1', column9: 'Y', column10: 'Ftms003' },
+  { isChecked: "N", column1: '42', column2: '2024-10-25 14:23:35', column3: '월간', column4: 'VMS', column5: 'VMS-N-0038', column6: '의좋은형제 휴게소', column7: '정상', column8: '-', column9: 'Y', column10: 'Ftms003' },
+  { isChecked: "N", column1: '41', column2: '2024-10-25 14:23:35', column3: '월간', column4: 'VMS', column5: 'VMS-N-0038', column6: '의좋은형제 휴게소', column7: '정상', column8: '-', column9: 'Y', column10: 'Ftms003' },
+];
+var data1_16 = [
+  { isChecked: "N", column1: '50', column2: '2024-10-25 14:23:35', column3: '월간', column4: '휴게소 주차정보', column5: 'VMS-N-0038', column6: '현덕 JCT', column7: '정상', column8: '-', column9: 'Y', column10: 'Ftms003' },
+  { isChecked: "N", column1: '49', column2: '2024-10-25 14:23:35', column3: '월간', column4: '휴게소 주차정보', column5: 'VMS-N-0038', column6: '현덕 JCT', column7: '정상', column8: '-', column9: 'Y', column10: 'Ftms003' },
+  { isChecked: "N", column1: '48', column2: '2024-10-25 14:23:35', column3: '월간', column4: '휴게소 주차정보', column5: 'VMS-N-0038', column6: '현덕 JCT', column7: '정상', column8: '-', column9: 'Y', column10: 'Ftms003' },
+  { isChecked: "N", column1: '47', column2: '2024-10-25 14:23:35', column3: '월간', column4: '갱구부 LED', column5: 'VMS-N-0038', column6: '현덕 JCT', column7: '정상', column8: '-', column9: 'Y', column10: 'Ftms003' },
+  { isChecked: "N", column1: '46', column2: '2024-10-25 14:23:35', column3: '월간', column4: '갱구부 LED', column5: 'VMS-N-0038', column6: '현덕 JCT', column7: '정상', column8: '1', column9: 'Y', column10: 'Ftms003' },
+  { isChecked: "N", column1: '45', column2: '2024-10-25 14:23:35', column3: '월간', column4: 'VMS', column5: 'VMS-N-0038', column6: '의좋은형제 휴게소', column7: '정상', column8: '1', column9: 'Y', column10: 'Ftms003' },
+  { isChecked: "N", column1: '44', column2: '2024-10-25 14:23:35', column3: '월간', column4: 'VMS', column5: 'VMS-N-0038', column6: '의좋은형제 휴게소', column7: '정상', column8: '1', column9: 'Y', column10: 'Ftms003' },
+  { isChecked: "N", column1: '43', column2: '2024-10-25 14:23:35', column3: '월간', column4: 'VMS', column5: 'VMS-N-0038', column6: '의좋은형제 휴게소', column7: '정상', column8: '1', column9: 'Y', column10: 'Ftms003' },
+  { isChecked: "N", column1: '42', column2: '2024-10-25 14:23:35', column3: '월간', column4: 'VMS', column5: 'VMS-N-0038', column6: '의좋은형제 휴게소', column7: '정상', column8: '-', column9: 'Y', column10: 'Ftms003' },
+  { isChecked: "N", column1: '41', column2: '2024-10-25 14:23:35', column3: '월간', column4: 'VMS', column5: 'VMS-N-0038', column6: '의좋은형제 휴게소', column7: '정상', column8: '-', column9: 'Y', column10: 'Ftms003' },
+];
 
 var columns1 = [
   checkColumns,
@@ -1086,6 +1110,156 @@ var columns1_14 = [
     sortable: true,
   },
 ];
+var columns1_15 = [
+  checkColumns,
+  {
+    key: 'column1',
+    label: '순번',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column2',
+    label: '점검일시',
+    width: 270,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column3',
+    label: '점검 유형',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column4',
+    label: '장비 유형',
+    width: 120,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column5',
+    label: '장비ID',
+    width: 270,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column6',
+    label: '위치',
+    width: '*',
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column7',
+    label: '점검 결과',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column8',
+    label: '이상항목',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column9',
+    label: '이미지 등록여부',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column10',
+    label: '점검자',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+];
+
+var columns1_16 = [
+  checkColumns,
+  {
+    key: 'column1',
+    label: '순번',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column2',
+    label: '점검일시',
+    width: 270,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column3',
+    label: '점검 유형',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column4',
+    label: '장비 유형',
+    width: 120,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column5',
+    label: '장비ID',
+    width: 270,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column6',
+    label: '위치',
+    width: '*',
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column7',
+    label: '점검 결과',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column8',
+    label: '이상항목',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column9',
+    label: '상세보기',
+    width: 100,
+    align: "center",
+    sortable: true,
+    formatter: function() {
+      return '<a class="s-ico details" href="javascript:;"></a>';
+    }
+  },
+  {
+    key: 'column10',
+    label: '점검자',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+];
 
 var data2 = [
   { column1: '로우데이터', column2: '로우데이터', column3: '로우데이터', state: 'red', column4: '로우 데이터' },
@@ -1397,12 +1571,14 @@ $(document.body).ready(function() {
   var $grid1_12 = $('[data-ax5grid="grid1_12"]');
   var $grid1_13 = $('[data-ax5grid="grid1_13"]');
   var $grid1_14 = $('[data-ax5grid="grid1_14"]');
+  var $grid1_15 = $('[data-ax5grid="grid1_15"]');
+  var $grid1_16 = $('[data-ax5grid="grid1_16"]');
   
   var $grid2 = $('[data-ax5grid="grid2"]');
   var $grid3 = $('[data-ax5grid="grid3"]');
   var $grid4 = $('[data-ax5grid="grid4"]');
 
-  if ($grid1.length || $grid1_2.length || $grid1_3.length || $grid1_4.length || $grid1_5.length || $grid1_6.length || $grid1_7.length || $grid1_8.length || $grid1_9.length || $grid1_10.length || $grid1_11.length || $grid1_12.length || $grid1_13.length || $grid1_14.length) {
+  if ($grid1.length || $grid1_2.length || $grid1_3.length || $grid1_4.length || $grid1_5.length || $grid1_6.length || $grid1_7.length || $grid1_8.length || $grid1_9.length || $grid1_10.length || $grid1_11.length || $grid1_12.length || $grid1_13.length || $grid1_14.length || $grid1_15.length || $grid1_16.length) {
     if ($grid1.length) {
       new ax5.ui.grid(getOptions($grid1, columns1)).setData(data1);
     } else if ($grid1_2.length) {
@@ -1431,6 +1607,10 @@ $(document.body).ready(function() {
       new ax5.ui.grid(getOptions($grid1_13, columns1_13)).setData(data1_13);
     } else if ($grid1_14.length) {
       new ax5.ui.grid(getOptions($grid1_14, columns1_14)).setData(data1_14);
+    } else if ($grid1_15.length) {
+      new ax5.ui.grid(getOptions($grid1_15, columns1_15)).setData(data1_15);
+    } else if ($grid1_16.length) {
+      new ax5.ui.grid(getOptions($grid1_16, columns1_16)).setData(data1_16);
     }
 
     $(document).on('click', '#chk-all', function() {
