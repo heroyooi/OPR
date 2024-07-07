@@ -506,8 +506,8 @@ input[type=number]::-webkit-outer-spin-button {
 .btn-switch{display:inline-block;width:36px;height:18px;background:url(../img/ico-switch-off.png) 0 0 no-repeat;vertical-align:middle;cursor:pointer;}
 .btn-switch.on{background:url(../img/ico-switch-on.png) 0 0 no-repeat;}
 .btn-base.btn-search > *{padding:8px;}
-.btn-item{display:block;width:40px;height:40px;background-image:url(../img/ico-24-minus2-def.png);background-position:50% 50%;background-repeat:no-repeat;border-radius:4px;background-color:#2a2d3e;}
-.btn-item.on, .btn-item:hover{background-color:#22779f;}
+.btn-item{display:block;width:40px;height:40px;background-image:url(../img/ico-24-minus2-def.png);background-position:50% 50%;background-repeat:no-repeat;border-radius:4px;background-color:#22779f;}
+.btn-item.disabled{background-color:#2a2d3e;pointer-events:none;}
 .switch-area{display:flex;align-items:center;gap:0 8px;}
 .switch-area .label{font-size:14px;font-weight:600;line-height:1.5;color:#b2bbce;}
 
