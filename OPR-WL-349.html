@@ -22,7 +22,7 @@
     <div id="header">
       <h1><a href="#"><img src="img/wih-logo-io.png" alt=""></a></h1>
       <div class="item-area">
-        <ul id="gnb" data-active="4">
+        <ul id="gnb" data-active="9">
           <li><a href="#">시스템관리</a></li>
           <li><a href="#">기초정보관리</a></li>
           <li><a href="#">FTMS 제어</a></li>
@@ -112,43 +112,49 @@
     </div><!--#header -->
     <div id="container" class="ver-lnb">
       <div class="left-wrap">
-        <h3 class="tit">운영관리</h3>
+        <h3 class="tit">현장장비 점검관리</h3>
         <ul class="lnb-list">
+          <li>
+            <a href="#" class="menu toggle">FTMS 점검계획</a>
+            <ul>
+              <li>
+                <a href="#" class="menu">FTMS 점검 계획표</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+              <li>
+                <a href="#" class="menu">FTMS 점검 체크리스트 관리</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu toggle">FTMS 점검 일지 관리</a>
+            <ul>
+              <li>
+                <a href="#" class="menu">FTMS 점검 일지 관리</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu toggle">고장 및 수리 관리</a>
+            <ul>
+              <li>
+                <a href="#" class="menu">고장 수리 접수</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+              <li>
+                <a href="#" class="menu">FTMS 장비 수리 내역</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+            </ul>
+          </li>
           <li class="on">
-            <a href="#" class="menu toggle">VMS 운영</a>
-            <ul>
-              <li class="on">
-                <a href="#" class="menu">VMS 이미지 기초정보 관리</a>
-                <a href="#" class="s-ico star"></a>
-              </li>
-              <li>
-                <a href="#" class="menu">VMS 메시지 기초정보 관리</a>
-                <a href="#" class="s-ico star"></a>
-              </li>
-              <li>
-                <a href="#" class="menu">VMS 기본 메시지 관리</a>
-                <a href="#" class="s-ico star"></a>
-              </li>
-              <li>
-                <a href="#" class="menu">VMS 표출 메시지 관리</a>
-                <a href="#" class="s-ico star"></a>
-              </li>
-              <li>
-                <a href="#" class="menu">VMS 표출 스케줄 관리</a>
-                <a href="#" class="s-ico star"></a>
-              </li>
-              <li>
-                <a href="#" class="menu">VMS 대응 메시지 관리</a>
-                <a href="#" class="s-ico star"></a>
-              </li>
-              <li>
-                <a href="#" class="menu">VMS 수동 메시지 표출</a>
-                <a href="#" class="s-ico star"></a>
-              </li>
-            </ul>
+            <a href="#" class="menu">점검 항목 관리</a>
+            <a href="#" class="s-ico star"></a>
           </li>
           <li>
-            <a href="#" class="menu toggle">LCS 운영</a>
+            <a href="#" class="menu toggle">보고서</a>
             <ul>
               <li>
                 <a href="#" class="menu">서브 메뉴</a>
@@ -157,25 +163,7 @@
             </ul>
           </li>
           <li>
-            <a href="#" class="menu toggle">DSRC 운영</a>
-            <ul>
-              <li>
-                <a href="#" class="menu">서브 메뉴</a>
-                <a href="#" class="s-ico star"></a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" class="menu toggle">안개경고주의 운영</a>
-            <ul>
-              <li>
-                <a href="#" class="menu">서브 메뉴</a>
-                <a href="#" class="s-ico star"></a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" class="menu toggle">갱구부 LED 운영</a>
+            <a href="#" class="menu toggle">센터설비 점검 체크리스트</a>
             <ul>
               <li>
                 <a href="#" class="menu">서브 메뉴</a>
@@ -191,12 +179,8 @@
             <a href="#" class="s-ico home"></a>
             <div class="menu-swiper swiper-container">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <a href="#" class="label">VDS 리셋 및 파라미터 제어</a>
-                  <a href="#" class="s-ico close"></a>
-                </div>
                 <div class="swiper-slide on">
-                  <a href="#" class="label">VMS 이미지 기초정보 관리</a>
+                  <a href="#" class="label">점검 항목 관리</a>
                   <a href="#" class="s-ico close"></a>
                 </div>
               </div>
@@ -210,77 +194,59 @@
         <div class="content-area">
           <div class="content-inner">
             <div class="tit-area">
-              <p class="tit">VMS 이미지 기초정보 등록</p>
-              <div class="btns-wrap">
-                <span class="btn-base btn-ico gray"><a href="#"><em><span class="s-ico cancel"></span>취소</em></a></span>
-                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico save2"></span>저장</em></a></span>
-              </div>
+              <ul class="tab-btn">
+                <li class="on"><a href="#">현장설비</a></li>
+                <li><a href="#">센터설비</a></li>
+              </ul>
             </div>
-            <div class="content-frame-wrap vms">
-              <div class="content-frame c-scrollbar">
-                <div class="vms-area">
-                  <div class="inner">
-                    <!-- <img src="img/example-vms.png" alt="" /> -->
-                  </div>
-                </div>
-              </div><!-- .content-frame -->
-              <div class="content-obj">
-                <div class="tip-wrap">
-                  <em class="ico"><img src="img/ico-badge-require.png" alt=""></em>
-                  <span>필수항목</span>
-                </div>
-                <div class="content-frame c-scrollbar mt8">
-                  <div class="tb-wrap">
-                    <table summary="운영자 정보 보기" class="tb-input">
-                      <colgroup>
-                        <col width="160" />
-                        <col width="*" />
-                      </colgroup>
-                      <tbody>
-                        <tr>
-                          <th scope="row">이미지 명 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
-                          <td>
-                            <div class="input-wrap">
-                              <input type="text" class="input-base" placeholder="이미지명 입력" />
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">이미지 설명</th>
-                          <td>
-                            <textarea class="textarea-base" placeholder="이미지 설명"></textarea>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">이미지 파일 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
-                          <td>
-                            <div class="input-wrap">
-                              <div class="input-btn input-file">
-                                <input type="text" class="input-base" readonly />
-                                <input type="file" />
-                                <span class="btn-base"><a href="#">파일 찾기</a></span>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div><!-- .content-frame -->
-              </div><!-- .content-obj -->
-            </div><!-- .content-frame-wrap -->
+            <div class="content-frame c-scrollbar">
+              <ul class="item-list">
+                <li>
+                  <span class="label">VDS</span>
+                  <span class="btn-base"><a href="#">항목/주기관리</a></span>
+                </li>
+                <li>
+                  <span class="label">VMS</span>
+                  <span class="btn-base"><a href="#">항목/주기관리</a></span>
+                </li>
+                <li>
+                  <span class="label">CCTV</span>
+                  <span class="btn-base"><a href="#">항목/주기관리</a></span>
+                </li>
+                <li>
+                  <span class="label">LCS</span>
+                  <span class="btn-base"><a href="#">항목/주기관리</a></span>
+                </li>
+                <li>
+                  <span class="label">긴급전화</span>
+                  <span class="btn-base"><a href="#">항목/주기관리</a></span>
+                </li>
+                <li>
+                  <span class="label">라디오 재방송</span>
+                  <span class="btn-base"><a href="#">항목/주기관리</a></span>
+                </li>
+                <li>
+                  <span class="label">RWIS</span>
+                  <span class="btn-base"><a href="#">항목/주기관리</a></span>
+                </li>
+                <li>
+                  <span class="label">휴게소 주차정보</span>
+                  <span class="btn-base"><a href="#">항목/주기관리</a></span>
+                </li>
+                <li>
+                  <span class="label">안개경고주의</span>
+                  <span class="btn-base"><a href="#">항목/주기관리</a></span>
+                </li>
+                <li>
+                  <span class="label">갱구부LED</span>
+                  <span class="btn-base"><a href="#">항목/주기관리</a></span>
+                </li>
+              </ul>
+            </div>
           </div><!-- .content-inner -->
         </div><!-- .content-area -->
       </div><!-- .content-wrap -->
     </div><!-- #container -->
-
-    <script src="js/ax5uiGridSample.js"></script>
-    <script>
-      $('.input-file input[type="file"]').on('change', function(){
-        var fileValue = this.value.split('\\');  
-        $(this).closest('.input-file').find('.input-base').val(fileValue[fileValue.length-1]);
-      });
-    </script>
   </div><!-- #wrap -->
 </body>
 </html>

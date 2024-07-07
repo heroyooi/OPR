@@ -77,6 +77,10 @@ body{width:100%;overflow:hidden;}
 .content-frame-wrap.ftms > .content-frame:nth-child(1){width:180px;flex-shrink:0;}
 .content-frame-wrap.ftms > .content-frame:nth-child(2){flex-grow:1;}
 
+.content-frame-wrap.vds{gap:0 20px;}
+.content-frame-wrap.vds > .content-frame:nth-child(1){width:496px;flex-shrink:0;}
+.content-frame-wrap.vds > .content-frame:nth-child(2){flex-grow:1;}
+
 #container.ver-lnb{display:flex;gap:0 20px;}
 #container.ver-lnb .content-wrap{flex-grow:1;}
 

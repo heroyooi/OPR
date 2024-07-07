@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>서부내륙고속도로 통합운영단말</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrap" class="c-scrollbar">
+    <div id="header">
+      <h1><a href="#"><img src="img/wih-logo-io.png" alt=""></a></h1>
+      <div class="item-area">
+        <ul id="gnb" data-active="9">
+          <li><a href="#">시스템관리</a></li>
+          <li><a href="#">기초정보관리</a></li>
+          <li><a href="#">FTMS 제어</a></li>
+          <li><a href="#">운영관리</a></li>
+          <li><a href="#">상황관리</a></li>
+          <li><a href="#">모니터링</a></li>
+          <li><a href="#">이력조회</a></li>
+          <li><a href="#">통계조회</a></li>
+          <li><a href="#">현장장비 점검관리</a></li>
+          <li><a href="#">안전관리</a></li>
+          <li><a href="#">작업 및 유지보수 이력 관리</a></li>
+        </ul>
+        <ul id="utilmenu">
+          <li><a href="#" class="s-ico notify w-label new"><span>고윤정님</span></a></li>
+          <li><a href="#" class="s-ico bookmark"></a></li>
+          <li><a href="#" class="s-ico logout"></a></li>
+        </ul>
+        <div class="bookmark-area">
+          <ul>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">RWIS 제어기 기초정보관리</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기 최대 10개</span>
+              </a>
+            </li>
+          </ul>
+          <div class="bookmark-item">
+            <a href="#" class="btn-text">즐겨찾기 관리 <span class="s-ico arrow"></span></a>
+            <a href="#" class="s-ico close gray"></a>
+          </div>
+        </div><!-- .bookmark-area -->
+      </div>
+    </div><!--#header -->
+    <div id="container" class="ver-lnb">
+      <div class="left-wrap">
+        <h3 class="tit">현장장비 점검관리</h3>
+        <ul class="lnb-list">
+          <li>
+            <a href="#" class="menu toggle">FTMS 점검계획</a>
+            <ul>
+              <li>
+                <a href="#" class="menu">FTMS 점검 계획표</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+              <li>
+                <a href="#" class="menu">FTMS 점검 체크리스트 관리</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+            </ul>
+          </li>
+          <li class="on">
+            <a href="#" class="menu toggle">FTMS 점검 일지 관리</a>
+            <ul>
+              <li class="on">
+                <a href="#" class="menu">FTMS 점검 일지 관리</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu toggle">고장 및 수리 관리</a>
+            <ul>
+              <li class="on">
+                <a href="#" class="menu">고장 수리 접수</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+              <li>
+                <a href="#" class="menu">FTMS 장비 수리 내역</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu">점검 항목 관리</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu toggle">보고서</a>
+            <ul>
+              <li>
+                <a href="#" class="menu">서브 메뉴</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu toggle">센터설비 점검 체크리스트</a>
+            <ul>
+              <li>
+                <a href="#" class="menu">서브 메뉴</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- .left-wrap -->
+      <div class="content-wrap">
+        <div class="content-top">
+          <div class="menu-area">
+            <a href="#" class="s-ico home"></a>
+            <div class="menu-swiper swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide on">
+                  <a href="#" class="label">돌발상황 관리</a>
+                  <a href="#" class="s-ico close"></a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="label">DSRC 리셋 및 송출 제어</a>
+                  <a href="#" class="s-ico close"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="navi-area">
+            <a href="" class="s-ico arrow-l"></a>
+            <a href="" class="s-ico arrow-r"></a>
+          </div>
+        </div><!-- .content-top -->
+        <div class="content-area">
+          <div class="content-inner">
+            <div class="tit-area">
+              <p class="tit">VDS 점검 결과 등록</p>
+              <div class="btns-wrap">
+                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico list"></span>목록</em></a></span>
+                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico modify"></span>수정</em></a></span>
+              </div>
+            </div>
+            <div class="content-frame-wrap vds">
+              <div class="content-frame c-scrollbar">
+                <div class="swiper vds-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" title="점검 전 사진 1">
+                      <img src="https://placehold.co/600x400/EEE/31343C" />
+                    </div>
+                    <div class="swiper-slide" title="점검 전 사진 2">
+                      <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                    </div>
+                    <div class="swiper-slide" title="점검 전 사진 3">
+                      <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                    </div>
+                    <div class="swiper-slide" title="점검 전 사진 4">
+                      <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                    </div>
+                    <div class="swiper-slide" title="점검 전 사진 5">
+                      <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                    </div>
+                    <div class="swiper-slide" title="점검 전 사진 6">
+                      <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                    </div>
+                    <div class="swiper-slide" title="점검 전 사진 7">
+                      <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                    </div>
+                    <div class="swiper-slide" title="점검 전 사진 8">
+                      <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                    </div>
+                    <div class="swiper-slide" title="점검 전 사진 9">
+                      <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                    </div>
+                    <div class="swiper-slide" title="점검 전 사진 10">
+                      <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                    </div>
+                  </div>
+                  <!-- <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div> -->
+                </div>
+                <div class="vds-thumb-wrap">
+                  <div class="swiper vds-thumb">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="https://placehold.co/600x400/EEE/31343C" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div><!-- .content-frame -->
+              <div class="content-frame c-scrollbar">
+                <div class="tb-wrap">
+                  <table summary="고장 수리 접수 등록" class="tb-input">
+                    <colgroup>
+                      <col width="160" />
+                      <col width="180" />
+                      <col width="206" />
+                      <col width="160" />
+                      <col width="*" />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">VDS ID</th>
+                        <td colspan="2">01-VDS-S-0111-02</td>
+                        <th scope="row">VDS ID</th>
+                        <td>01-VDS-S-0111-02</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">점검주기</th>
+                        <td colspan="2">월간</td>
+                        <th scope="row">점검 일시</th>
+                        <td>2024-10-25 00:00:00</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" rowspan="11">점검 항목 및 내용</th>
+                        <td class="td-gray">루프코일</td>
+                        <td colspan="3" class="td-gray">
+                          <div class="status-area">
+                            <span class="label">동작상태 및 저항 측정</span>
+                            <span class="status type-1">정상</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="td-gray">피에조 센서</td>
+                        <td colspan="3" class="td-gray">
+                          <div class="status-area">
+                            <span class="label">동작상태 및 압전 측정</span>
+                            <span class="status type-1">정상</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="td-gray">안테나</td>
+                        <td colspan="3" class="td-gray">
+                          <div class="status-area">
+                            <span class="label">동작상태 및 신호강도측정, 청소</span>
+                            <span class="status type-1">정상</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2" class="td-gray">제어부 모듈</td>
+                        <td colspan="3" class="td-gray">
+                          <div class="status-area">
+                            <span class="label">CPU 모듈 동작상태 점검</span>
+                            <span class="status type-1">정상</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="3" class="td-gray">
+                          <div class="status-area">
+                            <span class="label">센싱 모듈 점검</span>
+                            <span class="status type-1">정상</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td rowspan="3" class="td-gray">제어기 함체</td>
+                        <td colspan="3" class="td-gray">
+                          <div class="status-area">
+                            <span class="label">외관상태 점검</span>
+                            <span class="status type-2">이상</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="3" class="td-gray">
+                          <div class="status-area">
+                            <span class="label">내/외부 청소</span>
+                            <span class="status type-2">이상</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="3" class="td-gray">
+                          <div class="status-area">
+                            <span class="label">FAN, HEATER, DOOR 스위치 점검</span>
+                            <span class="status type-2">이상</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="4" class="td-gray">
+                          <div class="status-area">
+                            <span class="label">광전송기 및 분배함 외관상태</span>
+                            <span class="status type-3">보통</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="4" class="td-gray">
+                          <div class="status-area">
+                            <span class="label">시설물 외관 및 부착물 부착상태</span>
+                            <span class="status type-4">고장</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="4" class="td-gray">
+                          <div class="status-area">
+                            <span class="label">전원 및 접지상태</span>
+                            <span class="status type-1">정상</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">기타의견</th>
+                        <td colspan="4">고장 수리 필요</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div><!-- .content-frame -->
+            </div><!-- .content-frame-wrap -->
+          </div><!-- .content-inner -->
+        </div><!-- .content-area -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+    
+  </div><!-- #wrap -->
+  
+  <script>
+    var vdsThumb = new Swiper(".vds-thumb", {
+      // loop: true,
+      spaceBetween: 4,
+      slidesPerView: 5,
+      // freeMode: true,
+      watchSlidesProgress: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    var vdsSwiper = new Swiper(".vds-swiper", {
+      loop: true,
+      spaceBetween: 10,
+      // navigation: {
+      //   nextEl: ".swiper-button-next",
+      //   prevEl: ".swiper-button-prev",
+      // },
+      thumbs: {
+        swiper: vdsThumb,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+    });
+
+    $('.vds-swiper .swiper-slide').tooltip({
+      position: {
+        my: "left top",
+        at: "left+10 top+10",
+        using: function(position, feedback) {
+          $(this).css({
+            top: position.top,
+            left: position.left,
+            zIndex: 10000 // 충분히 높은 z-index 값 설정
+          });
+        }
+      },
+      track: true
+    });
+  </script>
+</body>
+</html>

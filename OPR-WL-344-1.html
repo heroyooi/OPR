@@ -22,7 +22,7 @@
     <div id="header">
       <h1><a href="#"><img src="img/wih-logo-io.png" alt=""></a></h1>
       <div class="item-area">
-        <ul id="gnb" data-active="4">
+        <ul id="gnb" data-active="9">
           <li><a href="#">시스템관리</a></li>
           <li><a href="#">기초정보관리</a></li>
           <li><a href="#">FTMS 제어</a></li>
@@ -112,43 +112,49 @@
     </div><!--#header -->
     <div id="container" class="ver-lnb">
       <div class="left-wrap">
-        <h3 class="tit">운영관리</h3>
+        <h3 class="tit">현장장비 점검관리</h3>
         <ul class="lnb-list">
+          <li>
+            <a href="#" class="menu toggle">FTMS 점검계획</a>
+            <ul>
+              <li>
+                <a href="#" class="menu">FTMS 점검 계획표</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+              <li>
+                <a href="#" class="menu">FTMS 점검 체크리스트 관리</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu toggle">FTMS 점검 일지 관리</a>
+            <ul>
+              <li>
+                <a href="#" class="menu">FTMS 점검 일지 관리</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+            </ul>
+          </li>
           <li class="on">
-            <a href="#" class="menu toggle">VMS 운영</a>
+            <a href="#" class="menu toggle">고장 및 수리 관리</a>
             <ul>
-              <li>
-                <a href="#" class="menu">VMS 이미지 기초정보 관리</a>
-                <a href="#" class="s-ico star"></a>
-              </li>
-              <li>
-                <a href="#" class="menu">VMS 메시지 기초정보 관리</a>
-                <a href="#" class="s-ico star"></a>
-              </li>
-              <li>
-                <a href="#" class="menu">VMS 기본 메시지 관리</a>
-                <a href="#" class="s-ico star"></a>
-              </li>
-              <li>
-                <a href="#" class="menu">VMS 표출 메시지 관리</a>
-                <a href="#" class="s-ico star"></a>
-              </li>
-              <li>
-                <a href="#" class="menu">VMS 표출 스케줄 관리</a>
-                <a href="#" class="s-ico star"></a>
-              </li>
               <li class="on">
-                <a href="#" class="menu">VMS 대응 메시지 관리</a>
+                <a href="#" class="menu">고장 수리 접수</a>
                 <a href="#" class="s-ico star"></a>
               </li>
               <li>
-                <a href="#" class="menu">VMS 수동 메시지 표출</a>
+                <a href="#" class="menu">FTMS 장비 수리 내역</a>
                 <a href="#" class="s-ico star"></a>
               </li>
             </ul>
           </li>
           <li>
-            <a href="#" class="menu toggle">LCS 운영</a>
+            <a href="#" class="menu">점검 항목 관리</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu toggle">보고서</a>
             <ul>
               <li>
                 <a href="#" class="menu">서브 메뉴</a>
@@ -157,25 +163,7 @@
             </ul>
           </li>
           <li>
-            <a href="#" class="menu toggle">DSRC 운영</a>
-            <ul>
-              <li>
-                <a href="#" class="menu">서브 메뉴</a>
-                <a href="#" class="s-ico star"></a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" class="menu toggle">안개경고주의 운영</a>
-            <ul>
-              <li>
-                <a href="#" class="menu">서브 메뉴</a>
-                <a href="#" class="s-ico star"></a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" class="menu toggle">갱구부 LED 운영</a>
+            <a href="#" class="menu toggle">센터설비 점검 체크리스트</a>
             <ul>
               <li>
                 <a href="#" class="menu">서브 메뉴</a>
@@ -192,7 +180,11 @@
             <div class="menu-swiper swiper-container">
               <div class="swiper-wrapper">
                 <div class="swiper-slide on">
-                  <a href="#" class="label">VMS 대응 메시지 관리</a>
+                  <a href="#" class="label">돌발상황 관리</a>
+                  <a href="#" class="s-ico close"></a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="label">DSRC 리셋 및 송출 제어</a>
                   <a href="#" class="s-ico close"></a>
                 </div>
               </div>
@@ -206,51 +198,16 @@
         <div class="content-area">
           <div class="content-inner">
             <div class="tit-area">
-              <p class="tit">VMS 대응 메시지 등록</p>
+              <p class="tit">고장 수리 접수 등록</p>
               <div class="btns-wrap">
                 <span class="btn-base btn-ico gray"><a href="#"><em><span class="s-ico cancel"></span>취소</em></a></span>
                 <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico save2"></span>저장</em></a></span>
               </div>
-            </div><!-- .tit-area -->
+            </div>
             <div class="content-frame-wrap">
               <div class="content-frame c-scrollbar">
                 <div class="map-area" style="background-color: #000;">
-                  <span class="s-ico vds" style="position:absolute; left: 425px; top: 104px;">
-                    <div class="s-info"><a href="#">01-VMS-DT-N-0001-02</a></div>
-                  </span>
-                  <span class="s-ico vds" style="position:absolute; left: 484px; top: 126px;">
-                    <div class="s-info"><a href="#">01-VMS-DT-N-0001-02</a></div>
-                  </span>
-                  <span class="s-ico vds" style="position:absolute; left: 439px; top: 185px;">
-                    <div class="s-info"><a href="#">01-VMS-DT-N-0001-02</a></div>
-                  </span>
-                  <span class="s-ico vds" style="position:absolute; left: 501px; top: 203px;">
-                    <div class="s-info"><a href="#">01-VMS-DT-N-0001-02</a></div>
-                  </span>
-                  <span class="s-ico vds" style="position:absolute; left: 358px; top: 263px;">
-                    <div class="s-info"><a href="#">01-VMS-DT-N-0001-02</a></div>
-                  </span>
-                  <span class="s-ico vds" style="position:absolute; left: 414px; top: 299px;">
-                    <div class="s-info"><a href="#">01-VMS-DT-N-0001-02</a></div>
-                  </span>
-                  <span class="s-ico vds" style="position:absolute; left: 352px; top: 358px;">
-                    <div class="s-info"><a href="#">01-VMS-DT-N-0001-02</a></div>
-                  </span>
-                  <span class="s-ico vds" style="position:absolute; left: 363px; top: 465px;">
-                    <div class="s-info"><a href="#">01-VMS-DT-N-0001-02</a></div>
-                  </span>
-                  <span class="s-ico vds" style="position:absolute; left: 419px; top: 466px;">
-                    <div class="s-info"><a href="#">01-VMS-DT-N-0001-02</a></div>
-                  </span>
-                  <span class="s-ico vds" style="position:absolute; left: 441px; top: 527px;">
-                    <div class="s-info"><a href="#">01-VMS-DT-N-0001-02</a></div>
-                  </span>
-                  <span class="s-ico vds" style="position:absolute; left: 387px; top: 545px;">
-                    <div class="s-info"><a href="#">01-VMS-DT-N-0001-02</a></div>
-                  </span>
-                  <span class="s-ico vds" style="position:absolute; left: 427px; bottom: 15px;">
-                    <div class="s-info"><a href="#">01-VMS-DT-N-0001-02</a></div>
-                  </span>
+                  <span class="s-ico poi" style="position:absolute; left: 387px; top: 256px;"></span>
                   <div class="map-navi">
                     <a href="#" class="s-ico plus"></a>
                     <a href="#" class="s-ico minus"></a>
@@ -264,95 +221,132 @@
                 </div>
                 <div class="content-frame c-scrollbar mt8">
                   <div class="tb-wrap">
-                    <table summary="VMS 대응 메시지 등록" class="tb-input">
+                    <table summary="고장 수리 접수 등록" class="tb-input">
                       <colgroup>
-                        <col width="100" />
-                        <col width="100" />
+                        <col width="160" />
                         <col width="*" />
                       </colgroup>
                       <tbody>
                         <tr>
-                          <th scope="row" colspan="2">구간 ID <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                          <th scope="row">장비 유형 <em class="ico"><img src="img/ico-badge-require.png" alt="" /></em></th>
                           <td>
-                            <div class="input-wrap" style="width:410px;">
+                            <select class="select-base" style="width: 220px;">
+                              <option value="0" selected>장비 유형 선택</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">장비 ID <em class="ico"><img src="img/ico-badge-require.png" alt="" /></em></th>
+                          <td>
+                            <div class="input-wrap">
                               <div class="input-btn">
-                                <input type="text" class="input-base" />
-                                <span class="btn-base auto"><a href="#">구간 찾기</a></span>
+                                <input type="text" class="input-base" placeholder="장비 ID" readonly>
+                                <span class="btn-base auto"><a href="#">장비 ID 찾기</a></span>
                               </div>
                             </div>
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row" colspan="2">시나리오 유형 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                          <th scope="row">방향 / 검지 구분 <em class="ico"><img src="img/ico-badge-require.png" alt="" /></em></th>
                           <td>
                             <div class="input-wrap">
-                              <select class="select-base" style="width: 320px;">
-                                <option value="0" selected>시나리오 유형 선택</option>
+                              <select class="select-base" style="width: 200px;">
+                                <option value="0" selected>유형 선택</option>
                                 <option value="1">값1</option>
                                 <option value="2">값2</option>
-                                <option value="3">값3</option>
+                              </select>
+                              <span class="dash">/</span>
+                              <select class="select-base" style="width: 200px;">
+                                <option value="0" selected>세부 유형 선택</option>
+                                <option value="1">값1</option>
+                                <option value="2">값2</option>
                               </select>
                             </div>
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row" colspan="2">표출 조건 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                          <th scope="row">X좌표/Y좌표 <em class="ico"><img src="img/ico-badge-require.png" alt="" /></em></th>
+                          <td>
+                            <div class="input-wrap input-group" style="width:420px;">
+                              <input type="text" class="input-base" placeholder="상세 내용 입력" value="127.1138" disabled />
+                              <span class="dash">/</span>
+                              <input type="text" class="input-base" placeholder="상세 내용 입력" value="36.815229" disabled />
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">설치 위치명(주소)</th>
                           <td>
                             <div class="input-wrap">
-                              <select class="select-base" style="width: 320px;">
-                                <option value="0" selected>표출 조건 유형</option>
-                                <option value="1">값1</option>
-                                <option value="2">값2</option>
-                                <option value="3">값3</option>
+                              <input type="text" class="input-base" placeholder="설치 위치 주소" disabled />
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">이상/고장 발생일</th>
+                          <td>
+                            <div class="input-wrap">
+                              <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom" style="width: 160px;">
+                                <input id="datepicker-input-start" type="text" aria-label="Date">
+                                <span class="tui-ico-date"></span>
+                                <div class="date_wrapper" id="general-start" style="margin-left: -1px;"></div>
+                              </div>
+                              <select class="select-base ml8" style="width: 90px;">
+                                <option value="0">선택</option>
+                                <option value="1" selected>01</option>
+                                <option value="2">02시</option>
+                                <option value="3">03시</option>
                               </select>
+                              <span class="unit">시</span>
+                              <select class="select-base ml8" style="width: 90px;">
+                                <option value="0">선택</option>
+                                <option value="1" selected>01</option>
+                                <option value="2">02분</option>
+                                <option value="3">03분</option>
+                              </select>
+                              <span class="unit">분</span>
                             </div>
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row" rowspan="4">표출 VMS/<br />폼 ID</th>
-                          <th scope="row" rowspan="2" class="bl">본선</th>
+                          <th scope="row">낙하물/장애물 유무 <em class="ico"><img src="img/ico-badge-require.png" alt="" /></em></th>
                           <td>
-                            <div class="input-wrap">
-                              <div class="input-btn">
-                                <input type="text" class="input-base" placeholder="VMS ID" disabled />
-                                <input type="text" class="input-base" placeholder="FORM ID" disabled />
-                                <span class="btn-base disabled"><a href="#">폼 ID 찾기</a></span>
-                              </div>
-                            </div>
+                            <ul class="chk-list">
+                              <li>
+                                <span class="chk-base">
+                                  <input type="checkbox" id="chk-1" checked />
+                                  <label for="chk-1">통신 이상</label>
+                                </span>
+                              </li>
+                              <li>
+                                <span class="chk-base">
+                                  <input type="checkbox" id="chk-2" checked />
+                                  <label for="chk-2">점검 요청</label>
+                                </span>
+                              </li>
+                              <li>
+                                <span class="chk-base">
+                                  <input type="checkbox" id="chk-3" />
+                                  <label for="chk-3">고장 수리</label>
+                                </span>
+                              </li>
+                            </ul>
+                            <textarea class="textarea-base mt8" placeholder="이상 내역 작성"></textarea>
                           </td>
                         </tr>
                         <tr>
+                          <th scope="row">사진 등록</th>
                           <td>
                             <div class="input-wrap">
-                              <div class="input-btn">
-                                <input type="text" class="input-base" placeholder="VMS ID" disabled />
-                                <input type="text" class="input-base" placeholder="FORM ID" disabled />
-                                <span class="btn-base disabled"><a href="#">폼 ID 찾기</a></span>
+                              <div class="input-btn input-file">
+                                <input type="text" class="input-base" placeholder="점검 전 사진 등록" readonly />
+                                <input type="file" accept="image/*" />
+                                <span class="btn-base auto"><a href="#">이미지파일</a></span>
                               </div>
                             </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" rowspan="2" class="bl">연계도로</th>
-                          <td>
-                            <div class="input-wrap">
-                              <div class="input-btn">
-                                <input type="text" class="input-base" placeholder="VMS ID" disabled />
-                                <input type="text" class="input-base" placeholder="FORM ID" disabled />
-                                <span class="btn-base disabled"><a href="#">폼 ID 찾기</a></span>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <div class="input-wrap">
-                              <div class="input-btn">
-                                <input type="text" class="input-base" placeholder="VMS ID" disabled />
-                                <input type="text" class="input-base" placeholder="FORM ID" disabled />
-                                <span class="btn-base disabled"><a href="#">폼 ID 찾기</a></span>
-                              </div>
-                            </div>
+                            <ul class="file-box"></ul>
                           </td>
                         </tr>
                       </tbody>
@@ -366,5 +360,55 @@
       </div><!-- .content-wrap -->
     </div><!-- #container -->
   </div><!-- #wrap -->
+  
+  <script>
+    tui.DatePicker.localeTexts['customKey'] = {
+      titles: {
+          // days
+          DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+          // daysShort
+          D: ['일', '월', '화', '수', '목', '금', '토'],
+          // months
+          MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+          // monthsShort
+          MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+      },
+      titleFormat: 'yyyy.MMM',
+      todayFormat: '오늘 : yyyy.MMMM.dd',
+      date: 'Date',
+      time: 'Time'
+    };
+
+    var datepicker = new tui.DatePicker('.date_wrapper#general-start', {
+      language: 'customKey',
+      date: new Date(),
+      input: {
+        element: '#datepicker-input-start',
+        format: 'YYYY-MM-dd',
+      }
+    });
+
+    $('.input-file input[type="file"]').on('change', function(e){
+      var fileBox = $(this).closest('.input-wrap').next('.file-box');
+      // var fileValue = this.value.split('\\');  
+      // $(this).closest('.input-file').find('.input-base').val(fileValue[fileValue.length-1]);
+      var reader = new FileReader();
+      reader.onload = function(event) {
+        fileBox.append('<li style="background-image:url(' + event.target.result + ')"><a href="#" class="btn-delete"></a></li>');
+      };
+      reader.readAsDataURL(event.target.files[0]); 
+    });
+    $('.file-box').on('click', '.btn-delete', function(e){
+      e.preventDefault();
+      $(this).closest('li').remove();
+    });
+
+    var qpopup = $.urlParam('popup');
+    if (qpopup== 'ftmsType') {
+      setTimeout(() => {
+        $.magnificPopup.open(getOptionsAnim('#popup-ftms-type', false));
+      }, 250);
+    }
+  </script>
 </body>
 </html>

@@ -12,7 +12,7 @@
   <script src="js/tui-date-picker.js"></script>
   <script src="js/jquery-ui.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/swiper.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
   <script src="js/aos.js"></script>
   <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
   <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
@@ -801,23 +801,6 @@ var datepicker = new tui.DatePicker('.date_wrapper#general-start', {
               </div>
 
               <div class="code-area">
-                <h3>Input + File <button>코드 보기</button></h3>
-<div class="code-box"><div class="input-wrap">
-  <div class="input-btn input-file">
-    <input type="text" class="input-base" readonly />
-    <input type="file" />
-    <span class="btn-base"><a href="#">파일 찾기</a></span>
-  </div>
-</div></div>
-<script>$('.input-file input[type="file"]').on('change', function(){
-  var fileValue = this.value.split('\\');  
-  $(this).closest('.input-file').find('.input-base').val(fileValue[fileValue.length-1]);
-});</script>
-<pre class="language-html"></pre>
-<pre class="language-javascript"></pre>
-              </div>
-
-              <div class="code-area">
                 <h3>연락처 <button>코드 보기</button></h3>
 <div class="code-box"><div class="input-wrap" style="width: 320px;">
   <div class="input-mobile">
@@ -882,6 +865,64 @@ var datepicker = new tui.DatePicker('.date_wrapper#general-start', {
   <input type="text" class="input-base" placeholder="발생 차로" />
 </div></div>
 <pre class="language-html"></pre>
+              </div>
+            </div><!-- .section -->
+
+            <div class="section">
+              <h2>Input - File</h2>
+      
+              <div class="code-area">
+                <h3>기본형 <button>코드 보기</button></h3>
+<div class="code-box" id="file-ex1"><div class="input-wrap">
+  <div class="input-btn input-file">
+    <input type="text" class="input-base" readonly />
+    <input type="file" />
+    <span class="btn-base"><a href="#">파일 찾기</a></span>
+  </div>
+</div></div>
+<script>$('#file-ex1 .input-file input[type="file"]').on('change', function(){
+  var fileValue = this.value.split('\\');  
+  $(this).closest('.input-file').find('.input-base').val(fileValue[fileValue.length-1]);
+});</script>
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+              </div>
+
+
+              <div class="code-area">
+                <h3>썸네일 추가형 <button>코드 보기</button></h3>
+<div class="code-box" id="file-ex2"><div class="input-wrap">
+  <div class="input-btn input-file">
+    <input type="text" class="input-base" placeholder="점검 전 사진 등록" readonly />
+    <input type="file" accept="image/*" />
+    <span class="btn-base auto"><a href="#">이미지찾기</a></span>
+  </div>
+</div>
+<ul class="file-box"></ul>
+<div class="input-wrap">
+  <div class="input-btn input-file">
+    <input type="text" class="input-base" placeholder="점검 전 사진 등록" readonly />
+    <input type="file" accept="image/*" />
+    <span class="btn-base auto"><a href="#">이미지찾기</a></span>
+  </div>
+</div>
+<ul class="file-box"></ul></div>
+<script>$('#file-ex2 .input-file input[type="file"]').on('change', function(e){
+  var fileBox = $(this).closest('.input-wrap').next('.file-box');
+  // var fileValue = this.value.split('\\');  
+  // $(this).closest('.input-file').find('.input-base').val(fileValue[fileValue.length-1]);
+  var reader = new FileReader();
+  reader.onload = function(event) {
+    fileBox.append('<li style="background-image:url(' + event.target.result + ')"><a href="#" class="btn-delete"></a></li>');
+  };
+  reader.readAsDataURL(event.target.files[0]); 
+});
+$('.file-box').on('click', '.btn-delete', function(e){
+  e.preventDefault();
+  $(this).closest('li').remove();
+});</script>
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
               </div>
             </div><!-- .section -->
 

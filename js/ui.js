@@ -51,7 +51,7 @@ var GUI = window.GUI || (function(){
     baseUI: function($this){
       var _ = $this;
       var csSelectUI = _.find('.select-box');
-      var tabUI = _.find('.tab-base');
+      var tabUI = _.find('.tab-base, .tab-btn');
       var inputUI = _.find('.input-base');
       var countUI = _.find('.counter-base');
       var popupUI = _.find('.popup-wrap');
