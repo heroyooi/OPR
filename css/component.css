@@ -769,3 +769,98 @@ input[type=number]::-webkit-outer-spin-button {
 .file-box li{width:72px;height:72px;border-radius:4px;background-color:#3e4157;position:relative;background-size:cover;background-position:50% 50%;background-repeat:no-repeat;display:inline-block;cursor:pointer;}
 .file-box li .btn-delete{position: absolute;right:0;top:0;width:24px;height:24px;border-radius:4px;background:rgba(33, 35, 50, 0.9) url(../img/ico-16-close.png) 50% 50% no-repeat;}
 .file-box + .input-wrap{margin-top:8px;}
+
+/* fullCalendar */
+#calendar.fc{position:relative;padding-top:20px;z-index:1;}
+#calendar.fc .fc-button-primary{width:32px;height:32px;border:0;margin-left:0;}
+#calendar.fc .fc-button-primary:hover{border:0;}
+#calendar.fc .fc-button:focus{outline:none !important;box-shadow:none;}
+#calendar.fc .fc-button-primary.fc-prev-button{background:url(../img/ico-24-page-bicprev-def.png) 50% 50% no-repeat;}
+#calendar.fc .fc-button-primary.fc-next-button{background:url(../img/ico-24-page-bicnext-def.png) 50% 50% no-repeat;}
+#calendar.fc .fc-button .fc-icon{display:none;}
+#calendar.fc .fc-toolbar-title{font-size:22px;line-height:29px;font-weight:bold;display:inline-block;vertical-align:middle;margin:0 30px;color:#b2bbce;}
+
+#calendar.fc-theme-standard .fc-scrollgrid{border-top:0;border-left:0;border-right:0;border-radius:4px 4px 0 0;overflow:hidden;}
+#calendar.fc-theme-standard th{background-color:#3e4157;border-bottom:0;border:0;}
+#calendar.fc-theme-standard th .fc-col-header-cell-cushion{font-size:13px;font-weight:700;color:#b2bbce;line-height:17px;padding:6px 4px;}
+#calendar.fc-theme-standard th .fc-col-header-cell.fc-day-sun .fc-col-header-cell-cushion{color:#b2bbce;}
+#calendar.fc-theme-standard tr:first-child td{border-top:0;}
+#calendar.fc-theme-standard th:first-child, #calendar.fc-theme-standard td:first-child{border-left:0;}
+#calendar.fc-theme-standard th:last-child, #calendar.fc-theme-standard td:last-child{border-right:0;}
+#calendar.fc-theme-standard .fc-day-sun .fc-daygrid-day-number{color:#b2bbce;}
+#calendar.fc .fc-daygrid-day-frame{padding:10px 9px;}
+#calendar.fc .fc-daygrid-day-top{flex-direction:row;font-size:13px;color:#fff;font-weight:500;justify-content:end;}
+#calendar.fc .fc-daygrid-day-number{color:#fff;}
+#calendar.fc.monthGrid .fc-daygrid-body-unbalanced .fc-daygrid-day-events{margin-top:6px;height:86px;position:relative;}
+#calendar.fc .fc-event-title{padding:0 8px;font-size:12px;line-height:1.5;border-radius:2px;display:flex;justify-content:space-between;}
+#calendar.fc .fc-daygrid-day-bg .fc-highlight{background-color: rgba(26, 194, 255, 0.15);}
+#calendar.fc .fc-event-title .fc-l, #calendar.fc .fc-event-title .fc-r{display:block;color:#fff;}
+#calendar.fc .fc-event-title .fc-l{flex-grow:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+#calendar.fc .fc-event-title .fc-r{flex-shrink:0;}
+#calendar.fc .dot .fc-event-title .fc-l::before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px;}
+#calendar.fc .dot.c-19b2e8 .fc-event-title .fc-l::before{background-color:#19b2e8;}
+#calendar.fc-direction-ltr .fc-daygrid-event-harness .fc-daygrid-event.fc-event-end,
+#calendar.fc-direction-rtl .fc-daygrid-event-harness .fc-daygrid-event.fc-event-start{margin:0;}
+#calendar.fc .fc-daygrid-event-harness{margin-top:4px !important;}
+#calendar.fc .fc-daygrid-event-harness:first-child{margin-top:0 !important;}
+#calendar.fc .fc-daygrid-day-bottom{font-size:0;padding:0;width:100%;position:absolute;left:0;bottom:0;}
+#calendar.fc .fc-daygrid-day-bottom:after{content:'';display:block;clear:both;}
+#calendar.fc .total-num{float:left;font-size:12px;color:#000;opacity:0.7;display:block;line-height:17px;padding-top:4px;}
+#calendar.fc .fc-day-other .total-num{display:none;}
+#calendar.fc .fc-daygrid-more-link{color:#b2bbce;font-size:12px;font-weight:600;padding:2px 4px;display:inline-block;border-radius:2px;}
+#calendar.fc .fc-daygrid-more-link:hover{background-color:#495367;}
+/* #calendar.fc .fc-daygrid-more-link{display:block;width:24px;height:24px;background:url(../img/icons/ic_of_off.png) 0 0 no-repeat;font-size:0;float:right;} */
+#calendar.fc .fc-daygrid-day.fc-day-today{background-color:#34374c;}
+#calendar.fc th.fc-day-today .fc-scrollgrid-sync-inner{position:relative;}
+#calendar.fc-theme-standard td{border-color:#3e4157;}
+
+/* #calendar.fc.timeGrid .fc-day-today .fc-daygrid-day-frame{border-top:0;}
+#calendar.fc.timeGrid th.fc-day-today .fc-scrollgrid-sync-inner:before,
+#calendar.fc.timeGrid th.fc-day-today .fc-scrollgrid-sync-inner:after{content:'';display:block;width:1px;height:100%;background-color:#7692c2;position:absolute;top:0;}
+#calendar.fc.timeGrid th.fc-day-today .fc-scrollgrid-sync-inner:before{left:0;}
+#calendar.fc.timeGrid th.fc-day-today .fc-scrollgrid-sync-inner:after{right:0;} */
+
+#calendar.fc:not(.timeGrid) .fc-scroller{overflow:inherit !important;}
+#calendar.fc:not(.timeGrid) .fc-view-harness{height:827px !important;}
+#calendar.fc:not(.timeGrid) .fc-scroller-harness-liquid{height:827px !important;}
+#calendar.fc.timeGrid.eachGrid tr td{overflow-y:auto;}/* 정기점검계획 주간에서는 클래스 eachGrid가 붙으며, 특별점검계획 주간과는 다르게 td간의 y스크롤이 생성된다.  */
+/* #calendar.fc.timeGrid .fc-view-harness{height:640px !important;}
+#calendar.fc.timeGrid .fc-daygrid-day-frame{height:640px !important;} */
+#calendar.fc .fc-scrollgrid-section-body table,
+#calendar.fc .fc-scrollgrid-section-footer table{height:auto !important;}
+
+#calendar.fc .fc-popover{border-radius:4px;-webkit-backdrop-filter: blur(4px);backdrop-filter: blur(4px);box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);border:1px solid #3e4157;overflow:hidden;margin-top:122px;background-color:#2a2d3e;max-width:210px;}
+#calendar.fc .fc-popover-header{padding:16px 12px;background-color:transparent;}
+#calendar.fc .fc-more-popover .fc-popover-body{max-height:99px;overflow-y:auto;padding:0 10px 9px;}
+#calendar.fc .fc-more-popover .fc-popover-body::-webkit-scrollbar{border-radius:4px;background:transparent;width:8px;}
+#calendar.fc .fc-more-popover .fc-popover-body::-webkit-scrollbar-track{border-radius:0 4px 4px 0;background:#34374c;border-left:1px solid #212332;} 
+#calendar.fc .fc-more-popover .fc-popover-body::-webkit-scrollbar-thumb{background-color:#495367;border-radius:4px;background-clip:padding-box;border:1px solid transparent;}
+#calendar.fc .fc-more-popover .fc-popover-body::-webkit-scrollbar-thumb:hover{background-color:#778298;}
+
+#calendar.fc .fc-popover-title{font-size:14px;line-height:1.5;color:#fff;font-weight:500;margin:0;}
+#calendar.fc .fc-popover-close{width:16px;height:16px;background:url(../img/ico-16-close.png) 50% 50% no-repeat;font-size:0;}
+#calendar.fc-theme-standard td.fc-timegrid-axis, #calendar.fc-theme-standard th.fc-timegrid-axis{display:none;}
+/* #calendar.fc.timeGrid .fc-daygrid-body-unbalanced .fc-daygrid-day-events{margin-top:0;}
+#calendar.fc.timeGrid colgroup{display:none;}
+#calendar.fc.timeGrid .fc-scrollgrid-section:nth-child(2){display:none;}
+#calendar.fc.timeGrid .fc-scrollgrid-section:nth-child(3){display:none;}
+#calendar.fc.timeGrid .fc-scrollgrid-section table,
+#calendar.fc.timeGrid .fc-timegrid .fc-daygrid-body{width:100% !important;}
+#calendar.fc.timeGrid .fc-scroller{overflow:hidden !important;} */
+#calendar.fc td[role="presentation"]{border-bottom:0;}/* 달력 가장 하단 보더 삭제 */
+#calendar.fc .fc-timegrid-axis-cushion, .fc .fc-timegrid-slot-label-cushion{color:#b2bbce;font-size:13px;line-height:1.5;font-weight:700;}
+#calendar.fc .fc-timegrid-event-harness-inset .fc-timegrid-event{box-shadow:none;padding:3px 8px;font-size:12px;font-weight:600;color:#fff;}
+#calendar.fc .fc-timegrid-event.c-19b2e8 .fc-event-main{background-color: #19b2e8;}
+#calendar.fc .fc-timegrid-event.c-19b2e8 .fc-event-title .fc-l::before{display:none;}
+
+#calendar.fc.weekGrid .fc-scroller-harness{overflow:auto;}
+/* #calendar.fc .fc-scroller-harness{overflow-y:auto;} */
+
+#calendar.fc a.fc-event{cursor:pointer;}
+.calendar-item{position: absolute;right:0;top:0;z-index:2;}
+.calendar-tooltip{position: absolute;display:none;z-index:10;padding:8px 16px;border-radius: 4px;
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);background-color: rgba(31, 61, 83, 0.91);}
+.calendar-tooltip li{margin-top:4px;}
+.calendar-tooltip li:first-child{margin-top:0;}
+.calendar-tooltip li a{font-size:14px;line-height:1.5;color:#b2bbce;}
+.calendar-tooltip li a:hover{color:#00bbfe;}
