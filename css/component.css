@@ -206,11 +206,23 @@
 .input-wrap.vms .font-picker a.f-bold:hover span,
 .input-wrap.vms .font-picker a.f-bold.on span{background:url(../img/icon-vms-bold_set.png) 50% 50% no-repeat;}
 .input-wrap.vms .font-picker a.f-circle span{background:url(../img/icon-vms-circle_def.png) 50% 50% no-repeat;}
+.input-wrap.vms .font-picker a.f-circle:hover span,
+.input-wrap.vms .font-picker a.f-circle.on span{background:url(../img/icon-vms-circle_set.png) 50% 50% no-repeat;}
 .input-wrap.vms .font-picker a.f-triangle span{background:url(../img/icon-vms-triangle_def.png) 50% 50% no-repeat;}
+.input-wrap.vms .font-picker a.f-triangle:hover span,
+.input-wrap.vms .font-picker a.f-triangle.on span{background:url(../img/icon-vms-triangle_set.png) 50% 50% no-repeat;}
 .input-wrap.vms .font-picker a.f-square span{background:url(../img/icon-vms-square_def.png) 50% 50% no-repeat;}
+.input-wrap.vms .font-picker a.f-square:hover span,
+.input-wrap.vms .font-picker a.f-square.on span{background:url(../img/icon-vms-square_set.png) 50% 50% no-repeat;}
 .input-wrap.vms .font-picker a.f-arrow span{background:url(../img/icon-vms-arrow_def.png) 50% 50% no-repeat;}
+.input-wrap.vms .font-picker a.f-arrow:hover span,
+.input-wrap.vms .font-picker a.f-arrow.on span{background:url(../img/icon-vms-arrow_set.png) 50% 50% no-repeat;}
 .input-wrap.vms .font-picker a.f-circleline span{background:url(../img/icon-vms-circleline_def.png) 50% 50% no-repeat;}
+.input-wrap.vms .font-picker a.f-circleline:hover span,
+.input-wrap.vms .font-picker a.f-circleline.on span{background:url(../img/icon-vms-circleline_set.png) 50% 50% no-repeat;}
 .input-wrap.vms .font-picker a.f-circleban span{background:url(../img/icon-vms-circleban_def.png) 50% 50% no-repeat;}
+.input-wrap.vms .font-picker a.f-circleban:hover span,
+.input-wrap.vms .font-picker a.f-circleban.on span{background:url(../img/icon-vms-circleban_set.png) 50% 50% no-repeat;}
 .auto-layer{position:absolute;left:0;top:40px;z-index:1;width:100%;background-color:#3e4157;padding:4px 0;box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25);border-radius:4px;}
 .auto-layer li{font-size:14px;line-height:1.5;}
 .auto-layer li a{display:block;padding:1.5px 16px;color:#b2bbce;}
