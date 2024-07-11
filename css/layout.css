@@ -59,7 +59,7 @@ body{width:100%;overflow:hidden;}
 .content-area > .left-area, .content-area > .right-area{width:50%;height:100%;}
 .content-area > .content-inner{padding:20px;width:100%;}
 .content-area.c-scrollbar > .content-inner::after{content:'';height:20px;display:block;}
-.content-area .content-frame{margin-top:16px;}
+.content-area .content-frame{margin-top:16px;position: relative;}
 .content-frame-wrap{display:flex;gap:0 16px;}
 .content-frame-wrap > .content-frame,
 .content-frame-wrap > .content-obj{width:50%;}

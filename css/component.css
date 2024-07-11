@@ -771,7 +771,7 @@ input[type=number]::-webkit-outer-spin-button {
 .file-box + .input-wrap{margin-top:8px;}
 
 /* fullCalendar */
-#calendar.fc{position:relative;padding-top:20px;z-index:1;}
+#calendar.fc{position:relative;z-index:1;}
 #calendar.fc .fc-button-primary{width:32px;height:32px;border:0;margin-left:0;}
 #calendar.fc .fc-button-primary:hover{border:0;}
 #calendar.fc .fc-button:focus{outline:none !important;box-shadow:none;}
@@ -809,23 +809,15 @@ input[type=number]::-webkit-outer-spin-button {
 #calendar.fc .fc-day-other .total-num{display:none;}
 #calendar.fc .fc-daygrid-more-link{color:#b2bbce;font-size:12px;font-weight:600;padding:2px 4px;display:inline-block;border-radius:2px;}
 #calendar.fc .fc-daygrid-more-link:hover{background-color:#495367;}
-/* #calendar.fc .fc-daygrid-more-link{display:block;width:24px;height:24px;background:url(../img/icons/ic_of_off.png) 0 0 no-repeat;font-size:0;float:right;} */
 #calendar.fc .fc-daygrid-day.fc-day-today{background-color:#34374c;}
 #calendar.fc th.fc-day-today .fc-scrollgrid-sync-inner{position:relative;}
 #calendar.fc-theme-standard td{border-color:#3e4157;}
 
-/* #calendar.fc.timeGrid .fc-day-today .fc-daygrid-day-frame{border-top:0;}
-#calendar.fc.timeGrid th.fc-day-today .fc-scrollgrid-sync-inner:before,
-#calendar.fc.timeGrid th.fc-day-today .fc-scrollgrid-sync-inner:after{content:'';display:block;width:1px;height:100%;background-color:#7692c2;position:absolute;top:0;}
-#calendar.fc.timeGrid th.fc-day-today .fc-scrollgrid-sync-inner:before{left:0;}
-#calendar.fc.timeGrid th.fc-day-today .fc-scrollgrid-sync-inner:after{right:0;} */
-
-#calendar.fc:not(.timeGrid) .fc-scroller{overflow:inherit !important;}
-#calendar.fc:not(.timeGrid) .fc-view-harness{height:827px !important;}
-#calendar.fc:not(.timeGrid) .fc-scroller-harness-liquid{height:827px !important;}
+#calendar.fc .fc-daygrid-body{border-bottom:1px solid #3e4157;}
+#calendar.fc.monthGrid .fc-scroller{overflow:inherit !important;}
+#calendar.fc.monthGrid .fc-view-harness{height:827px !important;}
+#calendar.fc.monthGrid .fc-scroller-harness-liquid{height:804px !important;}
 #calendar.fc.timeGrid.eachGrid tr td{overflow-y:auto;}/* 정기점검계획 주간에서는 클래스 eachGrid가 붙으며, 특별점검계획 주간과는 다르게 td간의 y스크롤이 생성된다.  */
-/* #calendar.fc.timeGrid .fc-view-harness{height:640px !important;}
-#calendar.fc.timeGrid .fc-daygrid-day-frame{height:640px !important;} */
 #calendar.fc .fc-scrollgrid-section-body table,
 #calendar.fc .fc-scrollgrid-section-footer table{height:auto !important;}
 
@@ -840,21 +832,32 @@ input[type=number]::-webkit-outer-spin-button {
 #calendar.fc .fc-popover-title{font-size:14px;line-height:1.5;color:#fff;font-weight:500;margin:0;}
 #calendar.fc .fc-popover-close{width:16px;height:16px;background:url(../img/ico-16-close.png) 50% 50% no-repeat;font-size:0;}
 #calendar.fc-theme-standard td.fc-timegrid-axis, #calendar.fc-theme-standard th.fc-timegrid-axis{display:none;}
-/* #calendar.fc.timeGrid .fc-daygrid-body-unbalanced .fc-daygrid-day-events{margin-top:0;}
-#calendar.fc.timeGrid colgroup{display:none;}
-#calendar.fc.timeGrid .fc-scrollgrid-section:nth-child(2){display:none;}
-#calendar.fc.timeGrid .fc-scrollgrid-section:nth-child(3){display:none;}
-#calendar.fc.timeGrid .fc-scrollgrid-section table,
-#calendar.fc.timeGrid .fc-timegrid .fc-daygrid-body{width:100% !important;}
-#calendar.fc.timeGrid .fc-scroller{overflow:hidden !important;} */
 #calendar.fc td[role="presentation"]{border-bottom:0;}/* 달력 가장 하단 보더 삭제 */
 #calendar.fc .fc-timegrid-axis-cushion, .fc .fc-timegrid-slot-label-cushion{color:#b2bbce;font-size:13px;line-height:1.5;font-weight:700;}
 #calendar.fc .fc-timegrid-event-harness-inset .fc-timegrid-event{box-shadow:none;padding:3px 8px;font-size:12px;font-weight:600;color:#fff;}
 #calendar.fc .fc-timegrid-event.c-19b2e8 .fc-event-main{background-color: #19b2e8;}
 #calendar.fc .fc-timegrid-event.c-19b2e8 .fc-event-title .fc-l::before{display:none;}
 
-#calendar.fc.weekGrid .fc-scroller-harness{overflow:auto;}
-/* #calendar.fc .fc-scroller-harness{overflow-y:auto;} */
+#calendar.fc.weekGrid .fc-timegrid-divider{padding:0;}
+#calendar.fc.weekGrid tbody[role="rowgroup"] .fc-scrollgrid-section:first-child .fc-scroller{max-height:122px;}
+#calendar.fc.weekGrid tbody[role="rowgroup"] .fc-scrollgrid-section:first-child .fc-scroller::-webkit-scrollbar{border-radius:4px;background:transparent;width:8px;}
+#calendar.fc.weekGrid tbody[role="rowgroup"] .fc-scrollgrid-section:first-child .fc-scroller::-webkit-scrollbar-track{border-radius:0 4px 4px 0;background:#34374c;border-left:1px solid #212332;} 
+#calendar.fc.weekGrid tbody[role="rowgroup"] .fc-scrollgrid-section:first-child .fc-scroller::-webkit-scrollbar-thumb{background-color:#495367;border-radius:4px;background-clip:padding-box;border:1px solid transparent;}
+#calendar.fc.weekGrid tbody[role="rowgroup"] .fc-scrollgrid-section:first-child .fc-scroller::-webkit-scrollbar-thumb:hover{background-color:#778298;}
+
+#calendar.fc.weekGrid thead[role="rowgroup"] .fc-scrollgrid-section .fc-scroller{overflow:hidden !important;}
+#calendar.fc.weekGrid .fc-scroller-liquid-absolute{max-height:1008px;}
+#calendar.fc.weekGrid .fc-scroller-liquid-absolute::-webkit-scrollbar{border-radius:4px;background:transparent;width:8px;}
+#calendar.fc.weekGrid .fc-scroller-liquid-absolute::-webkit-scrollbar-track{border-radius:0 4px 4px 0;background:#34374c;border-left:1px solid #212332;} 
+#calendar.fc.weekGrid .fc-scroller-liquid-absolute::-webkit-scrollbar-thumb{background-color:#495367;border-radius:4px;background-clip:padding-box;border:1px solid transparent;}
+#calendar.fc.weekGrid .fc-scroller-liquid-absolute::-webkit-scrollbar-thumb:hover{background-color:#778298;}
+
+#calendar.fc.weekGrid .fc-scrollgrid-section-header table colgroup col,
+#calendar.fc.weekGrid .fc-scrollgrid-section-body table colgroup col{width:99px !important;}
+#calendar.fc.weekGrid.fc-direction-ltr .fc-timegrid-slot-label-frame{text-align:left;}
+
+#calendar.fc.weekGrid .fc-scroller-liquid-absolute .fc-event-title{display:block;}
+#calendar.fc.weekGrid .fc-scroller-liquid-absolute .fc-event-title .fc-l .date{display:block;}
 
 #calendar.fc a.fc-event{cursor:pointer;}
 .calendar-item{position: absolute;right:0;top:0;z-index:2;}

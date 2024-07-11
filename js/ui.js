@@ -371,8 +371,8 @@ var GUI = window.GUI || (function(){
       var $wrapper = $('#wrap');
       var $header = $('#header');
       var $top = $('.content-wrap .content-top');
-      var $content = $('.content-wrap .content-area');
-      var $frame = $('.content-wrap .content-frame');
+      var $content = $('.content-wrap:not(.auto-height) .content-area');
+      var $frame = $('.content-wrap:not(.auto-height) .content-frame');
       var $popup_frame = $('.popup-wrap .content-frame');
       var _pd = 40;
 

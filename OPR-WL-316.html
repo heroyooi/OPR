@@ -169,7 +169,7 @@
           </li>
         </ul>
       </div><!-- .left-wrap -->
-      <div class="content-wrap">
+      <div class="content-wrap auto-height">
         <div class="content-top">
           <div class="menu-area">
             <a href="#" class="s-ico home"></a>
@@ -199,7 +199,7 @@
                 <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico color"></span>색상범례</em></a></span>
               </div>
             </div><!-- .search-area -->
-            <div class="content-frame c-scrollbar">
+            <div class="content-frame">
               <div class="calendar-item">
                 <ul class="tab-btn">
                   <li class="on"><a href="#">월간</a></li>
@@ -283,9 +283,41 @@
         eventContent: function(arg) {
           var event = arg.event;
           var arr = event.title.split('|');
-
-          return {
-            html: `<div class="fc-event-title"><span class="fc-l">${arr[0]}</span><span class="fc-r">${arr[1]}</span></div>`
+          var startTime = event.start;
+          var endTime = event.end;
+          const _startTime = String(startTime).match(/\b\d{2}:\d{2}/);
+          const _endTime = String(endTime).match(/\b\d{2}:\d{2}/);
+          if (_startTime[0] != "00:00") {
+            if (_endTime?.[0]) {
+              return {
+                html: `<div class="fc-event-title">
+                  <span class="fc-l">
+                    <em class="date">${_startTime[0]} ~ ${_endTime?.[0]}</em>
+                    <em class="title">${arr[0]}</em>
+                  </span>
+                  <span class="fc-r">${arr[1]}</span>
+                </div>`
+              }
+            } else {
+              return {
+                html: `<div class="fc-event-title">
+                  <span class="fc-l">
+                    <em class="date">${_startTime[0]}</em>
+                    <em class="title">${arr[0]}</em>
+                  </span>
+                  <span class="fc-r">${arr[1]}</span>
+                </div>`
+              }
+            }
+          } else {
+            return {
+              html: `<div class="fc-event-title">
+                <span class="fc-l">
+                  <em class="title">${arr[0]}</em>
+                  </span>
+                <span class="fc-r">${arr[1]}</span>
+              </div>`
+            }
           }
         }
       });
@@ -317,7 +349,7 @@
     var qsample = $.urlParam('sample');
     if (qsample) {
       setTimeout(() => {
-        if (qsample == "timeGridWeek") {
+        if (qsample == "weekand") {
           $('.calendar-item .tab-btn li:eq(1) a').click();
         }
       }, 250);
