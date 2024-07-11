@@ -62,11 +62,19 @@ var GUI = window.GUI || (function(){
         if ($(this).hasClass('disabled')) {
           return;
         }
-        if (!$(this).hasClass('on')) {
-          $(this).addClass('on');
+        if ($(this).closest('.btns-wrap').hasClass('select-one')) {
+          if (!$(this).hasClass('on')) {
+            $(this).addClass('on');
+            $(this).siblings().removeClass('on');
+          }
         } else {
-          $(this).removeClass('on');
+          if (!$(this).hasClass('on')) {
+            $(this).addClass('on');
+          } else {
+            $(this).removeClass('on');
+          }
         }
+        
       });
 
       if ($('#gnb').data('active')) {

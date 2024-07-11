@@ -667,6 +667,11 @@ picker1.on('change:end', () => {
     <option value="1" selected>01</option>
     <option value="2">02시</option>
     <option value="3">03시</option>
+  </select><select class="select-base ml8" style="width: 90px;">
+    <option value="0">선택</option>
+    <option value="1" selected>01</option>
+    <option value="2">02시</option>
+    <option value="3">03시</option>
   </select>
   <span class="unit">시</span>
   <select class="select-base ml8" style="width: 90px;">
@@ -1026,7 +1031,7 @@ $('.file-box').on('click', '.btn-delete', function(e){
               </div>
 
               <div class="code-area">
-                <h3>버튼 그룹 - 이벤트 <button>코드 보기</button></h3>
+                <h3>버튼 그룹 - 이벤트(다중 선택 가능) <button>코드 보기</button></h3>
 <div class="code-box"><div class="btns-wrap evt">
   <span class="btn-base"><a href="#">전체 선택</a></span>
   <span class="btn-base on"><a href="#">VMS 메시지</a></span>
@@ -1036,6 +1041,18 @@ $('.file-box').on('click', '.btn-delete', function(e){
   <span class="btn-base"><a href="#">차량 정비 업체</a></span>
   <span class="btn-base"><a href="#">112 사고 신고</a></span>
   <span class="btn-base"><a href="#">119 구조 요청</a></span>
+</div></div>
+<pre class="language-html"></pre>
+              </div>
+
+              <div class="code-area">
+                <h3>버튼 그룹 - 이벤트(단일 선택 가능) <button>코드 보기</button></h3>
+<div class="code-box"><div class="btns-wrap evt select-one">
+  <span class="btn-base on"><a href="#">일간</a></span>
+  <span class="btn-base"><a href="#">주간</a></span>
+  <span class="btn-base"><a href="#">월간</a></span>
+  <span class="btn-base"><a href="#">분기</a></span>
+  <span class="btn-base"><a href="#">연간</a></span>
 </div></div>
 <pre class="language-html"></pre>
               </div>
