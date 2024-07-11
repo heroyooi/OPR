@@ -128,3 +128,16 @@
 .item-list li{width:calc(25% - 6px);background-color:#34374c;padding:20px 32px;align-items:center;justify-content:space-between;display:flex;border-radius:4px;border:1px solid #34374c;} 
 .item-list li .label{font-size:16px;font-weight:700;color:#fff;line-height:1.5;}
 .item-list li:hover, .item-list li.on{background-color: #304c67;border:1px solid #1ac2ff;}
+
+.legend-list{display:flex;flex-wrap:wrap;gap:8px;}
+.legend-list > li{width:calc(50% - 4px);text-align:center;font-size:14px;font-weight:600;line-height:1.5;padding:5.5px;border-radius:4px;}
+.legend-list > li.c-00bbfe{background-color:#00bbfe;}
+.legend-list > li.c-2f78ff{background-color:#2f78ff;}
+.legend-list > li.c-e3c208{background-color:#e3c208;}
+.legend-list > li.c-853cfc{background-color:#853cfc;}
+.legend-list > li.c-ef4345{background-color:#ef4345;}
+.legend-list > li.c-00be9c{background-color:#00be9c;}
+.legend-list > li.c-0bbe35{background-color:#0bbe35;}
+.legend-list > li.c-a89b8f{background-color:#a89b8f;}
+.legend-list > li.c-ad2ec6{background-color:#ad2ec6;}
+.legend-list > li.c-d83a73{background-color:#d83a73;}
