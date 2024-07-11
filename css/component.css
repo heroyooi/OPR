@@ -688,6 +688,7 @@ input[type=number]::-webkit-outer-spin-button {
 .tb-input > thead > tr > th .top-area .label-wrap{display:flex;align-items:center;gap:0 8px;}
 .tb-input > thead > tr > th .top-area .label{font-size:14px;font-weight:600;line-height:1.5;color:#fff;display:inline-block;padding:0 4px;}
 .tb-input > tbody > tr > th, .tb-input > tbody > tr > td{padding:8px 12px;font-size:14px;line-height:21px;text-align:left;border-bottom:1px solid #212332;border-bottom:1px solid #212332;}
+.tb-input > tbody > tr > td .b-label{display:block;font-size:14px;color:#b2bbce;line-height:1.5;margin-bottom:8px;}
 .tb-input > tbody > tr > th{background-color:#3e4157;color:#778298;border-left:1px solid #212332;}
 .tb-input > tbody > tr > th:first-child{border-left:0;}
 .tb-input > tbody > tr > th.bl{border-left:1px solid #34364c;border-top:1px solid #34364c;}
