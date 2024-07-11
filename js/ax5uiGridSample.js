@@ -57,31 +57,6 @@ var rowClass = function(item, type) {
 }
 
 var checkColumns = {
-  // key: "isChecked",
-  // label: `<span class="chk-base chk-only">
-  //   <input type="checkbox" id="chk-all" />
-  //   <label for="chk-all">전체 체크박스</label>
-  // </span>`,
-  // width: 50,
-  // sortable: false,
-  // align: "center",
-  // // editor: {
-  //   //   type: "checkbox",
-  //   //   config: { height: 17, trueValue: "Y", falseValue: "N" }
-  //   // },
-  // formatter: function() {
-  //   if (this.item.isChecked === 'Y') {
-  //     return `<span class="chk-base chk-only">
-  //       <input type="checkbox" id="chk-${this.item.__index}" class="row-checkbox" checked />
-  //       <label for="chk-${this.item.__index}">체크박스${this.item.__index}</label>
-  //     </span>`;
-  //   } else {
-  //     return `<span class="chk-base chk-only">
-  //       <input type="checkbox" id="chk-${this.item.__index}" class="row-checkbox" />
-  //       <label for="chk-${this.item.__index}">체크박스${this.item.__index}</label>
-  //     </span>`;
-  //   }
-  // }
   key: "isChecked",
   label: `<input type="checkbox" id="chk-all" />`,
   width: 50,
@@ -107,6 +82,8 @@ var getOptions = ($selector, columns) => {
     page: {
       display: false,
     },
+    showRowSelector: true,
+    rowSelectorColumnWidth: 50,
   }
 }
 
@@ -319,7 +296,7 @@ var data1_16 = [
 ];
 
 var columns1 = [
-  checkColumns,
+  // checkColumns,
   {
     key: 'column1',
     label: '순번',
@@ -344,7 +321,7 @@ var columns1 = [
   },
 ];
 var columns1_2 = [
-  checkColumns,
+  // checkColumns,
   {
     key: 'column1',
     label: '순번',
@@ -389,7 +366,7 @@ var columns1_2 = [
   },
 ];
 var columns1_3 = [
-  checkColumns,
+  // checkColumns,
   {
     key: 'column1',
     label: '순번',
@@ -434,7 +411,7 @@ var columns1_3 = [
   },
 ];
 var columns1_4 = [
-  checkColumns,
+  // checkColumns,
   {
     key: 'column1',
     label: '순번',
@@ -479,7 +456,7 @@ var columns1_4 = [
   },
 ];
 var columns1_5 = [
-  checkColumns,
+  // checkColumns,
   {
     key: 'column1',
     label: '순번',
@@ -524,7 +501,7 @@ var columns1_5 = [
   },
 ];
 var columns1_6 = [
-  checkColumns,
+  // checkColumns,
   {
     key: 'column1',
     label: '순번',
@@ -555,7 +532,7 @@ var columns1_6 = [
   },
 ];
 var columns1_7 = [
-  checkColumns,
+  // checkColumns,
   {
     key: 'column1',
     label: '순번',
@@ -699,7 +676,7 @@ var columns1_7 = [
   },
 ];
 var columns1_8 = [
-  checkColumns,
+  // checkColumns,
   {
     key: 'column1',
     label: '순번',
@@ -786,7 +763,7 @@ var columns1_8 = [
   },
 ];
 var columns1_9 = [
-  checkColumns,
+  // checkColumns,
   {
     key: 'column1',
     label: '순번',
@@ -845,7 +822,7 @@ var columns1_9 = [
   },
 ];
 var columns1_10 = [
-  checkColumns,
+  // checkColumns,
   {
     key: 'column1',
     label: '순번',
@@ -906,7 +883,7 @@ var columns1_10 = [
   },
 ];
 var columns1_11 = [
-  checkColumns,
+  // checkColumns,
   {
     key: 'column1',
     label: '순번',
@@ -938,7 +915,7 @@ var columns1_11 = [
 ];
 
 var columns1_12 = [
-  checkColumns,
+  // checkColumns,
   {
     key: 'column1',
     label: '순번',
@@ -977,7 +954,7 @@ var columns1_12 = [
 ];
 
 var columns1_13 = [
-  checkColumns,
+  // checkColumns,
   {
     key: 'column1',
     label: '순번',
@@ -1066,7 +1043,7 @@ var columns1_13 = [
   },
 ];
 var columns1_14 = [
-  checkColumns,
+  // checkColumns,
   {
     key: 'column1',
     label: '순번',
@@ -1111,7 +1088,7 @@ var columns1_14 = [
   },
 ];
 var columns1_15 = [
-  checkColumns,
+  // checkColumns,
   {
     key: 'column1',
     label: '순번',
@@ -1185,7 +1162,7 @@ var columns1_15 = [
 ];
 
 var columns1_16 = [
-  checkColumns,
+  // checkColumns,
   {
     key: 'column1',
     label: '순번',
@@ -1279,7 +1256,7 @@ var data2 = [
 ];
 
 var columns2 = [
-  checkColumns,
+  // checkColumns,
   {
     key: 'column1',
     label: '컬럼명1',
@@ -1375,6 +1352,8 @@ var option2 = function($selector) {
     page: {
       display: false,
     },
+    showRowSelector: true,
+    rowSelectorColumnWidth: 50,
   }
 }
 
@@ -1396,7 +1375,7 @@ var data3 = [
 ];
 
 var columns3 = [
-  checkColumns,
+  // checkColumns,
   {
     key: 'column1',
     label: '컬럼명1',
@@ -1491,6 +1470,8 @@ var option3 = function($selector) {
     page: {
       display: false,
     },
+    showRowSelector: true,
+    rowSelectorColumnWidth: 50,
   }
 }
 

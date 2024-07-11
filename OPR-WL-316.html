@@ -262,7 +262,8 @@
         eventClick: function(info){
           clearTimeout(_timerTip);
           _showTip = false;
-          
+
+          // if ($(info.el).closest('.fc-scroller-liquid-absolute').length && $(info.el).closest('.weekGrid').length) {}
           $('.calendar-tooltip').css({
             left: info.jsEvent.pageX,
             top: info.jsEvent.pageY + 10,
@@ -290,7 +291,7 @@
           if (_startTime[0] != "00:00") {
             if (_endTime?.[0]) {
               return {
-                html: `<div class="fc-event-title">
+                html: `<div class="fc-event-title fc-period">
                   <span class="fc-l">
                     <em class="date">${_startTime[0]} ~ ${_endTime?.[0]}</em>
                     <em class="title">${arr[0]}</em>
@@ -300,7 +301,7 @@
               }
             } else {
               return {
-                html: `<div class="fc-event-title">
+                html: `<div class="fc-event-title fc-oneway">
                   <span class="fc-l">
                     <em class="date">${_startTime[0]}</em>
                     <em class="title">${arr[0]}</em>
@@ -332,7 +333,7 @@
         $('#calendar.fc').removeClass('monthGrid');
       } else {
         fullCalendar.changeView('dayGridMonth');
-        fullCalendar.setOption('dayMaxEvents', 2);
+        fullCalendar.setOption('dayMaxEvents', 3);
         $('#calendar.fc').removeClass('weekGrid'); // timeGrid
         $('#calendar.fc').addClass('monthGrid');
       }
