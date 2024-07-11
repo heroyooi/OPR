@@ -95,6 +95,7 @@
 .s-ico.none{background:url(../img/ico-16-none.png) 50% 50% no-repeat;width:16px;height:16px;}
 .s-ico.poi{background:url(../img/ico-bg_poi-point.png) 50% 50% no-repeat;width:26px;height:31px;}
 .s-ico.details{background:url(../img/ico-16-details-def.png) 50% 50% no-repeat;width:16px;height:17px;}
+.s-ico.print{background:url(../img/ico-16-print-def.png) 50% 50% no-repeat;width:16px;height:17px;}
 
 .s-ico.w-label{font-size:14px;font-weight:600;line-height:1.5;color:#b2bbce;width:auto;position: relative;}
 .s-ico.w-label::before{content:'';width:24px;height:24px;}
@@ -681,6 +682,30 @@ input[type=number]::-webkit-outer-spin-button {
 .fix-right .popup-wrap button.mfp-arrow{top:86px;}
 .fix-right .popup-wrap .con-wrap{padding:86px 20px 20px;}
 
+/* print popup */
+.popup-dimm{position: fixed;left:0;top:0;width:100%;height:100%;background-color: rgba(0, 0, 0, 0.75);z-index:9;display:none;}
+.popup-report{position:absolute;width:760px;left:50%;margin-left:-380px;top:66px;z-index:10;display:none;}
+.popup-report .header{display:flex;justify-content:flex-end;padding:8px 16px;background-color:#34374c;}
+.popup-report .header ul{display:flex;gap:0 16px;}
+.popup-report .header ul li a{display:block;width:24px;height:24px;}
+.popup-report .header ul li .print{background:url(../img/ico-24-print.png)}
+.popup-report .header ul li .pdf{background:url(../img/ico-24-pdf.png)}
+.popup-report .header ul li .cancel{background:url(../img/ico-24-cancel.png)}
+.popup-report .content{padding:30px 40px;background-color:#fff;}
+.popup-report .content .tit{font-size:22px;line-height:1.5;color:#212332;text-align:center;margin-bottom:30px;}
+.popup-report .content .tb-wrap{border:2px solid #212332;border-radius:8px;}
+.popup-report .content .tb-wrap table{table-layout:fixed;width:100%;}
+.popup-report .content .tb-wrap table th, .popup-report .content .tb-wrap table td{font-size:12px;line-height:1.5;border-top:1px solid #212332;}
+.popup-report .content .tb-wrap table tr:first-child th,
+.popup-report .content .tb-wrap table tr:first-child td{border-top:0;}
+.popup-report .content .tb-wrap table th{color:#34374c;background-color:#f4f6f9;padding:12px;font-weight:400;text-align:left;}
+.popup-report .content .tb-wrap table td{padding:12px 10px;font-weight:bold;color:#212332;}
+.popup-report .content .tb-wrap table td.red{color:#ef4345;}
+.popup-report .content .tb-wrap table td span{font-weight:normal;}
+.popup-report .content .s-tit{font-size:14px;line-height:1.5;font-weight:600;color:#212332;margin:20px 0 10px;}
+.popup-report .content .footer{display:flex;justify-content:space-between;align-items:center;margin-top:30px;}
+.popup-report .content .footer .date{font-size:14px;line-height:1.5;color:#212332;}
+
 .tb-wrap{border-radius:4px;overflow:hidden;}
 .tb-input{width:100%;table-layout:fixed;}
 .tb-input > thead > tr > th{padding:8px 12px;background-color:#34374c;text-align:left;border-bottom:1px solid #212332;}
@@ -899,7 +924,6 @@ input[type=number]::-webkit-outer-spin-button {
 #calendar.fc.weekGrid .fc-scroller-liquid-absolute .fc-event-title.fc-oneway .fc-l .title{display:block;}
 #calendar.fc.weekGrid .fc-scroller-liquid-absolute .fc-event-title.fc-oneway .fc-r{position: absolute;right:9px;top:1px;}
 
-
 #calendar.fc a.fc-event{cursor:pointer;}
 .calendar-item{position: absolute;right:0;top:0;z-index:2;}
 .calendar-tooltip{position: absolute;display:none;z-index:10;padding:8px 16px;border-radius: 4px;
@@ -908,3 +932,13 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);background-color: rgba(31, 61, 83, 0
 .calendar-tooltip li:first-child{margin-top:0;}
 .calendar-tooltip li a{font-size:14px;line-height:1.5;color:#b2bbce;}
 .calendar-tooltip li a:hover{color:#00bbfe;}
+
+@media print {
+  body, div{position: relative;}
+  #wrap{background-color:#fff !important;height:auto !important;}
+  #header, .content-wrap{background-color: #fff;}
+  #header, #container, .popup-wrap, .popup-dimm, .left-wrap, .content-wrap{display:none;}
+  .popup-report{margin-left:0;left:0;top:0;width:1077px;position:relative;}
+  .popup-report .header{display:none;}
+  .popup-report *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}

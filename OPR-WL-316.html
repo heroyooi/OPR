@@ -366,7 +366,7 @@
 
       fullCalendar.render();
     });
-    $('.tab-btn li a').on('click', function(){
+    $('.calendar-item .tab-btn li a').on('click', function(){
       if ($(this).text() === '주간') {
         fullCalendar.changeView('timeGridWeek');
         fullCalendar.setOption('dayMaxEvents', 999);

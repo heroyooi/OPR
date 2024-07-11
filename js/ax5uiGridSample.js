@@ -294,6 +294,18 @@ var data1_16 = [
   { isChecked: "N", column1: '42', column2: '2024-10-25 14:23:35', column3: '월간', column4: 'VMS', column5: 'VMS-N-0038', column6: '의좋은형제 휴게소', column7: '정상', column8: '-', column9: 'Y', column10: 'Ftms003' },
   { isChecked: "N", column1: '41', column2: '2024-10-25 14:23:35', column3: '월간', column4: 'VMS', column5: 'VMS-N-0038', column6: '의좋은형제 휴게소', column7: '정상', column8: '-', column9: 'Y', column10: 'Ftms003' },
 ];
+var data1_17 = [
+  { isChecked: "N", column1: '50', column2: '2024-10-25 14:23:35', column3: 'CCTV', column4: 'CCTV-N-0058', column5: '평택호휴게소', column6: '리셋', column7: '완료', column8: 'traffic00', column9: 'Y', column10: 'Y' },
+  { isChecked: "N", column1: '49', column2: '2024-10-25 14:23:35', column3: 'CCTV', column4: 'CCTV-N-0058', column5: '평택호휴게소', column6: '리셋', column7: '완료', column8: 'traffic00', column9: 'Y', column10: 'Y' },
+  { isChecked: "N", column1: '48', column2: '2024-10-25 14:23:35', column3: 'CCTV', column4: 'CCTV-N-0058', column5: '평택호휴게소', column6: '리셋', column7: '완료', column8: 'traffic00', column9: 'Y', column10: 'Y' },
+  { isChecked: "N", column1: '47', column2: '2024-10-25 14:23:35', column3: 'CCTV', column4: 'CCTV-N-0058', column5: '평택호휴게소', column6: '리셋', column7: '완료', column8: 'traffic00', column9: 'Y', column10: 'Y' },
+  { isChecked: "N", column1: '46', column2: '2024-10-25 14:23:35', column3: 'CCTV', column4: 'CCTV-N-0058', column5: '평택호휴게소', column6: '리셋', column7: '완료', column8: 'traffic00', column9: 'Y', column10: 'Y' },
+  { isChecked: "N", column1: '45', column2: '2024-10-25 14:23:35', column3: 'CCTV', column4: 'CCTV-N-0058', column5: '평택호휴게소', column6: '리셋', column7: '완료', column8: 'traffic00', column9: 'Y', column10: 'Y' },
+  { isChecked: "N", column1: '44', column2: '2024-10-25 14:23:35', column3: 'CCTV', column4: 'CCTV-N-0058', column5: '평택호휴게소', column6: '리셋', column7: '완료', column8: 'traffic00', column9: 'Y', column10: 'Y' },
+  { isChecked: "N", column1: '43', column2: '2024-10-25 14:23:35', column3: 'CCTV', column4: 'CCTV-N-0058', column5: '평택호휴게소', column6: '리셋', column7: '완료', column8: 'traffic00', column9: 'Y', column10: 'Y' },
+  { isChecked: "N", column1: '42', column2: '2024-10-25 14:23:35', column3: 'CCTV', column4: 'CCTV-N-0058', column5: '평택호휴게소', column6: '리셋', column7: '완료', column8: 'traffic00', column9: 'Y', column10: 'Y' },
+  { isChecked: "N", column1: '41', column2: '2024-10-25 14:23:35', column3: 'CCTV', column4: 'CCTV-N-0058', column5: '평택호휴게소', column6: '리셋', column7: '완료', column8: 'traffic00', column9: 'Y', column10: 'Y' },
+];
 
 var columns1 = [
   // checkColumns,
@@ -1238,6 +1250,86 @@ var columns1_16 = [
   },
 ];
 
+var columns1_17 = [
+  // checkColumns,
+  {
+    key: 'column1',
+    label: '순번',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column2',
+    label: '수리/조치 완료 일시',
+    width: 270,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column3',
+    label: '장비',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column4',
+    label: '장비ID',
+    width: 270,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column5',
+    label: '위치',
+    width: 270,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column6',
+    label: '조치결과',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column7',
+    label: '진행상태',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column8',
+    label: '담당자',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column9',
+    label: '상세보기',
+    width: 100,
+    align: "center",
+    sortable: true,
+    formatter: function() {
+      return '<a class="s-ico details" href="javascript:;"></a>';
+    }
+  },
+  {
+    key: 'column10',
+    label: '출력',
+    width: 100,
+    align: "center",
+    sortable: true,
+    formatter: function() {
+      return '<a class="s-ico print" href="javascript:void(0);" onclick="openPrint()"></a>';
+    }
+  },
+];
+
 var data2 = [
   { column1: '로우데이터', column2: '로우데이터', column3: '로우데이터', state: 'red', column4: '로우 데이터' },
   { column1: '로우데이터', column2: '로우데이터', column3: '라벨', column3Type: 'label', state: 'orange', column4: '로우 데이터' },
@@ -1554,12 +1646,13 @@ $(document.body).ready(function() {
   var $grid1_14 = $('[data-ax5grid="grid1_14"]');
   var $grid1_15 = $('[data-ax5grid="grid1_15"]');
   var $grid1_16 = $('[data-ax5grid="grid1_16"]');
+  var $grid1_17 = $('[data-ax5grid="grid1_17"]');
   
   var $grid2 = $('[data-ax5grid="grid2"]');
   var $grid3 = $('[data-ax5grid="grid3"]');
   var $grid4 = $('[data-ax5grid="grid4"]');
 
-  if ($grid1.length || $grid1_2.length || $grid1_3.length || $grid1_4.length || $grid1_5.length || $grid1_6.length || $grid1_7.length || $grid1_8.length || $grid1_9.length || $grid1_10.length || $grid1_11.length || $grid1_12.length || $grid1_13.length || $grid1_14.length || $grid1_15.length || $grid1_16.length) {
+  if ($grid1.length || $grid1_2.length || $grid1_3.length || $grid1_4.length || $grid1_5.length || $grid1_6.length || $grid1_7.length || $grid1_8.length || $grid1_9.length || $grid1_10.length || $grid1_11.length || $grid1_12.length || $grid1_13.length || $grid1_14.length || $grid1_15.length || $grid1_16.length || $grid1_17.length) {
     if ($grid1.length) {
       new ax5.ui.grid(getOptions($grid1, columns1)).setData(data1);
     } else if ($grid1_2.length) {
@@ -1592,6 +1685,8 @@ $(document.body).ready(function() {
       new ax5.ui.grid(getOptions($grid1_15, columns1_15)).setData(data1_15);
     } else if ($grid1_16.length) {
       new ax5.ui.grid(getOptions($grid1_16, columns1_16)).setData(data1_16);
+    } else if ($grid1_17.length) {
+      new ax5.ui.grid(getOptions($grid1_17, columns1_17)).setData(data1_17);
     }
 
     $(document).on('click', '#chk-all', function() {

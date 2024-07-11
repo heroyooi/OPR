@@ -225,8 +225,8 @@
               </div>
             </div><!-- .search-area -->
             <div class="content-frame c-scrollbar">
-              <div style="position: relative; height:470px;" id="grid1_16-parent">
-                <div class="cs-ax5grid" data-ax5grid="grid1_16" data-ax5grid-config="{}" style="height: 100%"></div>
+              <div style="position: relative; height:470px;" id="grid1_17-parent">
+                <div class="cs-ax5grid" data-ax5grid="grid1_17" data-ax5grid-config="{}" style="height: 100%"></div>
               </div>
               <div class="total-wrap mt12">
                 <div class="total">
@@ -252,25 +252,136 @@
       </div><!-- .content-wrap -->
     </div><!-- #container -->
 
-    <div class="popup-wrap mfp-hide" id="popup-ftms-type" style="width: 384px;">
+    <div class="popup-wrap mfp-hide" id="popup-search" style="width: 480px;">
       <div class="con-wrap">
-        <h3 class="tit">FTMS 장비 유형 선택</h3>
-        <p class="s-tit">장비유형</p>
-        <ul class="btn-list col2">
-          <li><span class="btn-base"><a href="#">VDS</a></span></li>
-          <li><span class="btn-base on"><a href="#">VMS</a></span></li>
-          <li><span class="btn-base"><a href="#">CCTV</a></span></li>
-          <li><span class="btn-base"><a href="#">LCS</a></span></li>
-          <li><span class="btn-base"><a href="#">긴급전화</a></span></li>
-          <li><span class="btn-base"><a href="#">라디오 재방송</a></span></li>
-          <li><span class="btn-base"><a href="#">RWIS</a></span></li>
-          <li><span class="btn-base"><a href="#">휴게소 주차정보</a></span></li>
-          <li><span class="btn-base"><a href="#">안개경고주의</a></span></li>
-          <li><span class="btn-base"><a href="#">갱구부LED</a></span></li>
+        <h3 class="tit">고장/수리 현황 조회</h3>
+        <div class="tb-wrap">
+          <table class="tb-input tp2">
+            <colgroup>
+              <col width="100" />
+              <col width="*" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>점검 대상 구분</th>
+                <td>
+                  <ul class="radio-list">
+                    <li>
+                      <span class="radio-base">
+                        <input type="radio" id="radio-1" name="radio" checked>
+                        <label for="radio-1">FTMS</label>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="radio-base">
+                        <input type="radio" id="radio-2" name="radio">
+                        <label for="radio-2">센터 설비</label>
+                      </span>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>링크 ID</th>
+                <td>20241025-01-N-003</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="status-list">
+          <li>
+            <div class="label-wrap">
+              <span class="label">VDS</span>
+              <span class="num">109/227</span>
+            </div>
+            <div class="gage-wrap">
+              <span class="gage" style="width: 48%;"></span>
+            </div>
+          </li>
+          <li>
+            <div class="label-wrap">
+              <span class="label">VMS</span>
+              <span class="num">26/48</span>
+            </div>
+            <div class="gage-wrap">
+              <span class="gage" style="width: 54.16%;"></span>
+            </div>
+          </li>
+          <li>
+            <div class="label-wrap">
+              <span class="label">CCTV</span>
+              <span class="num">109/227</span>
+            </div>
+            <div class="gage-wrap">
+              <span class="gage" style="width: 48%;"></span>
+            </div>
+          </li>
+          <li>
+            <div class="label-wrap">
+              <span class="label">LCS</span>
+              <span class="num">26/48</span>
+            </div>
+            <div class="gage-wrap">
+              <span class="gage" style="width: 54.16%;"></span>
+            </div>
+          </li>
+          <li>
+            <div class="label-wrap">
+              <span class="label">EMP</span>
+              <span class="num">109/227</span>
+            </div>
+            <div class="gage-wrap">
+              <span class="gage" style="width: 48%;"></span>
+            </div>
+          </li>
+          <li>
+            <div class="label-wrap">
+              <span class="label">ROD</span>
+              <span class="num">26/48</span>
+            </div>
+            <div class="gage-wrap">
+              <span class="gage" style="width: 54.16%;"></span>
+            </div>
+          </li>
+          <li>
+            <div class="label-wrap">
+              <span class="label">RWIS</span>
+              <span class="num">3/3</span>
+            </div>
+            <div class="gage-wrap">
+              <span class="gage" style="width: 100%;"></span>
+            </div>
+          </li>
+          <li>
+            <div class="label-wrap">
+              <span class="label">RPIS</span>
+              <span class="num">2/3</span>
+            </div>
+            <div class="gage-wrap">
+              <span class="gage" style="width: 66.66%;"></span>
+            </div>
+          </li>
+          <li>
+            <div class="label-wrap">
+              <span class="label">FOGW</span>
+              <span class="num">2/3</span>
+            </div>
+            <div class="gage-wrap">
+              <span class="gage" style="width: 66.66%;"></span>
+            </div>
+          </li>
+          <li>
+            <div class="label-wrap">
+              <span class="label">LED</span>
+              <span class="num">0/2</span>
+            </div>
+            <div class="gage-wrap">
+              <span class="gage" style="width: 0%;"></span>
+            </div>
+          </li>
         </ul>
         <div class="btns-wrap center mt24">
-          <span class="btn-base gray b-mfp-close"><a href="#">취소</a></span>
-          <span class="btn-base b-mfp-close"><a href="#">등록</a></span>
+          <span class="btn-base gray b-mfp-close"><a href="#">확인</a></span>
         </div>
       </div>
     </div><!-- .popup-wrap -->
@@ -320,9 +431,9 @@
       });
 
       var qpopup = $.urlParam('popup');
-      if (qpopup== 'ftmsType') {
+      if (qpopup== 'search') {
         setTimeout(() => {
-          $.magnificPopup.open(getOptionsAnim('#popup-ftms-type', false));
+          $.magnificPopup.open(getOptionsAnim('#popup-search', false));
         }, 250);
       }
     </script>

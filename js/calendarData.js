@@ -1,24 +1,3 @@
-/**
- * 점검계획 속성 색상값 (for backgroundColor & borderColor)
- * 
- * [점검계획 속성 : enabled color (hovered color)]
- * AVI : 0475f4 (035dc2)
- * CCTV : 4565e8 (1c42de)
- * DSRC : 28ae35 (1e8528)
- * VMS : ef7c3a (e35f12)
- * TMS : 5f7298 (4b5a79)
- * VSL : 9750e9 (7c23e3)
- * VDS : 4caff2 (1c9aef)
- * RWIS : e40e14 (b40b10)
- * 선로설비 : f5bc20 (d8a10a)
- * 통신설비 : 29c2b3 (20988c)
- * 특별점검 : f14e85 (ed1f64)
- */
-
-// REF: https://fullcalendar.io/docs/event-parsing
-var fnUrl = function(){
-  alert(1);
-}
 var regularData = [
   {
     start: '2024-07-01',

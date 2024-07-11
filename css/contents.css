@@ -141,3 +141,11 @@
 .legend-list > li.c-a89b8f{background-color:#a89b8f;}
 .legend-list > li.c-ad2ec6{background-color:#ad2ec6;}
 .legend-list > li.c-d83a73{background-color:#d83a73;}
+
+.status-list{margin-top:16px;}
+.status-list li{margin-top:16px;}
+.status-list li:first-child{margin-top:0;}
+.status-list li .label-wrap{display:flex;justify-content:space-between;margin-bottom:4px;}
+.status-list li .label-wrap span{font-size:14px;line-height:1.5;}
+.status-list li .label-wrap .label{font-weight:600;color:#778298;}
+.status-list li .label-wrap .num{font-weight:700;color:#fff;}
