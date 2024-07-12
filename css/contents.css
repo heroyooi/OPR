@@ -149,3 +149,6 @@
 .status-list li .label-wrap span{font-size:14px;line-height:1.5;}
 .status-list li .label-wrap .label{font-weight:600;color:#778298;}
 .status-list li .label-wrap .num{font-weight:700;color:#fff;}
+
+.chart-area{padding:16px;border-radius:4px;background-color:#212332;min-height:472px;}
+.chart-area .label{font-size:14px;font-weight:600;line-height:1.5;color:#b2bbce;text-align:center;display:block;}

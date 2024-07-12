@@ -306,6 +306,18 @@ var data1_17 = [
   { isChecked: "N", column1: '42', column2: '2024-10-25 14:23:35', column3: 'CCTV', column4: 'CCTV-N-0058', column5: '평택호휴게소', column6: '리셋', column7: '완료', column8: 'traffic00', column9: 'Y', column10: 'Y' },
   { isChecked: "N", column1: '41', column2: '2024-10-25 14:23:35', column3: 'CCTV', column4: 'CCTV-N-0058', column5: '평택호휴게소', column6: '리셋', column7: '완료', column8: 'traffic00', column9: 'Y', column10: 'Y' },
 ];
+var data1_18 = [
+  { isChecked: "N", column1: '50', column2: '2024-10-25', column3: '00', column4: '00', column5: '00', column6: '00', column7: '00' },
+  { isChecked: "N", column1: '49', column2: '2024-10-25', column3: '00', column4: '00', column5: '00', column6: '00', column7: '00' },
+  { isChecked: "N", column1: '48', column2: '2024-10-25', column3: '00', column4: '00', column5: '00', column6: '00', column7: '00' },
+  { isChecked: "N", column1: '47', column2: '2024-10-25', column3: '00', column4: '00', column5: '00', column6: '00', column7: '00' },
+  { isChecked: "N", column1: '46', column2: '2024-10-25', column3: '00', column4: '00', column5: '00', column6: '00', column7: '00' },
+  { isChecked: "N", column1: '45', column2: '2024-10-25', column3: '00', column4: '00', column5: '00', column6: '00', column7: '00' },
+  { isChecked: "N", column1: '44', column2: '2024-10-25', column3: '00', column4: '00', column5: '00', column6: '00', column7: '00' },
+  { isChecked: "N", column1: '43', column2: '2024-10-25', column3: '00', column4: '00', column5: '00', column6: '00', column7: '00' },
+  { isChecked: "N", column1: '42', column2: '2024-10-25', column3: '00', column4: '00', column5: '00', column6: '00', column7: '00' },
+  { isChecked: "N", column1: '41', column2: '2024-10-25', column3: '00', column4: '00', column5: '00', column6: '00', column7: '00' },
+];
 
 var columns1 = [
   // checkColumns,
@@ -925,7 +937,6 @@ var columns1_11 = [
     sortable: true,
   },
 ];
-
 var columns1_12 = [
   // checkColumns,
   {
@@ -964,7 +975,6 @@ var columns1_12 = [
     sortable: true,
   },
 ];
-
 var columns1_13 = [
   // checkColumns,
   {
@@ -1172,7 +1182,6 @@ var columns1_15 = [
     sortable: true,
   },
 ];
-
 var columns1_16 = [
   // checkColumns,
   {
@@ -1249,7 +1258,6 @@ var columns1_16 = [
     sortable: true,
   },
 ];
-
 var columns1_17 = [
   // checkColumns,
   {
@@ -1327,6 +1335,65 @@ var columns1_17 = [
     formatter: function() {
       return '<a class="s-ico print" href="javascript:void(0);" onclick="openPrint()"></a>';
     }
+  },
+];
+var columns1_18 = [
+  // checkColumns,
+  {
+    key: 'column1',
+    label: '순번',
+    width: 60,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column2',
+    label: '일자',
+    width: 170,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column3',
+    label: '합계',
+    width: 130,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column4',
+    label: '차량고장',
+    width: 130,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column4',
+    label: '교통사고',
+    width: 130,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column5',
+    label: '낙하물',
+    width: 130,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column6',
+    label: '과속',
+    width: 130,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column7',
+    label: '난폭운전',
+    width: 130,
+    align: "center",
+    sortable: true,
   },
 ];
 
@@ -1647,12 +1714,13 @@ $(document.body).ready(function() {
   var $grid1_15 = $('[data-ax5grid="grid1_15"]');
   var $grid1_16 = $('[data-ax5grid="grid1_16"]');
   var $grid1_17 = $('[data-ax5grid="grid1_17"]');
+  var $grid1_18 = $('[data-ax5grid="grid1_18"]');
   
   var $grid2 = $('[data-ax5grid="grid2"]');
   var $grid3 = $('[data-ax5grid="grid3"]');
   var $grid4 = $('[data-ax5grid="grid4"]');
 
-  if ($grid1.length || $grid1_2.length || $grid1_3.length || $grid1_4.length || $grid1_5.length || $grid1_6.length || $grid1_7.length || $grid1_8.length || $grid1_9.length || $grid1_10.length || $grid1_11.length || $grid1_12.length || $grid1_13.length || $grid1_14.length || $grid1_15.length || $grid1_16.length || $grid1_17.length) {
+  if ($grid1.length || $grid1_2.length || $grid1_3.length || $grid1_4.length || $grid1_5.length || $grid1_6.length || $grid1_7.length || $grid1_8.length || $grid1_9.length || $grid1_10.length || $grid1_11.length || $grid1_12.length || $grid1_13.length || $grid1_14.length || $grid1_15.length || $grid1_16.length || $grid1_17.length || $grid1_18.length) {
     if ($grid1.length) {
       new ax5.ui.grid(getOptions($grid1, columns1)).setData(data1);
     } else if ($grid1_2.length) {
@@ -1687,6 +1755,8 @@ $(document.body).ready(function() {
       new ax5.ui.grid(getOptions($grid1_16, columns1_16)).setData(data1_16);
     } else if ($grid1_17.length) {
       new ax5.ui.grid(getOptions($grid1_17, columns1_17)).setData(data1_17);
+    } else if ($grid1_18.length) {
+      new ax5.ui.grid(getOptions($grid1_18, columns1_18)).setData(data1_18);
     }
 
     $(document).on('click', '#chk-all', function() {

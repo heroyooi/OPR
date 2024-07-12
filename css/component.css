@@ -307,6 +307,9 @@ input[type=number]::-webkit-outer-spin-button {
 .cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"]{border:0;background-color:transparent;}
 .cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="header"]{border-bottom:0;background-image:none;background-color:transparent;}
 .cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="header"] [data-ax5grid-panel] [data-ax5grid-panel-scroll]{border-radius:4px 4px 0 0;overflow:hidden;}
+.cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="header"] [data-ax5grid-panel][data-ax5grid-panel="aside-header"]{border-radius:4px 0 0 0;}
+.cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="header"] [data-ax5grid-panel][data-ax5grid-panel="aside-header"] + [data-ax5grid-panel][data-ax5grid-panel="left-header"] + [data-ax5grid-panel] [data-ax5grid-panel-scroll]{border-radius:0 4px 0 0;}
+
 .cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="header"] [data-ax5grid-panel] table tr td{background-color:#f1f2f6;box-shadow:none;border-top:1px solid #7692c2;}
 .cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="header"] [data-ax5grid-panel] table tr td:hover{background-color:#f1f2f6;background-image:none;}
 .cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="header"] [data-ax5grid-panel][data-ax5grid-panel="left-header"],
