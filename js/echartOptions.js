@@ -1,121 +1,75 @@
-var colors = ['#00bbfe', '#2f78ff', '#853cfc', '#00be9c', '#e3c208'];
 
+var colors = ['#00bbfe', '#2f78ff', '#853cfc', '#00be9c', '#e3c208'];
 var options = {
-    bar: {
-        title: {
-            text: '돌발상황 발생량 통계'
-        },
-        tooltip: {},
-        legend: {
-            data: ['Publisher']
-        },
-        xAxis: {
-            data: ['A', 'B', 'C', 'D', 'E', 'F']
-        },
-        yAxis: {},
-        series: [
-            {
-            name: 'Publisher',
-            type: 'bar',
-            data: [85, 80, 50, 90, 30, 20]
-            }
-        ]
-    },
     pie: {
+        color: colors,
         title: {
             text: '돌발상황 발생량 통계',
-            subtext: 'Fake Data',
+            textStyle: {
+                fontSize: 14,
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+            },
             left: 'center'
         },
         tooltip: {
-            trigger: 'item'
+            trigger: 'item',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)', // 툴팁 배경색상 설정
+            textStyle: {
+                color: '#fff', // 툴팁 글씨색상 설정
+                fontFamily: 'Pretendard',
+                fontSize: 12,
+                fontWeight: '600'
+            },
+            borderWidth: 0,
+            formatter: '{b} {d}%'
         },
         legend: {
-            orient: 'vertical',
-            left: 'left'
+            orient: 'vertical', // 범례의 방향 설정 (수직)
+            right: '0%', // 범례의 위치 설정
+            align: 'left', // 범례 내용의 정렬 방향 (색상은 왼쪽, 텍스트는 오른쪽)
+            top: 'middle', // 범례의 상단 위치 설정 (화면 상단 중앙)
+            itemWidth: 16, // 아이템 너비
+            itemHeight: 8, // 아이템 높이
+            
+            itemGap: 0, // 항목 간 상하 간격 조정
+            textStyle: {
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+            },
+            formatter: function (name) {
+                return name; // 색상과 텍스트를 포함한 포맷을 설정
+            }
         },
         series: [
             {
-            name: 'Access From',
-            type: 'pie',
-            radius: '50%',
-            data: [
-                { value: 1048, name: 'Search Engine' },
-                { value: 735, name: 'Direct' },
-                { value: 580, name: 'Email' },
-                { value: 484, name: 'Union Ads' },
-                { value: 300, name: 'Video Ads' }
-            ],
-            emphasis: {
-                itemStyle: {
-                    shadowBlur: 10,
-                    shadowOffsetX: 0,
-                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                type: 'pie',
+                radius: '50%',
+                center: ['45%', '60%'],
+                data: [
+                    { value: 65, name: '차량고장' },
+                    { value: 15, name: '교통사고' },
+                    { value: 10, name: '낙하물' },
+                    { value: 7, name: '과목' },
+                    { value: 3, name: '난폭운전' }
+                ],
+                label: {
+                    formatter: '{b} {d}%', // 라벨 포맷 설정
+                    textStyle: {
+                        fontSize: 12,
+                        color: '#b2bbce',
+                        fontFamily: 'Pretendard',
+                    }
+                },
+                emphasis: {
+                    itemStyle: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    },
+                    
                 }
             }
-            }
-        ]
-    },
-    line: {
-        title: {
-            text: '돌발상황 발생량 통계'
-        },
-        tooltip: {
-            trigger: 'axis'
-        },
-        legend: {
-            data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine']
-        },
-        grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: true
-        },
-        toolbox: {
-        feature: {
-            saveAsImage: {}
-        }
-        },
-        xAxis: {
-            type: 'category',
-            boundaryGap: false,
-            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-        },
-        yAxis: {
-            type: 'value'
-        },
-        series: [
-        {
-            name: 'Email',
-            type: 'line',
-            stack: 'Total',
-            data: [120, 132, 101, 134, 90, 230, 210]
-        },
-        {
-            name: 'Union Ads',
-            type: 'line',
-            stack: 'Total',
-            data: [220, 182, 191, 234, 290, 330, 310]
-        },
-        {
-            name: 'Video Ads',
-            type: 'line',
-            stack: 'Total',
-            data: [150, 232, 201, 154, 190, 330, 410]
-        },
-        {
-            name: 'Direct',
-            type: 'line',
-            stack: 'Total',
-            data: [320, 332, 301, 334, 390, 330, 320]
-        },
-        {
-            name: 'Search Engine',
-            type: 'line',
-            stack: 'Total',
-            data: [820, 932, 901, 934, 1290, 1330, 1320]
-        }
         ]
     },
     lineBar: {
@@ -123,6 +77,7 @@ var options = {
         title: {
             text: '돌발상황 발생량 통계',
             textStyle: {
+                fontSize: 14,
                 color: '#b2bbce',
                 fontFamily: 'Pretendard',
             },
@@ -131,10 +86,14 @@ var options = {
         },
         tooltip: {
             trigger: 'axis',
-            backgroundColor: '#000000',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
             textStyle: {
-                color: '#ffffff'
-            }
+                color: '#ffffff',
+                fontFamily: 'Pretendard',
+                fontSize: 12,
+                fontWeight: '600'
+            },
+            borderWidth: 0,
         },
         legend: {
             data: ['차량고장', '과속', '빗길/눈길', '낙하물', '기타'],
@@ -152,9 +111,10 @@ var options = {
             top: '20%', // 그래프 영역을 아래로 이동
         },
         toolbox: {
-            feature: {
-                saveAsImage: {}
-            }
+            // feature: {
+            //     saveAsImage: {}
+            // }
+            show: false
         },
         xAxis: {
             type: 'category',
@@ -243,24 +203,28 @@ var options = {
             {
                 name: '과속',
                 type: 'line',
+                symbol: 'circle',
                 symbolSize: 10,
                 data: [0.95, 0.9, 0.8, 0.9, 0.82, 1.1, 0.9, 1.05, 0.95, 0.91]
             },
             {
                 name: '빗길/눈길',
                 type: 'line',
+                symbol: 'circle',
                 symbolSize: 10,
                 data: [0.72, 0.72, 0.73, 0.76, 0.76, 0.79, 0.8, 0.76, 0.85, 0.75]
             },
             {
                 name: '낙하물',
                 type: 'line',
+                symbol: 'circle',
                 symbolSize: 10,
                 data: [0.95, 1.05, 0.85, 1.1, 0.8, 1.15, 1, 0.8, 0.9, 1]
             },
             {
                 name: '기타',
                 type: 'line',
+                symbol: 'circle',
                 symbolSize: 10,
                 data: [1.05, 0.85, 1.1, 1.05, 0.95, 1.05, 1.1, 1.05, 1.07, 1.01]
             },

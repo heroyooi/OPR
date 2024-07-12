@@ -60,6 +60,10 @@ body{width:100%;overflow:hidden;}
 .content-area > .content-inner{padding:20px;width:100%;}
 .content-area.c-scrollbar > .content-inner::after{content:'';height:20px;display:block;}
 .content-area .content-frame{margin-top:16px;position: relative;}
+.content-line{border-top:1px solid #212332;position: relative;margin-top:16px;}
+.content-line::before, .content-line::after{content:'';display:block;width:20px;height:1px;background-color: #212332;position: absolute;top:0;}
+.content-line::before{left:-20px;}
+.content-line::after{right:-20px;}
 .content-frame-wrap{display:flex;gap:0 16px;}
 .content-frame-wrap > .content-frame,
 .content-frame-wrap > .content-obj{width:50%;}

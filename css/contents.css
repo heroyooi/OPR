@@ -38,6 +38,7 @@
 .tip-wrap .ico, .tip-wrap span{display:inline-block;vertical-align:middle;}
 .tip-wrap .ico{position:relative;top:3px;}
 .tip-wrap span{font-size:13px;font-weight:600;line-height:20px;color:#b2bbce;}
+.s-tit{font-size:16px;line-height:1.5;color:#b2bbce;margin-bottom:8px;}
 
 .chk-manage{border-radius:4px;overflow:hidden;min-height:100%;background-color:#34374c;}
 .chk-manage > li > dl > dt{font-size:14px;line-height:21px;padding:5.5px 10px;text-align:center;background-color:#3e4157;border-bottom:1px solid #2a2d3e;color:#778298;}

@@ -318,6 +318,29 @@ var data1_18 = [
   { isChecked: "N", column1: '42', column2: '2024-10-25', column3: '00', column4: '00', column5: '00', column6: '00', column7: '00' },
   { isChecked: "N", column1: '41', column2: '2024-10-25', column3: '00', column4: '00', column5: '00', column6: '00', column7: '00' },
 ];
+var data1_19 = [
+  
+  { isChecked: "N", column1: '50', column2: '1234567890', column3: ['red', '70'], column4: ['red', '70'], column5: ['red', '70'], column6: ['red', '70'], column7: ['red', '70'], column8: ['red', '70'], column9: ['red', '70'], column10: ['red', '70'], column11: ['red', '70'], column12: ['red', '70'], column13: ['red', '70'], column14: ['red', '70'], column15: ['red', '70'], column16: ['red', '70'], column17: ['red', '70'], column18: ['red', '70'], column19: ['red', '70'], column20: ['red', '70'], column21: ['red', '70'], column22: ['red', '70'], column23: ['red', '70'], column24: ['red', '70'], column25: ['red', '70'], column26: ['red', '200'] },
+
+
+  { isChecked: "N", column1: '49', column2: '1234567890', column3: ['red', '70'], column4: ['red', '70'], column5: ['red', '70'], column6: ['green', '70'], column7: ['red', '70'], column8: ['red', '70'], column9: ['red', '70'], column10: ['red', '70'], column11: ['red', '70'], column12: ['red', '70'], column13: ['red', '70'], column14: ['red', '70'], column15: ['red', '70'], column16: ['red', '70'], column17: ['red', '70'], column18: ['red', '70'], column19: ['red', '70'], column20: ['red', '70'], column21: ['red', '70'], column22: ['red', '70'], column23: ['red', '70'], column24: ['red', '70'], column25: ['red', '70'], column26: ['red', '70'] },
+
+  { isChecked: "N", column1: '48', column2: '1234567890', column3: ['red', '70'], column4: ['red', '70'], column5: ['orange', '70'], column6: ['red', '70'], column7: ['red', '70'], column8: ['red', '70'], column9: ['red', '70'], column10: ['red', '70'], column11: ['red', '70'], column12: ['red', '70'], column13: ['red', '70'], column14: ['red', '70'], column15: ['red', '70'], column16: ['red', '70'], column17: ['red', '70'], column18: ['red', '70'], column19: ['red', '70'], column20: ['red', '70'], column21: ['red', '70'], column22: ['red', '70'], column23: ['red', '70'], column24: ['red', '70'], column25: ['red', '70'], column26: ['red', '70'] },
+
+  { isChecked: "N", column1: '47', column2: '1234567890', column3: ['green', '70'], column4: ['green', '70'], column5: ['green', '70'], column6: ['red', '70'], column7: ['green', '70'], column8: ['green', '70'], column9: ['green', '70'], column10: ['green', '70'], column11: ['green', '70'], column12: ['green', '70'], column13: ['green', '70'], column14: ['green', '70'], column15: ['green', '70'], column16: ['green', '70'], column17: ['green', '70'], column18: ['green', '70'], column19: ['green', '70'], column20: ['green', '70'], column21: ['green', '70'], column22: ['green', '70'], column23: ['green', '70'], column24: ['green', '70'], column25: ['green', '70'], column26: ['green', '70'] },
+
+  { isChecked: "N", column1: '46', column2: '1234567890', column3: ['green', '70'], column4: ['green', '70'], column5: ['green', '70'], column6: ['green', '70'], column7: ['green', '70'], column8: ['green', '70'], column9: ['green', '70'], column10: ['green', '70'], column11: ['green', '70'], column12: ['green', '70'], column13: ['green', '70'], column14: ['green', '70'], column15: ['green', '70'], column16: ['green', '70'], column17: ['green', '70'], column18: ['green', '70'], column19: ['green', '70'], column20: ['green', '70'], column21: ['green', '70'], column22: ['green', '70'], column23: ['green', '70'], column24: ['green', '70'], column25: ['green', '70'], column26: ['green', '70'] },
+
+  { isChecked: "N", column1: '45', column2: '1234567890', column3: ['red', '70'], column4: ['red', '70'], column5: ['red', '70'], column6: ['green', '70'], column7: ['red', '70'], column8: ['red', '70'], column9: ['red', '70'], column10: ['red', '70'], column11: ['red', '70'], column12: ['red', '70'], column13: ['red', '70'], column14: ['red', '70'], column15: ['red', '70'], column16: ['red', '70'], column17: ['red', '70'], column18: ['red', '70'], column19: ['red', '70'], column20: ['red', '70'], column21: ['red', '70'], column22: ['red', '70'], column23: ['red', '70'], column24: ['red', '70'], column25: ['red', '70'], column26: ['red', '70'] },
+  
+  { isChecked: "N", column1: '44', column2: '1234567890', column3: ['red', '70'], column4: ['red', '70'], column5: ['orange', '70'], column6: ['red', '70'], column7: ['red', '70'], column8: ['red', '70'], column9: ['red', '70'], column10: ['red', '70'], column11: ['red', '70'], column12: ['red', '70'], column13: ['red', '70'], column14: ['red', '70'], column15: ['red', '70'], column16: ['red', '70'], column17: ['red', '70'], column18: ['red', '70'], column19: ['red', '70'], column20: ['red', '70'], column21: ['red', '70'], column22: ['red', '70'], column23: ['red', '70'], column24: ['red', '70'], column25: ['red', '70'], column26: ['red', '70'] },
+
+  { isChecked: "N", column1: '43', column2: '1234567890', column3: ['green', '70'], column4: ['green', '70'], column5: ['green', '70'], column6: ['red', '70'], column7: ['green', '70'], column8: ['green', '70'], column9: ['green', '70'], column10: ['green', '70'], column11: ['green', '70'], column12: ['green', '70'], column13: ['green', '70'], column14: ['green', '70'], column15: ['green', '70'], column16: ['green', '70'], column17: ['green', '70'], column18: ['green', '70'], column19: ['green', '70'], column20: ['green', '70'], column21: ['green', '70'], column22: ['green', '70'], column23: ['green', '70'], column24: ['green', '70'], column25: ['green', '70'], column26: ['green', '70'] },
+
+  { isChecked: "N", column1: '42', column2: '1234567890', column3: ['green', '70'], column4: ['green', '70'], column5: ['green', '70'], column6: ['green', '70'], column7: ['green', '70'], column8: ['green', '70'], column9: ['green', '70'], column10: ['green', '70'], column11: ['green', '70'], column12: ['green', '70'], column13: ['green', '70'], column14: ['green', '70'], column15: ['green', '70'], column16: ['green', '70'], column17: ['green', '70'], column18: ['green', '70'], column19: ['green', '70'], column20: ['green', '70'], column21: ['green', '70'], column22: ['green', '70'], column23: ['green', '70'], column24: ['green', '70'], column25: ['green', '70'], column26: ['green', '70'] },
+  
+  { isChecked: "N", column1: '41', column2: '1234567890', column3: ['green', '70'], column4: ['green', '70'], column5: ['green', '70'], column6: ['green', '70'], column7: ['green', '70'], column8: ['green', '70'], column9: ['green', '70'], column10: ['green', '70'], column11: ['green', '70'], column12: ['green', '70'], column13: ['green', '70'], column14: ['green', '70'], column15: ['green', '70'], column16: ['green', '70'], column17: ['green', '70'], column18: ['green', '70'], column19: ['green', '70'], column20: ['green', '70'], column21: ['green', '70'], column22: ['green', '70'], column23: ['green', '70'], column24: ['green', '70'], column25: ['green', '70'], column26: ['green', '70'] },
+];
 
 var columns1 = [
   // checkColumns,
@@ -1397,6 +1420,201 @@ var columns1_18 = [
   },
 ];
 
+var column1_19_formatter = function() {
+  if (this.value[0] == 'red') {
+    return '<span class="st-box red">' + this.value[1] + '</span>';
+  } else if (this.value[0] == 'orange') {
+    return '<span class="st-box orange">' + this.value[1] + '</span>';
+  } else if (this.value[0] == 'green') {
+    return '<span class="st-box green">' + this.value[1] + '</span>';
+  }
+}
+var columns1_19 = [
+  // checkColumns,
+  {
+    key: 'column1',
+    label: '순번',
+    width: 60,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column2',
+    label: '구분',
+    width: 140,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column3',
+    label: '00',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column4',
+    label: '01',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column5',
+    label: '02',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column6',
+    label: '03',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column7',
+    label: '04',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column8',
+    label: '05',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column9',
+    label: '06',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column10',
+    label: '07',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column11',
+    label: '08',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column12',
+    label: '09',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column13',
+    label: '10',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column14',
+    label: '11',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column15',
+    label: '12',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column16',
+    label: '13',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column17',
+    label: '14',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column18',
+    label: '15',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column19',
+    label: '16',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column20',
+    label: '17',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column21',
+    label: '18',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column22',
+    label: '19',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column23',
+    label: '20',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column24',
+    label: '21',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column25',
+    label: '22',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+  {
+    key: 'column26',
+    label: '23',
+    width: 56,
+    align: "center",
+    formatter: column1_19_formatter
+  },
+];
+
 var data2 = [
   { column1: '로우데이터', column2: '로우데이터', column3: '로우데이터', state: 'red', column4: '로우 데이터' },
   { column1: '로우데이터', column2: '로우데이터', column3: '라벨', column3Type: 'label', state: 'orange', column4: '로우 데이터' },
@@ -1715,12 +1933,15 @@ $(document.body).ready(function() {
   var $grid1_16 = $('[data-ax5grid="grid1_16"]');
   var $grid1_17 = $('[data-ax5grid="grid1_17"]');
   var $grid1_18 = $('[data-ax5grid="grid1_18"]');
+  var $grid1_19 = $('[data-ax5grid="grid1_19"]');
   
   var $grid2 = $('[data-ax5grid="grid2"]');
   var $grid3 = $('[data-ax5grid="grid3"]');
   var $grid4 = $('[data-ax5grid="grid4"]');
 
-  if ($grid1.length || $grid1_2.length || $grid1_3.length || $grid1_4.length || $grid1_5.length || $grid1_6.length || $grid1_7.length || $grid1_8.length || $grid1_9.length || $grid1_10.length || $grid1_11.length || $grid1_12.length || $grid1_13.length || $grid1_14.length || $grid1_15.length || $grid1_16.length || $grid1_17.length || $grid1_18.length) {
+  if (
+    $grid1.length || $grid1_2.length || $grid1_3.length || $grid1_4.length || $grid1_5.length || $grid1_6.length || $grid1_7.length || $grid1_8.length || $grid1_9.length || $grid1_10.length || $grid1_11.length || $grid1_12.length || $grid1_13.length || $grid1_14.length || $grid1_15.length || $grid1_16.length || $grid1_17.length || $grid1_18.length || $grid1_19.length
+  ) {
     if ($grid1.length) {
       new ax5.ui.grid(getOptions($grid1, columns1)).setData(data1);
     } else if ($grid1_2.length) {
@@ -1757,6 +1978,8 @@ $(document.body).ready(function() {
       new ax5.ui.grid(getOptions($grid1_17, columns1_17)).setData(data1_17);
     } else if ($grid1_18.length) {
       new ax5.ui.grid(getOptions($grid1_18, columns1_18)).setData(data1_18);
+    } else if ($grid1_19.length) {
+      new ax5.ui.grid(getOptions($grid1_19, columns1_19)).setData(data1_19);
     }
 
     $(document).on('click', '#chk-all', function() {
