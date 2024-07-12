@@ -21,7 +21,7 @@
 .tab-base li.on a{color:#fff;background-color:transparent;}
 
 .tab-btn{border-radius:4px;overflow:hidden;}
-.tab-btn li{width:50%;}
+/* .tab-btn li{width:50%;} */
 .tab-btn li a{padding:9.5px 24px;background-color:#3e4157;color:#b2bbce;font-size:14px;line-height:1.5;font-weight:600;}
 .tab-btn li.on a{background-color:#22779f;color:#fff;}
 

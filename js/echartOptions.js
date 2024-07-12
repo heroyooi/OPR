@@ -72,6 +72,140 @@ var options = {
             }
         ]
     },
+    pieLine: {
+        color: ['#00bbfe', '#2f78ff', '#e3c208'],
+        title: {
+            text: '통행시간',
+            textStyle: {
+                fontSize: 14,
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+            },
+            top: '0%', // 제목을 위쪽으로
+            left: 'center'
+        },
+        tooltip: {
+            trigger: 'axis',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            textStyle: {
+                color: '#ffffff',
+                fontFamily: 'Pretendard',
+                fontSize: 12,
+                fontWeight: '600'
+            },
+            borderWidth: 0,
+        },
+        legend: {
+            data: ['소형', '중형', '대형'],
+            textStyle: {
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+            },
+            top: '7%', // 범례를 제목 아래로
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true,
+            top: '20%', // 그래프 영역을 아래로 이동
+        },
+        toolbox: {
+            // feature: {
+            //     saveAsImage: {}
+            // }
+            show: false
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: true,
+            data: ['2024.10.01', '2024.10.01', '2024.10.01', '2024.10.01', '2024.10.01', '2024.10.01'],
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157'
+                }
+            },
+            axisLabel: {
+                textStyle: {
+                    fontSize: 11,
+                    fontWeight: 600,
+                    fontFamily: 'Pretendard',
+                    color: '#b2bbce'
+                },
+                // rotate: 45, 
+                interval: 0,
+            },
+        },
+        yAxis: {
+            type: 'value',
+            position: 'left',
+            alignTicks: true,
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157',
+                },
+            },
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157'
+                },
+            },
+            axisLabel: {
+                textStyle: {
+                    fontSize: 11,
+                    fontWeight: 600,
+                    fontFamily: 'Pretendard',
+                    color: '#b2bbce'
+                }
+            },
+            min: 0,
+            max: 100,
+            interval: 20,
+        },
+        series: [
+            // {
+            //     type: 'pie',
+            //     radius: '50%',
+            //     data: [
+            //         { value: 65, name: '소형' },
+            //         { value: 17, name: '중형' },
+            //         { value: 3, name: '대형' }
+            //     ],
+            //     label: {
+            //         formatter: '{b} {d}%', // 라벨 포맷 설정
+            //         textStyle: {
+            //             fontSize: 12,
+            //             color: '#b2bbce',
+            //             fontFamily: 'Pretendard',
+            //         }
+            //     },
+            // },
+            {
+                name: '소형',
+                type: 'line',
+                symbol: 'circle',
+                symbolSize: 8,
+                data: [50, 81, 77, 83, 99, 100]
+            },
+            {
+                name: '중형',
+                type: 'line',
+                symbol: 'circle',
+                symbolSize: 8,
+                data: [15, 15, 15, 15, 15, 15]
+            },
+            {
+                name: '대형',
+                type: 'line',
+                symbol: 'circle',
+                symbolSize: 8,
+                data: [5, 5, 5, 5, 5, 5]
+            },
+        ]
+    },
     lineBar: {
         color: colors,
         title: {

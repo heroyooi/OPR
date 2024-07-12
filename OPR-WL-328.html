@@ -114,10 +114,10 @@
       <div class="left-wrap">
         <h3 class="tit">통계조회</h3>
         <ul class="lnb-list">
-          <li class="on">
+          <li>
             <a href="#" class="menu toggle">상황별 발생량 통계</a>
             <ul>
-              <li class="on">
+              <li>
                 <a href="#" class="menu">돌발상황 발생량 통계</a>
                 <a href="#" class="s-ico star"></a>
               </li>
@@ -153,16 +153,20 @@
             <a href="#" class="menu toggle">교통지표 통계</a>
             <ul>
               <li>
-                <a href="#" class="menu">서브 메뉴</a>
+                <a href="#" class="menu">교통지표 통계 조회</a>
                 <a href="#" class="s-ico star"></a>
               </li>
             </ul>
           </li>
-          <li>
+          <li class="on">
             <a href="#" class="menu toggle">DSRC 통계</a>
             <ul>
+              <li class="on">
+                <a href="#" class="menu">DSRC 구간 통계</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
               <li>
-                <a href="#" class="menu">서브 메뉴</a>
+                <a href="#" class="menu">DSRC 노변 기지국 통계</a>
                 <a href="#" class="s-ico star"></a>
               </li>
             </ul>
@@ -194,7 +198,7 @@
             <div class="menu-swiper swiper-container">
               <div class="swiper-wrapper">
                 <div class="swiper-slide on">
-                  <a href="#" class="label">돌발상황 발생량 통계</a>
+                  <a href="#" class="label">DSRC 구간 통계</a>
                   <a href="#" class="s-ico close"></a>
                 </div>
               </div>
@@ -209,20 +213,7 @@
           <div class="content-inner">
             <div class="search-area">
               <div class="input-wrap input-datepicker">
-                <span class="label">일자</span>
-                <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom" style="width: 136px;">
-                  <input id="startpicker-input1" type="text" aria-label="Date">
-                  <span class="tui-ico-date"></span>
-                  <div id="startpicker-container1" style="margin-left: -1px;"></div>
-                </div>
-                <span class="bridge">~</span>
-                <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom" style="width: 136px;">
-                  <input id="endpicker-input1" type="text" aria-label="Date">
-                  <span class="tui-ico-date"></span>
-                  <div id="endpicker-container1" style="margin-left: -1px;"></div>
-                </div>
-
-                <span class="label ml20">방향</span>
+                <span class="label">방향</span>
                 <select class="select-base" style="width: 110px;">
                   <option value="0" selected>선택</option>
                   <option value="1">02</option>
@@ -230,7 +221,7 @@
                   <option value="3">값3</option>
                 </select>
 
-                <span class="label ml20">검색</span>
+                <span class="label ml20">구간</span>
                 <select class="select-base" style="width: 200px;">
                   <option value="0" selected>선택</option>
                   <option value="1">02</option>
@@ -244,38 +235,48 @@
                 <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico exceldown"></span>엑셀 다운로드</em></a></span>
               </div>
             </div><!-- .search-area -->
-            <div class="content-frame-wrap chart">
-              <div class="content-frame c-scrollbar">
-                <div class="chart-area">
-                  <div class="inner">
-                    <div id="mainChart" style="width: 100%; height: 411px;"></div>
-                  </div>
-                </div>
-              </div><!-- .content-frame -->
-              <div class="content-frame c-scrollbar">
-                <div style="position: relative; height:472px;" id="grid1_18-parent">
-                  <div class="cs-ax5grid" data-ax5grid="grid1_18" data-ax5grid-config="{}" style="height: 100%"></div>
-                </div>
-                <div class="total-wrap mt12">
-                  <div class="total">
-                    <span class="label">총</span>
-                    <span class="count">50</span>
-                    <span class="unit">건</span>
-                  </div>
-                  <div class="paging-area">
-                    <a href="#" class="btn-first disabled"></a>
-                    <a href="#" class="btn-prev disabled"></a>
-                    <div class="paging">
-                      <input class="current" type="text" value="1" />
-                      <span class="line">/</span>
-                      <span class="num">5</span>
+            <div class="content-line">
+              <div class="tit-area">
+                <p class="tit">구간별 차종별 통행시간 통계</p>
+                <ul class="tab-btn">
+                  <li class="on"><a href="#">5분</a></li>
+                  <li><a href="#">15분</a></li>
+                  <li><a href="#">1시간</a></li>
+                </ul>
+              </div>
+              <div class="content-frame-wrap chart">
+                <div class="content-frame c-scrollbar">
+                  <div class="chart-area">
+                    <div class="inner">
+                      <div id="mainChart" style="width: 100%; height: 411px;"></div>
                     </div>
-                    <a href="#" class="btn-next"></a>
-                    <a href="#" class="btn-last"></a>
                   </div>
-                </div><!-- .total-wrap -->
-              </div><!-- .content-frame -->
-            </div><!-- .content-frame-wrap -->
+                </div><!-- .content-frame -->
+                <div class="content-frame c-scrollbar">
+                  <div style="position: relative; height:472px;" id="grid1_18-parent">
+                    <div class="cs-ax5grid" data-ax5grid="grid1_18" data-ax5grid-config="{}" style="height: 100%"></div>
+                  </div>
+                  <div class="total-wrap mt12">
+                    <div class="total">
+                      <span class="label">총</span>
+                      <span class="count">50</span>
+                      <span class="unit">건</span>
+                    </div>
+                    <div class="paging-area">
+                      <a href="#" class="btn-first disabled"></a>
+                      <a href="#" class="btn-prev disabled"></a>
+                      <div class="paging">
+                        <input class="current" type="text" value="1" />
+                        <span class="line">/</span>
+                        <span class="num">5</span>
+                      </div>
+                      <a href="#" class="btn-next"></a>
+                      <a href="#" class="btn-last"></a>
+                    </div>
+                  </div><!-- .total-wrap -->
+                </div><!-- .content-frame -->
+              </div><!-- .content-frame-wrap -->
+            </div><!-- .content-line -->
           </div><!-- .content-inner -->
         </div><!-- .content-area -->
       </div><!-- .content-wrap -->
@@ -285,50 +286,9 @@
     <script src="js/echartOptions.js"></script>
     <script src="js/ax5uiGridSample.js"></script>
     <script>
-      tui.DatePicker.localeTexts['customKey'] = {
-        titles: {
-            // days
-            DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-            // daysShort
-            D: ['일', '월', '화', '수', '목', '금', '토'],
-            // months
-            MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-            // monthsShort
-            MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
-        },
-        titleFormat: 'yyyy.MMM',
-        todayFormat: '오늘 : yyyy.MMMM.dd',
-        date: 'Date',
-        time: 'Time'
-      };
-      
-      var today1 = new Date();
-      var picker1 = tui.DatePicker.createRangePicker({
-        language: 'customKey',
-        startpicker: {
-          date: today1,
-          input: '#startpicker-input1',
-          container: '#startpicker-container1'
-        },
-        endpicker: {
-          date: today1,
-          input: '#endpicker-input1',
-          container: '#endpicker-container1'
-        },
-        selectableRanges: [
-          [today1, new Date(today1.getFullYear() + 1, today1.getMonth(), today1.getDate())]
-        ],
-        format: 'YYYY-MM-dd',
-        // showAlways: true,
-      });
-      
-      picker1.on('change:end', () => {
-          console.log(123);
-      });
-      
       var mainChart = document.getElementById('mainChart');
       var myChart = echarts.init(mainChart);
-      myChart.setOption(options['pie']);
+      myChart.setOption(options['pieLine']);
       // window.addEventListener('resize', function () {
       //   myChart.resize();
       // });

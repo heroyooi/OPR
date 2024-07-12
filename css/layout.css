@@ -64,6 +64,7 @@ body{width:100%;overflow:hidden;}
 .content-line::before, .content-line::after{content:'';display:block;width:20px;height:1px;background-color: #212332;position: absolute;top:0;}
 .content-line::before{left:-20px;}
 .content-line::after{right:-20px;}
+.content-line > .tit-area:first-child{padding-top:16px;}
 .content-frame-wrap{display:flex;gap:0 16px;}
 .content-frame-wrap > .content-frame,
 .content-frame-wrap > .content-obj{width:50%;}
