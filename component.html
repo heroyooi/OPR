@@ -946,7 +946,26 @@ $('.file-box').on('click', '.btn-delete', function(e){
               </div>
 
               <div class="code-area">
-                <h3>셀렉트 그룹 <button>코드 보기</button></h3>
+                <h3>셀렉트 그룹1 <button>코드 보기</button></h3>
+<div class="code-box"><div class="input-wrap select-group">
+  <select class="select-base">
+    <option value="0" selected>처리유형 선택</option>
+    <option value="1">값1</option>
+    <option value="2">값2</option>
+    <option value="3">값3</option>
+  </select>
+  <select class="select-base">
+    <option value="0" selected>처리유형 선택</option>
+    <option value="1">값1</option>
+    <option value="2">값2</option>
+    <option value="3">값3</option>
+  </select>
+</div></div>
+<pre class="language-html"></pre>
+              </div>
+
+              <div class="code-area">
+                <h3>셀렉트 그룹2 <button>코드 보기</button></h3>
 <div class="code-box"><div class="input-wrap">
   <select class="select-base" style="width: 200px;">
     <option value="0" selected>방향 선택</option>
@@ -1254,7 +1273,7 @@ window.addEventListener('resize', function () {
               </div>
 
               <div class="code-area">
-                <h3>Line + Bar 챠트 <button>코드 보기</button></h3>
+                <h3>Line + Pie 챠트 <button>코드 보기</button></h3>
 <div class="code-box"><div class="chart-area">
   <div id="lineUpChart" style="width: 100%; height: 501px;"></div>
   <div id="pieDownChart" style="width: 100%; height: 305px; position: absolute; left: 0; top: 30px;"></div>
@@ -1268,6 +1287,40 @@ pieDownChart.setOption(options['pieDown']);
 window.addEventListener('resize', function () {
   lineUpChart.resize();
   pieDownChart.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+              </div>
+
+              <div class="code-area">
+                <h3>Bar Stack 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area" style="min-height: 404px;">
+  <div id="barStackChart" style="width: 100%; height: 372px;"></div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions.js"></script></div>
+<script>var barStackChart = echarts.init(document.getElementById('barStackChart'));
+barStackChart.setOption(options['barStack']);
+window.addEventListener('resize', function () {
+  barStackChart.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+              </div>
+
+              <div class="code-area">
+                <h3>Line 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area" style="min-height: 404px;">
+  <div id="lineChart" style="width: 100%; height: 372px;"></div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions.js"></script></div>
+<script>var lineChart = echarts.init(document.getElementById('lineChart'));
+lineChart.setOption(options['line']);
+window.addEventListener('resize', function () {
+  lineChart.resize();
 });</script>
 
 <pre class="language-html"></pre>

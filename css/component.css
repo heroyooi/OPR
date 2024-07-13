@@ -175,6 +175,11 @@
 .input-wrap.radio-input .radio-list{flex-shrink:0;}
 .input-wrap.input-select-btn{display:flex;gap:0 8px;align-items:center;}
 .input-wrap.input-select-btn .select-base, .input-wrap.input-select-btn .btn-item{flex-shrink:0;}
+.input-wrap.counter-select{display:flex;gap:0 8px;}
+.input-wrap.counter-select span:first-child,
+.input-wrap.counter-select .counter-base{flex-shrink:0;width:100px;}
+.counter-select-list > li{margin-top:8px;}
+.counter-select-list > li:first-child{margin-top:0;}
 
 .input-wrap.vms{display:flex;gap:0 8px;align-items:center;}
 .input-wrap.vms .color-picker{display:flex;gap:0 2px;padding:6px 8px;background-color:#34374c;border-radius:4px;}
