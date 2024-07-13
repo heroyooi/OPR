@@ -92,10 +92,13 @@
 .record-list > li .label{padding:4px 12px;border-radius: 4px;display:block;flex-shrink:0;height:29px;}
 .record-list > li .label.type-1{background-color: rgba(26, 194, 255, 0.5);}
 .record-list > li .label.type-2{background-color: rgba(11, 190, 53, 0.3);}
+.record-list > li .result{flex-grow:1;}
 .record-list > li .result > span{display:block;}
 .record-list > li .result .local{font-size:16px;font-weight:700;}
-.record-list > li .result .local + .date,
-.record-list > li .result .date + .local{margin-top:4px;}
+.record-list > li .result > * + .date,
+.record-list > li .result > * + .local{margin-top:4px;}
+.record-list > li .result > .date-wrap{display:flex;justify-content:space-between;}
+.record-list > li .result > .date-wrap .type{color:#b2bbce;}
 
 .btn-list{width:180px;}
 .btn-list > li{margin-top:8px;}
@@ -151,5 +154,5 @@
 .status-list li .label-wrap .label{font-weight:600;color:#778298;}
 .status-list li .label-wrap .num{font-weight:700;color:#fff;}
 
-.chart-area{padding:16px;border-radius:4px;background-color:#212332;min-height:472px;}
+.chart-area{padding:16px;border-radius:4px;background-color:#212332;min-height:472px;position: relative;}
 .chart-area .label{font-size:14px;font-weight:600;line-height:1.5;color:#b2bbce;text-align:center;display:block;}

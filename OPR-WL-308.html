@@ -235,7 +235,7 @@
               <div class="content-frame c-scrollbar">
                 <div class="chart-area">
                   <div class="inner">
-                    <div id="mainChart" style="width: 100%; height: 411px;"></div>
+                    <div id="lineBarChart" style="width: 100%; height: 411px;"></div>
                   </div>
                 </div>
               </div><!-- .content-frame -->
@@ -272,11 +272,10 @@
     <script src="js/echartOptions.js"></script>
     <script src="js/ax5uiGridSample.js"></script>
     <script>
-      var mainChart = document.getElementById('mainChart');
-      var myChart = echarts.init(mainChart);
-      myChart.setOption(options['lineBar']);
+      var lineBarChart = echarts.init(document.getElementById('lineBarChart'));
+      lineBarChart.setOption(options['lineBar']);
       // window.addEventListener('resize', function () {
-      //   myChart.resize();
+      //   lineBarChart.resize();
       // });
     </script>
   </div><!-- #wrap -->

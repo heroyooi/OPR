@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>서부내륙고속도로 통합운영단말</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrap" class="c-scrollbar">
+    <div id="header">
+      <h1><a href="#"><img src="img/wih-logo-io.png" alt=""></a></h1>
+      <div class="item-area">
+        <ul id="gnb" data-active="10">
+          <li><a href="#">시스템관리</a></li>
+          <li><a href="#">기초정보관리</a></li>
+          <li><a href="#">FTMS 제어</a></li>
+          <li><a href="#">운영관리</a></li>
+          <li><a href="#">상황관리</a></li>
+          <li><a href="#">모니터링</a></li>
+          <li><a href="#">이력조회</a></li>
+          <li><a href="#">통계조회</a></li>
+          <li><a href="#">현장장비 점검관리</a></li>
+          <li><a href="#">안전관리</a></li>
+          <li><a href="#">작업 및 유지보수 이력 관리</a></li>
+        </ul>
+        <ul id="utilmenu">
+          <li><a href="#" class="s-ico notify w-label new"><span>고윤정님</span></a></li>
+          <li><a href="#" class="s-ico bookmark"></a></li>
+          <li><a href="#" class="s-ico logout"></a></li>
+        </ul>
+        <div class="bookmark-area">
+          <ul>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">RWIS 제어기 기초정보관리</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기 최대 10개</span>
+              </a>
+            </li>
+          </ul>
+          <div class="bookmark-item">
+            <a href="#" class="btn-text">즐겨찾기 관리 <span class="s-ico arrow"></span></a>
+            <a href="#" class="s-ico close gray"></a>
+          </div>
+        </div><!-- .bookmark-area -->
+      </div>
+    </div><!--#header -->
+    <div id="container" class="ver-lnb">
+      <div class="left-wrap">
+        <h3 class="tit">안전관리</h3>
+        <ul class="lnb-list">
+          <li class="on">
+            <a href="#" class="menu">교통사고 관리</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">월별 사고 현황 관리</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">원인별 사고 현황 관리</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">교통사고 피해 현황 관리</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">교통사고 현황 관리</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">연도별 사고 현황 관리</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">사고 발생 현황 관리</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+        </ul>
+      </div><!-- .left-wrap -->
+      <div class="content-wrap">
+        <div class="content-top">
+          <div class="menu-area">
+            <a href="#" class="s-ico home"></a>
+            <div class="menu-swiper swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide on">
+                  <a href="#" class="label">교통사고 관리</a>
+                  <a href="#" class="s-ico close"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="navi-area">
+            <a href="" class="s-ico arrow-l"></a>
+            <a href="" class="s-ico arrow-r"></a>
+          </div>
+        </div><!-- .content-top -->
+        <div class="content-area">
+          <div class="content-inner">
+            <div class="tit-area">
+              <p class="tit">교통사고 관리 상세 조회</p>
+              <div class="btns-wrap">
+                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico modify"></span>수정</em></a></span>
+                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico list"></span>목록</em></a></span>
+              </div>
+            </div><!-- .tit-area -->
+            <div class="content-frame c-scrollbar">
+              <div class="tb-wrap">
+                <table summary="운영자 정보 보기" class="tb-input">
+                  <colgroup>
+                    <col width="160" />
+                    <col width="*" />
+                    <col width="160" />
+                    <col width="140" />
+                    <col width="504" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">사고 ID</th>
+                      <td>20241025-1438-S-001</td>
+                      <th scope="row" rowspan="2">피해 내용</th>
+                      <td class="td-gray">사상 여부</td>
+                      <td>중상 1명 / 경상 1명</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">사고 일시</th>
+                      <td>2024-10-25 14:38:45</td>
+                      <td class="td-gray">차량 손상</td>
+                      <td>2대 파손 (경미)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">사고 원인 유형</th>
+                      <td>기상 - 노면 상태</td>
+                      <th scope="row">사고 유형</th>
+                      <td colspan="2">기상 관련 사고</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">사고 내용</th>
+                      <td colspan="4">폭우로 미끄러운 노면상태에 감속 없이 주행하던 차량이 미끄러져 2대가 충돌</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">요일 구분</th>
+                      <td>금요일</td>
+                      <th scope="row">도로 구분</th>
+                      <td colspan="2">4차로</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">방면</th>
+                      <td>평택 방향</td>
+                      <th scope="row">구간</th>
+                      <td colspan="2">인주IC - 인주 JCT</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">조치 내용</th>
+                      <td colspan="4">현장출동 및 견인업체 호출 112신고 및 119 구조 차량 신고</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">사고 이정</th>
+                      <td>1.2km</td>
+                      <th scope="row">현장 도착</th>
+                      <td colspan="2">2024-10-24 14:53</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">노면 상태</th>
+                      <td>미끄러움</td>
+                      <th scope="row">처리 시각</th>
+                      <td colspan="2">2024-10-24 14:53</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">날씨 유형</th>
+                      <td>비</td>
+                      <th scope="row">접수 일시</th>
+                      <td colspan="2">2024-10-24 24:38:45</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">통행 제한 유형</th>
+                      <td>1차로 통제</td>
+                      <th scope="row">접수 방법</th>
+                      <td colspan="2">자동 검지 / 운영자 확인 접수</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">차단 시간</th>
+                      <td>40분</td>
+                      <th scope="row">보고자</th>
+                      <td colspan="2">traffic003</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">사고 등급</th>
+                      <td>3등급</td>
+                      <th scope="row">보고 구분</th>
+                      <td colspan="2">-</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">방책 시설 유형</th>
+                      <td>중앙분리대방호벽 콘크리트</td>
+                      <th scope="row">처리 유형 및 상태</th>
+                      <td colspan="2">처리 완료 / 교통제한 해제</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div><!-- .content-inner -->
+          </div><!-- .content-inner -->
+        </div><!-- .content-area -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+
+    <div class="popup-wrap mfp-hide" id="popup-record" style="width: 480px;">
+      <div class="con-wrap">
+        <h3 class="tit">최근 <em>2</em>건의 교통사고가 있습니다. <br />해당하는 사고 기록을 선택해 주세요.</h3>
+        <div class="content-frame c-scrollbar">
+          <ul class="record-list">
+            <li>
+              <span class="label type-1">자동 검지</span>
+              <div class="result">
+                <div class="date-wrap">
+                  <span class="type">교통사고</span>
+                  <span class="date">20241025 13:24:50</span>
+                </div>
+                <span class="local">평택방향 / 구간 : 인주 IC - 현덕 JCT</span>
+              </div>
+            </li>
+            <li>
+              <span class="label type-1">자동 검지</span>
+              <div class="result">
+                <div class="date-wrap">
+                  <span class="type">교통사고</span>
+                  <span class="date">20241025 13:24:50</span>
+                </div>
+                <span class="local">평택방향 / 구간 : 인주 IC - 현덕 JCT</span>
+              </div>
+            </li>
+          </ul>
+        </div><!-- .content-frame -->
+        <div class="btns-wrap center mt24">
+          <span class="btn-base gray b-mfp-close"><a href="#">취소</a></span>
+        </div>
+      </div>
+    </div><!-- .popup-wrap -->
+
+    <script>
+      var qpopup = $.urlParam('popup');
+      if (qpopup== 'record') {
+        setTimeout(() => {
+          $.magnificPopup.open(getOptionsAnim('#popup-record', false));
+        }, 250);
+      }
+    </script>
+  </div><!-- #wrap -->
+</body>
+</html>
