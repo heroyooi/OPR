@@ -1,4 +1,5 @@
 var colors = ['#00bbfe', '#2f78ff', '#853cfc', '#00be9c', '#e3c208'];
+
 var options = {
     pie: {
         color: colors,
@@ -656,6 +657,474 @@ var options = {
         ]
     },
     barMulti: {
-        
-    }
+        color: [...colors, '#ef4345'],
+        title: {
+            text: '월별 교통사고 현황',
+            textStyle: {
+                fontSize: 14,
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+            },
+            left: 'center'
+        },
+        tooltip: {
+            trigger: 'item',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)', // 툴팁 배경색상 설정
+            textStyle: {
+                color: '#fff', // 툴팁 글씨색상 설정
+                fontFamily: 'Pretendard',
+                fontSize: 12,
+                fontWeight: '600'
+            },
+            borderWidth: 0,
+            formatter: '{b} {a} 사고 {c}건'
+        },
+        legend: {
+            itemWidth: 16, // 아이템 너비
+            itemHeight: 8, // 아이템 높이
+            data: ['사망', '중상', '경상', '차량 완파', '차량 반파', '차량 파손 경비'],
+            textStyle: {
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+            },
+            top: '5%', // 범례를 제목 아래로
+        },
+        grid: {
+            left: '0%',
+            right: '0%',
+            bottom: '0%',
+            containLabel: true,
+            top: '12%', // 그래프 영역을 아래로 이동
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: true,
+            data: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157'
+                }
+            },
+            axisLabel: {
+                textStyle: {
+                    fontSize: 11,
+                    fontWeight: 600,
+                    fontFamily: 'Pretendard',
+                    color: '#b2bbce'
+                },
+                interval: 0,
+            },
+            axisTick: {
+                show: false // x축의 작은 세로선 숨기기
+            }
+        },
+        yAxis: {
+            type: 'value',
+            position: 'left',
+            alignTicks: true,
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157',
+                },
+            },
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157'
+                },
+            },
+            axisLabel: {
+                textStyle: {
+                    fontSize: 11,
+                    fontWeight: 600,
+                    fontFamily: 'Pretendard',
+                    color: '#b2bbce'
+                }
+            },
+            min: 0,
+            max: 35,
+            interval: 5,
+        },
+        series: [
+            {
+                name: "사망",
+                type: "bar",
+                barWidth: 8,
+                itemStyle: {
+                    borderRadius: [2, 2, 0, 0],
+                },
+                data: [11, 17, 12, 17, 17, 17, 17, 17, 12, 12, 12, 12]
+            },
+            {
+                name: "중상",
+                type: "bar",
+                barWidth: 8,
+                itemStyle: {
+                    borderRadius: [2, 2, 0, 0],
+                },
+                data: [1, 1, 1, 6, 6, 6, 6, 6, 1, 1, 1, 1]
+            },
+            {
+                name: "경상",
+                type: "bar",
+                barWidth: 8,
+                itemStyle: {
+                    borderRadius: [2, 2, 0, 0],
+                },
+                data: [3, 3, 3, 20, 20, 20, 20, 20, 3, 3, 3, 3]
+            },
+            {
+                name: "차량 완파",
+                type: "bar",
+                barWidth: 8,
+                itemStyle: {
+                    borderRadius: [2, 2, 0, 0],
+                },
+                data: [2, 2, 2, 12, 12, 12, 12, 12, 2, 2, 2, 2]
+            },
+            {
+                name: "차량 반파",
+                type: "bar",
+                barWidth: 8,
+                itemStyle: {
+                    borderRadius: [2, 2, 0, 0],
+                },
+                data: [2, 16, 2, 26, 26, 26, 26, 26, 2, 2, 2, 2]
+            },
+            {
+                name: "차량 파손 경비",
+                type: "bar",
+                barWidth: 8,
+                itemStyle: {
+                    borderRadius: [2, 2, 0, 0],
+                },
+                data: [21, 21, 21, 35, 35, 35, 35, 35, 21, 21, 21, 21]
+            },
+        ]
+    },
+    pieRight: {
+        color: ['#00bbfe', '#2f78ff', '#00be9c', '#e3c208'],
+        tooltip: {
+            trigger: 'item',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            textStyle: {
+                color: '#ffffff',
+                fontFamily: 'Pretendard',
+                fontSize: 12,
+                fontWeight: '600'
+            },
+            borderWidth: 0,
+        },
+        legend: {
+            show: false,
+        },
+        series: [
+            {
+                type: 'pie',
+                radius: '50%',
+                data: [
+                    { value: 65, name: '차트A' },
+                    { value: 21, name: '차트B' },
+                    { value: 11, name: '차트C' },
+                    { value: 3, name: '차트D' },
+                ],
+                label: {
+                    formatter: '{b} {d}%',
+                    textStyle: {
+                        fontSize: 12,
+                        color: '#b2bbce',
+                        fontFamily: 'Pretendard',
+                    }
+                },
+            }
+        ]
+
+    },
+    doughnut: {
+        color: [...colors, '#ef4345'],
+        title: {
+            text: '원인별 사고 현황',
+            textStyle: {
+                fontSize: 14,
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+            },
+            left: 'center'
+        },
+        tooltip: {
+            trigger: 'item',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)', // 툴팁 배경색상 설정
+            textStyle: {
+                color: '#fff', // 툴팁 글씨색상 설정
+                fontFamily: 'Pretendard',
+                fontSize: 12,
+                fontWeight: '600'
+            },
+            borderWidth: 0,
+            formatter: '[원인: {b}] 발생 사고 {c}건'
+        },
+        legend: {
+            itemWidth: 16, // 아이템 너비
+            itemHeight: 8, // 아이템 높이
+            data: ['졸음운전', '과속', '빗길/눈길', '차량이상', '낙하물', '도로상태'],
+            textStyle: {
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+            },
+            top: '15%', // 범례를 제목 아래로
+        },
+        series: [
+            {
+                type: 'pie',
+                radius: ['40%', '70%'],
+                avoidLabelOverlap: false,
+                center: ['50%', '60%'],
+                label: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    label: {
+                        show: false,
+                    }
+                },
+                labelLine: {
+                    show: false
+                },
+                data: [
+                    { value: 50, name: '졸음운전' },
+                    { value: 15, name: '과속' },
+                    { value: 15, name: '빗길/눈길' },
+                    { value: 10, name: '차량이상' },
+                    { value: 5, name: '낙하물' },
+                    { value: 5, name: '도로상태' }
+                ]
+            }
+        ]
+    },
+    barVertical: {
+        color: colors[0],
+        title: {
+            text: '계절별 사고 발생 현황',
+            textStyle: {
+                fontSize: 14,
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+            },
+            left: 'center'
+        },
+        tooltip: {
+            trigger: 'item',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)', // 툴팁 배경색상 설정
+            textStyle: {
+                color: '#fff', // 툴팁 글씨색상 설정
+                fontFamily: 'Pretendard',
+                fontSize: 12,
+                fontWeight: '600'
+            },
+            borderWidth: 0,
+            formatter: '{b} 사고 발생 {c}건'
+        },
+        legend: {
+            itemWidth: 16, // 아이템 너비
+            itemHeight: 8, // 아이템 높이
+            data: ['계절 별 사고 발생 사건'],
+            textStyle: {
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+            },
+            top: '8%', // 범례를 제목 아래로
+        },
+        grid: {
+            left: '0%',
+            right: '5%',
+            top: '18%',
+            bottom: '2%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'value',
+            min: 0,
+            max: 35,
+            interval: 5,
+            axisLabel: {
+                textStyle: {
+                    fontSize: 11,
+                    fontWeight: 600,
+                    fontFamily: 'Pretendard',
+                    color: '#b2bbce'
+                },
+                interval: 0,
+            },
+            axisTick: {
+                show: false,
+            },
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157' // x축의 큰 세로선 색상 설정
+                }
+            }
+        },
+        yAxis: {
+            type: 'category',
+            data: ['봄', '여름', '가을', '겨울'],
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157'
+                }
+            },
+            axisLabel: {
+                textStyle: {
+                    fontSize: 11,
+                    fontWeight: 600,
+                    fontFamily: 'Pretendard',
+                    color: '#b2bbce'
+                },
+                interval: 0,
+            },
+            axisTick: {
+                show: false // x축의 작은 세로선 숨기기
+            }
+        },
+        series: [
+            {
+                name: '계절 별 사고 발생 사건',
+                type: 'bar',
+                barWidth: '30%',
+                itemStyle: {
+                    borderRadius: [0, 4, 4, 0],
+                },
+                data: [13, 32, 26, 13]
+            },
+        ]
+    },
+    barLine: {
+        color: ['#00bbfe', '#e3c208', '#853cfc', '#00be9c'],
+        title: {
+            text: '품목별 장비투입 현황',
+            textStyle: {
+                fontSize: 14,
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+            },
+            left: 'center'
+        },
+        tooltip: {
+            trigger: 'axis',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)', // 툴팁 배경색상 설정
+            textStyle: {
+                color: '#fff', // 툴팁 글씨색상 설정
+                fontFamily: 'Pretendard',
+                fontSize: 12,
+                fontWeight: '600'
+            },
+            borderWidth: 0,
+        },
+        legend: {
+            itemWidth: 16, // 아이템 너비
+            itemHeight: 8, // 아이템 높이
+            data: ['DCS-T980', 'DCS-T970', '재고현황', '적정제고'],
+            textStyle: {
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+            },
+            top: '5%', // 범례를 제목 아래로
+        },
+        grid: {
+            left: '0%',
+            right: '0%',
+            bottom: '3%',
+            containLabel: true,
+            top: '12%', // 그래프 영역을 아래로 이동
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: true,
+            data: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157'
+                }
+            },
+            axisLabel: {
+                textStyle: {
+                    fontSize: 11,
+                    fontWeight: 600,
+                    fontFamily: 'Pretendard',
+                    color: '#b2bbce'
+                },
+                interval: 0,
+            },
+            axisTick: {
+                show: false // x축의 작은 세로선 숨기기
+            }
+        },
+        yAxis: {
+            type: 'value',
+            position: 'left',
+            alignTicks: true,
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157',
+                },
+            },
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157'
+                },
+            },
+            axisLabel: {
+                textStyle: {
+                    fontSize: 11,
+                    fontWeight: 600,
+                    fontFamily: 'Pretendard',
+                    color: '#b2bbce'
+                }
+            },
+            min: 0,
+            max: 14,
+            interval: 2,
+        },
+        series: [
+            {
+                name: "DCS-T980",
+                type: "bar",
+                barWidth: 16,
+                itemStyle: {
+                    borderRadius: [2, 2, 0, 0],
+                },
+                data: [7.5, 7.5, 7.5, 7.5, 7.5, 7.5, 7.5, 7.5, 7.5, 7.5, 7.5, 7.5]
+            },
+            {
+                name: "DCS-T970",
+                type: "bar",
+                barWidth: 16,
+                itemStyle: {
+                    borderRadius: [2, 2, 0, 0],
+                },
+                data: [4.4, 4.4, 4.4, 4.4, 4.4, 4.4, 4.4, 4.4, 4.4, 4.4, 4.4, 4.4]
+            },
+            {
+                name: "재고현황",
+                type: "line",
+                symbol: 'circle',
+                symbolSize: 7,
+                data: [11, 10, 8, 10, 6, 4, 6, 4, 8, 7, 6, 10]
+            },
+            {
+                name: "적정제고",
+                type: "line",
+                symbol: 'circle',
+                symbolSize: 7,
+                data: [10, 10, 8, 8, 7, 5, 5, 4, 8, 8, 7, 10]
+            },
+        ]
+    },
 }

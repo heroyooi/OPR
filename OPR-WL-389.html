@@ -166,20 +166,31 @@
           <div class="content-inner">
             <div class="search-area">
               <div class="input-wrap input-datepicker">
-                <span class="label">년도</span>
-                <select class="select-base" style="width: 120px;">
-                  <option value="0">선택</option>
-                  <option value="1" selected>2004</option>
-                  <option value="2">값2</option>
-                  <option value="3">값3</option>
-                </select>
+                <div>
+                  <ul class="tab-btn">
+                    <li class="on"><a href="#">계절별</a></li>
+                    <li><a href="#">사고 형태 별</a></li>
+                  </ul>
+                </div>
+                <span class="label">기간</span>
+                <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom" style="width: 160px;">
+                  <input id="startpicker-input1" type="text" aria-label="Date">
+                  <span class="tui-ico-date"></span>
+                  <div id="startpicker-container1" style="margin-left: -1px;"></div>
+                </div>
+                <span class="bridge">~</span>
+                <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom" style="width: 160px;">
+                  <input id="endpicker-input1" type="text" aria-label="Date">
+                  <span class="tui-ico-date"></span>
+                  <div id="endpicker-container1" style="margin-left: -1px;"></div>
+                </div>
                 <span class="btn-base btn-ico ml8"><a href="#"><em><span class="s-ico search"></span>검색</em></a></span>
               </div>
             </div><!-- .search-area -->
             <div class="content-frame mt16 c-scrollbar">
               <div class="chart-area" style="min-height: 404px;">
                 <div class="inner">
-                  <div id="barStackChart" style="width: 100%; height: 372px;"></div>
+                  <div id="barVerticalChart" style="width: 100%; height: 372px;"></div>
                 </div>
               </div>
             </div><!-- .content-frame -->
@@ -191,8 +202,49 @@
     <script src="js/echarts.min.js"></script>
     <script src="js/echartOptions.js"></script>
     <script>
-      var barStackChart = echarts.init(document.getElementById('barStackChart'));
-      barStackChart.setOption(options['barStack']);
+      tui.DatePicker.localeTexts['customKey'] = {
+        titles: {
+            // days
+            DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+            // daysShort
+            D: ['일', '월', '화', '수', '목', '금', '토'],
+            // months
+            MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+            // monthsShort
+            MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+        },
+        titleFormat: 'yyyy.MMM',
+        todayFormat: '오늘 : yyyy.MMMM.dd',
+        date: 'Date',
+        time: 'Time'
+      };
+      
+      var today1 = new Date();
+      var picker1 = tui.DatePicker.createRangePicker({
+        language: 'customKey',
+        startpicker: {
+          date: today1,
+          input: '#startpicker-input1',
+          container: '#startpicker-container1'
+        },
+        endpicker: {
+          date: today1,
+          input: '#endpicker-input1',
+          container: '#endpicker-container1'
+        },
+        selectableRanges: [
+          [today1, new Date(today1.getFullYear() + 1, today1.getMonth(), today1.getDate())]
+        ],
+        format: 'YYYY-MM-dd',
+        // showAlways: true,
+      });
+      
+      picker1.on('change:end', () => {
+          console.log(123);
+      });
+      
+      var barVerticalChart = echarts.init(document.getElementById('barVerticalChart'));
+      barVerticalChart.setOption(options['barVertical']);
     </script>
   </div><!-- #wrap -->
 </body>

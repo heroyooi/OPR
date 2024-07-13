@@ -1326,6 +1326,86 @@ window.addEventListener('resize', function () {
 <pre class="language-html"></pre>
 <pre class="language-javascript"></pre>
               </div>
+
+              <div class="code-area">
+                <h3>Bar + pie 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area" style="min-height: 608px;">
+  <div class="inner">
+    <div id="barMultiChart" style="width: 100%; height: 576px;"></div>
+    <div id="pieRightChart" style="width: 345px; height: 305px; position: absolute; right: 0; top: 40px;"></div>
+  </div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions.js"></script></div>
+<script>var barMultiChart = echarts.init(document.getElementById('barMultiChart'));
+var pieRightChart = echarts.init(document.getElementById('pieRightChart'));
+barMultiChart.setOption(options['barMulti']);
+pieRightChart.setOption(options['pieRight']);
+window.addEventListener('resize', function () {
+  barMultiChart.resize();
+  pieRightChart.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+              </div>
+
+              <div class="code-area">
+                <h3>Doughnut 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area" style="min-height: 404px;">
+  <div class="inner">
+    <div id="doughnutChart" style="width: 100%; height: 372px;"></div>
+  </div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions.js"></script></div>
+<script>var doughnutChart = echarts.init(document.getElementById('doughnutChart'));
+doughnutChart.setOption(options['doughnut']);
+window.addEventListener('resize', function () {
+  doughnutChart.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+              </div>
+
+              <div class="code-area">
+                <h3>Bar - Vertical 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area" style="min-height: 404px;">
+  <div class="inner">
+    <div id="barVerticalChart" style="width: 100%; height: 372px;"></div>
+  </div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions.js"></script></div>
+<script>var barVerticalChart = echarts.init(document.getElementById('barVerticalChart'));
+barVerticalChart.setOption(options['barVertical']);
+window.addEventListener('resize', function () {
+  barVerticalChart.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+              </div>
+
+              <div class="code-area">
+                <h3>Bar + Line 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area" style="min-height: 608px;">
+  <div class="inner">
+    <div id="barLineChart" style="width: 100%; height: 576px;"></div>
+  </div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions.js"></script></div>
+<script>var barLineChart = echarts.init(document.getElementById('barLineChart'));
+barLineChart.setOption(options['barLine']);
+window.addEventListener('resize', function () {
+  barLineChart.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+              </div>
             </div><!-- .section -->
 
 
