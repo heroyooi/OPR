@@ -96,6 +96,7 @@
 .s-ico.poi{background:url(../img/ico-bg_poi-point.png) 50% 50% no-repeat;width:26px;height:31px;}
 .s-ico.details{background:url(../img/ico-16-details-def.png) 50% 50% no-repeat;width:16px;height:17px;}
 .s-ico.print{background:url(../img/ico-16-print-def.png) 50% 50% no-repeat;width:16px;height:17px;}
+.s-ico.section{background:url(../img/ico-16-section.png) 50% 50% no-repeat;width:16px;height:16px;}
 
 .s-ico.w-label{font-size:14px;font-weight:600;line-height:1.5;color:#b2bbce;width:auto;position: relative;}
 .s-ico.w-label::before{content:'';width:24px;height:24px;}
@@ -173,6 +174,7 @@
 .input-wrap.input-group{display:flex;gap:0 8px;align-items:center;}
 .input-wrap.input-group .input-base{flex-grow:1;}
 .input-wrap.input-group .dash{margin:0;}
+.input-wrap.input-group .s-ico{flex-shrink:0;}
 .input-wrap.radio-input{display:flex;gap:0 8px;align-items:center;}
 .input-wrap.radio-input .radio-list{flex-shrink:0;}
 .input-wrap.input-select-btn{display:flex;gap:0 8px;align-items:center;}

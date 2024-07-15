@@ -246,56 +246,99 @@
       </div><!-- .content-wrap -->
     </div><!-- #container -->
 
-    <div class="popup-wrap mfp-hide" id="popup-delete" style="width: 560px;">
+    <div class="popup-wrap mfp-hide" id="popup-record" style="width: 480px;">
       <div class="con-wrap">
-        <h3 class="tit">예비품 삭제</h3>
+        <h3 class="tit">최근 <em>2</em>건의 자동 검지 기록이 있습니다. <br />해당하는 통제 기록을 선택해 주세요.</h3>
         <div class="content-frame c-scrollbar">
-          <div class="tb-wrap">
-            <table class="tb-input tp2">
-              <colgroup>
-                <col width="112" />
-                <col width="*" />
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th>구분/품목명</th>
-                  <td>
-                    <div class="input-wrap">
-                      <input type="text" class="input-base" value="자동 표출" disabled />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>반입일자</th>
-                  <td>
-                    <div class="input-wrap">
-                      <input type="text" class="input-base" value="자동 표출" disabled />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>Serial Number</th>
-                  <td>
-                    <div class="input-wrap">
-                      <input type="text" class="input-base" value="자동 표출" disabled />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>삭제 사유</th>
-                  <td>
-                    <div class="input-wrap">
-                      <input type="text" class="input-base" placeholder="삭제 사유 입력" />
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <ul class="record-list">
+            <li>
+              <div class="result">
+                <div class="date-wrap">
+                  <span class="date">20241025 13:24:50</span>
+                  <span class="type">상황관리</span>
+                </div>
+                <span class="local">평택방향 / 구간 : 인주 IC - 현덕 JCT</span>
+              </div>
+            </li>
+            <li>
+              <div class="result">
+                <div class="date-wrap">
+                  <span class="date">20241025 13:24:50</span>
+                  <span class="type">상황관리</span>
+                </div>
+                <span class="local">평택방향 / 구간 : 인주 IC - 현덕 JCT</span>
+              </div>
+            </li>
+            <li>
+              <div class="result">
+                <div class="date-wrap">
+                  <span class="date">20241025 13:24:50</span>
+                  <span class="type">상황관리</span>
+                </div>
+                <span class="local">평택방향 / 구간 : 인주 IC - 현덕 JCT</span>
+              </div>
+            </li>
+          </ul>
         </div><!-- .content-frame -->
         <div class="btns-wrap center mt24">
           <span class="btn-base gray b-mfp-close"><a href="#">취소</a></span>
-          <span class="btn-base b-mfp-close"><a href="#">삭제</a></span>
+        </div>
+      </div>
+    </div><!-- .popup-wrap -->
+
+    <div class="popup-wrap mfp-hide" id="popup-search" style="width: 680px;">
+      <div class="con-wrap">
+        <h3 class="tit">구간 찾기</h3>
+        <div class="map-area" style="background-color: #000; height: 300px;">
+          <div class="map-navi">
+            <a href="#" class="s-ico plus"></a>
+            <a href="#" class="s-ico minus"></a>
+          </div>
+        </div>
+        <div class="tb-wrap mt16">
+          <table class="tb-input tp2">
+            <colgroup>
+              <col width="120" />
+              <col width="*" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>통제 구간</th>
+                <td>
+                  <div class="input-wrap input-group">
+                    <input type="text" class="input-base" value="0000000000000" disabled>
+                    <span class="s-ico section"></span>
+                    <input type="text" class="input-base" value="0000000000000" disabled>
+                    <input type="text" class="input-base" value="1Km 구간" disabled>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>시작 노드 좌표</th>
+                <td>
+                  <div class="input-wrap full">
+                    <input type="text" class="input-base" value="127.1138" disabled>
+                    <span class="dash">/</span>
+                    <input type="text" class="input-base" value="36.815229" disabled>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>종료 노드 좌표</th>
+                <td>
+                  <div class="input-wrap full">
+                    <input type="text" class="input-base" value="127.1138" disabled>
+                    <span class="dash">/</span>
+                    <input type="text" class="input-base" value="36.815229" disabled>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="btns-wrap center mt24">
+          <span class="btn-base gray b-mfp-close"><a href="#">취소</a></span>
+          <span class="btn-base b-mfp-close"><a href="#">저장</a></span>
         </div>
       </div>
     </div><!-- .popup-wrap -->
@@ -309,9 +352,13 @@
     barLineChart.setOption(options['barLine']);
 
     var qpopup = $.urlParam('popup');
-    if (qpopup== 'delete') {
+    if (qpopup) {
       setTimeout(() => {
-        $.magnificPopup.open(getOptionsAnim('#popup-delete', false));
+        if (qpopup== 'record') {
+          $.magnificPopup.open(getOptionsAnim('#popup-record', false));
+        } else if (qpopup == 'search') {
+          $.magnificPopup.open(getOptionsAnim('#popup-search', false));
+        }
       }, 250);
     }
   </script>
