@@ -156,3 +156,9 @@
 
 .chart-area{padding:16px;border-radius:4px;background-color:#212332;min-height:472px;position: relative;}
 .chart-area .label{font-size:14px;font-weight:600;line-height:1.5;color:#b2bbce;text-align:center;display:block;}
+
+.monitor-list{display:flex;}
+.monitor-list > li.type-1{width:252px;}
+.monitor-list > li > dl > dt{font-size:16px;line-height:1.5;font-weight:700;color:#00bbfe;text-align:center;padding:8px;background-color: #203b51;}
+.monitor-list > li > dl > dd{}
+
