@@ -1128,90 +1128,104 @@ var options = {
         ]
     },
 
+    // https://echarts.apache.org/examples/en/editor.html?c=gauge-simple
     // https://echarts.apache.org/examples/en/editor.html?c=gauge-grade
     gauge: {
         series: [
-          {
-            type: 'gauge',
-            startAngle: 180,
-            endAngle: 0,
-            center: ['50%', '75%'],
-            radius: '90%',
-            min: 0,
-            max: 1,
-            splitNumber: 8,
-            axisLine: {
-              lineStyle: {
-                width: 6,
-                color: [
-                  [0.25, '#FF6E76'],
-                  [0.5, '#FDDD60'],
-                  [0.75, '#58D9F9'],
-                  [1, '#7CFFB2']
+            {
+                type: 'gauge',
+                startAngle: 200,
+                endAngle: -20,
+                center: ['50%', '62%'],
+                radius: '100%',
+                min: 0,
+                max: 1,
+                splitNumber: 10,
+                axisLine: {
+                  lineStyle: {
+                    width: 6,
+                    color: [
+                      [0.1, '#ad2ec6'],
+                      [0.3, '#ef4345'],
+                      [0.5, '#fcbb25'],
+                      [0.7, '#0bbe35'],
+                      [0.9, '#1ac2ff'],
+                      [1, '#2f78ff'],
+                    ]
+                  }
+                },
+                pointer: {
+                  icon: 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',
+                  length: '12%',
+                  width: 20,
+                  offsetCenter: [0, '-60%'],
+                  itemStyle: {
+                    color: 'auto'
+                  }
+                },
+                axisTick: {
+                  length: 12,
+                  lineStyle: {
+                    width: 1
+                  }
+                },
+                splitLine: {
+                    show: false,
+                },
+                axisLabel: {
+                  color: '#778298',
+                  fontSize: 11,
+                  distance: -38,
+                  formatter: function (value) {
+                    console.log('axisLabel : ', value)
+                    // if (value === 1) {
+                    //     return '100';
+                    if (value === 0.9) {
+                        return '90';
+                    // } else if (value === 0.8) {
+                    //     return '80';
+                    } else if (value === 0.7) {
+                        return '70';
+                    // } else if (value === 0.6) {
+                    //     return '60';
+                    } else if (value === 0.5) {
+                        return '50';
+                    // } else if (value === 0.4) {
+                    //     return '40';
+                    } else if (value === 0.3) {
+                        return '30';
+                    // } else if (value === 0.2) {
+                    //     return '20';
+                    } else if (value === 0.1) {
+                        return '10';
+                    // } else if (value === 0) {
+                    //     return '0';
+                    }
+                    return '';
+                  },
+                },
+                title: {
+                    offsetCenter: [0, '70%'],
+                    fontSize: 14,
+                    fontFamily: 'Pretendard',
+                    color: '#778298',
+                },
+                detail: {
+                  fontSize: 26,
+                  offsetCenter: [0, '0%'],
+                  valueAnimation: true,
+                  formatter: function (value) {
+                    return Math.round(value * 100) + '';
+                  },
+                  color: '#ffffff'
+                },
+                data: [
+                  {
+                    value: 0.72,
+                    name: '통행속도(km/h)'
+                  }
                 ]
               }
-            },
-            pointer: {
-                icon: 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',
-                length: '12%',
-                width: 20,
-                offsetCenter: [0, '-60%'],
-                itemStyle: {
-                  color: 'auto'
-                }
-            },
-            axisTick: {
-              length: 12,
-              lineStyle: {
-                color: 'auto',
-                width: 2
-              }
-            },
-            splitLine: {
-              length: 20,
-              lineStyle: {
-                color: 'auto',
-                width: 5
-              }
-            },
-            axisLabel: {
-              color: '#464646',
-              fontSize: 20,
-              distance: -60,
-              rotate: 'tangential',
-              formatter: function (value) {
-                if (value === 0.875) {
-                  return 'Grade A';
-                } else if (value === 0.625) {
-                  return 'Grade B';
-                } else if (value === 0.375) {
-                  return 'Grade C';
-                } else if (value === 0.125) {
-                  return 'Grade D';
-                }
-                return '';
-              }
-            },
-            title: {
-              offsetCenter: [0, '-10%'],
-              fontSize: 20
-            },
-            detail: {
-              fontSize: 30,
-              offsetCenter: [0, '-35%'],
-              valueAnimation: true,
-              formatter: function (value) {
-                return Math.round(value * 100) + '';
-              },
-              color: 'inherit'
-            },
-            data: [
-              {
-                value: 0.7,
-                name: 'Grade Rating'
-              }
-            ]
-          }
-        ],
+        ]
     }
 }

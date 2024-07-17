@@ -97,6 +97,7 @@ body{width:100%;overflow:hidden;}
 .content-frame-wrap.monitoring > .content-frame:nth-child(1),
 .content-frame-wrap.monitoring > .content-frame:nth-child(3){width:430px;flex-shrink:0;}
 .content-frame-wrap.monitoring > .content-frame:nth-child(2){flex-grow:1;}
+.content-frame-wrap.monitoring .map-area{border-radius:0;}
 
 #container.ver-lnb{display:flex;gap:0 20px;}
 #container.ver-lnb .content-wrap{flex-grow:1;}

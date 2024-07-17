@@ -157,8 +157,21 @@
 .chart-area{padding:16px;border-radius:4px;background-color:#212332;min-height:472px;position: relative;}
 .chart-area .label{font-size:14px;font-weight:600;line-height:1.5;color:#b2bbce;text-align:center;display:block;}
 
-.monitor-list{display:flex;}
-.monitor-list > li.type-1{width:252px;}
-.monitor-list > li > dl > dt{font-size:16px;line-height:1.5;font-weight:700;color:#00bbfe;text-align:center;padding:8px;background-color: #203b51;}
-.monitor-list > li > dl > dd{}
+.monitor-list{display:flex;flex-wrap:wrap;}
+.monitor-list > li{border-bottom:1px solid #212332;width:100%;}
+.monitor-list > li.type-1{width:58%;}
+.monitor-list > li.type-2{width:42%;border-left:1px solid #212332;}
+.monitor-list > li > dl > dt{padding:8px 16px;background-color:#203b51;display:flex;justify-content:center;align-items:center;font-size:16px;line-height:1.5;font-weight:bold;}
+.monitor-list > li > dl > dt.space{justify-content:space-between;}
+.monitor-list > li > dl > dt .label{color:#00bbfe;}
+.monitor-list > li > dl > dt .status{color:#fff;}
+.monitor-list > li > dl > dt .status em{font-weight:inherit;color:#fcbb25;}
+.monitor-list > li > dl > dd{position: relative;padding:16px;}
+.monitor-list > li > dl > dd.no-padding{padding:0;}
+.monitor-list > li > dl > dd .bg-circle{display:inline-block;background:url(../img/circle.png) 50% 50% no-repeat;width:94px;height:94px;position: absolute;left:50%;bottom:40px;margin-left:-47px;}
+.monitor-list > li > dl > dd .info span{display:block;}
+.monitor-list > li > dl > dd .info .label{font-size:16px;line-height:1.5;color:#778298;}
+.monitor-list > li > dl > dd .info .value{font-size:26px;font-weight:bold;color:#00bbfe;}
 
+.monitor-list > li.type-2 dd{height:107px;display:flex;align-items:center;border-top:1px solid #212332;}
+.monitor-list > li.type-2 dd:first-child{border-top:0;}

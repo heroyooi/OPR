@@ -395,9 +395,16 @@ var GUI = window.GUI || (function(){
         $wrapper.css('height', $(window).height());
         $content.css('height', $(window).height() - $header.outerHeight() - _pd - $top.outerHeight());
         // $frame.css('height', $(window).height() - $header.outerHeight() - _pd - $top.outerHeight() - ($search.outerHeight() || $tit.outerHeight()) - _mt - _pd);
-        $frame.each(function(){
-          $(this).css('height', $(window).height() - $(this).offset().top - _pd);
-        });
+        if ($frame.closest('.content-frame-wrap').hasClass('monitoring')) {
+          $frame.each(function(){ // OPR-WL-226.html
+            $(this).css('height', $(window).height() - $(this).offset().top - _pd / 2);
+          });
+        } else {
+          $frame.each(function(){
+            $(this).css('height', $(window).height() - $(this).offset().top - _pd);
+          });
+        }
+        
 
         // OPR-WL-206.html?popup=record
         $popup_frame.each(function(){
