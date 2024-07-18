@@ -159,8 +159,9 @@
 
 .monitor-list{display:flex;flex-wrap:wrap;}
 .monitor-list > li{border-bottom:1px solid #212332;width:100%;}
-.monitor-list > li.type-1{width:58%;}
-.monitor-list > li.type-2{width:42%;border-left:1px solid #212332;}
+.monitor-list > li.type-1{width:57%;}
+.monitor-list > li.type-2{width:43%;border-left:1px solid #212332;}
+.monitor-list > li.type-3{width:50%;border-left:1px solid #212332;}
 .monitor-list > li > dl > dt{padding:8px 16px;background-color:#203b51;display:flex;justify-content:center;align-items:center;font-size:16px;line-height:1.5;font-weight:bold;}
 .monitor-list > li > dl > dt.space{justify-content:space-between;}
 .monitor-list > li > dl > dt .label{color:#00bbfe;}
@@ -168,10 +169,39 @@
 .monitor-list > li > dl > dt .status em{font-weight:inherit;color:#fcbb25;}
 .monitor-list > li > dl > dd{position: relative;padding:16px;}
 .monitor-list > li > dl > dd.no-padding{padding:0;}
-.monitor-list > li > dl > dd .bg-circle{display:inline-block;background:url(../img/circle.png) 50% 50% no-repeat;width:94px;height:94px;position: absolute;left:50%;bottom:40px;margin-left:-47px;}
+.monitor-list > li > dl > dd .bg-circle{display:inline-block;background:url(../img/circle.png) 50% 50% no-repeat;width:94px;height:94px;position: absolute;left:50%;top:80px;margin-left:-44px;}
 .monitor-list > li > dl > dd .info span{display:block;}
 .monitor-list > li > dl > dd .info .label{font-size:16px;line-height:1.5;color:#778298;}
-.monitor-list > li > dl > dd .info .value{font-size:26px;font-weight:bold;color:#00bbfe;}
+.monitor-list > li > dl > dd .info .value{color:#00bbfe;}
+.monitor-list > li > dl > dd .info .s-value,
+.monitor-list > li > dl > dd .info .value{font-size:26px;font-weight:bold;}
+.monitor-list > li > dl > dd .info .s-value{color:#b2bbce;}
+.monitor-list > li > dl > dd .info .s-value.blue{color:#00bbfe;}
+.monitor-list > li > dl > dd .info .s-value,
+.monitor-list > li > dl > dd .info .s-unit{display:inline-block;}
+.monitor-list > li > dl > dd .info .s-unit{font-size:16px;line-height:1.59;color:#778298;}
+.monitor-list > li > dl > dd .weather-detail{display:flex;justify-content:space-between;align-items:center;}
+.monitor-list > li > dl > dd .weather-detail dd > span{color:#fff;line-height:1.5;font-weight:bold;}
+.monitor-list > li > dl > dd .weather-detail dd .local{font-size:16px;}
+.monitor-list > li > dl > dd .weather-detail dd .temp{font-size:26px;}
+.monitor-list > li > dl > dd .weather-info{margin-top:8px;}
+.monitor-list > li > dl > dd .weather-info li{display:flex;justify-content:space-between;font-size:14px;line-height:1.5;margin-top:1.4px;}
+.monitor-list > li > dl > dd .weather-info li:first-child{margin-top:0;}
+.monitor-list > li > dl > dd .weather-info li .label{color:#778298;}
+.monitor-list > li > dl > dd .weather-info li .value{color:#fff;}
+.monitor-list > li > dl > dd .state{display:inline-block;padding: 4px 12px;border-radius: 4px;background-color: rgba(26, 194, 255, 0.5);font-size:14px;color:#fff;font-weight:bold;}
 
-.monitor-list > li.type-2 dd{height:107px;display:flex;align-items:center;border-top:1px solid #212332;}
+.monitor-list > li.type-2 dd{height:137px;display:flex;align-items:center;border-top:1px solid #212332;}
 .monitor-list > li.type-2 dd:first-child{border-top:0;}
+
+/* range slider */
+.slider-horizon-area{position:relative;margin-top:25px;}
+.slider-horizon{width:203px;position:relative;margin:0 auto;}
+/* .slider-horizon.fill:before{background-color:#0288d1;} */
+.slider-horizon.ui-slider-horizontal{height:20px;}
+/* .slider-horizon .ui-widget-header{background-color:#0288d1;border-radius:0;} */
+.slider-horizon.ui-slider-horizontal .ui-slider-range-min{background:transparent;}
+.slider-horizon.ui-widget-content{border:0;background-image: linear-gradient(to left, #0bbe35 0%, #ffe340 50%, #ef4345 100%);border-radius:0;border-radius:14px;}
+.slider-horizon.ui-slider .ui-slider-handle{width:9px;height:28px;background-color:transparent !important;border:0;margin-top:0;top:-8px;margin-left:-4px;background:url(../img/chart-slidebar-bar.png) 50% 50% no-repeat;}
+.slider-horizon.ui-slider .ui-slider-handle:focus{outline:none;}
+.slider-label{font-size:14px;line-height:1.5;color:#778298;text-align:center;display:block;margin-top:4px;}

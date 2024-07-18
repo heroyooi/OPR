@@ -1137,7 +1137,7 @@ var options = {
                 startAngle: 200,
                 endAngle: -20,
                 center: ['50%', '62%'],
-                radius: '100%',
+                radius: '95%',
                 min: 0,
                 max: 1,
                 splitNumber: 10,

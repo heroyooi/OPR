@@ -115,6 +115,30 @@
 .s-ico.vds{width:26px;height:31px;background:url(../img/ico-poi-vds-def.png) 50% 50% no-repeat;cursor:pointer;}
 .s-ico.vds.on,
 .s-ico.vds:hover{background:url(../img/ico-poi-vds-sel.png) 50% 50% no-repeat;}
+.s-ico.weather{width:72px;height:72px;background-repeat:no-repeat;background-position:50% 50%;}
+.s-ico.weather.sunny{background-image:url(../img/ico-weather-sunny.png);}
+.s-ico.weather.yellowdust{background-image:url(../img/ico-weather-yellowdust.png);}
+.s-ico.weather.mist{background-image:url(../img/ico-weather-mist.png);}
+.s-ico.weather.thunder{background-image:url(../img/ico-weather-thunder.png);}
+.s-ico.weather.snow{background-image:url(../img/ico-weather-snow.png);}
+.s-ico.weather.rainsnow{background-image:url(../img/ico-weather-rainsnow.png);}
+.s-ico.weather.cloud{background-image:url(../img/ico-weather-cloud.png);}
+.s-ico.weather.cloudy{background-image:url(../img/ico-weather-cloudy.png);}
+.s-ico.weather.rain{background-image:url(../img/ico-weather-rain.png);}
+
+.s-ico.mode{width:52px;height:52px;background:url(../img/ico-mode.png) 50% 50% no-repeat;}
+.s-ico.traffic{width:52px;height:52px;background:url(../img/ico-traffic.png) 50% 50% no-repeat;}
+.s-ico.phone{width:52px;height:52px;background:url(../img/ico-phone.png) 50% 50% no-repeat;}
+.s-ico.report{width:52px;height:52px;background:url(../img/ico-report.png) 50% 50% no-repeat;}
+.s-ico.schedule{width:52px;height:52px;background:url(../img/ico-schedule.png) 50% 50% no-repeat;}
+.s-ico.break{width:52px;height:52px;background:url(../img/ico-break.png) 50% 50% no-repeat;}
+.s-ico.register{width:52px;height:52px;background:url(../img/ico-register.png) 50% 50% no-repeat;}
+.s-ico.repair{width:52px;height:52px;background:url(../img/ico-repair.png) 50% 50% no-repeat;}
+.s-ico.notify{width:52px;height:52px;background:url(../img/ico-notify.png) 50% 50% no-repeat;}
+.s-ico.accrue{width:52px;height:52px;background:url(../img/ico-accrue.png) 50% 50% no-repeat;}
+.s-ico.standby{width:52px;height:52px;background:url(../img/ico-standby.png) 50% 50% no-repeat;}
+.s-ico.info{width:52px;height:52px;background:url(../img/ico-info.png) 50% 50% no-repeat;}
+
 .map-navi{position:absolute;right:16px;top:50%;transform:translateY(-50%);}
 .map-navi > .s-ico{display:block;margin-top:1px;}
 .map-navi > .s-ico:first-child{margin-top:0;}
@@ -565,14 +589,21 @@ input[type=number]::-webkit-outer-spin-button {
 .tb-list td:last-child{padding-right:16px;} */
 .tb-list th.b-line{border-bottom:1px solid #34374c;}
 .tb-list th.bl, .tb-list td.bl{border-left:1px solid #212332;}
-.tb-list td .status::before{content:'';display:inline-block;width:8px;height:8px;border-radius:4px;margin-right:4px;}
+.tb-list td .status::before{content:'';display:inline-block;width:8px;height:8px;border-radius:4px;margin-right:4px;background-color:#b2bbce;}
 .tb-list td .on{coloR:#fff;}
+.tb-list tr td .status.st1,
 .tb-list tr.st1 td{background-color:rgba(11, 190, 53, 0.1);color:#0bbe35;}
+.tb-list tr td .status.st1::before,
 .tb-list tr.st1 td .status::before{background-color:#0bbe35;}
+.tb-list tr td .status.st2,
 .tb-list tr.st2 td{background-color:rgba(252, 187, 37, 0.1);color:#fcbb25;}
+.tb-list tr td .status.st2::before,
 .tb-list tr.st2 td .status::before{background-color:#fcbb25;}
+.tb-list tr td .status.st3,
 .tb-list tr.st3 td{background-color:rgba(239, 67, 69, 0.1);color:#ef4345;}
+.tb-list tr td .status.st3::before,
 .tb-list tr.st3 td .status::before{background-color:#ef4345;}
+.tb-list.td-ellipsis td{white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
 
 /* paging */
 .total-wrap{display:flex;justify-content:space-between;align-items: center;}
@@ -945,6 +976,8 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);background-color: rgba(31, 61, 83, 0
 .calendar-tooltip li:first-child{margin-top:0;}
 .calendar-tooltip li a{font-size:14px;line-height:1.5;color:#b2bbce;}
 .calendar-tooltip li a:hover{color:#00bbfe;}
+
+
 
 @media print {
   body, div{position: relative;}
