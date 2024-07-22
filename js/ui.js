@@ -428,6 +428,9 @@ $(function(){
 var openModal = function(id) {
   $(id).show();
 };
+var closeModal = function(id) {
+  $(id).hide();
+};
 
 // 이중 팝업을 열고 닫기 위한 함수
 var openCSPopup = function(id) {

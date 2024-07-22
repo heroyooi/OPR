@@ -260,3 +260,15 @@
 .monitor-swiper .swiper-pagination{position: relative;bottom:initial;top:initial;margin-top:8px;font-size:14px;color:#778298;line-height:1.5;}
 .monitor-swiper .swiper-pagination .swiper-pagination-current{color:#fff;}
 .monitor-swiper .swiper-slide{background-color:#000;text-align:center;}
+
+.monitor-image{display:flex;border-bottom:1px solid #212332;border-right:1px solid #212332;flex-wrap:wrap;}
+.monitor-image > li{width:33.333%;text-align:center;border-left:1px solid #212332;border-top:1px solid #212332;}
+.monitor-image > li dt{display:flex;font-size:14px;line-height:1.5;color:#fff;gap:0 2px;background-color:#34374c;padding:8px;align-items:center;}
+.monitor-image > li dt span{}
+.monitor-image > li dt .direction{font-weight:400;}
+.monitor-image > li dt .direction::before{content:'';display:inline-block;width:8px;height:8px;border-radius:4px;margin-right:4px;}
+.monitor-image > li dt .direction.st1::before{background-color: #0bbe35;}
+.monitor-image > li dt .direction.st2::before{background-color: #fcbb25 ;}
+.monitor-image > li dt .direction.st3::before{background-color: #ef4345;}
+.monitor-image > li dt .name{font-weight:600;}
+.monitor-image > li dd{padding:8px;background-color:#000;}
