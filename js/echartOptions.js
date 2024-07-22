@@ -1227,5 +1227,209 @@ var options = {
                 ]
               }
         ]
-    }
+    },
+    gauge2: {
+        series: [
+            {
+                type: 'gauge',
+                startAngle: 200,
+                endAngle: -20,
+                center: ['50%', '60%'],
+                radius: '105%',
+                min: 0,
+                max: 1,
+                splitNumber: 10,
+                axisLine: {
+                  lineStyle: {
+                    width: 6,
+                    color: [
+                      [0.1, '#ad2ec6'],
+                      [0.3, '#ef4345'],
+                      [0.5, '#fcbb25'],
+                      [0.7, '#0bbe35'],
+                      [0.9, '#1ac2ff'],
+                      [1, '#2f78ff'],
+                    ]
+                  }
+                },
+                pointer: {
+                  show: false,
+                },
+                axisTick: {
+                  length: 12,
+                  lineStyle: {
+                    width: 1
+                  }
+                },
+                splitLine: {
+                    show: false,
+                },
+                axisLabel: {
+                  color: '#778298',
+                  fontSize: 11,
+                  distance: -38,
+                  formatter: function (value) {
+                    console.log('axisLabel : ', value)
+                    // if (value === 1) {
+                    //     return '100';
+                    if (value === 0.9) {
+                        return '90';
+                    // } else if (value === 0.8) {
+                    //     return '80';
+                    } else if (value === 0.7) {
+                        return '70';
+                    // } else if (value === 0.6) {
+                    //     return '60';
+                    } else if (value === 0.5) {
+                        return '50';
+                    // } else if (value === 0.4) {
+                    //     return '40';
+                    } else if (value === 0.3) {
+                        return '30';
+                    // } else if (value === 0.2) {
+                    //     return '20';
+                    } else if (value === 0.1) {
+                        return '10';
+                    // } else if (value === 0) {
+                    //     return '0';
+                    }
+                    return '';
+                  },
+                },
+                title: {
+                    offsetCenter: [0, '70%'],
+                    fontSize: 14,
+                    fontFamily: 'Pretendard',
+                    color: '#778298',
+                },
+                detail: {
+                  fontSize: 26,
+                  offsetCenter: [0, '0%'],
+                  valueAnimation: true,
+                  formatter: function (value) {
+                    return Math.round(value * 100) + '';
+                  },
+                  color: '#ffffff'
+                },
+                data: [
+                  {
+                    value: 0.72,
+                  }
+                ]
+              }
+        ]
+    },
+    bar: {
+        color: ['#00bbfe', '#0bbe35'],
+        title: {
+            show: false
+        },
+        tooltip: {
+            trigger: 'axis',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)', // 툴팁 배경색상 설정
+            textStyle: {
+                color: '#fff', // 툴팁 글씨색상 설정
+                fontFamily: 'Pretendard',
+                fontSize: 12,
+                fontWeight: '600'
+            },
+            borderWidth: 0,
+        },
+        legend: {
+            itemWidth: 16, // 아이템 너비
+            itemHeight: 8, // 아이템 높이
+            data: ['전일', '금일'],
+            textStyle: {
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+            },
+            top: '0%', // 범례를 제목 아래로
+        },
+        grid: {
+            left: '0%',
+            right: '0%',
+            bottom: '0%',
+            containLabel: true,
+            top: '20%', // 그래프 영역을 아래로 이동
+        },
+        xAxis: {
+            show: false,
+            type: 'category',
+            boundaryGap: true,
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157'
+                }
+            },
+            axisLabel: {
+                textStyle: {
+                    fontSize: 11,
+                    fontWeight: 600,
+                    fontFamily: 'Pretendard',
+                    color: '#b2bbce'
+                },
+                interval: 0,
+            },
+            axisTick: {
+                show: false // x축의 작은 세로선 숨기기
+            }
+        },
+        yAxis: {
+            type: 'value',
+            position: 'left',
+            alignTicks: true,
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157',
+                },
+            },
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157'
+                },
+            },
+            axisLabel: {
+                textStyle: {
+                    fontSize: 11,
+                    fontWeight: 600,
+                    fontFamily: 'Pretendard',
+                    color: '#b2bbce'
+                },
+                formatter: function(value) {
+                    switch (value) {
+                        case 100: return '교통량';
+                        case 50: return '';
+                        case 0: return '시간대';
+                        default: return value;
+                    }
+                }
+            },
+            min: 0,
+            max: 100,
+            interval: 50,
+        },
+        series: [
+            {
+                name: "전일",
+                type: "bar",
+                barWidth: 8,
+                itemStyle: {
+                    borderRadius: [2, 2, 0, 0],
+                },
+                data: [50, 50, 50, 100, 50, 50, 50, 100, 50]
+            },
+            {
+                name: "금일",
+                type: "bar",
+                barWidth: 8,
+                itemStyle: {
+                    borderRadius: [2, 2, 0, 0],
+                },
+                data: [80, 50, 20, 60, 80, 50, 20, 60, 20]
+            },
+        ]
+    },
 }
