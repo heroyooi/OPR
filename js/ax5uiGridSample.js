@@ -341,6 +341,25 @@ var data1_19 = [
   
   { isChecked: "N", column1: '41', column2: '1234567890', column3: ['green', '70'], column4: ['green', '70'], column5: ['green', '70'], column6: ['green', '70'], column7: ['green', '70'], column8: ['green', '70'], column9: ['green', '70'], column10: ['green', '70'], column11: ['green', '70'], column12: ['green', '70'], column13: ['green', '70'], column14: ['green', '70'], column15: ['green', '70'], column16: ['green', '70'], column17: ['green', '70'], column18: ['green', '70'], column19: ['green', '70'], column20: ['green', '70'], column21: ['green', '70'], column22: ['green', '70'], column23: ['green', '70'], column24: ['green', '70'], column25: ['green', '70'], column26: ['green', '70'] },
 ];
+var data1_20 = [
+  { isChecked: "N", column1: '50', column2: 'TCCTV-0186', column3: '봉수산터널CCTV28', column4: '터널', column5: '익산' },
+  { isChecked: "N", column1: '49', column2: 'TCCTV-0186', column3: '봉수산터널CCTV28', column4: '터널', column5: '익산' },
+  { isChecked: "N", column1: '48', column2: 'TCCTV-0186', column3: '봉수산터널CCTV28', column4: '터널', column5: '익산' },
+  { isChecked: "N", column1: '47', column2: 'TCCTV-0186', column3: '봉수산터널CCTV28', column4: '터널', column5: '평택' },
+  { isChecked: "N", column1: '46', column2: 'TCCTV-0186', column3: '봉수산터널CCTV28', column4: '터널', column5: '평택' },
+  { isChecked: "N", column1: '45', column2: 'TCCTV-0186', column3: '봉수산터널CCTV28', column4: '터널', column5: '평택' },
+  { isChecked: "N", column1: '44', column2: 'TCCTV-0186', column3: '봉수산터널CCTV28', column4: '터널', column5: '평택' },
+  { isChecked: "N", column1: '43', column2: 'TCCTV-0186', column3: '봉수산터널CCTV28', column4: '터널', column5: '평택' },
+  { isChecked: "N", column1: '42', column2: 'TCCTV-0186', column3: '봉수산터널CCTV28', column4: '터널', column5: '평택' },
+  { isChecked: "N", column1: '41', column2: 'TCCTV-0186', column3: '봉수산터널CCTV28', column4: '터널', column5: '평택' },
+];
+var data1_21 = [
+  { isChecked: "N", column1: '50', column2: '01-VDS-0048', column3: '대흥터널CCTV5', column4: '터널', column5: '익산' },
+  { isChecked: "N", column1: '49', column2: 'VDS-0050', column3: 'OO 지점 VDS 1', column4: '터널', column5: '평택' },
+  { isChecked: "N", column1: '48', column2: 'VDS-0050', column3: 'OO 지점 VDS 1', column4: '터널', column5: '평택' },
+  { isChecked: "N", column1: '47', column2: 'VDS-0050', column3: 'OO 지점 VDS 1', column4: '터널', column5: '평택' },
+  { isChecked: "N", column1: '46', column2: 'VDS-0050', column3: 'OO 지점 VDS 1', column4: '터널', column5: '평택' },
+];
 
 var columns1 = [
   // checkColumns,
@@ -1615,6 +1634,83 @@ var columns1_19 = [
   },
 ];
 
+var columns1_20 = [
+  // checkColumns,
+  {
+    key: 'column1',
+    label: '순번',
+    width: 60,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column2',
+    label: '장비ID',
+    width: 230,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column3',
+    label: '이름',
+    width: 233,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column4',
+    label: '구분',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column5',
+    label: '방향',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+];
+var columns1_21 = [
+  // checkColumns,
+  {
+    key: 'column1',
+    label: '순번',
+    width: 60,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column2',
+    label: '장비ID',
+    width: 128,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column3',
+    label: '이름',
+    width: 128,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column4',
+    label: '구분',
+    width: 68,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column5',
+    label: '방향',
+    width: 68,
+    align: "center",
+    sortable: true,
+  },
+];
+
 var data2 = [
   { column1: '로우데이터', column2: '로우데이터', column3: '로우데이터', state: 'red', column4: '로우 데이터' },
   { column1: '로우데이터', column2: '로우데이터', column3: '라벨', column3Type: 'label', state: 'orange', column4: '로우 데이터' },
@@ -1934,13 +2030,15 @@ $(document.body).ready(function() {
   var $grid1_17 = $('[data-ax5grid="grid1_17"]');
   var $grid1_18 = $('[data-ax5grid="grid1_18"]');
   var $grid1_19 = $('[data-ax5grid="grid1_19"]');
+  var $grid1_20 = $('[data-ax5grid="grid1_20"]');
+  var $grid1_21 = $('[data-ax5grid="grid1_21"]');
   
   var $grid2 = $('[data-ax5grid="grid2"]');
   var $grid3 = $('[data-ax5grid="grid3"]');
   var $grid4 = $('[data-ax5grid="grid4"]');
 
   if (
-    $grid1.length || $grid1_2.length || $grid1_3.length || $grid1_4.length || $grid1_5.length || $grid1_6.length || $grid1_7.length || $grid1_8.length || $grid1_9.length || $grid1_10.length || $grid1_11.length || $grid1_12.length || $grid1_13.length || $grid1_14.length || $grid1_15.length || $grid1_16.length || $grid1_17.length || $grid1_18.length || $grid1_19.length
+    $grid1.length || $grid1_2.length || $grid1_3.length || $grid1_4.length || $grid1_5.length || $grid1_6.length || $grid1_7.length || $grid1_8.length || $grid1_9.length || $grid1_10.length || $grid1_11.length || $grid1_12.length || $grid1_13.length || $grid1_14.length || $grid1_15.length || $grid1_16.length || $grid1_17.length || $grid1_18.length || $grid1_19.length || $grid1_20.length || $grid1_21.length
   ) {
     if ($grid1.length) {
       new ax5.ui.grid(getOptions($grid1, columns1)).setData(data1);
@@ -1980,6 +2078,10 @@ $(document.body).ready(function() {
       new ax5.ui.grid(getOptions($grid1_18, columns1_18)).setData(data1_18);
     } else if ($grid1_19.length) {
       new ax5.ui.grid(getOptions($grid1_19, columns1_19)).setData(data1_19);
+    } else if ($grid1_20.length) {
+      new ax5.ui.grid(getOptions($grid1_20, columns1_20)).setData(data1_20);
+    } else if ($grid1_21.length) {
+      new ax5.ui.grid(getOptions($grid1_21, columns1_21)).setData(data1_21);
     }
 
     $(document).on('click', '#chk-all', function() {

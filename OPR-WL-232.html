@@ -278,7 +278,7 @@
                 </div>
               </div><!-- .content-frame -->
               <div class="content-frame c-scrollbar">
-                <ul class="monitor-image">
+                <ul class="monitor-image" id="image1">
                   <li>
                     <dl>
                       <dt>
@@ -412,6 +412,142 @@
                     </dl>
                   </li>
                 </ul>
+                <ul class="monitor-image col1" id="image2" style="display: none;">
+                  <li>
+                    <dl>
+                      <dt>
+                        <span class="direction st1">(평택방향)</span>
+                        <span class="name">01-VMS-IT-S-0009-02</span>
+                      </dt>
+                      <dd>
+                        <img src="https://placehold.co/778x72/111111/FFFFFF/png" alt="">
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>
+                        <span class="direction st1">(평택방향)</span>
+                        <span class="name">01-VMS-IT-S-0009-02</span>
+                      </dt>
+                      <dd>
+                        <img src="https://placehold.co/778x72/222222/FFFFFF/png" alt="">
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>
+                        <span class="direction st1">(평택방향)</span>
+                        <span class="name">01-VMS-IT-S-0009-02</span>
+                      </dt>
+                      <dd>
+                        <img src="https://placehold.co/778x72/333333/FFFFFF/png" alt="">
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>
+                        <span class="direction st1">(평택방향)</span>
+                        <span class="name">01-VMS-IT-S-0009-02</span>
+                      </dt>
+                      <dd>
+                        <img src="https://placehold.co/778x72/111111/FFFFFF/png" alt="">
+                      </dd>
+                    </dl>
+                  </li>
+                </ul>
+                <ul class="monitor-image" id="image3" style="display: none;">
+                  <li>
+                    <dl>
+                      <dt>
+                        <span class="direction st1">(평택방향)</span>
+                        <span class="name">01-VMS-IT-S-0009-02</span>
+                      </dt>
+                      <dd>
+                        <img src="https://placehold.co/246x116/111111/FFFFFF/png" alt="">
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>
+                        <span class="direction st1">(평택방향)</span>
+                        <span class="name">01-VMS-IT-S-0009-02</span>
+                      </dt>
+                      <dd>
+                        <img src="https://placehold.co/246x116/111111/FFFFFF/png" alt="">
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>
+                        <span class="direction st1">(평택방향)</span>
+                        <span class="name">01-VMS-IT-S-0009-02</span>
+                      </dt>
+                      <dd>
+                        <img src="https://placehold.co/246x116/111111/FFFFFF/png" alt="">
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>
+                        <span class="direction st3">(평택방향)</span>
+                        <span class="name">01-VMS-IT-S-0009-02</span>
+                      </dt>
+                      <dd>
+                        <img src="https://placehold.co/246x116/111111/FFFFFF/png" alt="">
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>
+                        <span class="direction st1">(평택방향)</span>
+                        <span class="name">01-VMS-IT-S-0009-02</span>
+                      </dt>
+                      <dd>
+                        <img src="https://placehold.co/246x116/111111/FFFFFF/png" alt="">
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>
+                        <span class="direction st1">(평택방향)</span>
+                        <span class="name">01-VMS-IT-S-0009-02</span>
+                      </dt>
+                      <dd>
+                        <img src="https://placehold.co/246x116/111111/FFFFFF/png" alt="">
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>
+                        <span class="direction st3">(평택방향)</span>
+                        <span class="name">01-VMS-IT-S-0009-02</span>
+                      </dt>
+                      <dd>
+                        <img src="https://placehold.co/246x116/111111/FFFFFF/png" alt="">
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>
+                        <span class="direction st1">(평택방향)</span>
+                        <span class="name">01-VMS-IT-S-0009-02</span>
+                      </dt>
+                      <dd>
+                        <img src="https://placehold.co/246x116/111111/FFFFFF/png" alt="">
+                      </dd>
+                    </dl>
+                  </li>
+                </ul>
               </div><!-- .content-frame -->
             </div><!-- .content-frame-wrap -->
           </div><!-- .content-inner -->
@@ -445,6 +581,19 @@
       setTimeout(() => {
         $('.s-ico.vds#evt').click();
       }, 250);
+
+      var qtype = $.urlParam('type');
+      if (qtype) {
+        setTimeout(() => {
+          if (qtype == '2') {
+            $('.monitor-image#image1').hide();
+            $('.monitor-image#image2').show();
+          } else if (qtype == '3') {
+            $('.monitor-image#image1').hide();
+            $('.monitor-image#image3').show();
+          }
+        }, 250);
+      }
     </script>
   </div><!-- #wrap -->
 </body>

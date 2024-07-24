@@ -65,6 +65,7 @@
 .s-ico.parameterup{background-image:url(../img/ico-24-parameterup-sel.png);}
 .s-ico.parameterdown{background-image:url(../img/ico-24-parameterdown-sel.png);}
 .s-ico.plus2{background-image:url(../img/ico-24-plus2-def.png);}
+.s-ico.view{background-image:url(../img/ico-24-view-sel.png);}
 
 .s-ico.search{background-image:url(../img/ico-24-search-sel.png);}
 .s-ico.storage{background-image:url(../img/ico-24-storage-sel.png);}
@@ -133,7 +134,7 @@
 .s-ico.schedule{width:52px;height:52px;background:url(../img/ico-schedule.png) 50% 50% no-repeat;}
 .s-ico.break{width:52px;height:52px;background:url(../img/ico-break.png) 50% 50% no-repeat;}
 .s-ico.register{width:52px;height:52px;background:url(../img/ico-register.png) 50% 50% no-repeat;}
-.s-ico.repair{width:52px;height:52px;background:url(../img/ico-repair.png) 50% 50% no-repeat;}
+.s-ico.repair2{width:52px;height:52px;background:url(../img/ico-repair.png) 50% 50% no-repeat;}
 .s-ico.notice{width:52px;height:52px;background:url(../img/ico-notify.png) 50% 50% no-repeat;}
 .s-ico.accrue{width:52px;height:52px;background:url(../img/ico-accrue.png) 50% 50% no-repeat;}
 .s-ico.standby{width:52px;height:52px;background:url(../img/ico-standby.png) 50% 50% no-repeat;}
@@ -595,6 +596,7 @@ input[type=number]::-webkit-outer-spin-button {
 .btn-base.only-ico em{padding-left:0;}
 .btn-base.only-ico em .s-ico{position: static;}
 .btn-base.on > *{background-color:#1ac2ff;color:#fff;}
+.btn-base.w-full{width:100%;}
 .btns-wrap{display:flex;gap:8px;flex-wrap:wrap;}
 .btns-wrap.center{justify-content:center;}
 .btns-wrap.right{justify-content:end;}
