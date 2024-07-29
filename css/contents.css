@@ -276,19 +276,24 @@
 
 .monitor-list > li.type-map .st-wrap{position:relative;height:100%;padding:0 40px;}
 .monitor-list > li.type-map .st-route-wrap{position:relative;width:100%;display:flex;height:100%;}
-.monitor-list > li.type-map .st-route-wrap .evt{position:absolute;border:2px solid #fff;height:17px;opacity:0;transition:opacity 0.2s;}
+.monitor-list > li.type-map .st-route-wrap .evt{position:absolute;border:2px solid #fff;height:17px;opacity:0;transition:opacity 0.2s;display:inline-block;}
 .monitor-list > li.type-map .st-route-wrap .evt.on{opacity:1;}
 .monitor-list > li.type-map .st-route-wrap .evt.shape-up,
 .monitor-list > li.type-map .st-route-wrap .evt.shape-down{height:54px;}
 .monitor-list > li.type-map .st-route-wrap .evt.top{top:194px;}
-.monitor-list > li.type-map .st-route-wrap .evt.top.shape-up{top:149px;}
-.monitor-list > li.type-map .st-route-wrap .evt.top.shape-down{top:203px;}
+.monitor-list > li.type-map .st-route-wrap .evt.top.shape-up{top:149px;border:0;}
+.monitor-list > li.type-map .st-route-wrap .evt.top.shape-down{top:203px;border:0;}
 .monitor-list > li.type-map .st-route-wrap .evt.top.up{top:149px;}
+.monitor-list > li.type-map .st-route-wrap .evt.top.down{top:240px;}
 
 .monitor-list > li.type-map .st-route-wrap .evt.bottom{top:235px;}
-.monitor-list > li.type-map .st-route-wrap .evt.bottom.shape-up{top:187px;}
-.monitor-list > li.type-map .st-route-wrap .evt.bottom.shape-down{top:246px;}
-.monitor-list > li.type-map .st-route-wrap .evt.bottom.up{top:187px;}
+.monitor-list > li.type-map .st-route-wrap .evt.bottom.shape-up{top:190px;border:0;}
+.monitor-list > li.type-map .st-route-wrap .evt.bottom.shape-down{top:246px;border:0;}
+.monitor-list > li.type-map .st-route-wrap .evt.bottom.up{top:190px;}
+.monitor-list > li.type-map .st-route-wrap .evt.bottom.down{top:281px;}
+.monitor-list > li.type-map .st-route-wrap .evt .sec{display:inline-block;position:absolute;top:0;border:2px solid #fff;height:17px;}
+.monitor-list > li.type-map .st-route-wrap .evt.shape-up .sec.shape{border:0;clip-path: polygon(69.57% 0%, 0% 84.91%, 0% 100%, 34.78% 100%, 91.3% 32.08%, 100% 32.08%, 100% 0%);background-color:rgba(255, 255, 255, 0.5);height:54px;}
+.monitor-list > li.type-map .st-route-wrap .evt.shape-down .sec.shape{border:0;clip-path: polygon(18.29% 100%, 0% 14.81%, 0% 0%, 9.14% 0%, 22.29% 68.52%, 100% 68.52%, 100% 100%);background-color:rgba(255, 255, 255, 0.5);height:54px;}
 
 .monitor-list > li.type-map .st-route{font-size:0;height:100%;width:100%;}
 .monitor-list > li.type-map .st-route li{display:inline-block;height:100%;border-left:1px solid #212332;position: relative;}
@@ -373,8 +378,10 @@
 #wrap.full .monitor-list > li.type-map .st-route-wrap .evt.top.shape-up{top:205px;}
 #wrap.full .monitor-list > li.type-map .st-route-wrap .evt.top.shape-down{top:259px;}
 #wrap.full .monitor-list > li.type-map .st-route-wrap .evt.top.up{top:205px;}
+#wrap.full .monitor-list > li.type-map .st-route-wrap .evt.top.down{top:296px;}
 
 #wrap.full .monitor-list > li.type-map .st-route-wrap .evt.bottom{top:291px;}
-#wrap.full .monitor-list > li.type-map .st-route-wrap .evt.bottom.shape-up{top:243px;}
+#wrap.full .monitor-list > li.type-map .st-route-wrap .evt.bottom.shape-up{top:246px;}
 #wrap.full .monitor-list > li.type-map .st-route-wrap .evt.bottom.shape-down{top:302px;}
-#wrap.full .monitor-list > li.type-map .st-route-wrap .evt.bottom.up{top:243px;}
+#wrap.full .monitor-list > li.type-map .st-route-wrap .evt.bottom.up{top:246px;}
+#wrap.full .monitor-list > li.type-map .st-route-wrap .evt.bottom.down{top:337px;}
