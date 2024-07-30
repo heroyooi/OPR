@@ -13,7 +13,7 @@ body{width:100%;overflow:hidden;}
 .login-wrap .login-box .btn-base{width:100%;}
 .login-wrap .find-area{display:flex;justify-content:space-between;align-items:center;margin-top:32px;}
 .login-wrap .find-area .label{font-size:13px;color:#b2bbce;}
-.login-wrap .find-area .btn{font-size:14px;font-weight:600;color:#00bbfe;line-height:1.5;}
+.login-wrap .find-area .btn{font-size:14px;font-weight:500;color:#00bbfe;line-height:1.5;}
 .login-wrap .login-copy{position: absolute;left:0;bottom:32px;width:100%;text-align:center;font-size:13px;line-height:1.5;}
 .login-wrap .login-copy dt{color:#b2bbce;font-weight:bold;}
 .login-wrap .login-copy dd{color:#778298;margin-top:8px;}
@@ -23,7 +23,7 @@ body{width:100%;overflow:hidden;}
 #header .item-area{display:flex;gap:0 8px;align-items:center;}
 #header .item-area #gnb{font-size:0;}
 #header .item-area #gnb li{padding:0 24px;display:inline-block;}
-#header .item-area #gnb li a{font-size:16px;font-weight:600;color:#b2bbce;display:inline-block;padding:25px 0;position: relative;}
+#header .item-area #gnb li a{font-size:16px;font-weight:500;color:#b2bbce;display:inline-block;padding:25px 0;position: relative;}
 #header .item-area #gnb li:not(.disabled).on a,
 #header .item-area #gnb li:not(.disabled):hover a{color:#fff;}
 #header .item-area #gnb li:not(.disabled).on a::before,
@@ -33,7 +33,7 @@ body{width:100%;overflow:hidden;}
 #header .item-area #utilmenu li{display:inline-block;vertical-align:middle;margin-left:8px;}
 #header .item-area #utilmenu li:first-child{margin-left:0;}
 #header .bookmark-area{position:absolute;right:30px;top:50px;width:192px;padding:12px;background-color:#3e4157;border-radius:4px;padding:8px 0;display:none;}
-#header .bookmark-area li a{display:flex;padding:4px 12px;font-size:13px;font-weight:600;color:#b2bbce;line-height:1.5;align-items:center;gap:0 4px;}
+#header .bookmark-area li a{display:flex;padding:4px 12px;font-size:13px;font-weight:500;color:#b2bbce;line-height:1.5;align-items:center;gap:0 4px;}
 #header .bookmark-area li a:hover{color:#1ac2ff;}
 #header .bookmark-item{display:flex;justify-content:space-between;align-items:center;padding:0 4px 0 12px;margin-top:10px;}
 #header .bookmark-item .btn-text{color:#00bbfe;display:flex;align-items:center;gap:0 4px;line-height:21px;font-size:14px;}
@@ -45,7 +45,7 @@ body{width:100%;overflow:hidden;}
 .content-wrap .content-top .menu-area .s-ico.home{width:44px;height:44px;flex-shrink:0;background-color:#2a2d3e;position: relative;z-index:2;}
 
 .menu-swiper .swiper-slide{width:auto;position: relative;}
-.menu-swiper .swiper-slide .label{font-size:14px;line-height:1.5;font-weight:600;padding:11.5px 40px 11.5px 20px;display:block;color:#778298;}
+.menu-swiper .swiper-slide .label{font-size:14px;line-height:1.5;font-weight:500;padding:11.5px 40px 11.5px 20px;display:block;color:#778298;}
 .menu-swiper .swiper-slide .s-ico.close{position:absolute;right:12px;top:14px;background:url(../img/ico-16-close-def.png) 50% 50% no-repeat;}
 .menu-swiper .swiper-slide.on{background-color: rgba(26, 194, 255, 0.15);}
 .menu-swiper .swiper-slide.on .label{color:#00bbfe;}
@@ -109,7 +109,7 @@ body{width:100%;overflow:hidden;}
 .left-wrap .lnb-list li{position: relative;}
 .left-wrap .lnb-list > li{margin-top:1px;border-radius:4px;overflow:hidden;background-color: #2a2d3e;}
 .left-wrap .lnb-list > li:first-child{margin-top:0;}
-.left-wrap .lnb-list > li a.menu{display:block;font-size:14px;line-height:1.5;font-weight:600;color:#778298;padding:7.5px 24px 7.5px 12px;position: relative;}
+.left-wrap .lnb-list > li a.menu{display:block;font-size:14px;line-height:1.5;font-weight:500;color:#778298;padding:7.5px 24px 7.5px 12px;position: relative;}
 .left-wrap .lnb-list > li a.menu.toggle::before{content:'';display:inline-block;width:16px;height:16px;background:url(../img/ico-24_arrow-treeopen-def.png) 50% 50% no-repeat;position: absolute;right:8px;top:10px;}
 .left-wrap .lnb-list > li a.menu.active::after{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;background-color:#fcbb25;margin-left:4px;}
 .left-wrap .lnb-list > li > ul{display:none;}

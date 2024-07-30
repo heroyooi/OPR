@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>서부내륙고속도로 통합운영단말</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css">
+  <link rel="stylesheet" href="css/prism.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+  <script src="js/ui.js"></script>
+  <style>
+    /* .component-wrap .content-area > .content-inner{padding:50px 20px;} */
+    .component-wrap .section{width:640px;padding:30px 0;}
+    .component-wrap .section.lg{width:1080px;}
+    .component-wrap .section h2{font-size:24px;font-weight:500;color:#fff;margin-bottom:10px;border-bottom:2px solid rgba(26, 194, 255, 0.15);padding-bottom:10px;}
+    .component-wrap .section .code-area{margin-top:20px;}
+    .component-wrap .section h3{font-size:16px;font-weight:500;color:#b2bbce;display:flex;align-items:center;gap:0 5px;margin-bottom:10px;margin-top:10px;}
+    .component-wrap .section h3 button{display:inline-block;padding:3px;background-color:#fff;border-radius:3px;font-size:12px;}
+    .component-wrap .section .panel-base > li{color:#fff;}
+    .component-wrap .section .ico-box{display:flex;gap:10px;flex-wrap:wrap;}
+    .component-wrap .section .ico-box > *{flex-shrink:0;}
+  </style>
+</head>
+<body>
+  <div id="wrap" class="component-wrap c-scrollbar">
+    <div id="header">
+      <h1><a href="#"><img src="img/wih-logo-io.png" alt=""></a></h1>
+      <div class="item-area">
+        <ul id="gnb">
+          <li><a href="#">시스템관리</a></li>
+          <li><a href="#">기초정보관리</a></li>
+          <li><a href="#">FTMS 제어</a></li>
+          <li><a href="#">운영관리</a></li>
+          <li><a href="#">상황관리</a></li>
+          <li><a href="#">모니터링</a></li>
+          <li><a href="#">이력조회</a></li>
+          <li><a href="#">통계조회</a></li>
+          <li><a href="#">현장장비 점검관리</a></li>
+          <li><a href="#">안전관리</a></li>
+          <li><a href="#">작업 및 유지보수 이력 관리</a></li>
+        </ul>
+        <ul id="utilmenu">
+          <li><a href="#" class="s-ico notify w-label new"><span>고윤정님</span></a></li>
+          <li><a href="#" class="s-ico bookmark"></a></li>
+          <li><a href="#" class="s-ico logout"></a></li>
+        </ul>
+        <div class="bookmark-area">
+          <ul>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">RWIS 제어기 기초정보관리</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기 최대 10개</span>
+              </a>
+            </li>
+          </ul>
+          <div class="bookmark-item">
+            <a href="#" class="btn-text">즐겨찾기 관리 <span class="s-ico arrow"></span></a>
+            <a href="#" class="s-ico close gray"></a>
+          </div>
+        </div><!-- .bookmark-area -->
+      </div>
+    </div><!--#header -->
+    <div id="container">
+      <div class="content-wrap">
+        <div class="content-top">
+          <div class="menu-area">
+            <a href="#" class="s-ico home"></a>
+          </div>
+          <div class="navi-area">
+            <a href="" class="s-ico arrow-l"></a>
+            <a href="" class="s-ico arrow-r"></a>
+          </div>
+        </div><!-- .content-top -->
+        <div class="content-area">
+          <div class="content-inner">
+            <div class="content-frame c-scrollbar">
+
+
+            <div class="section">
+              <h2>Selectbox - w3schools</h2>
+              <!-- https://www.w3schools.com/howto/howto_custom_select.asp -->
+
+              <div class="code-area">
+                <h3>W3S 버전 - 기본형 <button>코드 보기</button></h3>
+<div class="code-box"><div class="custom-select">
+  <select>
+    <option value="0">선택하세요</option>
+    <option value="1">값1</option>
+    <option value="2">값2</option>
+    <option value="3">값3</option>
+  </select>
+</div></div>
+<pre class="language-html"></pre>
+<pre class="language-javascript"><code>customSbox();</code></pre>
+              </div>
+
+              <div class="code-area">
+                <h3>W3S 버전 - 셀렉트 그룹1 <button>코드 보기</button></h3>
+<div class="code-box"><div class="input-wrap select-group">
+  <div class="custom-select">
+    <select>
+      <option value="0">처리유형 선택</option>
+      <option value="1">값1</option>
+      <option value="2">값2</option>
+      <option value="3">값3</option>
+    </select>
+  </div>
+  <div class="custom-select">
+    <select>
+      <option value="0">처리유형 선택</option>
+      <option value="1">값1</option>
+      <option value="2">값2</option>
+      <option value="3">값3</option>
+    </select>
+  </div>
+</div></div>
+<pre class="language-html"></pre>
+<pre class="language-javascript"><code>customSbox();</code></pre>
+              </div>
+
+              <div class="code-area">
+                <h3>W3S 버전 - 셀렉트 그룹2 <button>코드 보기</button></h3>
+<div class="code-box"><div class="input-wrap">
+  <div class="custom-select" style="width: 200px;">
+    <select>
+      <option value="0">방향 선택</option>
+      <option value="1">값1</option>
+      <option value="2">값2</option>
+      <option value="3">값3</option>
+    </select>
+  </div>
+  <span class="dash">/</span>
+  <div class="custom-select" style="width: 200px;">
+    <select>
+      <option value="0">방향 선택</option>
+      <option value="1">값1</option>
+      <option value="2">값2</option>
+      <option value="3">값3</option>
+    </select>
+  </div>
+</div></div>
+<pre class="language-html"></pre>
+<pre class="language-javascript"><code>customSbox();</code></pre>
+              </div>
+
+              <div class="code-area">
+                <h3>W3S 버전 - 셀렉트 그룹 - 단위 표기 <button>코드 보기</button></h3>
+<div class="code-box"><div class="input-wrap">
+  <div class="custom-select" style="width: 110px;">
+    <select>
+      <option value="0">0~10</option>
+      <option value="1">값1</option>
+      <option value="2">값2</option>
+      <option value="3">값3</option>
+    </select>
+  </div>
+  <div class="custom-select ml8" style="width: 110px;">
+    <select>
+      <option value="0">11~20</option>
+      <option value="1">값1</option>
+      <option value="2">값2</option>
+      <option value="3">값3</option>
+    </select>
+  </div>
+  <div class="custom-select ml8" style="width: 110px;">
+    <select>
+      <option value="0">21~30</option>
+      <option value="1">값1</option>
+      <option value="2">값2</option>
+      <option value="3">값3</option>
+    </select>
+  </div>
+  <span class="unit">km/h</span>
+</div></div>
+<pre class="language-html"></pre>
+<pre class="language-javascript"><code>customSbox();</code></pre>
+              </div>
+            </div><!-- .section -->
+
+            <div class="section">
+              <h2>Selectbox</h2>
+
+              <div class="code-area">
+                <h3>기본형 <button>코드 보기</button></h3>
+<div class="code-box"><select id="select1" class="select-base">
+  <option value="0">선택하세요</option>
+  <option value="1">값1</option>
+  <option value="2">값2</option>
+  <option value="3">값3</option>
+</select></div>
+<pre class="language-html"></pre>
+              </div>
+
+              <div class="code-area">
+                <h3>셀렉트 그룹1 <button>코드 보기</button></h3>
+<div class="code-box"><div class="input-wrap select-group">
+  <select class="select-base">
+    <option value="0" selected>처리유형 선택</option>
+    <option value="1">값1</option>
+    <option value="2">값2</option>
+    <option value="3">값3</option>
+  </select>
+  <select class="select-base">
+    <option value="0" selected>처리유형 선택</option>
+    <option value="1">값1</option>
+    <option value="2">값2</option>
+    <option value="3">값3</option>
+  </select>
+</div></div>
+<pre class="language-html"></pre>
+              </div>
+
+              <div class="code-area">
+                <h3>셀렉트 그룹2 <button>코드 보기</button></h3>
+<div class="code-box"><div class="input-wrap">
+  <select class="select-base" style="width: 200px;">
+    <option value="0" selected>방향 선택</option>
+    <option value="1">02</option>
+    <option value="2">값2</option>
+    <option value="3">값3</option>
+  </select>
+  <span class="dash">/</span>
+  <select class="select-base" style="width: 200px;">
+    <option value="0" selected>방향 선택</option>
+    <option value="1">02</option>
+    <option value="2">값2</option>
+    <option value="3">값3</option>
+  </select>
+</div></div>
+<pre class="language-html"></pre>
+              </div>
+
+              <div class="code-area">
+                <h3>셀렉트 그룹 - 단위 표기 <button>코드 보기</button></h3>
+<div class="code-box"><div class="input-wrap">
+  <select class="select-base" style="width: 110px;">
+    <option value="0" selected>0~10</option>
+    <option value="1">값1</option>
+    <option value="2">값2</option>
+  </select>
+  <select class="select-base ml8" style="width: 110px;">
+    <option value="0" selected>11~20</option>
+    <option value="1">값1</option>
+    <option value="2">값2</option>
+  </select>
+  <select class="select-base ml8" style="width: 110px;">
+    <option value="0" selected>21~30</option>
+    <option value="1">값1</option>
+    <option value="2">값2</option>
+  </select>
+  <span class="unit">km/h</span>
+</div></div>
+<pre class="language-html"></pre>
+              </div>
+            </div><!-- .section -->
+
+
+
+            </div><!-- .content-frame-->
+          </div><!-- .content-inner -->
+        </div><!-- .content-area -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+  </div><!-- #wrap -->
+  <script src="js/prism.js"></script>
+  <script>
+    var qpopup = $.urlParam('popup');
+    if (qpopup) {
+      setTimeout(() => {
+        $(`[href*="#popup-anim-${qpopup}"]`).click();
+      }, 250);
+    }
+    var _array = [];
+    $('.content-frame .section').each(function(){
+      _array.push($(this).offset().top - 170);
+      $('.lnb-list').append(`<li><a href="#" class="menu">${$(this).children('h2').text()}</a><a href="#" class="s-ico star"></a></li>`);
+    });
+    $('.lnb-list > li').on('click', function(e){
+      e.preventDefault();
+      $('.content-frame').animate({ scrollTop: _array[$(this).index()] }, 300);
+    });
+
+    $('.content-frame').on('load scroll', function(){
+      var scTop = $(this).scrollTop();
+      for (let i = 0; i < _array.length; i++) {
+        if (scTop >= _array[i] && scTop < _array[i+1]) {
+          $('.lnb-list > li.on').removeClass('on');
+          $('.lnb-list > li').eq(i).addClass('on');
+        }
+      }
+    });
+
+    customSbox();
+  </script>
+</body>
+</html>

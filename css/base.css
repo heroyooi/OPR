@@ -40,10 +40,10 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{-webkit-appea
 input[type=number]{-moz-appearance:textfield;}/* Firefox */
 
 /* placeholder */
-::-webkit-input-placeholder{color:#778298;font-weight:600;}
-::-moz-placeholder{color:#778298;font-weight:600;}
-:-ms-input-placeholder{color:#778298;font-weight:600;}
-:-moz-placeholder{color:#778298;font-weight:600;}
+::-webkit-input-placeholder{color:#778298;font-weight:500;}
+::-moz-placeholder{color:#778298;font-weight:500;}
+:-ms-input-placeholder{color:#778298;font-weight:500;}
+:-moz-placeholder{color:#778298;font-weight:500;}
 
 /* base - a */
 a{color:#000}
