@@ -311,11 +311,19 @@
                       </ul>
 
                       <ul class="grid-list type-1x8" style="display: none;">
-                        <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li> 
+                        <li class="dash"></li>
+                        <li><input type="text" /></li>
+                        <li><input type="text" /></li>
+                        <li><input type="text" /></li>
+                        <li><input type="text" /></li>
+                        <li><input type="text" /></li>
+                        <li><input type="text" /></li>
+                        <li class="dash"></li> 
                       </ul>
 
                       <ul class="grid-list type-1x2" style="display: none;">
-                        <li></li><li></li>
+                        <li class="dash"></li>
+                        <li class="dash"></li>
                       </ul>
 
                       <span class="obj" data-id="1" style="width: 74px; left: 54px; top: 50%; transform: translateY(-50%);"><img src="img/object-arrow.svg" alt=""></span>
@@ -610,6 +618,9 @@
     if (qtype) {
       $('.grid-list').hide();
       $('.grid-list.type-'+qtype).show();
+      if (qtype == '1x8' || qtype == '1x2') {
+        $('.grid-list-wrap .obj, .grid-list-wrap .s-info').hide();
+      }
     }
     if (qsample === 'autocomplete') {
       $('.input-base.autocomplete').val('안 ').focus();

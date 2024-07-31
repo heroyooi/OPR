@@ -417,6 +417,15 @@
           format: 'YYYY-MM-dd',
         }
       });
+
+      $('.btn-switch').on('click', function(e){
+        e.preventDefault();
+        if (!$(this).hasClass('on')) {
+          $(this).addClass('on');
+        } else {
+          $(this).removeClass('on');
+        }
+      });
     </script>
   </div><!-- #wrap -->
 </body>

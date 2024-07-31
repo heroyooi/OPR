@@ -51,7 +51,10 @@
 .vms-area > .item .input-wrap:first-child{margin-top:0;}
 .vms-area > .inner{padding:16px;min-height:520px;display:flex;justify-content:center;align-items:center;}
 .grid-list{display:flex;border:1px solid #34374c;flex-wrap:wrap;width:100%;}
-.grid-list li{background-color:#000;border-left:1px solid #34374c;border-top:1px solid #34374c;}
+.grid-list li{background-color:#000;border-left:1px solid #34374c;border-top:1px solid #34374c;position: relative;}
+.grid-list li.dash::before{content:'';display:block;width:100%;height:100%;border:1px dashed #34374c;position:absolute;left:0;top:0;}
+.grid-list li input{position: absolute;left:0;top:0;width:100%;height:100%;text-align:center;background-color:transparent;color:#fff;border:1px solid #000;}
+.grid-list li input:focus{border:1px solid #1ac2ff;}
 
 .grid-list.type-2x10 li{height:50px;width:10%;}
 .grid-list.type-2x10 li:nth-child(10n + 1){border-left:0;}
