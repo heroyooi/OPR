@@ -24,6 +24,7 @@
 /* .tab-btn li{width:50%;} */
 .tab-btn li a{padding:9.5px 24px;background-color:#3e4157;color:#b2bbce;font-size:14px;line-height:1.5;font-weight:500;}
 .tab-btn li.on a{background-color:#22779f;color:#fff;}
+.tab-btn li:hover a{background-color:#1ac2ff;color:#fff;}
 
 .panel-base > li{display:none;}
 
@@ -528,7 +529,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .cs-ax5grid[data-ax5grid] .st-box {
   display: flex; align-items: center; justify-content: center;
-  font-size: 14px;font-weight:500; height: 42px;
+  font-size: 14px;font-weight:500; height: 43px;
 }
 .cs-ax5grid[data-ax5grid] .st-box.red {
   background-color: #46384b;color: #ef4345;
@@ -638,9 +639,10 @@ input[type=number]::-webkit-outer-spin-button {
 .btn-base.only-ico em .s-ico{position: static;}
 .btn-base.on > *{background-color:#1ac2ff;color:#fff;}
 .btn-base.w-full{width:100%;}
-.btns-wrap{display:flex;gap:8px;flex-wrap:wrap;}
+.btns-wrap{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
 .btns-wrap.center{justify-content:center;}
 .btns-wrap.right{justify-content:end;}
+.btns-wrap .radio-list + .btn-base{margin-left:4px;}
 .btn-switch{display:inline-block;width:36px;height:18px;background:url(../img/ico-switch-off.png) 0 0 no-repeat;vertical-align:middle;cursor:pointer;}
 .btn-switch.on{background:url(../img/ico-switch-on.png) 0 0 no-repeat;}
 .btn-base.btn-search > *{padding:8px;}
@@ -1031,8 +1033,9 @@ input[type=number]::-webkit-outer-spin-button {
 #calendar.fc-theme-standard th .fc-col-header-cell-cushion{font-size:13px;font-weight:700;color:#b2bbce;line-height:17px;padding:6px 4px;}
 #calendar.fc-theme-standard th .fc-col-header-cell.fc-day-sun .fc-col-header-cell-cushion{color:#b2bbce;}
 #calendar.fc-theme-standard tr:first-child td{border-top:0;}
-#calendar.fc-theme-standard th:first-child, #calendar.fc-theme-standard td:first-child{border-left:0;}
-#calendar.fc-theme-standard th:last-child, #calendar.fc-theme-standard td:last-child{border-right:0;}
+#calendar.fc-theme-standard th:first-child{border-left:0;}
+#calendar.fc-theme-standard th:last-child{border-right:0;}
+#calendar.fc-theme-standard tr td:first-child{border-left:1px solid #3e4157;}
 #calendar.fc-theme-standard .fc-day-sun .fc-daygrid-day-number{color:#b2bbce;}
 #calendar.fc .fc-daygrid-day-frame{padding:10px 9px;}
 #calendar.fc .fc-daygrid-day-top{flex-direction:row;font-size:13px;color:#fff;font-weight:500;justify-content:end;}
@@ -1047,7 +1050,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 #calendar.fc-direction-ltr .fc-daygrid-event-harness .fc-daygrid-event.fc-event-end,
 #calendar.fc-direction-rtl .fc-daygrid-event-harness .fc-daygrid-event.fc-event-start{margin:0;}
-#calendar.fc .fc-daygrid-event-harness{margin-top:4px !important;}
+#calendar.fc.monthGrid .fc-daygrid-event-harness{margin-top:4px !important;}
+#calendar.fc.weekGrid .fc-daygrid-event-harness{margin-top:1px !important;}
 #calendar.fc .fc-daygrid-event-harness:first-child{margin-top:0 !important;}
 #calendar.fc .fc-daygrid-day-bottom{font-size:0;padding:0;width:100%;position:absolute;left:0;bottom:0;}
 #calendar.fc .fc-daygrid-day-bottom:after{content:'';display:block;clear:both;}
@@ -1060,9 +1064,14 @@ input[type=number]::-webkit-outer-spin-button {
 #calendar.fc-theme-standard td{border-color:#3e4157;}
 
 #calendar.fc .fc-daygrid-body{border-bottom:1px solid #3e4157;}
-#calendar.fc.monthGrid .fc-scroller{overflow:inherit !important;}
-#calendar.fc.monthGrid .fc-view-harness{height:827px !important;}
-#calendar.fc.monthGrid .fc-scroller-harness-liquid{height:804px !important;}
+#calendar.fc.monthGrid thead .fc-scroller{overflow:inherit !important;}
+#calendar.fc.monthGrid .fc-view-harness{height:calc(100vh - 300px) !important;}
+#calendar.fc.monthGrid .fc-scroller-liquid-absolute::-webkit-scrollbar{border-radius:4px;background:transparent;width:8px;}
+#calendar.fc.monthGrid .fc-scroller-liquid-absolute::-webkit-scrollbar-track{border-radius:0 4px 4px 0;background:#34374c;border-left:1px solid #212332;} 
+#calendar.fc.monthGrid .fc-scroller-liquid-absolute::-webkit-scrollbar-thumb{background-color:#495367;border-radius:4px;background-clip:padding-box;border:1px solid transparent;}
+#calendar.fc.monthGrid .fc-scroller-liquid-absolute::-webkit-scrollbar-thumb:hover{background-color:#778298;}
+
+/* #calendar.fc.monthGrid .fc-scroller-harness-liquid{height:804px !important;} */
 #calendar.fc.timeGrid.eachGrid tr td{overflow-y:auto;}/* 정기점검계획 주간에서는 클래스 eachGrid가 붙으며, 특별점검계획 주간과는 다르게 td간의 y스크롤이 생성된다.  */
 #calendar.fc .fc-scrollgrid-section-body table,
 #calendar.fc .fc-scrollgrid-section-footer table{height:auto !important;}
@@ -1116,7 +1125,6 @@ input[type=number]::-webkit-outer-spin-button {
 #calendar.fc.weekGrid tbody[role="rowgroup"] .fc-scrollgrid-section:first-child .fc-scroller::-webkit-scrollbar-thumb:hover{background-color:#778298;}
 
 #calendar.fc.weekGrid thead[role="rowgroup"] .fc-scrollgrid-section .fc-scroller{overflow:hidden !important;}
-#calendar.fc.weekGrid .fc-scroller-liquid-absolute{max-height:1008px;}
 #calendar.fc.weekGrid .fc-scroller-liquid-absolute::-webkit-scrollbar{border-radius:4px;background:transparent;width:8px;}
 #calendar.fc.weekGrid .fc-scroller-liquid-absolute::-webkit-scrollbar-track{border-radius:0 4px 4px 0;background:#34374c;border-left:1px solid #212332;} 
 #calendar.fc.weekGrid .fc-scroller-liquid-absolute::-webkit-scrollbar-thumb{background-color:#495367;border-radius:4px;background-clip:padding-box;border:1px solid transparent;}
@@ -1132,7 +1140,7 @@ input[type=number]::-webkit-outer-spin-button {
 #calendar.fc.weekGrid .fc-scroller-liquid-absolute .fc-event-title.fc-oneway .fc-r{position: absolute;right:9px;top:1px;}
 
 #calendar.fc a.fc-event{cursor:pointer;}
-.calendar-item{position: absolute;right:0;top:0;z-index:2;}
+.calendar-item{position: absolute;right:0;top:0;z-index:2;display:flex;align-items:center;gap:0 16px;}
 .calendar-tooltip{position: absolute;display:none;z-index:10;padding:8px 16px;border-radius: 4px;
 box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);background-color: rgba(31, 61, 83, 0.91);}
 .calendar-tooltip li{margin-top:4px;}
@@ -1140,7 +1148,9 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);background-color: rgba(31, 61, 83, 0
 .calendar-tooltip li a{font-size:14px;line-height:1.5;color:#b2bbce;}
 .calendar-tooltip li a:hover{color:#00bbfe;}
 
-
+/* #calendar.fc.weekGrid .fc-scroller-liquid-absolute{max-height:1008px;} */
+#calendar.fc.weekGrid .fc-view-harness{height:calc(100vh - 300px) !important;}
+#calendar.fc.weekGrid .fc-scroller-liquid-absolute{height:calc(100vh - 455px);}
 
 @media print {
   body, div{position: relative;}

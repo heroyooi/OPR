@@ -195,12 +195,48 @@
                 <li><a href="#">센터설비</a></li>
               </ul>
               <div class="btns-wrap">
+                <ul class="radio-list">
+                  <li>
+                    <span class="radio-base">
+                      <input type="radio" id="radio-period-1" name="radio-period" checked>
+                      <label for="radio-period-1">전체</label>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="radio-base">
+                      <input type="radio" id="radio-period-2" name="radio-period">
+                      <label for="radio-period-2">일일</label>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="radio-base">
+                      <input type="radio" id="radio-period-3" name="radio-period">
+                      <label for="radio-period-3">주간</label>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="radio-base">
+                      <input type="radio" id="radio-period-4" name="radio-period">
+                      <label for="radio-period-4">월간</label>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="radio-base">
+                      <input type="radio" id="radio-period-5" name="radio-period">
+                      <label for="radio-period-5">연간</label>
+                    </span>
+                  </li>
+                </ul>
                 <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico plan"></span>계획출력</em></a></span>
                 <span class="btn-base btn-ico btn-popup-anim-3"><a href="#popup-legend-1"><em><span class="s-ico color"></span>색상범례</em></a></span>
               </div>
             </div><!-- .search-area -->
             <div class="content-frame">
               <div class="calendar-item">
+                <div class="switch-area">
+                  <span class="label">내 스케줄만 보기</span>
+                  <span class="btn-switch"></span>
+                </div>
                 <ul class="tab-btn">
                   <li class="on"><a href="#">월간</a></li>
                   <li><a href="#">주간</a></li>
@@ -276,6 +312,7 @@
         $('#calendar.fc .fc-daygrid-day').each(function () {
           $(this).find('.fc-daygrid-day-number').text($(this).find('.fc-daygrid-day-number').text().split('일')[0]);          
         });
+        
       } else {
         $('#calendar.fc .fc-view-harness').css('height', $('#calendar.fc .fc-daygrid-body').outerHeight());
       }
@@ -293,7 +330,7 @@
         initialDate: '2024-07-01',
         locale: 'ko',
         editable: true, // Drag 이벤트 비활성화
-        dayMaxEvents: 3,
+        dayMaxEvents: 2,
         events: regularData,
         // eventOrder: function(a, b) {
         //   return b.title.localeCompare(a.title);
@@ -374,7 +411,7 @@
         $('#calendar.fc').removeClass('monthGrid');
       } else {
         fullCalendar.changeView('dayGridMonth');
-        fullCalendar.setOption('dayMaxEvents', 3);
+        fullCalendar.setOption('dayMaxEvents', 2);
         $('#calendar.fc').removeClass('weekGrid'); // timeGrid
         $('#calendar.fc').addClass('monthGrid');
       }
@@ -385,6 +422,15 @@
         clearTimeout(_timerTip);
         _showTip = false;
         $('.calendar-tooltip').hide();
+      }
+    });
+
+    $('.btn-switch').on('click', function(e){
+      e.preventDefault();
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+      } else {
+        $(this).removeClass('on');
       }
     });
 
@@ -402,8 +448,6 @@
         }
       }, 250);
     }
-
-    
     
     if (qsample) {
       setTimeout(() => {
