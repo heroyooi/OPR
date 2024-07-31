@@ -2119,10 +2119,13 @@ $(document.body).ready(function() {
       position: {
           my: "center top+5",
           at: "center bottom"
-      }
+      },
+      show: null,
+      hide: null
     }).tooltip("open");
   });
   $(document).on("mouseleave", "[data-ax5grid-panel-scroll=body] span", function (e) {
+    $(e.target).tooltip("option", "hide", false);
     $(e.target).tooltip("close");
     $(".ui-helper-hidden-accessible").remove();
   })
