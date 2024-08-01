@@ -201,103 +201,422 @@
                 <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico plus2"></span>항목 추가</em></a></span>
               </div>
             </div><!-- .tit-area -->
-            <div class="content-frame c-scrollbar">
-              <div class="tb-wrap">
-                <table summary="정체 현황" class="tb-list">
-                  <colgroup>
-                    <col width="396" />
-                    <col width="396" />
-                    <col width="396" />
-                    <col width="*" />
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th class="t-center" scope="col">항목 분류</th>
-                      <th class="t-center" scope="col">점검 항목</th>
-                      <th class="t-center" scope="col">주기 설정</th>
-                      <th class="t-center" scope="col"></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="pr8">
-                        <div class="input-wrap input-group">
-                          <select class="select-base">
-                            <option value="0">항목 분류 입력</option>
-                            <option value="1" selected>항목 선택한 상태</option>
-                            <option value="2">값2</option>
-                            <option value="3">값3</option>
-                          </select>
-                          <input type="text" class="input-base" placeholder="항목 입력" value="루프코일">
-                        </div>
-                      </td>
-                      <td colspan="3" class="pl0">
-                        <div class="input-wrap input-select-btn">
-                          <input type="text" class="input-base" placeholder="점검 내용 입력" value="상태점검 완료했음">
-                          <select class="select-base" style="width: 200px;">
-                            <option value="0">주기설정</option>
-                            <option value="1" selected>월간</option>
-                            <option value="2">값2</option>
-                            <option value="3">값3</option>
-                          </select>
-                          <a href="#" class="btn-item delete"></a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="pr8">
-                        <div class="input-wrap input-group">
-                          <select class="select-base">
-                            <option value="0">항목 분류 입력</option>
-                            <option value="1" selected>미분류</option>
-                            <option value="2">값2</option>
-                            <option value="3">값3</option>
-                          </select>
-                          <input type="text" class="input-base" placeholder="항목 입력" disabled>
-                        </div>
-                      </td>
-                      <td colspan="3" class="pl0">
-                        <div class="input-wrap input-select-btn">
-                          <input type="text" class="input-base" placeholder="점검 내용 입력" value="상태점검 완료했음">
-                          <select class="select-base" style="width: 200px;">
-                            <option value="0" selected>주기설정</option>
-                            <option value="1">값1</option>
-                            <option value="2">값2</option>
-                            <option value="3">값3</option>
-                          </select>
-                          <a href="#" class="btn-item delete"></a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="pr8">
-                        <div class="input-wrap input-group">
-                          <select class="select-base">
-                            <option value="0" selected>항목 분류 입력</option>
-                            <option value="1">값1</option>
-                            <option value="2">값2</option>
-                            <option value="3">값3</option>
-                          </select>
-                          <input type="text" class="input-base" placeholder="항목 입력">
-                        </div>
-                      </td>
-                      <td colspan="3" class="pl0">
-                        <div class="input-wrap input-select-btn">
-                          <input type="text" class="input-base" placeholder="점검 내용 입력">
-                          <select class="select-base" style="width: 200px;">
-                            <option value="0" selected>주기설정</option>
-                            <option value="1">값1</option>
-                            <option value="2">값2</option>
-                            <option value="3">값3</option>
-                          </select>
-                          <a href="#" class="btn-item delete"></a>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div><!-- .content-frame -->
+
+            <div class="tb-wrapper">
+              <table summary="정체 현황" class="tb-list tb-fix">
+                <colgroup>
+                  <col width="396" />
+                  <col width="396" />
+                  <col width="396" />
+                  <col width="*" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th class="t-center" scope="col">항목 분류</th>
+                    <th class="t-center" scope="col">점검 항목</th>
+                    <th class="t-center" scope="col">주기 설정</th>
+                    <th class="t-center" scope="col"></th>
+                  </tr>
+                </thead>
+              </table>
+              <div class="content-frame c-scrollbar">
+                <div class="tb-wrap">
+                  <table summary="정체 현황" class="tb-list">
+                    <colgroup>
+                      <col width="396" />
+                      <col width="396" />
+                      <col width="396" />
+                      <col width="*" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th class="t-center" scope="col">항목 분류</th>
+                        <th class="t-center" scope="col">점검 항목</th>
+                        <th class="t-center" scope="col">주기 설정</th>
+                        <th class="t-center" scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="pr8">
+                          <div class="input-wrap input-group">
+                            <select class="select-base">
+                              <option value="0">항목 분류 입력</option>
+                              <option value="1" selected>항목 선택한 상태</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <input type="text" class="input-base" placeholder="항목 입력" value="루프코일">
+                          </div>
+                        </td>
+                        <td colspan="3" class="pl0">
+                          <div class="input-wrap input-select-btn">
+                            <input type="text" class="input-base" placeholder="점검 내용 입력" value="상태점검 완료했음">
+                            <select class="select-base" style="width: 200px;">
+                              <option value="0">주기설정</option>
+                              <option value="1" selected>월간</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <a href="#" class="btn-item delete"></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pr8">
+                          <div class="input-wrap input-group">
+                            <select class="select-base">
+                              <option value="0">항목 분류 입력</option>
+                              <option value="1" selected>미분류</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <input type="text" class="input-base" placeholder="항목 입력" disabled>
+                          </div>
+                        </td>
+                        <td colspan="3" class="pl0">
+                          <div class="input-wrap input-select-btn">
+                            <input type="text" class="input-base" placeholder="점검 내용 입력" value="상태점검 완료했음">
+                            <select class="select-base" style="width: 200px;">
+                              <option value="0" selected>주기설정</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <a href="#" class="btn-item delete"></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pr8">
+                          <div class="input-wrap input-group">
+                            <select class="select-base">
+                              <option value="0" selected>항목 분류 입력</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <input type="text" class="input-base" placeholder="항목 입력">
+                          </div>
+                        </td>
+                        <td colspan="3" class="pl0">
+                          <div class="input-wrap input-select-btn">
+                            <input type="text" class="input-base" placeholder="점검 내용 입력">
+                            <select class="select-base" style="width: 200px;">
+                              <option value="0" selected>주기설정</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <a href="#" class="btn-item delete"></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pr8">
+                          <div class="input-wrap input-group">
+                            <select class="select-base">
+                              <option value="0" selected>항목 분류 입력</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <input type="text" class="input-base" placeholder="항목 입력">
+                          </div>
+                        </td>
+                        <td colspan="3" class="pl0">
+                          <div class="input-wrap input-select-btn">
+                            <input type="text" class="input-base" placeholder="점검 내용 입력">
+                            <select class="select-base" style="width: 200px;">
+                              <option value="0" selected>주기설정</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <a href="#" class="btn-item delete"></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pr8">
+                          <div class="input-wrap input-group">
+                            <select class="select-base">
+                              <option value="0" selected>항목 분류 입력</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <input type="text" class="input-base" placeholder="항목 입력">
+                          </div>
+                        </td>
+                        <td colspan="3" class="pl0">
+                          <div class="input-wrap input-select-btn">
+                            <input type="text" class="input-base" placeholder="점검 내용 입력">
+                            <select class="select-base" style="width: 200px;">
+                              <option value="0" selected>주기설정</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <a href="#" class="btn-item delete"></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pr8">
+                          <div class="input-wrap input-group">
+                            <select class="select-base">
+                              <option value="0" selected>항목 분류 입력</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <input type="text" class="input-base" placeholder="항목 입력">
+                          </div>
+                        </td>
+                        <td colspan="3" class="pl0">
+                          <div class="input-wrap input-select-btn">
+                            <input type="text" class="input-base" placeholder="점검 내용 입력">
+                            <select class="select-base" style="width: 200px;">
+                              <option value="0" selected>주기설정</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <a href="#" class="btn-item delete"></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pr8">
+                          <div class="input-wrap input-group">
+                            <select class="select-base">
+                              <option value="0" selected>항목 분류 입력</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <input type="text" class="input-base" placeholder="항목 입력">
+                          </div>
+                        </td>
+                        <td colspan="3" class="pl0">
+                          <div class="input-wrap input-select-btn">
+                            <input type="text" class="input-base" placeholder="점검 내용 입력">
+                            <select class="select-base" style="width: 200px;">
+                              <option value="0" selected>주기설정</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <a href="#" class="btn-item delete"></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pr8">
+                          <div class="input-wrap input-group">
+                            <select class="select-base">
+                              <option value="0" selected>항목 분류 입력</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <input type="text" class="input-base" placeholder="항목 입력">
+                          </div>
+                        </td>
+                        <td colspan="3" class="pl0">
+                          <div class="input-wrap input-select-btn">
+                            <input type="text" class="input-base" placeholder="점검 내용 입력">
+                            <select class="select-base" style="width: 200px;">
+                              <option value="0" selected>주기설정</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <a href="#" class="btn-item delete"></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pr8">
+                          <div class="input-wrap input-group">
+                            <select class="select-base">
+                              <option value="0" selected>항목 분류 입력</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <input type="text" class="input-base" placeholder="항목 입력">
+                          </div>
+                        </td>
+                        <td colspan="3" class="pl0">
+                          <div class="input-wrap input-select-btn">
+                            <input type="text" class="input-base" placeholder="점검 내용 입력">
+                            <select class="select-base" style="width: 200px;">
+                              <option value="0" selected>주기설정</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <a href="#" class="btn-item delete"></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pr8">
+                          <div class="input-wrap input-group">
+                            <select class="select-base">
+                              <option value="0" selected>항목 분류 입력</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <input type="text" class="input-base" placeholder="항목 입력">
+                          </div>
+                        </td>
+                        <td colspan="3" class="pl0">
+                          <div class="input-wrap input-select-btn">
+                            <input type="text" class="input-base" placeholder="점검 내용 입력">
+                            <select class="select-base" style="width: 200px;">
+                              <option value="0" selected>주기설정</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <a href="#" class="btn-item delete"></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pr8">
+                          <div class="input-wrap input-group">
+                            <select class="select-base">
+                              <option value="0" selected>항목 분류 입력</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <input type="text" class="input-base" placeholder="항목 입력">
+                          </div>
+                        </td>
+                        <td colspan="3" class="pl0">
+                          <div class="input-wrap input-select-btn">
+                            <input type="text" class="input-base" placeholder="점검 내용 입력">
+                            <select class="select-base" style="width: 200px;">
+                              <option value="0" selected>주기설정</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <a href="#" class="btn-item delete"></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pr8">
+                          <div class="input-wrap input-group">
+                            <select class="select-base">
+                              <option value="0" selected>항목 분류 입력</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <input type="text" class="input-base" placeholder="항목 입력">
+                          </div>
+                        </td>
+                        <td colspan="3" class="pl0">
+                          <div class="input-wrap input-select-btn">
+                            <input type="text" class="input-base" placeholder="점검 내용 입력">
+                            <select class="select-base" style="width: 200px;">
+                              <option value="0" selected>주기설정</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <a href="#" class="btn-item delete"></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pr8">
+                          <div class="input-wrap input-group">
+                            <select class="select-base">
+                              <option value="0" selected>항목 분류 입력</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <input type="text" class="input-base" placeholder="항목 입력">
+                          </div>
+                        </td>
+                        <td colspan="3" class="pl0">
+                          <div class="input-wrap input-select-btn">
+                            <input type="text" class="input-base" placeholder="점검 내용 입력">
+                            <select class="select-base" style="width: 200px;">
+                              <option value="0" selected>주기설정</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <a href="#" class="btn-item delete"></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pr8">
+                          <div class="input-wrap input-group">
+                            <select class="select-base">
+                              <option value="0" selected>항목 분류 입력</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <input type="text" class="input-base" placeholder="항목 입력">
+                          </div>
+                        </td>
+                        <td colspan="3" class="pl0">
+                          <div class="input-wrap input-select-btn">
+                            <input type="text" class="input-base" placeholder="점검 내용 입력">
+                            <select class="select-base" style="width: 200px;">
+                              <option value="0" selected>주기설정</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <a href="#" class="btn-item delete"></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pr8">
+                          <div class="input-wrap input-group">
+                            <select class="select-base">
+                              <option value="0" selected>항목 분류 입력</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <input type="text" class="input-base" placeholder="항목 입력">
+                          </div>
+                        </td>
+                        <td colspan="3" class="pl0">
+                          <div class="input-wrap input-select-btn">
+                            <input type="text" class="input-base" placeholder="점검 내용 입력">
+                            <select class="select-base" style="width: 200px;">
+                              <option value="0" selected>주기설정</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                            <a href="#" class="btn-item delete"></a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div><!-- .content-frame -->
+            </div>
           </div><!-- .content-inner -->
         </div><!-- .content-area -->
       </div><!-- .content-wrap -->

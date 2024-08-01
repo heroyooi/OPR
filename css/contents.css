@@ -112,6 +112,8 @@
 .btn-list > li{margin-top:8px;}
 .btn-list > li:first-child{margin-top:0;}
 .btn-list > li .btn-base{width:100%;}
+.btn-list.evt > li.on .btn-base.gray > *{background-color: #22779f;color:#fff;}
+.btn-list.evt > li:hover .btn-base.gray > *{background-color: #1ac2ff;color:#fff;}
 
 .btn-list.col2{width:100%;display:flex;gap:8px;flex-wrap:wrap;}
 .btn-list.col2 > li {width:calc(50% - 4px);margin-top:0;}

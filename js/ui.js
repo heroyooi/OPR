@@ -57,6 +57,28 @@ var GUI = window.GUI || (function(){
       var popupUI = _.find('.popup-wrap');
       var csPopupUI = _.find('.cs-popup-wrap');
 
+      $('.btn-list.evt .btn-base').on('click', function(e){
+        e.preventDefault();
+        if ($(this).hasClass('disabled')) {
+          return;
+        }
+        if ($(this).closest('.btn-list').hasClass('select-one')) {
+          if (!$(this).closest('li').hasClass('on')) {
+            $(this).closest('li').addClass('on');
+            $(this).closest('li').siblings().removeClass('on');
+          } else {
+            $(this).closest('li').removeClass('on');
+          }
+        } else {
+          if (!$(this).closest('li').hasClass('on')) {
+            $(this).closest('li').addClass('on');
+          } else {
+            $(this).closest('li').removeClass('on');
+          }
+        }
+        
+      });
+
       $('.btns-wrap.evt .btn-base').on('click', function(e){
         e.preventDefault();
         if ($(this).hasClass('disabled')) {
