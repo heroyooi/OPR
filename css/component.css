@@ -186,10 +186,13 @@
 .s-info{display:inline-block;font-size:14px;line-height:1.5;font-weight:500;position:absolute;white-space:nowrap;padding:8px 16px;border-radius: 4px;box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);background-color: rgba(31, 61, 83, 0.91);z-index:1;color:#fff;cursor:default;}
 .s-info a{color:#1ac2ff;}
 .s-info > span{display:block;color:#1ac2ff;}
-.s-info > span + ul{margin-top:4px;}
-.s-info > span + ul.primary li{margin-top:4px;}
-.s-info > span + ul.primary li:first-child{margin-top:0;}
-.s-info > span + ul.primary li a{color:#b2bbce;}
+.s-info > a{color:#19b2e8;}
+.s-info > a:hover{text-decoration:underline;color:#1ac2ff;}}
+.s-info ul{margin-top:4px;}
+.s-info ul.primary li{margin-top:4px;}
+.s-info ul.primary li:first-child{margin-top:0;}
+.s-info ul.primary li a{color:#b2bbce;}
+.s-info ul.primary li a:hover{text-decoration:underline;color:#fff;}
 .s-ico .s-info{left:32px;top:34px;display:none;padding:4px 8px;}
 .s-ico.trigger .s-info{display:block !important;}
 .s-ico.trigger{background:url(../img/ico-poi-vds-sel.png) 50% 50% no-repeat;}
@@ -496,6 +499,10 @@ input[type=number]::-webkit-outer-spin-button {
 .cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="scroller"] [data-ax5grid-scroller="horizontal"] [data-ax5grid-scroller="horizontal-bar"]:hover{background-color:#778298;}
 .cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="scroller"] [data-ax5grid-scroller="corner"]{background-color: #34374c;border-color:#212332;}
 
+/* hover 시 스크롤 보이도록 */
+.cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="scroller"] [data-ax5grid-scroller="vertical"] [data-ax5grid-scroller="vertical-bar"]{opacity:0;}
+.cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"]:hover [data-ax5grid-container="scroller"] [data-ax5grid-scroller="vertical"] [data-ax5grid-scroller="vertical-bar"]{opacity:1;}
+
 /* ax5grid - tbody tr & td - customize */
 .cs-ax5grid[data-ax5grid] .txt-link{color:#0475f4;text-decoration:underline;cursor:pointer;}
 .cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="body"] [data-ax5grid-panel] table tr:hover td,
@@ -626,7 +633,7 @@ input[type=number]::-webkit-outer-spin-button {
 .btn-base > *:hover{background-color:#1ac2ff;}
 .btn-base.lg > *{font-size:16px;padding:10px 16px;width:100%;}
 .btn-base.gray > *{background-color:#3e4157;color:#b2bbce;}
-.btn-base.gray > *:hover{color:#fff;background-color:#1ac2ff;}}
+.btn-base.gray > *:hover{color:#fff;background-color:#495367;}
 .btn-base.disabled > *{background-color:#3e4157;color:#778298;cursor:default;pointer-events:none;}
 .btn-base.btn-ico em{font-style:normal;font-weight:inherit;display:inline-block;padding-left:32px;position: relative;}
 .btn-base.btn-ico em .s-ico{position:absolute;left:0;top:-2px;}
@@ -930,6 +937,8 @@ input[type=number]::-webkit-outer-spin-button {
 .tb-input > tbody > tr > th.p-short{padding:5px 12px;}
 .tb-input > tbody > tr > td{background-color:#34374c;color:#fff;border-left:1px solid #212332;height:44px;}
 .tb-input > tbody > tr > td .line{display:inline-block;margin:0 8px;}
+.tb-input > tbody > tr:first-child > th,
+.tb-input > tbody > tr:first-child > td{border-top:0;}
 .tb-input.td-gray > tbody > tr > td,
 .tb-input > tbody > tr > td.td-gray{color:#b2bbce;font-weight:500;}
 .tb-input > tbody > tr > td.td-red{color:#ef4345;font-weight:500;}

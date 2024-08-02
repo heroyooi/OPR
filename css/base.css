@@ -31,7 +31,7 @@ input{color:#000}
 input:checked[type="checkbox"]{background-color:#666;-webkit-appearance:checkbox}
 input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none}
 /* input[type="password"]{font-family:dotum,'돋움',sans-serif;} */
-input[type="password"]::-webkit-input-placeholder{font-family:'Noto Sans KR';}
+/* input[type="password"]::-webkit-input-placeholder{font-family:'Noto Sans KR';} */
 button{border:0;background-color:transparent;padding:0;cursor:pointer}
 input[type="radio"] {-webkit-appearance:radio;}
 input[type="checkbox"] {-webkit-appearance:checkbox;}

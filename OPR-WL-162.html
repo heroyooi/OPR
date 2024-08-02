@@ -331,21 +331,21 @@
                       <span class="obj" data-id="3" style="width: 74px; right: 15px; top: 50%; transform: translateY(-50%);"><img src="img/object-circleban.svg" alt=""></span>
 
                       <div class="s-info" id="s-info-1" style="left: 110px; top: 60px; display: none;">
-                        <span>VMS 제공구간ID 맵핑</span>
+                        <a href="#">VMS 제공구간ID 맵핑</a>
                         <ul class="primary">
                           <li><a href="#">삭제</a></li>
                         </ul>
                       </div>
 
                       <div class="s-info" id="s-info-2" style="right: 188px; top: 60px; display: none;">
-                        <span>VMS 제공구간ID 맵핑</span>
+                        <a href="#">VMS 제공구간ID 맵핑</a>
                         <ul class="primary">
                           <li><a href="#">삭제</a></li>
                         </ul>
                       </div>
 
                       <div class="s-info" id="s-info-3" style="right: 80px; top: 60px; display: block;">
-                        <span>VMS 제공구간ID 맵핑</span>
+                        <a href="#">VMS 제공구간ID 맵핑</a>
                         <ul class="primary">
                           <li><a href="#">삭제</a></li>
                         </ul>
@@ -627,6 +627,9 @@
     } else if (qsample === 'result') {
       $('.message-list').show();
     }
+    setTimeout(() => {
+      $('#wrap > #grid-parent').hide();
+    }, 250);
     if (qpopup === 'addVms') {
       setTimeout(() => {
         $.magnificPopup.open(getOptionsAnim('#popup-add-vms', false));
