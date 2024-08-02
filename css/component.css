@@ -261,7 +261,7 @@
 .input-wrap.vms .font-picker{display:flex;gap:0 8px;align-items:center;}
 .input-wrap.vms .color-picker a[class*="c-"],
 .input-wrap.vms .align-picker a[class*="a-"],
-.input-wrap.vms .font-picker a[class*="f-"]{padding:2px;display:inline-block;border-radius:2px;}
+.input-wrap.vms .font-picker a[class*="f-"]{padding:2px;display:inline-block;border-radius:2px;border:1px solid transparent;}
 .input-wrap.vms .color-picker a[class*="c-"] span,
 .input-wrap.vms .align-picker a[class*="a-"] span,
 .input-wrap.vms .font-picker a[class*="f-"] span{display:inline-block;width:16px;height:16px;border-radius:1px;}
@@ -270,7 +270,7 @@
 .input-wrap.vms .align-picker a[class*="a-"].on,
 .input-wrap.vms .align-picker a[class*="a-"]:hover,
 .input-wrap.vms .font-picker a[class*="f-"].on,
-.input-wrap.vms .font-picker a[class*="f-"]:hover{background-color:#2a2d3e;}
+.input-wrap.vms .font-picker a[class*="f-"]:hover{background-color:#2a2d3e;border:1px solid #b2bbce;}
 
 .input-wrap.vms .color-picker a.c-ffffff span{background-color:#ffffff;}
 .input-wrap.vms .color-picker a.c-000000 span{background-color:#000000;}

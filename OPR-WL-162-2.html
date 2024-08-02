@@ -114,7 +114,7 @@
       <div class="left-wrap">
         <h3 class="tit">운영관리</h3>
         <ul class="lnb-list">
-          <li class="on">
+          <li>
             <a href="#" class="menu toggle">VMS 운영</a>
             <ul>
               <li>
@@ -125,7 +125,7 @@
                 <a href="#" class="menu">VMS 메시지 기초정보 관리</a>
                 <a href="#" class="s-ico star"></a>
               </li>
-              <li class="on">
+              <li>
                 <a href="#" class="menu">VMS 기본 메시지 관리</a>
                 <a href="#" class="s-ico star"></a>
               </li>
@@ -147,11 +147,31 @@
               </li>
             </ul>
           </li>
-          <li>
+          <li class="on">
             <a href="#" class="menu toggle">LCS 운영</a>
             <ul>
               <li>
-                <a href="#" class="menu">서브 메뉴</a>
+                <a href="#" class="menu">LCS 이미지 관리</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+              <li class="on">
+                <a href="#" class="menu">LCS 기본 메시지 관리</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+              <li>
+                <a href="#" class="menu">LCS 표출 메시지</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+              <li>
+                <a href="#" class="menu">LCS 표출 스케줄 관리</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+              <li>
+                <a href="#" class="menu">LCS 대응 메시지 관리</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+              <li>
+                <a href="#" class="menu">LCS 수동 메시지 표출</a>
                 <a href="#" class="s-ico star"></a>
               </li>
             </ul>
@@ -192,11 +212,15 @@
             <div class="menu-swiper swiper-container">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <a href="#" class="label">VDS 리셋 및 파라미터 제어</a>
+                  <a href="#" class="label">운영자 목록</a>
+                  <a href="#" class="s-ico close"></a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="label">VMS 기초정보</a>
                   <a href="#" class="s-ico close"></a>
                 </div>
                 <div class="swiper-slide on">
-                  <a href="#" class="label">VMS 이미지 기초정보 관리</a>
+                  <a href="#" class="label">LCS 메시지 관리</a>
                   <a href="#" class="s-ico close"></a>
                 </div>
               </div>
@@ -210,7 +234,7 @@
         <div class="content-area">
           <div class="content-inner">
             <div class="tit-area">
-              <p class="tit">VMS 기본 메시지 등록</p>
+              <p class="tit">LCS 기본 메시지 등록</p>
               <div class="btns-wrap">
                 <span class="btn-base btn-ico gray"><a href="#"><em><span class="s-ico cancel"></span>취소</em></a></span>
                 <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico save2"></span>저장</em></a></span>
@@ -222,7 +246,7 @@
                   <div class="item">
                     <div class="input-wrap vms">
                       <select class="select-base sm" style="width: 112px;">
-                        <option value="0">오브젝트</option>
+                        <option value="0">배경</option>
                         <option value="1">값1</option>
                         <option value="2">값2</option>
                         <option value="3">값3</option>
@@ -675,12 +699,6 @@
                                   <label for="chk-form-2">이미지</label>
                                 </span>
                               </li>
-                              <li>
-                                <span class="chk-base">
-                                  <input type="checkbox" id="chk-form-3">
-                                  <label for="chk-form-3">오브젝트</label>
-                                </span>
-                              </li>
                             </ul>
                           </td>
                         </tr>
@@ -693,7 +711,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">VMS 유형 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                          <th scope="row">LCS 유형 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
                           <td>
                             <div class="input-wrap select-group" style="width: 408px;">
                               <select class="select-base">
@@ -702,55 +720,16 @@
                                 <option value="2">값2</option>
                                 <option value="3">값3</option>
                               </select>
-                              <select class="select-base">
-                                <option value="0">세부 유형 선택</option>
-                                <option value="1">값1</option>
-                                <option value="2">값2</option>
-                                <option value="3">값3</option>
-                              </select>
                             </div>
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">시나리오 유형 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
-                          <td>
-                            <select class="select-base" style="width: 408px;">
-                              <option value="0">유형 선택</option>
-                              <option value="1">값1</option>
-                              <option value="2">값2</option>
-                              <option value="3">값3</option>
-                            </select>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">메시지 유형 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
-                          <td>
-                            <select class="select-base" style="width: 408px;">
-                              <option value="0">유형 선택</option>
-                              <option value="1">값1</option>
-                              <option value="2">값2</option>
-                              <option value="3">값3</option>
-                            </select>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">정보 단위 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
-                          <td>
-                            <select class="select-base" style="width: 200px;">
-                              <option value="0">유형 선택</option>
-                              <option value="1">값1</option>
-                              <option value="2">값2</option>
-                              <option value="3">값3</option>
-                            </select>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">fill-in 메시지</th>
+                          <th scope="row">기본 메시지</th>
                           <td>
                             <div class="input-wrap">
                               <div class="input-btn">
                                 <input type="text" class="input-base autocomplete" placeholder="변수내용 또는 메시지 키워드 입력" />
-                                <span class="btn-base auto"><a href="#">Fill-in 메시지 검색</a></span>
+                                <span class="btn-base auto"><a href="#">기본 메시지 검색</a></span>
                               </div>
                               <div class="auto-layer" style="display: none;">
                                 <ul>
@@ -794,9 +773,16 @@
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row">VMS 제공구간 ID</th>
+                          <th scope="row">정보 단위 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
                           <td>
-                            <textarea class="textarea-base" placeholder="VMS 제공구간 ID" disabled></textarea>
+                            <div class="input-wrap select-group" style="width: 408px;">
+                              <select class="select-base">
+                                <option value="0">선택</option>
+                                <option value="1">값1</option>
+                                <option value="2">값2</option>
+                                <option value="3">값3</option>
+                              </select>
+                            </div>
                           </td>
                         </tr>
                       </tbody>
