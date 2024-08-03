@@ -49,7 +49,7 @@
 .vms-area > .item{padding:16px;border-bottom:1px solid #2a2d3e;}
 .vms-area > .item .input-wrap{margin-top:12px;}
 .vms-area > .item .input-wrap:first-child{margin-top:0;}
-.vms-area > .inner{padding:16px;min-height:520px;display:flex;justify-content:center;align-items:center;}
+.vms-area > .inner{padding:16px;/*min-height:520px;*/display:flex;justify-content:center;align-items:center;}
 .grid-list{display:flex;border:1px solid #34374c;flex-wrap:wrap;width:100%;}
 .grid-list li{background-color:#000;border-left:1px solid #34374c;border-top:1px solid #34374c;position: relative;}
 .grid-list li.dash::before{content:'';display:block;width:100%;height:100%;border:1px dashed #34374c;position:absolute;left:0;top:0;}

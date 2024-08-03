@@ -754,15 +754,30 @@
   <!-- <script src="http://SortableJS.github.io/Sortable/Sortable.js"></script> -->
   <script src="js/Sortable.js"></script>
   <script>
+    $('.tb-div a:contains("현시")').parent().on('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+        $(this).closest('.columnGroup').removeClass('disabled');
+      } else {
+        $(this).removeClass('on');
+        $(this).closest('.columnGroup').addClass('disabled');
+      }
+    });
     $('.gage-wrap .gage').animate({ width: '100%' }, 1000 * 18);
     Sortable.create(document.getElementById('tableList'), {
       sort: true,
       handle: '.columnGroup',
       animation: 150,
       filter: ".columnGroup.disabled",
+      onChoose: function (evt) {
+        // console.log('Element chosen:', evt.item);
+        // console.log('Element chosen:', evt.target);
+      },
       onMove: function (evt) {
         return !evt.related.classList.contains('disabled');
-      }
+      },
     });
 
     var qsample = $.urlParam('sample');

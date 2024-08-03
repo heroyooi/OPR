@@ -903,6 +903,10 @@
       }
     });
 
+    $(window).on('load resize', function(){
+      $('.vms-area > .inner').css('height', $(window).height() - $('.vms-area > .inner').offset().top - 40);
+    });
+
     var qtype = $.urlParam('type');
     var qsample = $.urlParam('sample');
     var qpopup = $.urlParam('popup');
