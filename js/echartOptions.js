@@ -1157,7 +1157,7 @@ var options = {
                 pointer: {
                   icon: 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',
                   length: '12%',
-                  width: 20,
+                  width: 10,
                   offsetCenter: [0, '-60%'],
                   itemStyle: {
                     color: 'auto'
@@ -1253,7 +1253,13 @@ var options = {
                   }
                 },
                 pointer: {
-                  show: false,
+                    icon: 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',
+                    length: '12%',
+                    width: 10,
+                    offsetCenter: [0, '-60%'],
+                    itemStyle: {
+                      color: 'auto'
+                    }
                 },
                 axisTick: {
                   length: 12,

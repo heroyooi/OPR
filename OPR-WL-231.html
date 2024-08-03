@@ -402,7 +402,7 @@
                       <li style="width: 2.8%"><span>인주JCT</span></li>
                       <li style="width: 5.2%"><span>인주IC</span></li>
                       <li style="width: 7.9%"><span>현덕JCT</span></li>
-                      <li style="width: 4.56%"><span class="up">포승IC</span></li>
+                      <li class="half" style="width: 4.56%;"><span class="up">포승IC</span></li>
                       <li>
                         <span class="up">포중JCT</span>
                         <span>안중IC</span>
@@ -559,6 +559,24 @@
                             <td class="t-center">25분</td>
                             <td class="t-center">650m</td>
                           </tr>
+                          <tr class="st1">
+                            <td>OOOOOOOO</td>
+                            <td>OOOOO구간</td>
+                            <td>
+                              <span class="status">67km/h</span>
+                            </td>
+                            <td class="t-center">25분</td>
+                            <td class="t-center">650m</td>
+                          </tr>
+                          <tr class="st1">
+                            <td>OOOOOOOO</td>
+                            <td>OOOOO구간</td>
+                            <td>
+                              <span class="status">67km/h</span>
+                            </td>
+                            <td class="t-center">25분</td>
+                            <td class="t-center">650m</td>
+                          </tr>
                         </tbody>
                       </table>
                     </div>
@@ -627,7 +645,7 @@
         } else {
           $(this).removeClass('on');
           $('#wrap').removeClass('full');
-          $('.monitor-list > li.type-map').css('height', 358);
+          $('.monitor-list > li.type-map').css('height', $(window).height() - 589);
           barChart.resize();
           gaugeChart2.resize();
         }
@@ -635,6 +653,8 @@
       $(window).on('load resize', function(){
         if ($('#wrap').hasClass('full')) {
           $('.monitor-list > li.type-map').css('height', $(window).height() - 438);
+        } else {
+          $('.monitor-list > li.type-map').css('height', $(window).height() - 589);
         }
       });
 

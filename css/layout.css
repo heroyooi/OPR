@@ -129,6 +129,7 @@ body{width:100%;overflow:hidden;}
 .left-wrap .lnb-list li.on .s-ico.star{background:url(../img/ico-16-star-sel2.png) 50% 50% no-repeat;}
 .left-wrap .lnb-list li.on .s-ico.star.on{background:url(../img/ico-16-star-sel.png) 50% 50% no-repeat;}
 
+#wrap.full{padding-top:0;}
 #wrap.full #header{display:none;}
 #wrap.full #container{padding:0;}
 #wrap.full .left-wrap{display:none;}
