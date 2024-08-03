@@ -253,6 +253,25 @@
       <div class="con-wrap">
         <h3 class="tit">센터설비 색상 범례</h3>
         <ul class="legend-list">
+          <li class="c-00bbfe">중앙호스트</li>
+          <li class="c-2f78ff">운영단말</li>
+          <li class="c-e3c208">상황판</li>
+          <li class="c-853cfc">백업장치</li>
+          <li class="c-ef4345">긴급전화 센터설비</li>
+          <li class="c-00be9c">CCTV 중앙장비</li>
+          <li class="c-0bbe35">부대설비</li>
+          <li class="c-d83a73">주변장치</li>
+        </ul>
+        <div class="btns-wrap center mt24">
+          <span class="btn-base gray b-mfp-close"><a href="#">닫기</a></span>
+        </div>
+      </div>
+    </div><!-- .popup-wrap -->
+
+    <div class="popup-wrap mfp-hide" id="popup-legend-2" style="width: 384px;">
+      <div class="con-wrap">
+        <h3 class="tit">현장설비 색상 범례</h3>
+        <ul class="legend-list">
           <li class="c-00bbfe">VDS</li>
           <li class="c-2f78ff">LCS</li>
           <li class="c-e3c208">VMS</li>
@@ -263,25 +282,6 @@
           <li class="c-a89b8f">안개경고주의</li>
           <li class="c-ad2ec6">RWIS</li>
           <li class="c-d83a73">갱구부 LED</li>
-        </ul>
-        <div class="btns-wrap center mt24">
-          <span class="btn-base gray b-mfp-close"><a href="#">닫기</a></span>
-        </div>
-      </div>
-    </div><!-- .popup-wrap -->
-
-    <div class="popup-wrap mfp-hide" id="popup-legend-2" style="width: 384px;">
-      <div class="con-wrap">
-        <h3 class="tit">센터설비 색상 범례</h3>
-        <ul class="legend-list">
-          <li class="c-00bbfe">중앙호스트</li>
-          <li class="c-2f78ff">운영단말</li>
-          <li class="c-e3c208">상황판</li>
-          <li class="c-853cfc">백업장치</li>
-          <li class="c-ef4345">긴급전화 센터설비</li>
-          <li class="c-00be9c">CCTV 중앙장비</li>
-          <li class="c-0bbe35">부대설비</li>
-          <li class="c-d83a73">주변장치</li>
         </ul>
         <div class="btns-wrap center mt24">
           <span class="btn-base gray b-mfp-close"><a href="#">닫기</a></span>
@@ -443,8 +443,8 @@
           // $.magnificPopup.open(getOptionsAnim('#popup-legend-1', false));
           $('a[href*="popup-legend-1"]').click();
         } else if (qpopup === 'legend2') {
-          // $.magnificPopup.open(getOptionsAnim('#popup-legend-2', false));
-          $('a[href*="popup-legend-1"]').click();
+          $.magnificPopup.open(getOptionsAnim('#popup-legend-2', false));
+          // $('a[href*="popup-legend-2"]').click();
         }
       }, 250);
     }
