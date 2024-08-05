@@ -111,10 +111,10 @@
 .s-ico.w-label.new::after{content:'';display:inline-block;width:8px;height:8px;border-radius:4px;background-color:#fcbb25;position:absolute;left:18px;top:2px;}
 
 .s-ico.plus, .s-ico.minus{width:40px;height:40px;border-radius:4px;}
-.s-ico.plus{background:#34374c url(../img/ico-24-plus-def.png) 50% 50% no-repeat;}
-.s-ico.minus{background:#34374c url(../img/ico-24-minus-def.png) 50% 50% no-repeat;}
-.s-ico.plus:hover{background:#34374c url(../img/ico-24-plus-sel.png) 50% 50% no-repeat;}
-.s-ico.minus:hover{background:#34374c url(../img/ico-24-minus-sel.png) 50% 50% no-repeat;}
+.s-ico.plus{background:#34374c url(../img/ico-24-plus2-dis.svg) 50% 50% no-repeat;}
+.s-ico.minus{background:#34374c url(../img/ico-24-minus2-dis.svg) 50% 50% no-repeat;}
+.s-ico.plus:hover{background:#34374c url(../img/ico-24-plus2-def.svg) 50% 50% no-repeat;}
+.s-ico.minus:hover{background:#34374c url(../img/ico-24-minus2-def.svg) 50% 50% no-repeat;}
 .s-ico.cctv{width:26px;height:31px;background:url(../img/ico-poi-cctv-def.png) 50% 50% no-repeat;cursor:pointer;}
 .s-ico.cctv.on{background:url(../img/ico-poi-cctv-sel.png) 50% 50% no-repeat;}
 .s-ico.vds{width:26px;height:31px;background:url(../img/ico-poi-vds-def.png) 50% 50% no-repeat;cursor:pointer;}

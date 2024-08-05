@@ -267,6 +267,19 @@
                         </div>
                       </div>
                     </div>
+                    <div class="input-wrap vms">
+                      <div class="align-picker">
+                        <div class="item">
+                          <a href="#" class="a-left"><span></span></a>
+                          <a href="#" class="a-middle"><span></span></a>
+                          <a href="#" class="a-right"><span></span></a>
+                          <a href="#" class="a-top"><span></span></a>
+                          <a href="#" class="a-middlelen"><span></span></a>
+                          <a href="#" class="a-bottom"><span></span></a>
+                          <a href="#" class="a-center"><span></span></a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="inner">
 
@@ -904,7 +917,8 @@
     });
 
     $(window).on('load resize', function(){
-      $('.vms-area > .inner').css('height', $(window).height() - $('.vms-area > .inner').offset().top - 40);
+      // $('.vms-area > .inner').css('height', $(window).height() - $('.vms-area > .inner').offset().top - 40);
+      $('.vms-area > .inner').css('height', 488);
     });
 
     var qtype = $.urlParam('type');

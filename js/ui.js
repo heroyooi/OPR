@@ -427,6 +427,7 @@ var GUI = window.GUI || (function(){
               $(this).css('height', $(window).height() - $header.outerHeight() - _pd - $top.outerHeight()); // OPR-WL-231.html
             });
           } else {
+            console.log(3)
             $frame.each(function(){
               $(this).css('height', $(window).height() - $(this).offset().top - _pd);
             });

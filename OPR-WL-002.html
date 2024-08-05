@@ -122,7 +122,7 @@
           </div>
         </div><!-- .content-top -->
         <div class="content-area">
-          <div class="left-area c-scrollbar">
+          <div class="left-area">
             <ul class="st-list">
               <li class="no">
                 <div class="st-l">
@@ -221,8 +221,8 @@
                   <span class="label">정체 현황</span>
                   <a href="#" class="s-ico more"></a>
                 </div>
-                <div class="tb-wrap">
-                  <table summary="정체 현황" class="tb-list">
+                <div class="tb-wrapper">
+                  <table summary="정체 현황" class="tb-list tb-fix">
                     <colgroup>
                       <col width="33.333%" />
                       <col width="33.333%" />
@@ -235,44 +235,62 @@
                         <th scope="col">평균속도</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr class="st1">
-                        <td>OOOOO구간</td>
-                        <td>OOOOO방향</td>
-                        <td>
-                          <span class="status">100km/h</span>
-                        </td>
-                      </tr>
-                      <tr class="st3">
-                        <td>OOOOO구간</td>
-                        <td>OOOOO방향</td>
-                        <td>
-                          <span class="status">32km/h</span>
-                        </td>
-                      </tr>
-                      <tr class="st3">
-                        <td>OOOOO구간</td>
-                        <td>OOOOO방향</td>
-                        <td>
-                          <span class="status">20km/h</span>
-                        </td>
-                      </tr>
-                      <tr class="st1">
-                        <td>OOOOO구간</td>
-                        <td>OOOOO방향</td>
-                        <td>
-                          <span class="status">100km/h</span>
-                        </td>
-                      </tr>
-                      <tr class="st2">
-                        <td>OOOOO구간</td>
-                        <td>OOOOO방향</td>
-                        <td>
-                          <span class="status">44km/h</span>
-                        </td>
-                      </tr>
-                    </tbody>
                   </table>
+                  <div class="content-frame c-scrollbar">
+                    <div class="tb-wrap mt0">
+                      <table summary="정체 현황" class="tb-list">
+                        <colgroup>
+                          <col width="33.333%" />
+                          <col width="33.333%" />
+                          <col width="33.333%" />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th scope="col">정체구간</th>
+                            <th scope="col">정체방향</th>
+                            <th scope="col">평균속도</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="st1">
+                            <td>OOOOO구간</td>
+                            <td>OOOOO방향</td>
+                            <td>
+                              <span class="status">100km/h</span>
+                            </td>
+                          </tr>
+                          <tr class="st3">
+                            <td>OOOOO구간</td>
+                            <td>OOOOO방향</td>
+                            <td>
+                              <span class="status">32km/h</span>
+                            </td>
+                          </tr>
+                          <tr class="st3">
+                            <td>OOOOO구간</td>
+                            <td>OOOOO방향</td>
+                            <td>
+                              <span class="status">20km/h</span>
+                            </td>
+                          </tr>
+                          <tr class="st1">
+                            <td>OOOOO구간</td>
+                            <td>OOOOO방향</td>
+                            <td>
+                              <span class="status">100km/h</span>
+                            </td>
+                          </tr>
+                          <tr class="st2">
+                            <td>OOOOO구간</td>
+                            <td>OOOOO방향</td>
+                            <td>
+                              <span class="status">44km/h</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="st-table">
@@ -280,64 +298,66 @@
                   <span class="label">시설물 상태</span>
                   <a href="#" class="s-ico more"></a>
                 </div>
-                <ul class="col-list">
-                  <li>
-                    <span class="label">VDS</span>
-                    <span class="result">0/91</span>
-                  </li>
-                  <li>
-                    <span class="label">AVC</span>
-                    <span class="result">0/10</span>
-                  </li>
-                  <li>
-                    <span class="label">DSRC</span>
-                    <span class="result">0/91</span>
-                  </li>
-                  <li class="st3">
-                    <span class="label">CCTV</span>
-                    <span class="result">3/229</span>
-                  </li>
-                  <li class="st3">
-                    <span class="label">VMS</span>
-                    <span class="result">2/32</span>
-                  </li>
-                  <li>
-                    <span class="label">LCS</span>
-                    <span class="result">0/32</span>
-                  </li>
-                  <li>
-                    <span class="label">RWIS</span>
-                    <span class="result">0/2</span>
-                  </li>
-                  <li>
-                    <span class="label">RDO</span>
-                    <span class="result">0/2</span>
-                  </li>
-                  <li>
-                    <span class="label">FOGW</span>
-                    <span class="result">0/2</span>
-                  </li>
-                  <li>
-                    <span class="label">PRIS</span>
-                    <span class="result">0/2</span>
-                  </li>
-                  <li>
-                    <span class="label">긴급전화</span>
-                    <span class="result">0/48</span>
-                  </li>
-                  <li>
-                    <span class="label">갱구부 LED</span>
-                    <span class="result">0/2</span>
-                  </li>
-                  <li>
-                    <span class="label">터널 환기</span>
-                    <span class="result">0/0</span>
-                  </li>
-                  <li>
-                    <span class="label">터널 전력</span>
-                    <span class="result">0/0</span>
-                  </li>
-                </ul>
+                <div class="content-frame c-scrollbar">
+                  <ul class="col-list mt0">
+                    <li>
+                      <span class="label">VDS</span>
+                      <span class="result">0/91</span>
+                    </li>
+                    <li>
+                      <span class="label">AVC</span>
+                      <span class="result">0/10</span>
+                    </li>
+                    <li>
+                      <span class="label">DSRC</span>
+                      <span class="result">0/91</span>
+                    </li>
+                    <li class="st3">
+                      <span class="label">CCTV</span>
+                      <span class="result">3/229</span>
+                    </li>
+                    <li class="st3">
+                      <span class="label">VMS</span>
+                      <span class="result">2/32</span>
+                    </li>
+                    <li>
+                      <span class="label">LCS</span>
+                      <span class="result">0/32</span>
+                    </li>
+                    <li>
+                      <span class="label">RWIS</span>
+                      <span class="result">0/2</span>
+                    </li>
+                    <li>
+                      <span class="label">RDO</span>
+                      <span class="result">0/2</span>
+                    </li>
+                    <li>
+                      <span class="label">FOGW</span>
+                      <span class="result">0/2</span>
+                    </li>
+                    <li>
+                      <span class="label">PRIS</span>
+                      <span class="result">0/2</span>
+                    </li>
+                    <li>
+                      <span class="label">긴급전화</span>
+                      <span class="result">0/48</span>
+                    </li>
+                    <li>
+                      <span class="label">갱구부 LED</span>
+                      <span class="result">0/2</span>
+                    </li>
+                    <li>
+                      <span class="label">터널 환기</span>
+                      <span class="result">0/0</span>
+                    </li>
+                    <li>
+                      <span class="label">터널 전력</span>
+                      <span class="result">0/0</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div><!-- .left-area -->
