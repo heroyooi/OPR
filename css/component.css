@@ -1092,7 +1092,6 @@ input[type=number]::-webkit-outer-spin-button {
 #calendar.fc .fc-daygrid-day.fc-day-today{background-color:#34374c;}
 #calendar.fc th.fc-day-today .fc-scrollgrid-sync-inner{position:relative;}
 #calendar.fc-theme-standard td{border-color:#3e4157;}
-#calendar.fc-theme-standard td{border-left:1px solid red;}
 
 #calendar.fc .fc-daygrid-body{border-bottom:1px solid #3e4157;}
 #calendar.fc.monthGrid thead .fc-scroller{overflow:inherit !important;}
@@ -1104,8 +1103,10 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* #calendar.fc.monthGrid .fc-scroller-harness-liquid{height:804px !important;} */
 #calendar.fc.timeGrid.eachGrid tr td{overflow-y:auto;}/* 정기점검계획 주간에서는 클래스 eachGrid가 붙으며, 특별점검계획 주간과는 다르게 td간의 y스크롤이 생성된다.  */
-#calendar.fc .fc-scrollgrid-section-body table,
-#calendar.fc .fc-scrollgrid-section-footer table{height:auto !important;}
+/* #calendar.fc .fc-scrollgrid-section-body table,
+#calendar.fc .fc-scrollgrid-section-footer table{height:auto !important;} *//* 주간 캘린더에서 선이 안보여서 일단 주석 처리 2024-08-07 */
+#calendar.fc.weekGrid .fc-timegrid-body{width:100% !important;}
+#calendar.fc.weekGrid .fc-timegrid-body > .fc-timegrid-slots > table{width:100% !important;}
 
 #calendar.fc .fc-popover{border-radius:4px;-webkit-backdrop-filter: blur(4px);backdrop-filter: blur(4px);box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);border:1px solid #3e4157;overflow:hidden;margin-top:122px;background-color:#2a2d3e;max-width:210px;}
 #calendar.fc .fc-popover-header{padding:16px 12px;background-color:transparent;}
@@ -1181,9 +1182,10 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);background-color: rgba(31, 61, 83, 0
 .calendar-tooltip li a{font-size:14px;line-height:1.5;color:#b2bbce;}
 .calendar-tooltip li a:hover{color:#00bbfe;}
 
-/* #calendar.fc.weekGrid .fc-scroller-liquid-absolute{max-height:1008px;} */
 #calendar.fc.weekGrid .fc-view-harness{height:calc(100vh - 300px) !important;}
+#calendar.fc.weekGrid .fc-scroller-harness-liquid{border-bottom:1px solid #3e4157;}
 #calendar.fc.weekGrid .fc-scroller-liquid-absolute{height:calc(100vh - 455px);}
+#calendar.fc.weekGrid td.fc-timegrid-col[role="gridcell"]{}
 
 @media print {
   body, div{position: relative;}
