@@ -63,6 +63,7 @@ body{width:100%;overflow:hidden;}
 .content-area.c-scrollbar > .content-inner::after{content:'';height:20px;display:block;}
 .content-area .content-frame{margin-top:16px;position: relative;}
 .content-area .content-frame.w-full{width:100%;}
+.content-area .content-frame.bg{background:#34374c;}
 .content-line{border-top:1px solid #212332;position: relative;margin-top:16px;}
 .content-line::before, .content-line::after{content:'';display:block;width:20px;height:1px;background-color: #212332;position: absolute;top:0;}
 .content-line::before{left:-20px;}
