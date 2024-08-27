@@ -645,49 +645,5 @@
       </div>
     </div><!-- .popup-wrap -->
   </div><!-- #wrap -->
-  
-  <script>
-    var vdsThumb = new Swiper(".vds-thumb", {
-      loop: true,
-      spaceBetween: 4,
-      slidesPerView: 5,
-      // freeMode: true,
-      watchSlidesProgress: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-    var vdsSwiper = new Swiper(".vds-swiper", {
-      loop: true,
-      spaceBetween: 10,
-      // navigation: {
-      //   nextEl: ".swiper-button-next",
-      //   prevEl: ".swiper-button-prev",
-      // },
-      thumbs: {
-        swiper: vdsThumb,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        type: "fraction",
-      },
-    });
-
-    $('.vds-swiper .swiper-slide').tooltip({
-      position: {
-        my: "left top",
-        at: "left+10 top+10",
-        using: function(position, feedback) {
-          $(this).css({
-            top: position.top,
-            left: position.left,
-            zIndex: 10000 // 충분히 높은 z-index 값 설정
-          });
-        }
-      },
-      track: true
-    });
-  </script>
 </body>
 </html>

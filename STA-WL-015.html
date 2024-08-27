@@ -1,0 +1,2188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>서부내륙고속도로 통합운영단말</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="dashboard-wrap" class="c-scrollbar">
+    <div class="d-map" style="background-color:#000;"></div>
+    <div class="d-header">
+      <h1><a href="#"><img src="img/d/wih-logo-db.png" alt=""></a></h1>
+
+      <div class="item-area">
+        <span class="date">2024년 10월 25일(금)</span>
+        <span class="time">13:30:01</span>
+
+        <ul class="tab-btn">
+          <li class="st1"><a href="#">평시</a></li>
+          <li class="st2 on"><a href="#">돌발</a></li>
+          <li class="st3"><a href="#">브리핑</a></li>
+        </ul>
+
+        <div class="switch-area">
+          <span class="label">자동ON</span>
+          <span class="btn-switch on"></span>
+        </div>
+        <a href="#" class="btn-power"><span>종료</span></a>
+      </div><!-- .item-area -->
+    </div><!-- .d-header -->
+
+    <div class="d-item-wrap" style="background-color:rgba(30, 30, 30, 0.5);">
+
+      <div class="detail-wrap" id="detail1" style="width: 460px; left: 17px; top: 152px; display: none;">
+        <dl>
+          <dt>
+            <span class="tit">인주JCT-학성천교</span>
+            <a href="#" class="btn-close">닫기</a>
+          </dt>
+          <dd>
+            <ul class="list">
+              <li class="c-scrollbar" style="max-height:680px;">
+                <ul>
+                  <li>
+                    <span class="label">구분</span>
+                    <span class="result">교통사고</span>
+                  </li>
+                  <li>
+                    <span class="label">일시</span>
+                    <span class="result">2024-10-25 11:34:26</span>
+                  </li>
+                  <li>
+                    <span class="label">검지</span>
+                    <span class="result">자동검지</span>
+                  </li>
+                  <li>
+                    <span class="label">기상사태</span>
+                    <span class="result">맑음</span>
+                  </li>
+                  <li>
+                    <span class="label">위치</span>
+                    <span class="result">익산) OO IC 3차로</span>
+                  </li>
+                  <li>
+                    <span class="label">상세내용</span>
+                    <!-- <span class="result c-scrollbar" style="max-height:490px;"> -->
+                    <span class="result">
+                      사상자 없음. 중상자 1. <br />
+                      차량 파손.<br />
+                      119, 112, 차량견인업체 호출<br />
+                      내용이길다<br />
+                      내용이길다<br />
+                      내용이길다<br />
+                      내용이길다<br />
+                      내용이길다<br />
+                      내용이길다<br />
+                      내용이길다<br />
+                      내용이길다<br />
+                      내용이길다<br />
+                      내용이길다<br />
+                      내용이길다<br />
+                      내용이길다<br />
+                      내용이길다<br />
+                      내용이길다<br />
+                      내용이길다<br />
+                      내용이길다
+                    </span>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li>
+                    <span class="label">처리상태</span>
+                    <!-- <span class="result status tp1">접수중</span> -->
+                    <span class="result status tp2">처리중</span>
+                    <!-- <span class="result status tp3">처리완료</span> -->
+                  </li>
+                  <li>
+                    <span class="label">처리시간</span>
+                    <span class="result">00:00:00</span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div><!-- .detail-wrap -->
+
+      <div class="detail-wrap" id="detail2" style="width: 1114px; right: 160px; top: 152px; display: none;">
+        <dl>
+          <dt>
+            <span class="tit">CCTV 명칭표기</span>
+            <a href="#" class="btn-close">닫기</a>
+          </dt>
+          <dd class="no-padding"><img src="https://placehold.co/1110x836/000/FFF?text=movie" /></dd>
+        </dl>
+      </div><!-- .detail-wrap -->
+
+      <!-- 평시(메뉴 OFF/ON) -->
+      <span class="s-ico expressway expressway-25 s1" style="left: 529px; top: 738px;"></span>
+      <span class="s-ico expressway expressway-151 s1" style="left: 1126px; top: 299px;"></span>
+      <span class="s-ico expressway expressway-30 s1" style="left: 2477px; top: 255px;"></span>
+      <span class="s-ico expressway expressway-15 s1" style="left: 3322px; top: 624px;"></span>
+
+      <span class="s-ico highway highway-32 s1" style="left: 2706px; top: 336px;"></span>
+      <span class="s-ico highway highway-39 s1" style="left: 2993px; top: 559px;"></span>
+
+      <span class="s-ico weather cloudy s1" style="left: 620px; top: 541px;"></span>
+      <span class="s-ico weather cloudy s1" style="left: 1963px; top: 358px;"></span>
+      <span class="s-ico weather cloudy s1" style="left: 3020px; top: 820px;"></span>
+
+      <span class="s-ico jct s1" style="left: 601px; top: 784px;"></span>
+      <span class="s-txt s1" style="left: 653px; top: 781px;">익산JCT</span>
+
+      <span class="s-txt s1" style="left: 717px; top: 662px;">동익산IC</span>
+      <span class="s-ico ic s1" style="left: 741px; top: 696px;"></span>
+
+      <span class="s-ico ic s1" style="left: 1156px; top: 449px;"></span>
+      <span class="s-txt s1" style="left: 1141px; top: 482px;">부여IC</span>
+
+      <span class="s-ico jct s1" style="left: 1218px; top: 417px;"></span>
+      <span class="s-txt s1" style="left: 1270px; top: 415px;">부여JCT</span>
+
+      <span class="s-ico ic s1" style="left: 1762px; top: 255px;"></span>
+      <span class="s-txt s1" style="left: 1747px; top: 289px;">청양IC</span>
+
+      <span class="s-ico jct s1" style="left: 2373px; top: 362px;"></span>
+      <span class="s-txt s1" style="left: 2425px; top: 360px;">예산JCT</span>
+
+      <span class="s-ico ic s1" style="left: 2623px; top: 515px;"></span>
+      <span class="s-txt s1" style="left: 2661px; top: 511px;">예산IC</span>
+
+      <span class="s-txt s1" style="left: 2797px; top: 632px;">인주JCT</span>
+      <span class="s-ico jct s1" style="left: 2815px; top: 666px;"></span>
+
+      <span class="s-ico ic s1" style="left: 2953px; top: 750px;"></span>
+      <span class="s-txt s1" style="left: 2976px; top: 777px;">인주IC</span>
+
+      <span class="s-ico jct s1" style="left: 3048px; top: 732px;"></span>
+      <span class="s-txt s1" style="left: 3100px; top: 729px;">현덕JCT</span>
+
+      <span class="s-ico ic s1" style="left: 3279px; top: 819px;"></span>
+      <span class="s-txt s1" style="left: 3266px; top: 850px;">안중IC</span>
+
+      <span class="s-txt s1" style="left: 3130px; top: 588px;">포승IC</span>
+      <span class="s-ico ic s1" style="left: 3145px; top: 624px;"></span>
+
+      <span class="s-ico jct s1" style="left: 3237px; top: 557px;"></span>
+      <span class="s-txt s1" style="left: 3289px; top: 553px;">포승JCT</span>
+
+      <!-- 평시(구간확대) -->
+      <span class="s-ico highway highway-32 s2" style="left: 1434px; top: 322.5px;"></span>
+      <span class="s-ico highway highway-39 s2" style="left: 2628px; top: 405.5px;"></span>
+      <span class="s-ico vms s2" style="left: 1615px; top: 454px;"></span>
+      <span class="s-ico cctv s2" style="left: 1763px; top: 841px;"></span>
+      <span class="s-ico cctv s2" style="left: 1856px; top: 724px;"></span>
+      <span class="s-ico cctv s2" style="left: 1991px; top: 780px;"></span>
+
+      <span class="s-txt s2" style="left: 1466px; top: 168.5px;">예산JCT</span>
+      <span class="s-ico ic s2" style="left: 1488px; top: 204.5px;"></span>
+
+      <span class="s-txt s2" style="left: 2101px; top: 639px;">인주JCT</span>
+      <span class="s-ico jct s2" style="left: 2119px; top: 679.5px;"></span>
+
+      <span class="s-ico ic s2" style="left: 2521px; top: 942.5px;"></span>
+      <span class="s-txt s2" style="left: 2551px; top: 972px;">인주IC</span>
+
+      <span class="s-ico jct s2" style="left: 2847px; top: 876px;"></span>
+      <span class="s-txt s2" style="left: 2900px; top: 873px;">현덕JCT</span>
+
+      <span class="s-txt s2" style="left: 3132px; top: 507px;">포승IC</span>
+      <span class="s-ico ic s2" style="left: 3153px; top: 542.5px;"></span>
+
+      <span class="s-ico jct s2" style="left: 3432px; top: 328px;"></span>
+      <span class="s-txt s2" style="left: 3485px; top: 325px;">포승JCT</span>
+
+      <div class="accident-wrap md" style="left: 1391px; top: 323px;">
+        <span class="s-ico accident"></span>
+        <div class="accident-tip">
+          <span class="label">돌발 발생</span>
+          <span class="info">(익산) 인주JCT - 예산 IC</span>
+        </div>
+      </div>
+
+      <div class="accident-wrap lg" style="left: 2195px; top: 215px;">
+        <span class="s-ico accident"></span>
+      </div>
+
+      <div class="accident-wrap md freezing" style="left: 2319px; top: 437px; display: none;">
+        <span class="s-ico freezing"></span>
+      </div>
+      
+      <div class="map-navi">
+        <a href="#" class="s-ico fullroute"></a>
+        <a href="#" class="s-ico plus"></a>
+        <a href="#" class="s-ico minus"></a>
+      </div>
+      <span class="map-num">10000</span>
+    </div><!-- .d-item-wrap -->
+
+    <div class="d-status-wrap">
+      <ul class="status-box-list">
+        <li class="md">
+          <dl>
+            <dt><span class="tit">기상정보</span></dt>
+            <dd>
+              <ul class="weather-list">
+                <li>
+                  <span class="tit">평택(평택호대교)</span>
+                  <ul class="weather-info">
+                    <li>
+                      <dl class="detail">
+                        <dd>
+                          <span class="info">흐림</span>
+                          <span class="temp">5°C</span>
+                        </dd>
+                        <dt><span class="s-ico weather cloudy"></span></dt>
+                      </dl>
+                    </li>
+                    <li>
+                      <ul class="s-list">
+                        <li>
+                          <span class="label">풍향</span>
+                          <span class="value">0000</span>
+                        </li>
+                        <li>
+                          <span class="label">풍속</span>
+                          <span class="value">0m/s</span>
+                        </li>
+                        <li>
+                          <span class="label">습도</span>
+                          <span class="value">70%</span>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="s-list">
+                        <li>
+                          <span class="label">가시거리</span>
+                          <span class="value">1000</span>
+                        </li>
+                        <li>
+                          <span class="label">노면상태</span>
+                          <span class="value">0000</span>
+                        </li>
+                        <li>
+                          <span class="label">노면함량</span>
+                          <span class="value">0m/s</span>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="tit">충남 예산(의좋은형제휴게소)</span>
+                  <ul class="weather-info">
+                    <li>
+                      <dl class="detail">
+                        <dd>
+                          <span class="info">흐림</span>
+                          <span class="temp">5°C</span>
+                        </dd>
+                        <dt><span class="s-ico weather cloudy"></span></dt>
+                      </dl>
+                    </li>
+                    <li>
+                      <ul class="s-list">
+                        <li>
+                          <span class="label">풍향</span>
+                          <span class="value">0000</span>
+                        </li>
+                        <li>
+                          <span class="label">풍속</span>
+                          <span class="value">0m/s</span>
+                        </li>
+                        <li>
+                          <span class="label">습도</span>
+                          <span class="value">70%</span>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="s-list">
+                        <li>
+                          <span class="label">가시거리</span>
+                          <span class="value">1000</span>
+                        </li>
+                        <li>
+                          <span class="label">노면상태</span>
+                          <span class="value">0000</span>
+                        </li>
+                        <li>
+                          <span class="label">노면함량</span>
+                          <span class="value">0m/s</span>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="tit">전북 군산(금강대교)</span>
+                  <ul class="weather-info">
+                    <li>
+                      <dl class="detail">
+                        <dd>
+                          <span class="info">흐림</span>
+                          <span class="temp">5°C</span>
+                        </dd>
+                        <dt><span class="s-ico weather cloudy"></span></dt>
+                      </dl>
+                    </li>
+                    <li>
+                      <ul class="s-list">
+                        <li>
+                          <span class="label">풍향</span>
+                          <span class="value">0000</span>
+                        </li>
+                        <li>
+                          <span class="label">풍속</span>
+                          <span class="value">0m/s</span>
+                        </li>
+                        <li>
+                          <span class="label">습도</span>
+                          <span class="value">70%</span>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul class="s-list">
+                        <li>
+                          <span class="label">가시거리</span>
+                          <span class="value">1000</span>
+                        </li>
+                        <li>
+                          <span class="label">노면상태</span>
+                          <span class="value">0000</span>
+                        </li>
+                        <li>
+                          <span class="label">노면함량</span>
+                          <span class="value">0m/s</span>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              
+            </dd>
+          </dl>
+        </li>
+        <li class="xl">
+          <dl>
+            <dt><span class="tit">돌발 구간 CCTV</span></dt>
+            <dd class="no-padding">
+              <div class="movie-wrap">
+                <div class="movie-left">
+                  <div class="movie-obj"><img src="https://placehold.co/640x480/000/FFF?text=movie" /></div>
+                </div>
+                <div class="movie-right">
+                  <div class="movie-obj"><img src="https://placehold.co/320x240/000/FFF?text=movie" /></div>
+                  <div class="movie-obj"><img src="https://placehold.co/320x240/000/FFF?text=movie" /></div>
+                  <div class="movie-obj"><img src="https://placehold.co/320x240/000/FFF?text=movie" /></div>
+                  <div class="movie-obj"><img src="https://placehold.co/320x240/000/FFF?text=movie" /></div>
+                </div>
+              </div>
+            </dd>
+          </dl>
+        </li>
+        <li class="md">
+          <dl>
+            <dt><span class="tit">VMS</span></dt>
+            <dd class="pt24">
+              <p class="vms-item-tit"><span>인주JCT - 예산IC</span> 구간</p>
+              <div class="swiper vms-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <dl>
+                      <dt><span>01-VMS-IT-S-0009-02</span></dt>
+                      <dd><img src="https://placehold.co/592x270/000/FFF" /></dd>
+                    </dl>
+                  </div>
+                  <div class="swiper-slide">
+                    <dl>
+                      <dt><span>01-VMS-IT-S-0009-02</span></dt>
+                      <dd><img src="https://placehold.co/592x270/111/FFF" /></dd>
+                    </dl>
+                  </div>
+                  <div class="swiper-slide">
+                    <dl>
+                      <dt><span>01-VMS-IT-S-0009-02</span></dt>
+                      <dd><img src="https://placehold.co/592x270/222/FFF" /></dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="vms-item">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div><!-- .vms-swiper -->
+            </dd>
+          </dl>
+        </li>
+        <li class="md">
+          <dl>
+            <dt><span class="tit">LCS</span></dt>
+            <dd class="pt24">
+              <p class="vms-item-tit"><span>인주JCT - 예산IC</span> 구간</p>
+              <div class="swiper vms-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <dl>
+                      <dt><span>01-VMS-IT-S-0009-02</span></dt>
+                      <dd><img src="https://placehold.co/592x270/000/FFF" /></dd>
+                    </dl>
+                  </div>
+                  <div class="swiper-slide">
+                    <dl>
+                      <dt><span>01-VMS-IT-S-0009-02</span></dt>
+                      <dd><img src="https://placehold.co/592x270/111/FFF" /></dd>
+                    </dl>
+                  </div>
+                  <div class="swiper-slide">
+                    <dl>
+                      <dt><span>01-VMS-IT-S-0009-02</span></dt>
+                      <dd><img src="https://placehold.co/592x270/222/FFF" /></dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="vms-item">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div><!-- .vms-swiper -->
+            </dd>
+          </dl>
+        </li>
+        <li class="md">
+          <dl>
+            <dt class="green">
+              <span class="tit">시설물 현황</span>
+            </dt>
+            <dd class="no-padding">
+              <ul class="fac-info">
+                <li>
+                  <span class="label">VDS</span>
+                  <span class="result">0/91</span>
+                </li>
+                <li>
+                  <span class="label">AVC</span>
+                  <span class="result">0/10</span>
+                </li>
+                <li>
+                  <span class="label">DSRC</span>
+                  <span class="result">0/91</span>
+                </li>
+                <li class="red">
+                  <span class="label">CCTV</span>
+                  <span class="result">3/229</span>
+                </li>
+                <li class="red">
+                  <span class="label">VMS</span>
+                  <span class="result">2/32</span>
+                </li>
+                <li>
+                  <span class="label">LCS</span>
+                  <span class="result">0/32</span>
+                </li>
+                <li>
+                  <span class="label">RWIS</span>
+                  <span class="result">0/2</span>
+                </li>
+                <li>
+                  <span class="label">RDO</span>
+                  <span class="result">0/10</span>
+                </li>
+                <li>
+                  <span class="label">FOGW</span>
+                  <span class="result">0/2</span>
+                </li>
+                <li>
+                  <span class="label">PRIS</span>
+                  <span class="result">0/2</span>
+                </li>
+                <li>
+                  <span class="label">긴급전화</span>
+                  <span class="result">0/48</span>
+                </li>
+                <li>
+                  <span class="label">갱구부 LED</span>
+                  <span class="result">0/2</span>
+                </li>
+                <li>
+                  <span class="label">터널 환기</span>
+                  <span class="result">0/0</span>
+                </li>
+                <li>
+                  <span class="label">터널 전력</span>
+                  <span class="result">0/0</span>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+      </ul>
+      <ul class="status-box-list">
+        <li class="full">
+          <dl>
+            <dt>
+              <div class="tit-wrap">
+                <a href="#" class="btn-l disabled"></a>
+                <span class="tit">서부내륙고속도로 전체 구간</span>
+                <a href="#" class="btn-r"></a>
+              </div>
+            </dt>
+            <dd class="type-map">
+              <!-- S: 1. 전체 -->
+              <div class="st-wrap" id="st1">
+
+                <!-- call -->
+                <a href="#" class="s-ico call top" style="left: 507px;"></a>
+                <a href="#" class="s-ico call top" style="left: 543px;"></a>
+                <a href="#" class="s-ico call top" style="left: 579px;"></a>
+                <a href="#" class="s-ico call top" style="left: 964px;"></a>
+                <a href="#" class="s-ico call top" style="left: 1000px;"></a>
+                <a href="#" class="s-ico call top" style="left: 1036px;"></a>
+                <a href="#" class="s-ico call top" style="left: 1891px;"></a>
+                <a href="#" class="s-ico call top" style="left: 1925px;"></a>
+                <a href="#" class="s-ico call top" style="left: 1959px;"></a>
+                <a href="#" class="s-ico call top" style="left: 1993px;"></a>
+                <a href="#" class="s-ico call top" style="left: 2027px;"></a>
+                <a href="#" class="s-ico call top" style="left: 2061px;"></a>
+                <a href="#" class="s-ico call top" style="left: 2095px;"></a>
+                <a href="#" class="s-ico call top" style="left: 2129px;"></a>
+                <a href="#" class="s-ico call top" style="left: 2163px;"></a>
+
+                <!-- lcs -->
+                <a href="#" class="s-ico lcs top" style="left: 557px;"></a>
+                <a href="#" class="s-ico lcs top" style="left: 603px;"></a>
+                <a href="#" class="s-ico lcs top" style="left: 1030px;"></a>
+                <a href="#" class="s-ico lcs top" style="left: 1891px;"></a>
+                <a href="#" class="s-ico lcs top" style="left: 1937px;"></a>
+                <a href="#" class="s-ico lcs top" style="left: 1983px;"></a>
+                <a href="#" class="s-ico lcs top" style="left: 2029px;"></a>
+                <a href="#" class="s-ico lcs top" style="left: 2075px;"></a>
+                <a href="#" class="s-ico lcs top" style="left: 2121px;"></a>
+                <a href="#" class="s-ico lcs top" style="left: 2203px;"></a>
+
+                <!-- vms -->
+                <a href="#" class="s-ico vms top" style="left: 333px;"></a>
+                <a href="#" class="s-ico vms top" style="left: 480px;"></a>
+                <a href="#" class="s-ico vms top" style="left: 1165px;"></a>
+                <a href="#" class="s-ico vms top" style="left: 1532px;"></a>
+                <a href="#" class="s-ico vms top" style="left: 2228px;"></a>
+                <a href="#" class="s-ico vms top" style="left: 2460px;"></a>
+                <a href="#" class="s-ico vms top" style="left: 2675px;"></a>
+                <a href="#" class="s-ico vms top" style="left: 2917px;"></a>
+                <a href="#" class="s-ico vms top" style="left: 3206px;"></a>
+                <a href="#" class="s-ico vms top" style="left: 3483px; top: 114px;"></a>
+
+                <!-- cctv -->
+                <a href="#" class="s-ico cctv top" style="left: 244px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 448px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 530px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 566px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 602px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 732px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 768px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 804px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 866px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 908px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 964px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1000px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1036px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1253px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1310px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1446px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1482px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1518px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1554px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1604px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1640px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1698px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1765px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1889px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1923px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1957px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1991px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2025px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2059px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2093px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2127px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2161px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2228px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2466px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2581px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2633px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2739px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2891px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2953px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 3015px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 3176px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 3255px;"></a>
+
+                <a href="#" class="s-ico cctv top" style="left: 3392px; top: 226px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 3472px; top: 212px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 3506px; top: 212px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 3599px; top: 232px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 3667px; top: 212px;"></a>
+
+                <div class="st-line-wrap" style="z-index: 1;">
+                  <div class="st-line top">
+                    <span class="st-section st1" style="width: 329px"><i></i></span>
+                    <span class="st-section st1" style="width: 417px"><i></i></span>
+                    <span class="st-section st1" style="width: 578px"><i></i></span>
+                    <span class="st-section st1" style="width: 448px"><i></i></span>
+                    <span class="st-section st1" style="width: 390px"><i></i></span>
+                    <span class="st-section st1" style="width: 166px"><i></i></span>
+                    <span class="st-section st1" style="width: 172px"><i></i></span>
+                    <span class="st-section st1" style="width: 266px"><i></i></span>
+                    <span class="st-section st1" style="width: 170px"><i></i></span>
+                    <span class="st-section st1" style="width: 118px"><i></i></span>
+                    <span class="st-section st1" style="width: 120px"><i></i></span>
+                    <span class="st-section st1" style="width: 33px"><i style="border-right: 1px solid #212332;"></i></span>
+                    
+                    <span class="st-section st1 shape-up" style="width: 214px;">
+                      <i style="width: 214px; height: 70px; background:url(img/d/line-tg.png) 0 0 no-repeat;"></i>
+                    </span>
+                    <span class="st-section st1 up" style="width: 168px"><i></i></span>
+
+                    <span class="st-section st1 shape-down" style="width: 399px">
+                      <i style="width: 381px; height: 70px; background:url(img/d/line-bg.png) 0 0 no-repeat;"></i>
+                    </span>
+                  </div>
+                  <div class="st-line bottom">
+                    <span class="st-section st1" style="width: 329px"><i></i></span>
+                    <span class="st-section st1" style="width: 417px"><i></i></span>
+                    <span class="st-section st1" style="width: 578px"><i></i></span>
+                    <span class="st-section st1" style="width: 448px"><i></i></span>
+                    <span class="st-section st1" style="width: 390px"><i></i></span>
+                    <span class="st-section st1" style="width: 166px"><i></i></span>
+                    <span class="st-section st1" style="width: 172px"><i></i></span>
+                    <span class="st-section st1" style="width: 266px"><i></i></span>
+                    <span class="st-section st1" style="width: 170px"><i></i></span>
+                    <span class="st-section st1" style="width: 118px"><i></i></span>
+                    <span class="st-section st1" style="width: 120px"><i></i></span>
+                    <span class="st-section st1" style="width: 33px"><i style="border-right: 1px solid #212332;"></i></span>
+                    
+                    <span class="st-section st1 shape-up" style="width: 214px;">
+                      <i style="width: 214px; height: 70px; background:url(img/d/line-tg.png) 0 0 no-repeat;"></i>
+                    </span>
+                    <span class="st-section st1 up" style="width: 168px"><i></i></span>
+
+                    <span class="st-section st1 shape-down" style="width: 399px">
+                      <i style="width: 381px; height: 70px; background:url(img/d/line-bg.png) 0 0 no-repeat;"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <a href="#" class="s-ico cctv bottom" style="left: 471px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 507px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 543px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 579px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 639px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 695px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 732px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 768px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 804px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1018px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1052px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1141px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1207px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1241px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1455px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1491px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1527px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1563px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1599px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1673px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1827px;"></a>
+
+                <a href="#" class="s-ico cctv bottom" style="left: 1889px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1923px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1957px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1991px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2025px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2059px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2093px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2127px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2161px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2204px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2247px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2354px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2393px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2449px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2492px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2535px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2580px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2681px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2771px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2838px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 3113px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 3176px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 3292px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 3339px; bottom: 152px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 3459px; bottom: 109px;"></a>
+
+                <!-- vms -->
+                <a href="#" class="s-ico vms bottom" style="left: 632px;"></a>
+                <a href="#" class="s-ico vms bottom" style="left: 1304px;"></a>
+                <a href="#" class="s-ico vms bottom" style="left: 1713px;"></a>
+                <a href="#" class="s-ico vms bottom" style="left: 1799px;"></a>
+                <a href="#" class="s-ico vms bottom" style="left: 2317px;"></a>
+                <a href="#" class="s-ico vms bottom" style="left: 2554px;"></a>
+                <a href="#" class="s-ico vms bottom" style="left: 2763px;"></a>
+                <a href="#" class="s-ico vms bottom" style="left: 3003px;"></a>
+                <a href="#" class="s-ico vms bottom" style="left: 3243px;"></a>
+                <a href="#" class="s-ico vms bottom" style="left: 3371px; bottom: 117px;"></a>
+
+                <!-- lcs -->
+                <a href="#" class="s-ico lcs bottom" style="left: 515px;"></a>
+                <a href="#" class="s-ico lcs bottom" style="left: 565px;"></a>
+                <a href="#" class="s-ico lcs bottom" style="left: 925px;"></a>
+                <a href="#" class="s-ico lcs bottom" style="left: 1891px;"></a>
+                <a href="#" class="s-ico lcs bottom" style="left: 1937px;"></a>
+                <a href="#" class="s-ico lcs bottom" style="left: 1983px;"></a>
+                <a href="#" class="s-ico lcs bottom" style="left: 2029px;"></a>
+                <a href="#" class="s-ico lcs bottom" style="left: 2075px;"></a>
+
+                <!-- call -->
+                <a href="#" class="s-ico call bottom" style="left: 507px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 543px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 579px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 964px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 1000px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 1036px;"></a>
+
+                <a href="#" class="s-ico call bottom" style="left: 1892px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 1926px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 1960px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 1994px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 2028px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 2062px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 2096px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 2130px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 2164px;"></a>
+
+                <div class="st-route-wrap">
+                  <ul class="st-route">
+                    <li style="width: 329px"><span>부여IC</span></li>
+                    <li class="warning" style="width: 417px"><span>부여JCT</span></li>
+
+                    <li class="warning2" style="width: 577px"><span>은산3터널</span></li>
+                    <li style="width: 449px"><span>청양IC</span></li>
+                    <li class="warning" style="width: 390px"><span>봉수산터널</span></li>
+                    <li class="warning2" style="width: 165px"><span>예산 예당호휴게소 하이패스IC</span></li>
+                    <li style="width: 173px"><span>예산JCT</span></li>
+                    <li class="warning" style="width: 266px"><span>예산 추사고택(신암)IC</span></li>
+                    <li class="warning2" style="width: 169px"><span>신창 IC</span></li>
+                    <li style="width: 119px"><span>아산JCT</span></li>
+                    <li class="warning" style="width: 120px"><span>영인IC</span></li>
+                    <li class="warning2" style="width: 34px"><span class="top">평택호휴게소 하이패스 IC</span></li>
+                    <li style="width: 214px"><span>현덕JCT</span></li>
+                    <li class="warning" style="width: 168px" class="half"><span class="top">포승IC</span></li><!--마지막 구간 185px - 168px(현) = 17px 차이 -->
+                    <li class="warning2">
+                      <span class="top">포중JCT</span>
+                      <span class="bottom">안중IC</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <span class="st-label arrow-l">평택 방향</span>
+                <span class="st-label arrow-r">익산 방향</span>  
+
+                <a href="#" class="st-navi prev"></a>
+                <a href="#" class="st-navi next"></a>
+              </div><!-- .st-wrap -->
+              <!-- E: 1. 전체 -->
+
+              <!-- S: 2. 포승 IC ~ 포승 JCT -->
+              <div class="st-wrap" id="st2" style="display: none;">
+                <div class="st-line-wrap" style="z-index: 1;">
+                  <div class="st-line top">
+                    <span class="st-section st1" style="width: 368px"><i></i></span>
+                    <span class="st-section st2" style="width: 147px"><i></i></span>
+                    <span class="st-section st3" style="width: 468px"><i></i></span>
+                    <span class="st-section st1" style="width: 1359px"><i></i></span>
+                    <span class="st-section st2" style="width: 813px"><i></i></span>
+                    <span class="st-section st3" style="width: 437px"><i></i></span>
+                  </div>
+
+                  <div class="st-line bottom">
+                    <span class="st-section st1" style="width: 368px"><i></i></span>
+                    <span class="st-section st2" style="width: 147px"><i></i></span>
+                    <span class="st-section st3" style="width: 468px"><i></i></span>
+                    <span class="st-section st1" style="width: 1359px"><i></i></span>
+                    <span class="st-section st2" style="width: 813px"><i></i></span>
+                    <span class="st-section st3" style="width: 437px"><i></i></span>
+                  </div>
+                </div>
+
+                <a href="#" class="s-ico cctv bottom" style="left: 2856px;"></a>
+
+                <div class="st-route-wrap">
+                  <ul class="st-route">
+                    <li style="width: calc(100% - 2px)"></li>
+                    <li></li>
+                  </ul>
+                </div>
+
+                <span class="st-label arrow-r">평택</span>
+                <span class="st-label arrow-l">익산</span>  
+
+                <a href="#" class="st-navi prev"></a>
+                <a href="#" class="st-navi next"></a>
+              </div><!-- .st-wrap -->
+              <!-- E: 2. 포승 IC ~ 포승 JCT -->
+
+              <!-- S: 3. 현덕 JCT ~ 포승 IC -->
+              <div class="st-wrap" id="st3" style="display: none;">
+                <a href="#" class="s-ico vms top" style="left: 2743px;"></a>
+
+                <div class="st-line-wrap" style="z-index: 1;">
+                  <div class="st-line top">
+                    <span class="st-section st1" style="width: 368px"><i></i></span>
+                    <span class="st-section st2" style="width: 64px"><i></i></span>
+                    <span class="st-section st1" style="width: 64px"><i></i></span>
+                    <span class="st-section st3" style="width: 482px"><i></i></span>
+                    <span class="st-section st1" style="width: 214px"><i></i></span>
+                    <span class="st-section st3" style="width: 66px"><i></i></span>
+                    <span class="st-section st2" style="width: 413px"><i></i></span>
+                    <span class="st-section st3" style="width: 66px"><i></i></span>
+                    <span class="st-section st1" style="width: 398px"><i></i></span>
+                    <span class="st-section st2" style="width: 495px"><i></i></span>
+                    <span class="st-section st1" style="width: 520px"><i></i></span>
+                    <span class="st-section st3" style="width: 144px"><i></i></span>
+                    <span class="st-section st1" style="width: 297px"><i></i></span>
+                  </div>
+
+                  <div class="st-line bottom">
+                    <span class="st-section st1" style="width: 368px"><i></i></span>
+                    <span class="st-section st2" style="width: 64px"><i></i></span>
+                    <span class="st-section st1" style="width: 64px"><i></i></span>
+                    <span class="st-section st3" style="width: 482px"><i></i></span>
+                    <span class="st-section st1" style="width: 214px"><i></i></span>
+                    <span class="st-section st3" style="width: 66px"><i></i></span>
+                    <span class="st-section st2" style="width: 413px"><i></i></span>
+                    <span class="st-section st3" style="width: 66px"><i></i></span>
+                    <span class="st-section st1" style="width: 398px"><i></i></span>
+                    <span class="st-section st2" style="width: 495px"><i></i></span>
+                    <span class="st-section st1" style="width: 520px"><i></i></span>
+                    <span class="st-section st3" style="width: 144px"><i></i></span>
+                    <span class="st-section st1" style="width: 297px"><i></i></span>
+                  </div>
+                </div>
+                
+                <a href="#" class="s-ico cctv bottom" style="left: 478px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2748px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="right: 125px;"></a>
+                <a href="#" class="s-ico vms bottom" style="left: 1300px;"></a>
+
+                <div class="st-route-wrap">
+                  <ul class="st-route">
+                    <li style="width: calc(100% - 2px)"></li>
+                    <li></li>
+                  </ul>
+                </div>
+
+                <span class="st-label arrow-r">평택</span>
+                <span class="st-label arrow-l">익산</span>  
+
+                <a href="#" class="st-navi prev"></a>
+                <a href="#" class="st-navi next"></a>
+              </div><!-- .st-wrap -->
+              <!-- E: 3. 현덕 JCT ~ 포승 IC -->
+
+              <!-- S: 4. 현덕 JCT ~ 안중 IC (지선) -->
+              <div class="st-wrap" id="st4" style="display: none;">
+
+                <a href="#" class="s-ico cctv top" style="left: 2387px;"></a>
+
+                <div class="st-line-wrap" style="z-index: 1;">
+                  <div class="st-line top">
+                    <span class="st-section st1" style="width: 236px"><i></i></span>
+                    <span class="st-section st2" style="width: 312px"><i></i></span>
+                    <span class="st-section st1" style="width: 194px"><i></i></span>
+                    <span class="st-section st3" style="width: 66px"><i></i></span>
+                    <span class="st-section st1" style="width: 327px"><i></i></span>
+                    <span class="st-section st3" style="width: 97px"><i></i></span>
+                    <span class="st-section st2" style="width: 158px"><i></i></span>
+                    <span class="st-section st3" style="width: 66px"><i></i></span>
+                    <span class="st-section st1" style="width: 178px"><i></i></span>
+                    <span class="st-section st2" style="width: 634px"><i></i></span>
+                    <span class="st-section st1" style="width: 678px"><i></i></span>
+                    <span class="st-section st3" style="width: 53px"><i></i></span>
+                    <span class="st-section st1" style="width: 341px"><i></i></span>
+                    <span class="st-section st3" style="width: 250px"><i></i></span>
+                  </div>
+
+                  <div class="st-line bottom">
+                    <span class="st-section st1" style="width: 236px"><i></i></span>
+                    <span class="st-section st2" style="width: 312px"><i></i></span>
+                    <span class="st-section st1" style="width: 194px"><i></i></span>
+                    <span class="st-section st3" style="width: 66px"><i></i></span>
+                    <span class="st-section st1" style="width: 327px"><i></i></span>
+                    <span class="st-section st3" style="width: 97px"><i></i></span>
+                    <span class="st-section st2" style="width: 158px"><i></i></span>
+                    <span class="st-section st3" style="width: 66px"><i></i></span>
+                    <span class="st-section st1" style="width: 178px"><i></i></span>
+                    <span class="st-section st2" style="width: 634px"><i></i></span>
+                    <span class="st-section st1" style="width: 678px"><i></i></span>
+                    <span class="st-section st3" style="width: 53px"><i></i></span>
+                    <span class="st-section st1" style="width: 341px"><i></i></span>
+                    <span class="st-section st3" style="width: 250px"><i></i></span>
+                  </div>
+                </div>
+                
+                <a href="#" class="s-ico cctv bottom" style="left: 621px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1347px;"></a>
+                <a href="#" class="s-ico vms bottom" style="left: 653px;"></a>
+
+                <div class="st-route-wrap">
+                  <ul class="st-route">
+                    <li style="width: calc(100% - 2px)"></li>
+                    <li></li>
+                  </ul>
+                </div>
+
+                <span class="st-label arrow-r">평택</span>
+                <span class="st-label arrow-l">익산</span>  
+
+                <a href="#" class="st-navi prev"></a>
+                <a href="#" class="st-navi next"></a>
+              </div><!-- .st-wrap -->
+              <!-- E: 4. 현덕 JCT ~ 안중 IC (지선) -->
+
+              <!-- S: 5. 평택호휴게소 하이패스 IC ~ 현덕 JCT -->
+              <div class="st-wrap" id="st5" style="display: none;">
+                <div class="st-line-wrap" style="z-index: 1;">
+                  <div class="st-line top">
+                    <span class="st-section st1" style="width: 685px"><i></i></span>
+                    <span class="st-section st2" style="width: 97px"><i></i></span>
+                    <span class="st-section st1" style="width: 374px"><i></i></span>
+                    <span class="st-section st2" style="width: 374px"><i></i></span>
+                    <span class="st-section st3" style="width: 394px"><i></i></span>
+                    <span class="st-section st1" style="width: 1666px"><i></i></span>
+                  </div>
+
+                  <div class="st-line bottom">
+                    <span class="st-section st1" style="width: 685px"><i></i></span>
+                    <span class="st-section st2" style="width: 97px"><i></i></span>
+                    <span class="st-section st1" style="width: 374px"><i></i></span>
+                    <span class="st-section st2" style="width: 374px"><i></i></span>
+                    <span class="st-section st3" style="width: 394px"><i></i></span>
+                    <span class="st-section st1" style="width: 1666px"><i></i></span>
+                  </div>
+                </div>
+                <a href="#" class="s-ico cctv bottom" style="left: 1726px;"></a>
+
+                <div class="st-route-wrap">
+                  <ul class="st-route">
+                    <li style="width: calc(100% - 2px)"></li>
+                    <li></li>
+                  </ul>
+                </div>
+
+                <span class="st-label arrow-r">평택</span>
+                <span class="st-label arrow-l">익산</span>  
+
+                <a href="#" class="st-navi prev"></a>
+                <a href="#" class="st-navi next"></a>
+              </div><!-- .st-wrap -->
+              <!-- E: 5. 평택호휴게소 하이패스 IC ~ 현덕 JCT -->
+
+              <!-- S: 6. 영인 IC ~ 평택호휴게소 하이패스 IC -->
+              <div class="st-wrap" id="st6" style="display: none;">
+                <a href="#" class="s-ico vms  top" style="left: 2219px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1620px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2902px;"></a>
+
+                <div class="st-line-wrap" style="z-index: 1;">
+                  <div class="st-line top">
+                    <span class="st-section st1" style="width: 189px"><i></i></span>
+                    <span class="st-section st2" style="width: 62px"><i></i></span>
+                    <span class="st-section st1" style="width: 194px"><i></i></span>
+                    <span class="st-section st2" style="width: 76px"><i></i></span>
+                    <span class="st-section st3" style="width: 30px"><i></i></span>
+                    <span class="st-section st2" style="width: 204px"><i></i></span>
+                    <span class="st-section st3" style="width: 42px"><i></i></span>
+                    <span class="st-section st1" style="width: 219px"><i></i></span>
+                    <span class="st-section st3" style="width: 165px"><i></i></span>
+                    <span class="st-section st2" style="width: 32px"><i></i></span>
+                    <span class="st-section st3" style="width: 576px"><i></i></span>
+                    <span class="st-section st1" style="width: 315px"><i></i></span>
+                    <span class="st-section st2" style="width: 288px"><i></i></span>
+                    <span class="st-section st1" style="width: 68px"><i></i></span>
+                    <span class="st-section st3" style="width: 376px"><i></i></span>
+                    <span class="st-section st1" style="width: 277px"><i></i></span>
+                    <span class="st-section st3" style="width: 238px"><i></i></span>
+                    <span class="st-section st2" style="width: 161px"><i></i></span>
+                    <span class="st-section st3" style="width: 78px"><i></i></span>
+                  </div>
+
+                  <div class="st-line bottom">
+                    <span class="st-section st1" style="width: 189px"><i></i></span>
+                    <span class="st-section st2" style="width: 62px"><i></i></span>
+                    <span class="st-section st1" style="width: 194px"><i></i></span>
+                    <span class="st-section st2" style="width: 76px"><i></i></span>
+                    <span class="st-section st3" style="width: 30px"><i></i></span>
+                    <span class="st-section st2" style="width: 204px"><i></i></span>
+                    <span class="st-section st3" style="width: 42px"><i></i></span>
+                    <span class="st-section st1" style="width: 219px"><i></i></span>
+                    <span class="st-section st3" style="width: 165px"><i></i></span>
+                    <span class="st-section st2" style="width: 32px"><i></i></span>
+                    <span class="st-section st3" style="width: 576px"><i></i></span>
+                    <span class="st-section st1" style="width: 315px"><i></i></span>
+                    <span class="st-section st2" style="width: 288px"><i></i></span>
+                    <span class="st-section st1" style="width: 68px"><i></i></span>
+                    <span class="st-section st3" style="width: 376px"><i></i></span>
+                    <span class="st-section st1" style="width: 277px"><i></i></span>
+                    <span class="st-section st3" style="width: 238px"><i></i></span>
+                    <span class="st-section st2" style="width: 161px"><i></i></span>
+                    <span class="st-section st3" style="width: 78px"><i></i></span>
+                  </div>
+                </div>
+
+                <a href="#" class="s-ico cctv bottom" style="left: 459px;"></a>
+                <a href="#" class="s-ico vms bottom" style="left: 2576px;"></a>
+                
+
+                <div class="st-route-wrap">
+                  <ul class="st-route">
+                    <li style="width: calc(100% - 2px)"></li>
+                    <li></li>
+                  </ul>
+                </div>
+
+                <span class="st-label arrow-r">평택</span>
+                <span class="st-label arrow-l">익산</span>  
+
+                <a href="#" class="st-navi prev"></a>
+                <a href="#" class="st-navi next"></a>
+              </div><!-- .st-wrap -->
+              <!-- E: 6. 영인 IC ~ 평택호휴게소 하이패스 IC -->
+
+              <!-- S: 7. 아산 JCT ~ 영인 IC -->
+              <div class="st-wrap" id="st7" style="display: none;">
+                <div class="st-line-wrap" style="z-index: 1;">
+                  <div class="st-line top">
+                    <span class="st-section st1" style="width: 941px"><i></i></span>
+                    <span class="st-section st2" style="width: 97px"><i></i></span>
+                    <span class="st-section st1" style="width: 357px"><i></i></span>
+                    <span class="st-section st3" style="width: 369px"><i></i></span>
+                    <span class="st-section st1" style="width: 1171px"><i></i></span>
+                    <span class="st-section st3" style="width: 654px"><i></i></span>
+                  </div>
+
+                  <div class="st-line bottom">
+                    <span class="st-section st1" style="width: 941px"><i></i></span>
+                    <span class="st-section st2" style="width: 97px"><i></i></span>
+                    <span class="st-section st1" style="width: 357px"><i></i></span>
+                    <span class="st-section st3" style="width: 369px"><i></i></span>
+                    <span class="st-section st1" style="width: 1171px"><i></i></span>
+                    <span class="st-section st3" style="width: 654px"><i></i></span>
+                  </div>
+                </div>
+
+                <a href="#" class="s-ico cctv bottom" style="left: 3049px;"></a>
+
+                <div class="st-route-wrap">
+                  <ul class="st-route">
+                    <li style="width: calc(100% - 2px)"></li>
+                    <li></li>
+                  </ul>
+                </div>
+
+                <span class="st-label arrow-r">평택</span>
+                <span class="st-label arrow-l">익산</span>  
+
+                <a href="#" class="st-navi prev"></a>
+                <a href="#" class="st-navi next"></a>
+              </div><!-- .st-wrap -->
+              <!-- E: 7. 아산 JCT ~ 영인 IC -->
+
+              <!-- S: 8. 신창 IC ~ 아산 JCT -->
+              <div class="st-wrap" id="st8" style="display: none;">
+
+                <a href="#" class="s-ico vms top" style="left: 1136px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 635px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1604px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 3505px;"></a>
+
+                <div class="st-line-wrap" style="z-index: 1;">
+                  <div class="st-line top">
+                    <span class="st-section st1" style="width: 116px"><i></i></span>
+                    <span class="st-section st2" style="width: 108px"><i></i></span>
+                    <span class="st-section st1" style="width: 223px"><i></i></span>
+                    <span class="st-section st2" style="width: 41px"><i></i></span>
+                    <span class="st-section st3" style="width: 18px"><i></i></span>
+                    <span class="st-section st2" style="width: 257px"><i></i></span>
+                    <span class="st-section st3" style="width: 263px"><i></i></span>
+                    <span class="st-section st1" style="width: 284px"><i></i></span>
+                    <span class="st-section st3" style="width: 143px"><i></i></span>
+                    <span class="st-section st2" style="width: 32px"><i></i></span>
+                    <span class="st-section st3" style="width: 369px"><i></i></span>
+                    <span class="st-section st1" style="width: 47px"><i></i></span>
+                    <span class="st-section st2" style="width: 384px"><i></i></span>
+                    <span class="st-section st1" style="width: 121px"><i></i></span>
+                    <span class="st-section st3" style="width: 64px"><i></i></span>
+                    <span class="st-section st1" style="width: 117px"><i></i></span>
+                    <span class="st-section st3" style="width: 61px"><i></i></span>
+                    <span class="st-section st2" style="width: 17px"><i></i></span>
+                    <span class="st-section st3" style="width: 357px"><i></i></span>
+                    <span class="st-section st1" style="width: 117px"><i></i></span>
+                    <span class="st-section st2" style="width: 41px"><i></i></span>
+                    <span class="st-section st1" style="width: 411px"><i></i></span>
+                  </div>
+
+                  <div class="st-line bottom">
+                    <span class="st-section st1" style="width: 116px"><i></i></span>
+                    <span class="st-section st2" style="width: 108px"><i></i></span>
+                    <span class="st-section st1" style="width: 223px"><i></i></span>
+                    <span class="st-section st2" style="width: 41px"><i></i></span>
+                    <span class="st-section st3" style="width: 18px"><i></i></span>
+                    <span class="st-section st2" style="width: 257px"><i></i></span>
+                    <span class="st-section st3" style="width: 263px"><i></i></span>
+                    <span class="st-section st1" style="width: 284px"><i></i></span>
+                    <span class="st-section st3" style="width: 143px"><i></i></span>
+                    <span class="st-section st2" style="width: 32px"><i></i></span>
+                    <span class="st-section st3" style="width: 369px"><i></i></span>
+                    <span class="st-section st1" style="width: 47px"><i></i></span>
+                    <span class="st-section st2" style="width: 384px"><i></i></span>
+                    <span class="st-section st1" style="width: 121px"><i></i></span>
+                    <span class="st-section st3" style="width: 64px"><i></i></span>
+                    <span class="st-section st1" style="width: 117px"><i></i></span>
+                    <span class="st-section st3" style="width: 61px"><i></i></span>
+                    <span class="st-section st2" style="width: 17px"><i></i></span>
+                    <span class="st-section st3" style="width: 357px"><i></i></span>
+                    <span class="st-section st1" style="width: 117px"><i></i></span>
+                    <span class="st-section st2" style="width: 41px"><i></i></span>
+                    <span class="st-section st1" style="width: 411px"><i></i></span>
+                  </div>
+                </div>
+
+                <a href="#" class="s-ico vms bottom" style="left: 2786px;"></a>
+
+                <div class="st-route-wrap">
+                  <ul class="st-route">
+                    <li style="width: calc(100% - 2px)"></li>
+                    <li></li>
+                  </ul>
+                </div>
+
+                <span class="st-label arrow-r">평택</span>
+                <span class="st-label arrow-l">익산</span>  
+
+                <a href="#" class="st-navi prev"></a>
+                <a href="#" class="st-navi next"></a>
+              </div><!-- .st-wrap -->
+              <!-- E: 8. 신창 IC ~ 아산 JCT -->
+
+              <!-- S: 9. 예산 추사고택(신암) IC ~ 신창 IC -->
+              <div class="st-wrap" id="st9" style="display: none;">
+                <a href="#" class="s-ico vms top" style="left: 759px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 390px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1446px;"></a>
+
+                <div class="st-line-wrap" style="z-index: 1;">
+                  <div class="st-line top">
+                    <span class="st-section st1" style="width: 93px"><i></i></span>
+                    <span class="st-section st2" style="width: 93px"><i></i></span>
+                    <span class="st-section st1" style="width: 186px"><i></i></span>
+                    <span class="st-section st2" style="width: 122px"><i></i></span>
+                    <span class="st-section st3" style="width: 83px"><i></i></span>
+                    <span class="st-section st2" style="width: 36px"><i></i></span>
+                    <span class="st-section st1" style="width: 36px"><i></i></span>
+                    <span class="st-section st3" style="width: 172px"><i></i></span>
+                    <span class="st-section st1" style="width: 181px"><i></i></span>
+                    <span class="st-section st3" style="width: 195px"><i></i></span>
+                    <span class="st-section st2" style="width: 129px"><i></i></span>
+                    <span class="st-section st3" style="width: 156px"><i></i></span>
+                    <span class="st-section st1" style="width: 47px"><i></i></span>
+                    <span class="st-section st1" style="width: 30px"><i></i></span>
+                    <span class="st-section st2" style="width: 76px"><i></i></span>
+                    <span class="st-section st1" style="width: 30px"><i></i></span>
+                    <span class="st-section st1" style="width: 121px"><i></i></span>
+                    <span class="st-section st3" style="width: 14px"><i></i></span>
+                    <span class="st-section st1" style="width: 191px"><i></i></span>
+                    <span class="st-section st3" style="width: 117px"><i></i></span>
+                    <span class="st-section st2" style="width: 77px"><i></i></span>
+                    <span class="st-section st3" style="width: 357px"><i></i></span>
+                    <span class="st-section st1" style="width: 12px"><i></i></span>
+                    <span class="st-section st2" style="width: 173px"><i></i></span>
+                    <span class="st-section st3" style="width: 45px"><i></i></span>
+                    <span class="st-section st1" style="width: 12px"><i></i></span>
+                    <span class="st-section st2" style="width: 220px"><i></i></span>
+                    <span class="st-section st1" style="width: 201px"><i></i></span>
+                    <span class="st-section st3" style="width: 201px"><i></i></span>
+                    <span class="st-section st1" style="width: 12px"><i></i></span>
+                    <span class="st-section st3" style="width: 172px"><i></i></span>
+                  </div>
+
+                  <div class="st-line bottom">
+                    <span class="st-section st1" style="width: 93px"><i></i></span>
+                    <span class="st-section st2" style="width: 93px"><i></i></span>
+                    <span class="st-section st1" style="width: 186px"><i></i></span>
+                    <span class="st-section st2" style="width: 122px"><i></i></span>
+                    <span class="st-section st3" style="width: 83px"><i></i></span>
+                    <span class="st-section st2" style="width: 36px"><i></i></span>
+                    <span class="st-section st1" style="width: 36px"><i></i></span>
+                    <span class="st-section st3" style="width: 172px"><i></i></span>
+                    <span class="st-section st1" style="width: 181px"><i></i></span>
+                    <span class="st-section st3" style="width: 195px"><i></i></span>
+                    <span class="st-section st2" style="width: 129px"><i></i></span>
+                    <span class="st-section st3" style="width: 156px"><i></i></span>
+                    <span class="st-section st1" style="width: 47px"><i></i></span>
+                    <span class="st-section st1" style="width: 30px"><i></i></span>
+                    <span class="st-section st2" style="width: 76px"><i></i></span>
+                    <span class="st-section st1" style="width: 30px"><i></i></span>
+                    <span class="st-section st1" style="width: 121px"><i></i></span>
+                    <span class="st-section st3" style="width: 14px"><i></i></span>
+                    <span class="st-section st1" style="width: 191px"><i></i></span>
+                    <span class="st-section st3" style="width: 117px"><i></i></span>
+                    <span class="st-section st2" style="width: 77px"><i></i></span>
+                    <span class="st-section st3" style="width: 357px"><i></i></span>
+                    <span class="st-section st1" style="width: 12px"><i></i></span>
+                    <span class="st-section st2" style="width: 173px"><i></i></span>
+                    <span class="st-section st3" style="width: 45px"><i></i></span>
+                    <span class="st-section st1" style="width: 12px"><i></i></span>
+                    <span class="st-section st2" style="width: 220px"><i></i></span>
+                    <span class="st-section st1" style="width: 201px"><i></i></span>
+                    <span class="st-section st3" style="width: 201px"><i></i></span>
+                    <span class="st-section st1" style="width: 12px"><i></i></span>
+                    <span class="st-section st3" style="width: 172px"><i></i></span>
+                  </div>
+                </div>
+
+                <a href="#" class="s-ico cctv bottom" style="left: 851px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2118px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 3139px;"></a>
+                <a href="#" class="s-ico vms bottom" style="left: 2113px;"></a>
+
+                <div class="st-route-wrap">
+                  <ul class="st-route">
+                    <li style="width: calc(100% - 2px)"></li>
+                    <li></li>
+                  </ul>
+                </div>
+
+                <span class="st-label arrow-r">평택</span>
+                <span class="st-label arrow-l">익산</span>  
+
+                <a href="#" class="st-navi prev"></a>
+                <a href="#" class="st-navi next"></a>
+              </div><!-- .st-wrap -->
+              <!-- E: 9. 예산 추사고택(신암) IC ~ 신창 IC -->
+
+              <!-- S: 10. 예산 JCT ~ 예산 추사고택(신암) IC -->
+              <div class="st-wrap" id="st10" style="display: none;">
+                <a href="#" class="s-ico vms top" style="left: 1009px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1014px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 3505px;"></a>
+
+                <div class="st-line-wrap" style="z-index: 1;">
+                  <div class="st-line top">
+                    <span class="st-section st1" style="width: 142px"><i></i></span>
+                    <span class="st-section st2" style="width: 29px"><i></i></span>
+                    <span class="st-section st3" style="width: 13px"><i></i></span>
+                    <span class="st-section st2" style="width: 29px"><i></i></span>
+                    <span class="st-section st1" style="width: 131px"><i></i></span>
+                    <span class="st-section st3" style="width: 13px"><i></i></span>
+                    <span class="st-section st1" style="width: 13px"><i></i></span>
+                    <span class="st-section st2" style="width: 122px"><i></i></span>
+                    <span class="st-section st3" style="width: 22px"><i></i></span>
+                    <span class="st-section st1" style="width: 22px"><i></i></span>
+                    <span class="st-section st2" style="width: 26px"><i></i></span>
+                    <span class="st-section st1" style="width: 13px"><i></i></span>
+                    <span class="st-section st3" style="width: 155px"><i></i></span>
+                    <span class="st-section st1" style="width: 85px"><i></i></span>
+                    <span class="st-section st2" style="width: 26px"><i></i></span>
+                    <span class="st-section st3" style="width: 49px"><i></i></span>
+                    <span class="st-section st2" style="width: 147px"><i></i></span>
+                    <span class="st-section st3" style="width: 156px"><i></i></span>
+                    <span class="st-section st1" style="width: 91px"><i></i></span>
+                    <span class="st-section st2" style="width: 152px"><i></i></span>
+                    <span class="st-section st1" style="width: 163px"><i></i></span>
+                    <span class="st-section st3" style="width: 201px"><i></i></span>
+                    <span class="st-section st1" style="width: 326px"><i></i></span>
+                    <span class="st-section st3" style="width: 77px"><i></i></span>
+                    <span class="st-section st2" style="width: 37px"><i></i></span>
+                    <span class="st-section st3" style="width: 240px"><i></i></span>
+                    <span class="st-section st1" style="width: 147px"><i></i></span>
+                    <span class="st-section st2" style="width: 55px"><i></i></span>
+                    <span class="st-section st1" style="width: 12px"><i></i></span>
+                    <span class="st-section st3" style="width: 130px"><i></i></span>
+                    <span class="st-section st2" style="width: 296px"><i></i></span>
+                    <span class="st-section st1" style="width: 62px"><i></i></span>
+                    <span class="st-section st1" style="width: 12px"><i></i></span>
+                    <span class="st-section st3" style="width: 169px"><i></i></span>
+                    <span class="st-section st1" style="width: 194px"><i></i></span>
+                  </div>
+
+                  <div class="st-line bottom">
+                    <span class="st-section st1" style="width: 142px"><i></i></span>
+                    <span class="st-section st2" style="width: 29px"><i></i></span>
+                    <span class="st-section st3" style="width: 13px"><i></i></span>
+                    <span class="st-section st2" style="width: 29px"><i></i></span>
+                    <span class="st-section st1" style="width: 131px"><i></i></span>
+                    <span class="st-section st3" style="width: 13px"><i></i></span>
+                    <span class="st-section st1" style="width: 13px"><i></i></span>
+                    <span class="st-section st2" style="width: 122px"><i></i></span>
+                    <span class="st-section st3" style="width: 22px"><i></i></span>
+                    <span class="st-section st1" style="width: 22px"><i></i></span>
+                    <span class="st-section st2" style="width: 26px"><i></i></span>
+                    <span class="st-section st1" style="width: 13px"><i></i></span>
+                    <span class="st-section st3" style="width: 155px"><i></i></span>
+                    <span class="st-section st1" style="width: 85px"><i></i></span>
+                    <span class="st-section st2" style="width: 26px"><i></i></span>
+                    <span class="st-section st3" style="width: 49px"><i></i></span>
+                    <span class="st-section st2" style="width: 147px"><i></i></span>
+                    <span class="st-section st3" style="width: 156px"><i></i></span>
+                    <span class="st-section st1" style="width: 91px"><i></i></span>
+                    <span class="st-section st2" style="width: 152px"><i></i></span>
+                    <span class="st-section st1" style="width: 163px"><i></i></span>
+                    <span class="st-section st3" style="width: 201px"><i></i></span>
+                    <span class="st-section st1" style="width: 326px"><i></i></span>
+                    <span class="st-section st3" style="width: 77px"><i></i></span>
+                    <span class="st-section st2" style="width: 37px"><i></i></span>
+                    <span class="st-section st3" style="width: 240px"><i></i></span>
+                    <span class="st-section st1" style="width: 147px"><i></i></span>
+                    <span class="st-section st2" style="width: 55px"><i></i></span>
+                    <span class="st-section st1" style="width: 12px"><i></i></span>
+                    <span class="st-section st3" style="width: 130px"><i></i></span>
+                    <span class="st-section st2" style="width: 296px"><i></i></span>
+                    <span class="st-section st1" style="width: 62px"><i></i></span>
+                    <span class="st-section st1" style="width: 12px"><i></i></span>
+                    <span class="st-section st3" style="width: 169px"><i></i></span>
+                    <span class="st-section st1" style="width: 194px"><i></i></span>
+                  </div>
+                </div>
+
+                <a href="#" class="s-ico cctv bottom" style="left: 289px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1729px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2434px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 3111px;"></a>
+                <a href="#" class="s-ico vms bottom" style="left: 2756px;"></a>
+
+                <div class="st-route-wrap">
+                  <ul class="st-route">
+                    <li style="width: calc(100% - 2px)"></li>
+                    <li></li>
+                  </ul>
+                </div>
+
+                <span class="st-label arrow-r">평택</span>
+                <span class="st-label arrow-l">익산</span>  
+
+                <a href="#" class="st-navi prev"></a>
+                <a href="#" class="st-navi next"></a>
+              </div><!-- .st-wrap -->
+              <!-- E: 10. 예산 JCT ~ 예산 추사고택(신암) IC -->
+
+              <!-- S: 11. 예산 예당호휴게소 하이패스 IC ~ 예산 JCT -->
+              <div class="st-wrap" id="st11" style="display: none;">
+                <div class="st-line-wrap" style="z-index: 1;">
+                  <div class="st-line top">
+                    <span class="st-section st1" style="width: 321px"><i></i></span>
+                    <span class="st-section st1" style="width: 235px"><i></i></span>
+                    <span class="st-section st2" style="width: 299px"><i></i></span>
+                    <span class="st-section st3" style="width: 56px"><i></i></span>
+                    <span class="st-section st1" style="width: 125px"><i></i></span>
+                    <span class="st-section st2" style="width: 13px"><i></i></span>
+                    <span class="st-section st3" style="width: 295px"><i></i></span>
+                    <span class="st-section st1" style="width: 36px"><i></i></span>
+                    <span class="st-section st2" style="width: 249px"><i></i></span>
+                    <span class="st-section st3" style="width: 642px"><i></i></span>
+                    <span class="st-section st1" style="width: 895px"><i></i></span>
+                    <span class="st-section st1" style="width: 423px"><i></i></span>
+                  </div>
+
+                  <div class="st-line bottom">
+                    <span class="st-section st1" style="width: 321px"><i></i></span>
+                    <span class="st-section st1" style="width: 235px"><i></i></span>
+                    <span class="st-section st2" style="width: 299px"><i></i></span>
+                    <span class="st-section st3" style="width: 56px"><i></i></span>
+                    <span class="st-section st1" style="width: 125px"><i></i></span>
+                    <span class="st-section st2" style="width: 13px"><i></i></span>
+                    <span class="st-section st3" style="width: 295px"><i></i></span>
+                    <span class="st-section st1" style="width: 36px"><i></i></span>
+                    <span class="st-section st2" style="width: 249px"><i></i></span>
+                    <span class="st-section st3" style="width: 642px"><i></i></span>
+                    <span class="st-section st1" style="width: 895px"><i></i></span>
+                    <span class="st-section st1" style="width: 423px"><i></i></span>
+                  </div>
+                </div>
+
+                <a href="#" class="s-ico cctv bottom" style="left: 2390px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 3286px;"></a>
+                <a href="#" class="s-ico vms bottom" style="left: 1490px;"></a>
+
+                <div class="st-route-wrap">
+                  <ul class="st-route">
+                    <li style="width: calc(100% - 2px)"></li>
+                    <li></li>
+                  </ul>
+                </div>
+
+                <span class="st-label arrow-r">평택</span>
+                <span class="st-label arrow-l">익산</span>  
+
+                <a href="#" class="st-navi prev"></a>
+                <a href="#" class="st-navi next"></a>
+              </div><!-- .st-wrap -->
+              <!-- E: 11. 예산 예당호휴게소 하이패스 IC ~ 예산 JCT -->
+
+              <!-- S: 12. 봉수산터널 ~ 예산 예당호휴게소 하이패스 IC -->
+              <div class="st-wrap" id="st12" style="display: none;">
+                <a href="#" class="s-ico call top" style="left: 126px;"></a>
+                <a href="#" class="s-ico call top" style="left: 220px;"></a>
+                <a href="#" class="s-ico call top" style="left: 327px;"></a>
+                <a href="#" class="s-ico call top" style="left: 418px;"></a>
+                <a href="#" class="s-ico call top" style="left: 507px;"></a>
+                <a href="#" class="s-ico call top" style="left: 584px;"></a>
+                <a href="#" class="s-ico call top" style="left: 747px;"></a>
+                <a href="#" class="s-ico call top" style="left: 904px;"></a>
+                <a href="#" class="s-ico call top" style="left: 1059px;"></a>
+                <a href="#" class="s-ico call top" style="left: 1194px;"></a>
+                <a href="#" class="s-ico call top" style="left: 1361px;"></a>
+                <a href="#" class="s-ico call top" style="left: 1490px;"></a>
+                <a href="#" class="s-ico call top" style="left: 1710px;"></a>
+                <a href="#" class="s-ico call top" style="left: 1828px;"></a>
+                <a href="#" class="s-ico call top" style="left: 2007px;"></a>
+                <a href="#" class="s-ico call top" style="left: 2153px;"></a>
+                <a href="#" class="s-ico call top" style="left: 2265px;"></a>
+                <a href="#" class="s-ico call top" style="left: 2422px;"></a>
+
+                <a href="#" class="s-ico lcs top" style="left: 212px;"></a>
+                <a href="#" class="s-ico lcs top" style="left: 377px;"></a>
+                <a href="#" class="s-ico lcs top" style="left: 546px;"></a>
+                <a href="#" class="s-ico lcs top" style="left: 719px;"></a>
+                <a href="#" class="s-ico lcs top" style="left: 1004px;"></a>
+                <a href="#" class="s-ico lcs top" style="left: 1211px;"></a>
+                <a href="#" class="s-ico lcs top" style="left: 1446px;"></a>
+                <a href="#" class="s-ico lcs top" style="left: 1682px;"></a>
+                <a href="#" class="s-ico lcs top" style="left: 1979px;"></a>
+                <a href="#" class="s-ico lcs top" style="left: 2177px;"></a>
+                <a href="#" class="s-ico lcs top" style="left: 2417px;"></a>
+                <a href="#" class="s-ico lcs top" style="left: 3170px;"></a>
+
+                <a href="#" class="s-ico cctv top" style="left: 125px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 271px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 382px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 468px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 584px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 730px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 888px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1048px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1194px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1345px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1491px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1710px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1828px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2009px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2161px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2336px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2833px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2935px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 3008px;"></a>
+
+                <div class="st-line-wrap" style="z-index: 1;">
+                  <div class="st-line top">
+                    <span class="st-section st1" style="width: 145px"><i></i></span>
+                    <span class="st-section st1" style="width: 196px"><i></i></span>
+                    <span class="st-section st2" style="width: 225px"><i></i></span>
+                    <span class="st-section st3" style="width: 307px"><i></i></span>
+                    <span class="st-section st1" style="width: 307px"><i></i></span>
+                    <span class="st-section st2" style="width: 316px"><i></i></span>
+                    <span class="st-section st3" style="width: 323px"><i></i></span>
+                    <span class="st-section st1" style="width: 314px"><i></i></span>
+                    <span class="st-section st2" style="width: 172px"><i></i></span>
+                    <span class="st-section st3" style="width: 365px"><i></i></span>
+                    <span class="st-section st1" style="width: 243px"><i></i></span>
+                    <span class="st-section st2" style="width: 164px"><i></i></span>
+                    <span class="st-section st1" style="width: 223px"><i></i></span>
+                    <span class="st-section st2" style="width: 16px"><i></i></span>
+                    <span class="st-section st1" style="width: 261px"><i></i></span>
+                  </div>
+
+                  <div class="st-line bottom">
+                    <span class="st-section st1" style="width: 145px"><i></i></span>
+                    <span class="st-section st1" style="width: 196px"><i></i></span>
+                    <span class="st-section st2" style="width: 225px"><i></i></span>
+                    <span class="st-section st3" style="width: 307px"><i></i></span>
+                    <span class="st-section st1" style="width: 307px"><i></i></span>
+                    <span class="st-section st2" style="width: 316px"><i></i></span>
+                    <span class="st-section st3" style="width: 323px"><i></i></span>
+                    <span class="st-section st1" style="width: 314px"><i></i></span>
+                    <span class="st-section st2" style="width: 172px"><i></i></span>
+                    <span class="st-section st3" style="width: 365px"><i></i></span>
+                    <span class="st-section st1" style="width: 243px"><i></i></span>
+                    <span class="st-section st2" style="width: 164px"><i></i></span>
+                    <span class="st-section st1" style="width: 223px"><i></i></span>
+                    <span class="st-section st2" style="width: 16px"><i></i></span>
+                    <span class="st-section st1" style="width: 261px"><i></i></span>
+                  </div>
+                </div>
+
+                <a href="#" class="s-ico cctv bottom" style="left: 125px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 271px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 382px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 468px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 584px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 730px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 888px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1048px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1194px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1345px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1491px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1710px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1828px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2009px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2161px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2336px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2788px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2869px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2939px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 3424px;"></a>
+
+                <a href="#" class="s-ico lcs bottom" style="left: 125px;"></a>
+                <a href="#" class="s-ico lcs bottom" style="left: 271px;"></a>
+                <a href="#" class="s-ico lcs bottom" style="left: 467px;"></a>
+                <a href="#" class="s-ico lcs bottom" style="left: 579px;"></a>
+                <a href="#" class="s-ico lcs bottom" style="left: 781px;"></a>
+                <a href="#" class="s-ico lcs bottom" style="left: 1057px;"></a>
+                <a href="#" class="s-ico lcs bottom" style="left: 1120px;"></a>
+                <a href="#" class="s-ico lcs bottom" style="left: 1337px;"></a>
+                <a href="#" class="s-ico lcs bottom" style="left: 1484px;"></a>
+                <a href="#" class="s-ico lcs bottom" style="left: 1764px;"></a>
+                <a href="#" class="s-ico lcs bottom" style="left: 2025px;"></a>
+                <a href="#" class="s-ico lcs bottom" style="left: 2330px;"></a>
+
+                <a href="#" class="s-ico call bottom" style="left: 126px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 196px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 327px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 418px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 507px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 584px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 747px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 904px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 1059px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 1194px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 1361px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 1490px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 1710px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 1828px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 2007px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 2153px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 2265px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 2422px;"></a>
+
+                <div class="st-route-wrap"> 
+                  <ul class="st-route">
+                    <li style="width: calc(100% - 2px)"></li>
+                    <li></li>
+                  </ul>
+                </div>
+
+                <span class="st-label arrow-r">평택</span>
+                <span class="st-label arrow-l">익산</span>  
+
+                <a href="#" class="st-navi prev"></a>
+                <a href="#" class="st-navi next"></a>
+              </div><!-- .st-wrap -->
+              <!-- E: 12. 봉수산터널 ~ 예산 예당호휴게소 하이패스 IC -->
+
+              <!-- S: 13. 청양 IC ~ 봉수산터널 -->
+              <div class="st-wrap" id="st13" style="display: none;">
+
+                <a href="#" class="s-ico vms top" style="left: 911px;"></a>
+                <a href="#" class="s-ico vms top" style="left: 3594px;"></a>
+
+                <a href="#" class="s-ico cctv top" style="left: 178px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 601px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 730px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1073px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1273px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1818px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2647px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 3082px;"></a>
+
+                <div class="st-line-wrap" style="z-index: 1;">
+                  <div class="st-line top">
+                    <span class="st-section st1" style="width: 52px"><i></i></span>
+                    <span class="st-section st1" style="width: 53px"><i></i></span>
+                    <span class="st-section st2" style="width: 16px"><i></i></span>
+                    <span class="st-section st1" style="width: 61px"><i></i></span>
+                    <span class="st-section st2" style="width: 67px"><i></i></span>
+                    <span class="st-section st3" style="width: 83px"><i></i></span>
+                    <span class="st-section st2" style="width: 16px"><i></i></span>
+                    <span class="st-section st1" style="width: 96px"><i></i></span>
+                    <span class="st-section st3" style="width: 66px"><i></i></span>
+                    <span class="st-section st1" style="width: 54px"><i></i></span>
+                    <span class="st-section st3" style="width: 46px"><i></i></span>
+                    <span class="st-section st2" style="width: 87px"><i></i></span>
+                    <span class="st-section st3" style="width: 16px"><i></i></span>
+                    <span class="st-section st1" style="width: 48px"><i></i></span>
+                    <span class="st-section st3" style="width: 16px"><i></i></span>
+                    <span class="st-section st2" style="width: 16px"><i></i></span>
+                    <span class="st-section st1" style="width: 57px"><i></i></span>
+                    <span class="st-section st2" style="width: 48px"><i></i></span>
+                    <span class="st-section st1" style="width: 47px"><i></i></span>
+                    <span class="st-section st3" style="width: 46px"><i></i></span>
+                    <span class="st-section st1" style="width: 113px"><i></i></span>
+                    <span class="st-section st3" style="width: 38px"><i></i></span>
+                    <span class="st-section st1" style="width: 91px"><i></i></span>
+                    <span class="st-section st2" style="width: 16px"><i></i></span>
+                    <span class="st-section st3" style="width: 99px"><i></i></span>
+                    <span class="st-section st2" style="width: 89px"><i></i></span>
+                    <span class="st-section st3" style="width: 16px"><i></i></span>
+                    <span class="st-section st2" style="width: 55px"><i></i></span>
+                    <span class="st-section st3" style="width: 55px"><i></i></span>
+                    <span class="st-section st1" style="width: 18px"><i></i></span>
+                    <span class="st-section st2" style="width: 59px"><i></i></span>
+                    <span class="st-section st1" style="width: 18px"><i></i></span>
+                    <span class="st-section st3" style="width: 18px"><i></i></span>
+                    <span class="st-section st2" style="width: 57px"><i></i></span>
+                    <span class="st-section st3" style="width: 18px"><i></i></span>
+                    <span class="st-section st1" style="width: 76px"><i></i></span>
+                    <span class="st-section st3" style="width: 131px"><i></i></span>
+                    <span class="st-section st1" style="width: 23px"><i></i></span>
+                    <span class="st-section st3" style="width: 39px"><i></i></span>
+                    <span class="st-section st2" style="width: 18px"><i></i></span>
+                    <span class="st-section st1" style="width: 65px"><i></i></span>
+                    <span class="st-section st2" style="width: 10px"><i></i></span>
+                    <span class="st-section st1" style="width: 95px"><i></i></span>
+                    <span class="st-section st2" style="width: 95px"><i></i></span>
+                    <span class="st-section st1" style="width: 95px"><i></i></span>
+                    <span class="st-section st2" style="width: 95px"><i></i></span>
+                    <span class="st-section st1" style="width: 80px"><i></i></span>
+                    <span class="st-section st2" style="width: 42px"><i></i></span>
+                    <span class="st-section st1" style="width: 42px"><i></i></span>
+                    <span class="st-section st2" style="width: 10px"><i></i></span>
+                    <span class="st-section st1" style="width: 82px"><i></i></span>
+                    <span class="st-section st2" style="width: 41px"><i></i></span>
+                    <span class="st-section st3" style="width: 10px"><i></i></span>
+                    <span class="st-section st1" style="width: 240px"><i></i></span>
+                    <span class="st-section st3" style="width: 193px"><i></i></span>
+                    <span class="st-section st2" style="width: 10px"><i></i></span>
+                    <span class="st-section st3" style="width: 68px"><i></i></span>
+                    <span class="st-section st1" style="width: 101px"><i></i></span>
+                    <span class="st-section st3" style="width: 34px"><i></i></span>
+                    <span class="st-section st2" style="width: 10px"><i></i></span>
+                    <span class="st-section st2" style="width: 10px"><i></i></span>
+                    <span class="st-section st1" style="width: 123px"><i></i></span>
+                  </div>
+
+                  <div class="st-line bottom">
+                    <span class="st-section st1" style="width: 52px"><i></i></span>
+                    <span class="st-section st1" style="width: 53px"><i></i></span>
+                    <span class="st-section st2" style="width: 16px"><i></i></span>
+                    <span class="st-section st1" style="width: 61px"><i></i></span>
+                    <span class="st-section st2" style="width: 67px"><i></i></span>
+                    <span class="st-section st3" style="width: 83px"><i></i></span>
+                    <span class="st-section st2" style="width: 16px"><i></i></span>
+                    <span class="st-section st1" style="width: 96px"><i></i></span>
+                    <span class="st-section st3" style="width: 66px"><i></i></span>
+                    <span class="st-section st1" style="width: 54px"><i></i></span>
+                    <span class="st-section st3" style="width: 46px"><i></i></span>
+                    <span class="st-section st2" style="width: 87px"><i></i></span>
+                    <span class="st-section st3" style="width: 16px"><i></i></span>
+                    <span class="st-section st1" style="width: 48px"><i></i></span>
+                    <span class="st-section st3" style="width: 16px"><i></i></span>
+                    <span class="st-section st2" style="width: 16px"><i></i></span>
+                    <span class="st-section st1" style="width: 57px"><i></i></span>
+                    <span class="st-section st2" style="width: 48px"><i></i></span>
+                    <span class="st-section st1" style="width: 47px"><i></i></span>
+                    <span class="st-section st3" style="width: 46px"><i></i></span>
+                    <span class="st-section st1" style="width: 113px"><i></i></span>
+                    <span class="st-section st3" style="width: 38px"><i></i></span>
+                    <span class="st-section st1" style="width: 91px"><i></i></span>
+                    <span class="st-section st2" style="width: 16px"><i></i></span>
+                    <span class="st-section st3" style="width: 99px"><i></i></span>
+                    <span class="st-section st2" style="width: 89px"><i></i></span>
+                    <span class="st-section st3" style="width: 16px"><i></i></span>
+                    <span class="st-section st2" style="width: 55px"><i></i></span>
+                    <span class="st-section st3" style="width: 55px"><i></i></span>
+                    <span class="st-section st1" style="width: 18px"><i></i></span>
+                    <span class="st-section st2" style="width: 59px"><i></i></span>
+                    <span class="st-section st1" style="width: 18px"><i></i></span>
+                    <span class="st-section st3" style="width: 18px"><i></i></span>
+                    <span class="st-section st2" style="width: 57px"><i></i></span>
+                    <span class="st-section st3" style="width: 18px"><i></i></span>
+                    <span class="st-section st1" style="width: 76px"><i></i></span>
+                    <span class="st-section st3" style="width: 131px"><i></i></span>
+                    <span class="st-section st1" style="width: 23px"><i></i></span>
+                    <span class="st-section st3" style="width: 39px"><i></i></span>
+                    <span class="st-section st2" style="width: 18px"><i></i></span>
+                    <span class="st-section st1" style="width: 65px"><i></i></span>
+                    <span class="st-section st2" style="width: 10px"><i></i></span>
+                    <span class="st-section st1" style="width: 95px"><i></i></span>
+                    <span class="st-section st2" style="width: 95px"><i></i></span>
+                    <span class="st-section st1" style="width: 95px"><i></i></span>
+                    <span class="st-section st2" style="width: 95px"><i></i></span>
+                    <span class="st-section st1" style="width: 80px"><i></i></span>
+                    <span class="st-section st2" style="width: 42px"><i></i></span>
+                    <span class="st-section st1" style="width: 42px"><i></i></span>
+                    <span class="st-section st2" style="width: 10px"><i></i></span>
+                    <span class="st-section st1" style="width: 82px"><i></i></span>
+                    <span class="st-section st2" style="width: 41px"><i></i></span>
+                    <span class="st-section st3" style="width: 10px"><i></i></span>
+                    <span class="st-section st1" style="width: 240px"><i></i></span>
+                    <span class="st-section st3" style="width: 193px"><i></i></span>
+                    <span class="st-section st2" style="width: 10px"><i></i></span>
+                    <span class="st-section st3" style="width: 68px"><i></i></span>
+                    <span class="st-section st1" style="width: 101px"><i></i></span>
+                    <span class="st-section st3" style="width: 34px"><i></i></span>
+                    <span class="st-section st2" style="width: 10px"><i></i></span>
+                    <span class="st-section st2" style="width: 10px"><i></i></span>
+                    <span class="st-section st1" style="width: 123px"><i></i></span>
+                  </div>
+                </div>
+
+                <a href="#" class="s-ico cctv bottom" style="left: 577px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 683px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 918px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1233px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1397px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2279px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="right: 194px;"></a>
+
+                <a href="#" class="s-ico vms bottom" style="left: 2450px;"></a>
+                <a href="#" class="s-ico vms bottom" style="right: 223px;"></a>
+
+                <div class="st-route-wrap">
+                  <ul class="st-route">
+                    <li style="width: calc(100% - 2px)"></li>
+                    <li></li>
+                  </ul>
+                </div>
+
+                <span class="st-label arrow-r">평택</span>
+                <span class="st-label arrow-l">익산</span>  
+
+                <a href="#" class="st-navi prev"></a>
+                <a href="#" class="st-navi next"></a>
+              </div><!-- .st-wrap -->
+              <!-- E: 13. 청양 IC ~ 봉수산터널 -->
+
+              <!-- S: 14. 은산3터널 ~ 청양 IC -->
+              <div class="st-wrap" id="st14" style="display: none;">
+                <a href="#" class="s-ico call top" style="left: 789px;"></a>
+                <a href="#" class="s-ico call top" style="left: 904px;"></a>
+                <a href="#" class="s-ico call top" style="left: 963px;"></a>
+
+                <a href="#" class="s-ico lcs top" style="left: 1016px;"></a>
+                <a href="#" class="s-ico vms top" style="left: 1639px;"></a>
+
+                <a href="#" class="s-ico cctv top" style="left: 126px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 468px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 770px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 905px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1018px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2119px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2528px;"></a>
+
+                <div class="st-line-wrap" style="z-index: 1;">
+                  <div class="st-line top">
+                    <span class="st-section st1" style="width: 272px"><i></i></span>
+                    <span class="st-section st1" style="width: 47px"><i></i></span>
+                    <span class="st-section st2" style="width: 30px"><i></i></span>
+                    <span class="st-section st3" style="width: 14px"><i></i></span>
+                    <span class="st-section st2" style="width: 43px"><i></i></span>
+                    <span class="st-section st1" style="width: 224px"><i></i></span>
+                    <span class="st-section st2" style="width: 272px"><i></i></span>
+                    <span class="st-section st3" style="width: 14px"><i></i></span>
+                    <span class="st-section st2" style="width: 52px"><i></i></span>
+                    <span class="st-section st1" style="width: 61px"><i></i></span>
+                    <span class="st-section st3" style="width: 14px"><i></i></span>
+                    <span class="st-section st1" style="width: 276px"><i></i></span>
+                    <span class="st-section st2" style="width: 205px"><i></i></span>
+                    <span class="st-section st3" style="width: 35px"><i></i></span>
+                    <span class="st-section st1" style="width: 14px"><i></i></span>
+                    <span class="st-section st2" style="width: 214px"><i></i></span>
+                    <span class="st-section st1" style="width: 14px"><i></i></span>
+                    <span class="st-section st2" style="width: 108px"><i></i></span>
+                    <span class="st-section st1" style="width: 83px"><i></i></span>
+                    <span class="st-section st2" style="width: 108px"><i></i></span>
+                    <span class="st-section st3" style="width: 16px"><i></i></span>
+                    <span class="st-section st1" style="width: 131px"><i></i></span>
+                    <span class="st-section st3" style="width: 16px"><i></i></span>
+                    <span class="st-section st1" style="width: 132px"><i></i></span>
+                    <span class="st-section st2" style="width: 190px"><i></i></span>
+                    <span class="st-section st1" style="width: 190px"><i></i></span>
+                    <span class="st-section st2" style="width: 43px"><i></i></span>
+                    <span class="st-section st3" style="width: 16px"><i></i></span>
+                    <span class="st-section st1" style="width: 158px"><i></i></span>
+                    <span class="st-section st3" style="width: 16px"><i></i></span>
+                    <span class="st-section st1" style="width: 379px"><i></i></span>
+                    <span class="st-section st2" style="width: 93px"><i></i></span>
+                    <span class="st-section st3" style="width: 16px"><i></i></span>
+                    <span class="st-section st2" style="width: 93px"><i></i></span>
+                  </div>
+
+                  <div class="st-line bottom">
+                    <span class="st-section st1" style="width: 272px"><i></i></span>
+                    <span class="st-section st1" style="width: 47px"><i></i></span>
+                    <span class="st-section st2" style="width: 30px"><i></i></span>
+                    <span class="st-section st3" style="width: 14px"><i></i></span>
+                    <span class="st-section st2" style="width: 43px"><i></i></span>
+                    <span class="st-section st1" style="width: 224px"><i></i></span>
+                    <span class="st-section st2" style="width: 272px"><i></i></span>
+                    <span class="st-section st3" style="width: 14px"><i></i></span>
+                    <span class="st-section st2" style="width: 52px"><i></i></span>
+                    <span class="st-section st1" style="width: 61px"><i></i></span>
+                    <span class="st-section st3" style="width: 14px"><i></i></span>
+                    <span class="st-section st1" style="width: 276px"><i></i></span>
+                    <span class="st-section st2" style="width: 205px"><i></i></span>
+                    <span class="st-section st3" style="width: 35px"><i></i></span>
+                    <span class="st-section st1" style="width: 14px"><i></i></span>
+                    <span class="st-section st2" style="width: 214px"><i></i></span>
+                    <span class="st-section st1" style="width: 14px"><i></i></span>
+                    <span class="st-section st2" style="width: 108px"><i></i></span>
+                    <span class="st-section st1" style="width: 83px"><i></i></span>
+                    <span class="st-section st2" style="width: 108px"><i></i></span>
+                    <span class="st-section st3" style="width: 16px"><i></i></span>
+                    <span class="st-section st1" style="width: 131px"><i></i></span>
+                    <span class="st-section st3" style="width: 16px"><i></i></span>
+                    <span class="st-section st1" style="width: 132px"><i></i></span>
+                    <span class="st-section st2" style="width: 190px"><i></i></span>
+                    <span class="st-section st1" style="width: 190px"><i></i></span>
+                    <span class="st-section st2" style="width: 43px"><i></i></span>
+                    <span class="st-section st3" style="width: 16px"><i></i></span>
+                    <span class="st-section st1" style="width: 158px"><i></i></span>
+                    <span class="st-section st3" style="width: 16px"><i></i></span>
+                    <span class="st-section st1" style="width: 379px"><i></i></span>
+                    <span class="st-section st2" style="width: 93px"><i></i></span>
+                    <span class="st-section st3" style="width: 16px"><i></i></span>
+                    <span class="st-section st2" style="width: 93px"><i></i></span>
+                  </div>
+                </div>
+
+                <a href="#" class="s-ico cctv bottom" style="left: 730px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 888px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1214px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1889px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2035px;"></a>
+
+                <a href="#" class="s-ico vms bottom" style="left: 2522px;"></a>
+                <a href="#" class="s-ico lcs bottom" style="left: 619px;"></a>
+
+                <a href="#" class="s-ico call bottom" style="left: 789px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 904px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 963px;"></a>
+
+                <div class="st-route-wrap">
+                  <ul class="st-route">
+                    <li style="width: calc(100% - 2px)"></li>
+                    <li></li>
+                  </ul>
+                </div>
+
+                <span class="st-label arrow-r">평택</span>
+                <span class="st-label arrow-l">익산</span>  
+
+                <a href="#" class="st-navi prev"></a>
+                <a href="#" class="st-navi next"></a>
+              </div><!-- .st-wrap -->
+              <!-- E: 14. 은산3터널 ~ 청양 IC -->
+
+              <!-- S: 15. 부여 JCT ~ 은산3터널 -->
+              <div class="st-wrap" id="st15" style="display: none;">
+                <a href="#" class="s-ico call top" style="left: 1724px;"></a>
+                <a href="#" class="s-ico call top" style="left: 1763px;"></a>
+                <a href="#" class="s-ico call top" style="left: 1803px;"></a>
+
+                <a href="#" class="s-ico lcs top" style="left: 1756px;"></a>
+                <a href="#" class="s-ico lcs top" style="left: 1979px;"></a>
+                <a href="#" class="s-ico vms top" style="left: 1382px;"></a>
+
+                <a href="#" class="s-ico cctv top" style="left: 228px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1724px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1803px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1919px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2867px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 2975px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 3314px;"></a>
+
+                <div class="st-line-wrap" style="z-index: 1;">
+                  <div class="st-line top">
+                    <span class="st-section st1" style="width: 135px"><i></i></span>
+                    <span class="st-section st1" style="width: 70px"><i></i></span>
+                    <span class="st-section st2" style="width: 136px"><i></i></span>
+                    <span class="st-section st3" style="width: 67px"><i></i></span>
+                    <span class="st-section st2" style="width: 21px"><i></i></span>
+                    <span class="st-section st1" style="width: 157px"><i></i></span>
+                    <span class="st-section st2" style="width: 140px"><i></i></span>
+                    <span class="st-section st3" style="width: 129px"><i></i></span>
+                    <span class="st-section st1" style="width: 263px"><i></i></span>
+                    <span class="st-section st3" style="width: 69px"><i></i></span>
+                    <span class="st-section st1" style="width: 82px"><i></i></span>
+                    <span class="st-section st2" style="width: 194px"><i></i></span>
+                    <span class="st-section st3" style="width: 35px"><i></i></span>
+                    <span class="st-section st1" style="width: 59px"><i></i></span>
+                    <span class="st-section st2" style="width: 214px"><i></i></span>
+                    <span class="st-section st1" style="width: 184px"><i></i></span>
+                    <span class="st-section st2" style="width: 281px"><i></i></span>
+                    <span class="st-section st3" style="width: 34px"><i></i></span>
+                    <span class="st-section st1" style="width: 91px"><i></i></span>
+                    <span class="st-section st3" style="width: 55px"><i></i></span>
+                    <span class="st-section st1" style="width: 64px"><i></i></span>
+                    <span class="st-section st2" style="width: 63px"><i></i></span>
+                    <span class="st-section st3" style="width: 26px"><i></i></span>
+                    <span class="st-section st1" style="width: 149px"><i></i></span>
+                    <span class="st-section st2" style="width: 139px"><i></i></span>
+                    <span class="st-section st1" style="width: 71px"><i></i></span>
+                    <span class="st-section st3" style="width: 137px"><i></i></span>
+                    <span class="st-section st1" style="width: 129px"><i></i></span>
+                    <span class="st-section st2" style="width: 179px"><i></i></span>
+                    <span class="st-section st3" style="width: 168px"><i></i></span>
+                    <span class="st-section st2" style="width: 120px"><i></i></span>
+                  </div>
+
+                  <div class="st-line bottom">
+                    <span class="st-section st1" style="width: 135px"><i></i></span>
+                    <span class="st-section st1" style="width: 70px"><i></i></span>
+                    <span class="st-section st2" style="width: 136px"><i></i></span>
+                    <span class="st-section st3" style="width: 67px"><i></i></span>
+                    <span class="st-section st2" style="width: 21px"><i></i></span>
+                    <span class="st-section st1" style="width: 157px"><i></i></span>
+                    <span class="st-section st2" style="width: 140px"><i></i></span>
+                    <span class="st-section st3" style="width: 129px"><i></i></span>
+                    <span class="st-section st1" style="width: 263px"><i></i></span>
+                    <span class="st-section st3" style="width: 69px"><i></i></span>
+                    <span class="st-section st1" style="width: 82px"><i></i></span>
+                    <span class="st-section st2" style="width: 194px"><i></i></span>
+                    <span class="st-section st3" style="width: 35px"><i></i></span>
+                    <span class="st-section st1" style="width: 59px"><i></i></span>
+                    <span class="st-section st2" style="width: 214px"><i></i></span>
+                    <span class="st-section st1" style="width: 184px"><i></i></span>
+                    <span class="st-section st2" style="width: 281px"><i></i></span>
+                    <span class="st-section st3" style="width: 34px"><i></i></span>
+                    <span class="st-section st1" style="width: 91px"><i></i></span>
+                    <span class="st-section st3" style="width: 55px"><i></i></span>
+                    <span class="st-section st1" style="width: 64px"><i></i></span>
+                    <span class="st-section st2" style="width: 63px"><i></i></span>
+                    <span class="st-section st3" style="width: 26px"><i></i></span>
+                    <span class="st-section st1" style="width: 149px"><i></i></span>
+                    <span class="st-section st2" style="width: 139px"><i></i></span>
+                    <span class="st-section st1" style="width: 71px"><i></i></span>
+                    <span class="st-section st3" style="width: 137px"><i></i></span>
+                    <span class="st-section st1" style="width: 129px"><i></i></span>
+                    <span class="st-section st2" style="width: 179px"><i></i></span>
+                    <span class="st-section st3" style="width: 168px"><i></i></span>
+                    <span class="st-section st2" style="width: 120px"><i></i></span>
+                  </div>
+                </div>
+
+                <a href="#" class="s-ico cctv bottom" style="left: 1162px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1432px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1724px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 1803px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2080px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2716px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 2867px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 3200px;"></a>
+                <a href="#" class="s-ico cctv bottom" style="left: 3511px;"></a>
+
+                <a href="#" class="s-ico vms bottom" style="left: 2073px;"></a>
+
+                <a href="#" class="s-ico lcs bottom" style="left: 1652px;"></a>
+                <a href="#" class="s-ico lcs bottom" style="left: 1756px;"></a>
+
+                <a href="#" class="s-ico call bottom" style="left: 1724px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 1763px;"></a>
+                <a href="#" class="s-ico call bottom" style="left: 1803px;"></a>
+
+                <div class="st-route-wrap">
+                  <ul class="st-route">
+                    <li style="width: calc(100% - 2px)"></li>
+                    <li></li>
+                  </ul>
+                </div>
+
+                <span class="st-label arrow-r">평택</span>
+                <span class="st-label arrow-l">익산</span>  
+
+                <a href="#" class="st-navi prev"></a>
+                <a href="#" class="st-navi next"></a>
+              </div><!-- .st-wrap -->
+              <!-- E: 15. 부여 JCT ~ 은산3터널 -->
+
+              <!-- S: 16. 부여 IC ~ 부여 JCT -->
+              <div class="st-wrap" id="st16" style="display: none;">
+                <a href="#" class="s-ico vms top" style="left: 2572px;"></a>
+                <a href="#" class="s-ico cctv top" style="left: 1717px;"></a>
+
+                <div class="st-line-wrap" style="z-index: 1;">
+                  <div class="st-line top">
+                    <span class="st-section st1" style="width: 129px"><i></i></span>
+                    <span class="st-section st2" style="width: 42px"><i></i></span>
+                    <span class="st-section st3" style="width: 42px"><i></i></span>
+                    <span class="st-section st1" style="width: 143px"><i></i></span>
+                    <span class="st-section st2" style="width: 245px"><i></i></span>
+                    <span class="st-section st3" style="width: 60px"><i></i></span>
+                    <span class="st-section st1" style="width: 267px"><i></i></span>
+                    <span class="st-section st2" style="width: 36px"><i></i></span>
+                    <span class="st-section st1" style="width: 635px"><i></i></span>
+                    <span class="st-section st2" style="width: 435px"><i></i></span>
+                    <span class="st-section st3" style="width: 425px"><i></i></span>
+                    <span class="st-section st1" style="width: 320px"><i></i></span>
+                    <span class="st-section st2" style="width: 49px"><i></i></span>
+                    <span class="st-section st1" style="width: 376px"><i></i></span>
+                    <span class="st-section st3" style="width: 201px"><i></i></span>
+                    <span class="st-section st1" style="width: 184px"><i></i></span>
+                  </div>
+
+                  <div class="st-line bottom">
+                    <span class="st-section st1" style="width: 129px"><i></i></span>
+                    <span class="st-section st2" style="width: 42px"><i></i></span>
+                    <span class="st-section st3" style="width: 42px"><i></i></span>
+                    <span class="st-section st1" style="width: 143px"><i></i></span>
+                    <span class="st-section st2" style="width: 245px"><i></i></span>
+                    <span class="st-section st3" style="width: 60px"><i></i></span>
+                    <span class="st-section st1" style="width: 267px"><i></i></span>
+                    <span class="st-section st2" style="width: 36px"><i></i></span>
+                    <span class="st-section st1" style="width: 635px"><i></i></span>
+                    <span class="st-section st2" style="width: 435px"><i></i></span>
+                    <span class="st-section st3" style="width: 425px"><i></i></span>
+                    <span class="st-section st1" style="width: 320px"><i></i></span>
+                    <span class="st-section st2" style="width: 49px"><i></i></span>
+                    <span class="st-section st1" style="width: 376px"><i></i></span>
+                    <span class="st-section st3" style="width: 201px"><i></i></span>
+                    <span class="st-section st1" style="width: 184px"><i></i></span>
+                  </div>
+                </div>
+
+                <!-- <a href="#" class="s-ico cctv bottom" style="left: 1162px;"></a> -->
+
+                <div class="st-route-wrap">
+                  <ul class="st-route">
+                    <li style="width: calc(100% - 2px)"></li>
+                    <li></li>
+                  </ul>
+                </div>
+
+                <span class="st-label arrow-r">평택</span>
+                <span class="st-label arrow-l">익산</span>  
+
+                <a href="#" class="st-navi prev"></a>
+                <a href="#" class="st-navi next"></a>
+              </div><!-- .st-wrap -->
+              <!-- E: 16. 부여 IC ~ 부여 JCT -->
+            </dd><!-- .type-map -->
+          </dl>
+        </li>
+      </ul>
+    </div><!-- .d-status-wrap -->
+  </div><!-- #dashboard-wrap -->
+
+  <div class="popup-wrap z-anim mfp-hide" id="popup-notice" style="max-width: 1000px;">
+    <div class="tit-wrap">
+      <img src="img/d/wih-logo-bic.png" alt="">
+    </div>
+    <div class="con-wrap">
+      모든 돌발상황이 종료되었습니다. <br /><strong>3초 후 평시모드 화면</strong>으로 이동합니다.
+    </div>
+  </div>
+
+  <script>
+    $('.btn-switch').on('click', function(e){
+      e.preventDefault();
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+      } else {
+        $(this).removeClass('on');
+      }
+    });
+
+    $('.d-status-wrap .type-map .s-ico').filter('.cctv, .call, .vms, .lcs').on('click', function(e){
+      e.preventDefault();
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+      } else {
+        $(this).removeClass('on');
+      }
+    });
+
+    // $('.st-route-wrap').each(function(){
+    //   var cloneRoute = $(this).clone();
+    //   $(this).addClass('origin');
+    //   cloneRoute.addClass('trick');
+    //   $(this).closest('.st-wrap').append(cloneRoute);
+    // });
+    // $('.d-status-wrap .type-map .st-route-wrap.trick').each(function(){
+    //   $(this).find('.st-route li').on('mouseenter', function(){
+    //     var index = $(this).index();
+    //     $(this).closest('.st-wrap').find('.st-route-wrap.origin .st-route li').eq(index).addClass('on');
+    //   }).on('mouseleave', function(){
+    //     var index = $(this).index();
+    //     $(this).closest('.st-wrap').find('.st-route-wrap.origin .st-route li').eq(index).removeClass('on');
+    //   })
+    // });
+    $('.d-status-wrap .type-map .st-route-wrap').each(function(){
+      $(this).find('.st-route li').on('mouseenter', function(){
+        $(this).siblings().removeClass('on');
+        $(this).addClass('on');
+      });
+    });
+    $('.d-status-wrap .type-map .st-wrap').on('mouseleave', function(){
+      $('.st-route li.on').removeClass('on');
+    });
+
+    new Swiper(".vms-swiper", {
+      loop: true,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+    });
+
+    $('.d-item-wrap .detail-wrap .btn-close').on('click', function(e){
+      e.preventDefault();
+      $(this).closest('.detail-wrap').hide();
+    });
+
+    var qpopup = $.urlParam('popup');
+    var qsample = $.urlParam('sample');
+    if (!qsample) {
+      $('.d-item-wrap > .s1').show();
+    }
+    if (qpopup || qsample) {
+      setTimeout(() => {
+        if (qsample == 'detail') {
+          $('.d-item-wrap > .s1').show();
+          $('.d-item-wrap .detail-wrap#detail1').show();
+        }
+        if (qpopup == 'cctv') {
+          $('.accident-wrap.freezing').show();
+          $('.d-item-wrap .detail-wrap#detail1').show();
+          $('.d-item-wrap .detail-wrap#detail2').show();
+        } else if (qpopup == 'notice') {
+          $('.d-item-wrap > .s1').show();
+          $.magnificPopup.open(getOptionsAnim2('#popup-notice', false));
+        }
+      }, 250);
+    }
+  </script>
+</body>
+</html>

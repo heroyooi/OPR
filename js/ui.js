@@ -507,6 +507,23 @@ function getOptionsAnim(id) {
   };
 }
 
+function getOptionsAnim2(id) {
+  return {
+    items: {
+      src: id,
+      type: 'inline',
+    },
+    fixedContentPos: true,
+    fixedBgPos: true,
+    overflowY: 'auto',
+    closeBtnInside: true,
+    preloader: false,
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'mfp-zin'
+  };
+}
+
 // selectbox
 function customSbox() {
   var x, selElmnt, a, b, c, i, j;

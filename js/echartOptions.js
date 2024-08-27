@@ -1325,6 +1325,7 @@ var options = {
               }
         ]
     },
+    
     bar: {
         color: ['#00bbfe', '#0bbe35'],
         title: {
@@ -1436,6 +1437,507 @@ var options = {
                 },
                 data: [80, 50, 20, 60, 80, 50, 20, 60, 20]
             },
+        ]
+    },
+
+    d_bar: {
+        color: ['#1ac2ff', '#00be9c'],
+        title: {
+            text: '{highlight|인주JCT - 예산IC} 구간',
+            textStyle: {
+                fontSize: 19,
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+                rich: {
+                    highlight: {
+                        fontSize: 19,
+                        fontFamily: 'Pretendard',
+                        color: '#ffffff', // 색상 변경
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            left: 'center'
+        },
+        tooltip: {
+            trigger: 'axis',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            textStyle: {
+                color: '#fff',
+                fontFamily: 'Pretendard',
+                fontSize: 17,
+                fontWeight: '600'
+            },
+            borderWidth: 0,
+        },
+        legend: {
+            data: ['전일', '금일'],
+            textStyle: {
+                fontSize: 17,
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+            },
+            bottom: '0%',
+        },
+        grid: {
+            left: '3%',
+            right: '10%',
+            bottom: '8%',
+            containLabel: true,
+            top: '20%',
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: true,
+            data: ['00', '04', '08', '12', '16', '20', '24'],
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157'
+                }
+            },
+            axisLabel: {
+                textStyle: {
+                    fontSize: 17,
+                    fontWeight: 600,
+                    fontFamily: 'Pretendard',
+                    color: '#b2bbce'
+                },
+                interval: 0,
+            },
+            axisTick: {
+                show: false
+            },
+            // name: '시간',
+            // nameLocation: 'end',
+            // nameGap: 0,
+            // nameTextStyle: {
+            //     fontSize: 17,
+            //     fontWeight: 600,
+            //     fontFamily: 'Pretendard',
+            //     color: '#b2bbce',
+            //     padding: [0, 30, 0, 0]
+            // }
+        },
+        yAxis: {
+            type: 'value',
+            position: 'left',
+            alignTicks: true,
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157',
+                },
+            },
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157'
+                },
+            },
+            axisLabel: {
+                textStyle: {
+                    fontSize: 17,
+                    fontWeight: 600,
+                    fontFamily: 'Pretendard',
+                    color: '#b2bbce'
+                },
+                formatter: function () { return ''; }  // y축 단위 제거
+            },
+            min: 0,
+            max: 14,
+            interval: 2,
+            // name: '교통량',
+            // nameLocation: 'end',
+            // nameTextStyle: {
+            //     fontSize: 17,
+            //     fontWeight: 600,
+            //     fontFamily: 'Pretendard',
+            //     color: '#b2bbce',
+            //     padding: [0, 0, 0, 30]
+            // },
+        },
+        series: [
+            {
+                name: "전일",
+                type: "line",
+                symbol: 'none',
+                data: [0, 3, 6, 8, 10, 8, 11],
+                smooth: true,
+            },
+            {
+                name: "금일",
+                type: "line",
+                symbol: 'none',
+                data: [4, 5, 6, 4, 5, 8, 10],
+                smooth: true,
+            },
+        ]
+    },
+    d_doughnut: {
+        color: [...colors, '#ef4345'],
+        title: {
+            text: '{highlight|인주JCT - 예산IC} 구간',
+            textStyle: {
+                fontSize: 19,
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+                rich: {
+                    highlight: {
+                        fontSize: 19,
+                        fontFamily: 'Pretendard',
+                        color: '#ffffff',
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            left: 'center'
+        },
+        tooltip: {
+            trigger: 'item',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            textStyle: {
+                color: '#fff',
+                fontFamily: 'Pretendard',
+                fontSize: 12,
+                fontWeight: '600'
+            },
+            borderWidth: 0,
+            formatter: '[원인: {b}] 발생 사고 {c}건'
+        },
+        legend: {
+            itemWidth: 16,
+            itemHeight: 8,
+            data: ['1종', '2종', '3종', '4종', '5종', '6종'],
+            textStyle: {
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+            },
+            right: '0', // 범례를 우측에 위치
+            top: '30%', // 범례의 상단 위치 조정
+            orient: 'vertical', // 범례를 수직으로 배치
+        },
+        series: [
+            {
+                type: 'pie',
+                radius: ['40%', '70%'],
+                avoidLabelOverlap: false,
+                center: ['50%', '60%'],
+                label: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    label: {
+                        show: false,
+                    }
+                },
+                labelLine: {
+                    show: false
+                },
+                data: [
+                    { value: 50, name: '1종' },
+                    { value: 16, name: '2종' },
+                    { value: 16, name: '3종' },
+                    { value: 11, name: '4종' },
+                    { value: 5, name: '5종' },
+                    { value: 2, name: '6종' }
+                ]
+            }
+        ]
+    },
+    d_gauge: {
+        series: [
+            {
+                type: 'gauge',
+                startAngle: 200,
+                endAngle: -20,
+                center: ['53%', '60%'],
+                radius: '105%',
+                min: 0,
+                max: 1,
+                splitNumber: 10,
+                axisLine: {
+                  lineStyle: {
+                    width: 12,
+                    color: [
+                      [0.1, '#ad2ec6'],
+                      [0.3, '#ef4345'],
+                      [0.5, '#fcbb25'],
+                      [0.7, '#0bbe35'],
+                      [0.9, '#1ac2ff'],
+                      [1, '#2f78ff'],
+                    ]
+                  }
+                },
+                pointer: {
+                    icon: 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',
+                    length: '12%',
+                    width: 10,
+                    offsetCenter: [0, '-60%'],
+                    itemStyle: {
+                      color: 'auto'
+                    }
+                },
+                axisTick: {
+                  length: 12,
+                  lineStyle: {
+                    width: 1
+                  }
+                },
+                splitLine: {
+                    show: false,
+                },
+                axisLabel: {
+                  color: '#778298',
+                  fontSize: 17,
+                  fontWeight: 600,
+                  distance: -50,
+                  formatter: function (value) {
+                    // if (value === 1) {
+                    //     return '100';
+                    if (value === 0.9) {
+                        return '90';
+                    // } else if (value === 0.8) {
+                    //     return '80';
+                    } else if (value === 0.7) {
+                        return '70';
+                    // } else if (value === 0.6) {
+                    //     return '60';
+                    } else if (value === 0.5) {
+                        return '50';
+                    // } else if (value === 0.4) {
+                    //     return '40';
+                    } else if (value === 0.3) {
+                        return '30';
+                    // } else if (value === 0.2) {
+                    //     return '20';
+                    } else if (value === 0.1) {
+                        return '10';
+                    // } else if (value === 0) {
+                    //     return '0';
+                    }
+                    return '';
+                  },
+                },
+                title: {
+                    offsetCenter: [0, '70%'],
+                    fontSize: 14,
+                    fontFamily: 'Pretendard',
+                    color: '#778298',
+                },
+                detail: {
+                  fontSize: 51,
+                  fontWeight: 700,
+                  offsetCenter: [0, '0%'],
+                  valueAnimation: true,
+                  formatter: function (value) {
+                    return Math.round(value * 100) + '';
+                  },
+                  color: '#ffffff'
+                },
+                data: [
+                  {
+                    value: 0.72,
+                  }
+                ]
+              }
+        ]
+    },
+    d_bar2: {
+        color: ['#00bbfe', '#0bbe35'],
+        title: {
+            show: false,
+        },
+        tooltip: {
+            trigger: 'axis',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)', // 툴팁 배경색상 설정
+            textStyle: {
+                color: '#fff', // 툴팁 글씨색상 설정
+                fontFamily: 'Pretendard',
+                fontSize: 12,
+                fontWeight: '600'
+            },
+            borderWidth: 0,
+        },
+        legend: {
+            itemWidth: 16, // 아이템 너비
+            itemHeight: 8, // 아이템 높이
+            data: ['익산', '평택'],
+            textStyle: {
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+                fontSize: 19,
+                fontWeight: 600
+            },
+            top: '0%', // 범례를 제목 아래로
+            right: '5%',
+        },
+        grid: {
+            left: '0%',
+            right: '0%',
+            bottom: '0%',
+            containLabel: true,
+            top: '20%', // 그래프 영역을 아래로 이동
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: true,
+            data: ['익산', '평택', '익산', '평택', '익산', '평택', '익산', '평택'],
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157'
+                }
+            },
+            axisLabel: {
+                textStyle: {
+                    fontSize: 17,
+                    fontWeight: 600,
+                    fontFamily: 'Pretendard',
+                    color: '#b2bbce'
+                },
+                interval: 0,
+            },
+            axisTick: {
+                show: false // x축의 작은 세로선 숨기기
+            }
+        },
+        yAxis: {
+            type: 'value',
+            position: 'left',
+            alignTicks: true,
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157',
+                },
+            },
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157'
+                },
+            },
+            axisLabel: {
+                textStyle: {
+                    fontSize: 17,
+                    fontWeight: 600,
+                    fontFamily: 'Pretendard',
+                    color: '#b2bbce'
+                }
+            },
+            min: 0,
+            max: 70000,
+            interval: 10000,
+        },
+        series: [
+            {
+                name: "익산",
+                type: "bar"
+            },
+            {
+                name: "평택",
+                type: "bar"
+            },
+            {
+                name: "데이터",
+                type: "bar",
+                barWidth: 16,
+                itemStyle: {
+                    borderRadius: [4, 4, 0, 0],
+                },
+                data: [
+                    {
+                        "value": 25000,
+                        "itemStyle": { "color": "#00bbfe" } // 익산
+                    },
+                    {
+                        "value": 45000,
+                        "itemStyle": { "color": "#0bbe35" } // 평택
+                    },
+                    {
+                        "value": 65000,
+                        "itemStyle": { "color": "#00bbfe" }
+                    },
+                    {
+                        "value": 55000,
+                        "itemStyle": { "color": "#0bbe35" }
+                    },
+                    {
+                        "value": 60000,
+                        "itemStyle": { "color": "#00bbfe" }
+                    },
+                    {
+                        "value": 50000,
+                        "itemStyle": { "color": "#0bbe35" }
+                    },
+                    {
+                        "value": 20000,
+                        "itemStyle": { "color": "#00bbfe" }
+                    },
+                    {
+                        "value": 65000,
+                        "itemStyle": { "color": "#0bbe35" }
+                    },
+                ]
+            },
+        ]
+    },
+    d_doughnut2: {
+        color: [...colors, '#ef4345'],
+        title: false,
+        tooltip: {
+            trigger: 'item',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)', // 툴팁 배경색상 설정
+            textStyle: {
+                color: '#fff', // 툴팁 글씨색상 설정
+                fontFamily: 'Pretendard',
+                fontSize: 18,
+                fontWeight: '600'
+            },
+            borderWidth: 0,
+            formatter: '[원인: {b}] 발생 사고 {c}건'
+        },
+        legend: {
+            itemWidth: 16, // 아이템 너비
+            itemHeight: 8, // 아이템 높이
+            data: ['졸음운전', '과속', '빗길/눈길', '차량이상', '낙하물', '도로상태'],
+            textStyle: {
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+                fontSize: 19,
+                fontWeight: 600,
+            },
+            top: '0%', // 범례를 제목 아래로
+        },
+        series: [
+            {
+                type: 'pie',
+                radius: ['50%', '80%'],
+                avoidLabelOverlap: false,
+                center: ['50%', '53%'],
+                label: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    label: {
+                        show: false,
+                    }
+                },
+                labelLine: {
+                    show: false
+                },
+                data: [
+                    { value: 50, name: '졸음운전' },
+                    { value: 15, name: '과속' },
+                    { value: 15, name: '빗길/눈길' },
+                    { value: 10, name: '차량이상' },
+                    { value: 5, name: '낙하물' },
+                    { value: 5, name: '도로상태' }
+                ]
+            }
         ]
     },
 }

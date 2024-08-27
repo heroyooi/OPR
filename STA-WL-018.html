@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>서부내륙고속도로 통합운영단말</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="dashboard-wrap" class="c-scrollbar">
+    <div class="d-map" style="background-color:#000;"></div>
+    <div class="d-header">
+      <h1><a href="#"><img src="img/d/wih-logo-db.png" alt=""></a></h1>
+
+      <div class="item-area">
+        <span class="date">2024년 10월 25일(금)</span>
+        <span class="time">13:30:01</span>
+
+        <ul class="tab-btn">
+          <li class="st1"><a href="#">평시</a></li>
+          <li class="st2"><a href="#">돌발</a></li>
+          <li class="st3 on"><a href="#">브리핑</a></li>
+        </ul>
+
+        <div class="switch-area">
+          <span class="label">자동ON</span>
+          <span class="btn-switch on"></span>
+        </div>
+        <a href="#" class="btn-power"><span>종료</span></a>
+      </div><!-- .item-area -->
+    </div><!-- .d-header -->
+
+    <div class="d-item-wrap briefing" style="background-color:rgba(30, 30, 30, 0.5);">
+      <div class="brief-menu">
+        <ul>
+          <!-- 구간교통량 -->
+          <li class="on">
+            <span class="label">서부내륙 고속도로</span>
+            <span class="con">구간 교통량 타임랩스</span>
+            <a href="#" class="btn-more"></a>
+            <div class="control-wrap">
+              <div class="legend-color">
+                <span class="color" style="background-color:#00bbfe"></span>
+                <span class="color" style="background-color:#49e3c7"></span>
+                <span class="color" style="background-color:#cbfc9d"></span>
+                <span class="color" style="background-color:#f6f39e"></span>
+                <span class="color" style="background-color:#fcbb25"></span>
+                <span class="color" style="background-color:#ef4345"></span>
+              </div>
+              <div class="legend-text">
+                <span class="txt min">Min</span>
+                <span class="txt max">Max</span>
+              </div>
+              <ul class="control-list">
+                <li>
+                  <span class="label">Coverage</span>
+                  <div class="slider-horizon-area">
+                    <div class="slider-horizon" id="slider1_1"></div>
+                    <input type="hidden" readonly />
+                  </div>
+                </li>
+                <li>
+                  <span class="label">Radius</span>
+                  <div class="slider-horizon-area">
+                    <div class="slider-horizon" id="slider1_2"></div>
+                    <input type="hidden" readonly />
+                  </div>
+                </li>
+                <li>
+                  <span class="label">Upper Percentile</span>
+                  <div class="slider-horizon-area">
+                    <div class="slider-horizon" id="slider1_3"></div>
+                    <input type="hidden" readonly />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <span class="label">서부내륙 고속도로</span>
+            <span class="con">교통사고 발생량 및 원인</span>
+          </li>
+
+          <!-- 구간통행속도 -->
+          <li style="display: none;">
+            <span class="label">서부내륙 고속도로</span>
+            <span class="con">구간 교통량 타임랩스</span>
+            <a href="#" class="btn-more"></a>
+            <div class="control-wrap">
+              <div class="legend-color">
+                <span class="color" style="background-color:#0bbe35"></span>
+                <span class="color" style="background-color:#82eb2f"></span>
+                <span class="color" style="background-color:#e7ff87"></span>
+                <span class="color" style="background-color:#ffce5b"></span>
+                <span class="color" style="background-color:#ff782d"></span>
+                <span class="color" style="background-color:#ef4345"></span>
+              </div>
+              <div class="legend-text">
+                <span class="txt min">Min</span>
+                <span class="txt max">Max</span>
+              </div>
+              <ul class="control-list">
+                <li>
+                  <span class="label">Coverage</span>
+                  <div class="slider-horizon-area">
+                    <div class="slider-horizon" id="slider2_1"></div>
+                    <input type="hidden" readonly />
+                  </div>
+                </li>
+                <li>
+                  <span class="label">Radius</span>
+                  <div class="slider-horizon-area">
+                    <div class="slider-horizon" id="slider2_2"></div>
+                    <input type="hidden" readonly />
+                  </div>
+                </li>
+                <li>
+                  <span class="label">Upper Percentile</span>
+                  <div class="slider-horizon-area">
+                    <div class="slider-horizon" id="slider2_3"></div>
+                    <input type="hidden" readonly />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- 지점별 밀도 -->
+          <li style="display: none;">
+            <span class="label">서부내륙 고속도로</span>
+            <span class="con">지점별/차로별 밀도</span>
+            <a href="#" class="btn-more"></a>
+            <div class="control-wrap">
+              <div class="legend-color">
+                <span class="color" style="background-color:#bdeeff"></span>
+                <span class="color" style="background-color:#93e2ff"></span>
+                <span class="color" style="background-color:#00bbfe"></span>
+                <span class="color" style="background-color:#0075ff"></span>
+                <span class="color" style="background-color:#0047fe"></span>
+                <span class="color" style="background-color:#1a15ff"></span>
+              </div>
+              <div class="legend-text">
+                <span class="txt min">Min</span>
+                <span class="txt max">Max</span>
+              </div>
+              <ul class="control-list">
+                <li>
+                  <span class="label">Coverage</span>
+                  <div class="slider-horizon-area">
+                    <div class="slider-horizon" id="slider3_1"></div>
+                    <input type="hidden" readonly />
+                  </div>
+                </li>
+                <li>
+                  <span class="label">Radius</span>
+                  <div class="slider-horizon-area">
+                    <div class="slider-horizon" id="slider3_2"></div>
+                    <input type="hidden" readonly />
+                  </div>
+                </li>
+                <li>
+                  <span class="label">Upper Percentile</span>
+                  <div class="slider-horizon-area">
+                    <div class="slider-horizon" id="slider3_3"></div>
+                    <input type="hidden" readonly />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- 차로별 밀도 -->
+          <li>
+            <span class="label">서부내륙 고속도로</span>
+            <span class="con">지점별/차로별 밀도</span>
+            <a href="#" class="btn-more"></a>
+            <div class="control-wrap">
+              <div class="legend-color">
+                <span class="color" style="background-color:#ffbbbc"></span>
+                <span class="color" style="background-color:#ff9d9e"></span>
+                <span class="color" style="background-color:#fb6b6c"></span>
+                <span class="color" style="background-color:#ef4345"></span>
+                <span class="color" style="background-color:#d0090b"></span>
+                <span class="color" style="background-color:#a00506"></span>
+              </div>
+              <div class="legend-text">
+                <span class="txt min">Min</span>
+                <span class="txt max">Max</span>
+              </div>
+              <ul class="control-list">
+                <li>
+                  <span class="label">Coverage</span>
+                  <div class="slider-horizon-area">
+                    <div class="slider-horizon" id="slider4_1"></div>
+                    <input type="hidden" readonly />
+                  </div>
+                </li>
+                <li>
+                  <span class="label">Radius</span>
+                  <div class="slider-horizon-area">
+                    <div class="slider-horizon" id="slider4_2"></div>
+                    <input type="hidden" readonly />
+                  </div>
+                </li>
+                <li>
+                  <span class="label">Upper Percentile</span>
+                  <div class="slider-horizon-area">
+                    <div class="slider-horizon" id="slider4_3"></div>
+                    <input type="hidden" readonly />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div><!-- .brief-menu -->
+
+      <div class="brief-zoom">
+        <a href="#" class="btn zoom-in"></a>
+        <a href="#" class="btn zoom-out"></a>
+      </div>
+
+      <div class="brief-filter">
+        <ul class="filter-list">
+          <li>
+            <ul class="tab">
+              <li class="on"><a href="#">구간 교통량</a></li>
+              <li><a href="#">구간 통행속도</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul class="tab">
+              <li class="on"><a href="#">평택 방향</a></li>
+              <li><a href="#">익산 방향</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul class="tab">
+              <li class="on"><a href="#">최근 24시간</a></li>
+              <li><a href="#">최근 48시간</a></li>
+            </ul>
+          </li>
+          <li class="switch">
+            <div class="switch-area">
+              <span class="label">구간라벨</span>
+              <span class="btn-switch on"></span>
+            </div>
+          </li>
+        </ul>
+      </div><!-- .brief-filter -->
+
+      <span class="s-txt" style="left: 535px; top: 1358px;">부여IC-부여JCT</span>
+      <span class="s-txt" style="left: 817px; top: 1230px;">부여JCT-청양IC</span>
+      <span class="s-txt" style="left: 1109px; top: 1080px;">청양IC-예산JCT</span>
+      <span class="s-txt" style="left: 1341px; top: 1188px;">예산JCT-예산IC</span>
+      <span class="s-txt" style="left: 1706px; top: 1272px;">예산IC-인주JCT</span>
+      <span class="s-txt" style="left: 1888px; top: 1138px;">인주JCT-인주IC</span>
+      <span class="s-txt" style="left: 2042px; top: 1255px;">인주IC-현덕JCT</span>
+      <span class="s-txt" style="left: 2294px; top: 1297px;">인주IC-현덕JCT</span>
+      <span class="s-txt" style="left: 2328px; top: 1152px;">현덕JCT-포승IC</span>
+      <span class="s-txt" style="left: 2596px; top: 992px;">포승IC-포승JCT</span>
+      <span class="s-txt" style="left: 2552px; top: 1408px;">현덕JCT-안중IC</span>
+
+      <div class="brief-timeline">
+        <div class="timeline-area">
+          <a href="#" class="btn-play"></a>
+          <div class="timeline">
+            <div class="slider-horizon-area">
+              <div class="slider-horizon" id="slider_timeline"></div>
+              <input type="hidden" readonly />
+              <span class="date" style="left: 15%;">
+                <em>10.25</em>
+              </span>
+              <span class="date" style="left: 70%;">
+                <em>10.26</em>
+              </span>
+              <div class="slider-tooltip">수 16:30</div>
+            </div>
+          </div>
+        </div>
+        <div class="detail-area">
+          <span class="tit">포승IC - 포승JCT</span>
+          <div class="detail-swiper swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <span class="time">16시</span>
+                <span class="con">12345678</span>
+                <span class="color" style="background-color:#00bbfe"></span>
+              </div>
+              <div class="swiper-slide">
+                <span class="time">16시</span>
+                <span class="con">12345678</span>
+                <span class="color" style="background-color:#49e3c7"></span>
+              </div>
+              <div class="swiper-slide">
+                <span class="time">16시</span>
+                <span class="con">12345678</span>
+                <span class="color" style="background-color:#cbfc9d"></span>
+              </div>
+              <div class="swiper-slide">
+                <span class="time">16시</span>
+                <span class="con">12345678</span>
+                <span class="color" style="background-color:#f6f39e"></span>
+              </div>
+              <div class="swiper-slide">
+                <span class="time">16시</span>
+                <span class="con">12345678</span>
+                <span class="color" style="background-color:#fcbb25"></span>
+              </div>
+              <div class="swiper-slide">
+                <span class="time">16시</span>
+                <span class="con">12345678</span>
+                <span class="color" style="background-color:#ef4345"></span>
+              </div>
+              <div class="swiper-slide">
+                <span class="time">16시</span>
+                <span class="con">12345678</span>
+                <span class="color" style="background-color:#f6f39e"></span>
+              </div>
+              <div class="swiper-slide">
+                <span class="time">16시</span>
+                <span class="con">12345678</span>
+                <span class="color" style="background-color:#49e3c7"></span>
+              </div>
+              <div class="swiper-slide">
+                <span class="time">16시</span>
+                <span class="con">12345678</span>
+                <span class="color" style="background-color:#00bbfe"></span>
+              </div>
+              <div class="swiper-slide">
+                <span class="time">16시</span>
+                <span class="con">12345678</span>
+                <span class="color" style="background-color:#49e3c7"></span>
+              </div>
+              <div class="swiper-slide">
+                <span class="time">16시</span>
+                <span class="con">12345678</span>
+                <span class="color" style="background-color:#ef4345"></span>
+              </div>
+              <div class="swiper-slide">
+                <span class="time">16시</span>
+                <span class="con">12345678</span>
+                <span class="color" style="background-color:#f6f39e"></span>
+              </div>
+              <div class="swiper-slide">
+                <span class="time">16시</span>
+                <span class="con">12345678</span>
+                <span class="color" style="background-color:#00bbfe"></span>
+              </div>
+              <div class="swiper-slide">
+                <span class="time">16시</span>
+                <span class="con">12345678</span>
+                <span class="color" style="background-color:#49e3c7"></span>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn-prev"></a>
+          <a href="#" class="btn-next"></a>
+        </div>
+      </div><!-- timeline-area -->
+    </div><!-- .d-item-wrap -->
+
+    
+  </div><!-- #dashboard-wrap -->
+
+  <div class="popup-wrap z-anim mfp-hide" id="popup-notice" style="max-width: 1000px;">
+    <div class="tit-wrap">
+      <img src="img/d/wih-logo-bic.png" alt="">
+    </div>
+    <div class="con-wrap">
+      모든 돌발상황이 종료되었습니다. <br /><strong>3초 후 평시모드 화면</strong>으로 이동합니다.
+    </div>
+  </div>
+
+  <script>
+    $('.btn-switch').on('click', function(e){
+      e.preventDefault();
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+      } else {
+        $(this).removeClass('on');
+      }
+    });
+
+    var getRange = function(el, { min = 0, max = 100, value, step = 10 }) {
+      var amount = $(el).next('input[type="hidden"]');
+      $(el).slider({
+        range: "min",
+        min,
+        max,
+        value,
+        step,
+        slide: function(event, ui){
+          amount.val(ui.value);
+          if (ui.value > 0) {
+          } else {
+          }
+        },
+      });
+    }
+
+    // 구간교통량
+    getRange('#slider1_1', {
+      value: 70,
+    });
+    getRange('#slider1_2', {
+      value: 30,
+    });
+    getRange('#slider1_3', {
+      value: 0,
+    });
+    
+    // 구간통행속도
+    getRange('#slider2_1', {
+      value: 100,
+    });
+    getRange('#slider2_2', {
+      value: 70,
+    });
+    getRange('#slider2_3', {
+      value: 70,
+    });
+
+    // 지점별 밀도
+    getRange('#slider3_1', {
+      value: 70,
+    });
+    getRange('#slider3_2', {
+      value: 30,
+    });
+    getRange('#slider3_3', {
+      value: 0,
+    });
+
+    // 차로별 밀도
+    getRange('#slider4_1', {
+      value: 100,
+    });
+    getRange('#slider4_2', {
+      value: 70,
+    });
+    getRange('#slider4_3', {
+      value: 70,
+    });
+
+    // 타임라인
+    let prevValue = 0;
+    var stip = $('.slider-tooltip');
+    $('#slider_timeline').slider({
+      range: "min",
+      min: 0,
+      max: 100,
+      value: 5,
+      step: 1,
+      slide: function(event, ui){
+        $(this).next('input[type="hidden"]').val(ui.value);
+        if (ui.value > prevValue) {
+          console.log('오른쪽으로 이동');
+          stip.css('left', ui.handle.offsetLeft + 33);
+        } else if (ui.value < prevValue) {
+          console.log('왼쪽으로 이동');
+          stip.css('left', ui.handle.offsetLeft);
+        }
+        
+        // 이전 값을 현재 값으로 업데이트
+        prevValue = ui.value;
+      },
+    });
+
+    if ($('#slider_timeline').slider("value") > 0) {
+      stip.css('left', $('#slider_timeline').find('.ui-slider-handle')[0].offsetLeft + 16);
+    }
+    if ($('#slider_timeline').slider("value") == 0) {
+      stip.css('left', 7);
+    }
+
+    $('#dashboard-wrap .brief-menu > ul > li .btn-more').on('click', function(e){
+      e.preventDefault();
+      if (!$(this).closest('li').hasClass('active')) {
+        $(this).closest('li').addClass('active');
+      } else {
+        $(this).closest('li').removeClass('active');
+      }
+    })
+    $('.d-item-wrap .detail-wrap .btn-close').on('click', function(e){
+      e.preventDefault();
+      $(this).closest('.detail-wrap').hide();
+    });
+
+    $('#dashboard-wrap .brief-filter .filter-list > li .tab li a').on('click', function(e){
+      e.preventDefault();
+      $(this).closest('li').addClass('on');
+      $(this).closest('li').siblings().removeClass('on');
+    });
+
+    $('.d-item-wrap > .s-txt').show();
+
+    new Swiper('.detail-swiper', {
+      slidesPerView: 'auto',
+      observer: true,
+      observeParents: true,
+      observeSlideChildren: true,
+      navigation: {
+        nextEl: ".detail-area .btn-next",
+        prevEl: ".detail-area .btn-prev",
+      },
+    });
+
+    var qpopup = $.urlParam('popup');
+    var qsample = $.urlParam('sample');
+    if (!qsample) {
+      $('.d-item-wrap > .s1').show();
+    }
+    if (qpopup || qsample) {
+      setTimeout(() => {
+        if (qsample == 'detail') {
+          $('.d-item-wrap > .s1').show();
+          $('.d-item-wrap .detail-wrap#detail1').show();
+        }
+        if (qpopup == 'cctv') {
+          $('.accident-wrap.freezing').show();
+          $('.d-item-wrap .detail-wrap#detail1').show();
+          $('.d-item-wrap .detail-wrap#detail2').show();
+        } else if (qpopup == 'notice') {
+          $('.d-item-wrap > .s1').show();
+          $.magnificPopup.open(getOptionsAnim2('#popup-notice', false));
+        }
+      }, 250);
+    }
+  </script>
+</body>
+</html>

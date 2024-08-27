@@ -705,7 +705,7 @@ input[type=number]::-webkit-outer-spin-button {
 .tb-list tr.st3 td{background-color:rgba(239, 67, 69, 0.1);color:#ef4345;}
 .tb-list tr td .status.st3::before,
 .tb-list tr.st3 td .status::before{background-color:#ef4345;}
-.tb-list.td-ellipsis td{white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+.tb-list.td-ellipsis td:not(.no-ellipsis){white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
 
 .tb-wrapper{position: relative;}
 .tb-wrapper .c-scrollbar::-webkit-scrollbar-track{margin-top:32px;}
