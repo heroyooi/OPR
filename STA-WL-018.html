@@ -506,6 +506,14 @@
     });
 
     $('.d-item-wrap > .s-txt').show();
+    $('#dashboard-wrap .brief-timeline .timeline-area .btn-play').on('click', function(e){
+      e.preventDefault();
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+      } else {
+        $(this).removeClass('on');
+      }
+    })
 
     new Swiper('.detail-swiper', {
       slidesPerView: 'auto',
