@@ -1078,11 +1078,11 @@ input[type=number]::-webkit-outer-spin-button {
 #calendar.fc .fc-event-title .fc-l{flex-grow:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 #calendar.fc .fc-event-title .fc-r{flex-shrink:0;}
 
-#calendar.fc-direction-ltr .fc-daygrid-event-harness .fc-daygrid-event.fc-event-end,
+/* #calendar.fc-direction-ltr .fc-daygrid-event-harness .fc-daygrid-event.fc-event-end,
 #calendar.fc-direction-rtl .fc-daygrid-event-harness .fc-daygrid-event.fc-event-start{margin:0;}
 #calendar.fc.monthGrid .fc-daygrid-event-harness{margin-top:2px !important;}
 #calendar.fc.weekGrid .fc-daygrid-event-harness{margin-top:1px !important;}
-#calendar.fc .fc-daygrid-event-harness:first-child{margin-top:0 !important;}
+#calendar.fc .fc-daygrid-event-harness:first-child{margin-top:0 !important;} */
 #calendar.fc .fc-daygrid-day-bottom{font-size:0;padding:0;width:100%;position:absolute;left:0;bottom:0;}
 #calendar.fc .fc-daygrid-day-bottom:after{content:'';display:block;clear:both;}
 #calendar.fc .total-num{float:left;font-size:12px;color:#000;opacity:0.7;display:block;line-height:17px;padding-top:4px;}

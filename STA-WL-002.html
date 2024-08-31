@@ -482,12 +482,12 @@
         <li class="md">
           <dl>
             <dt><span class="tit">공사/행사정보</span></dt>
-            <dd class="pt24">
+            <dd class="chart">
               <span class="chart-tit">부여 JCT - 청양 IC</span>
               <div class="gauge-chart-area">
                 <span class="gauge-label">통행속도 <br />(km/h)</span>
                 <span class="bg-circle"></span>
-                <div id="gaugeChart" style="width: 100%; height: 316px;"></div>
+                <div id="gaugeChart" style="width: 100%; height: 304px;"></div>
               </div>
               <div class="slider-horizon-area">
                 <span class="slider-label">포화도(%)</span>
@@ -499,7 +499,7 @@
         </li>
         <li class="md">
           <dl>
-            <dt class="toggle on"><span class="tit">돌발정보</span></dt>
+            <dt class="toggle t1 on"><span class="tit">돌발정보</span></dt>
             <dd class="no-padding c-scrollbar" style="height: 420px;">
               <div class="tb-wrap" id="isData">
                 <table summary="돌발상황" class="tb-list td-ellipsis">
@@ -609,7 +609,7 @@
                 </div>
               </div>
             </dd>
-            <dt class="toggle"><span class="tit">특별상황</span></dt>
+            <dt class="toggle t2"><span class="tit">특별상황</span></dt>
             <dd class="no-padding c-scrollbar" style="height: 420px;">
               <div class="tb-wrap">
                 <table summary="돌발상황" class="tb-list td-ellipsis special">
@@ -1067,16 +1067,16 @@
                     <span class="st-section st1" style="width: 266px"><i></i></span>
                     <span class="st-section st1" style="width: 170px"><i></i></span>
                     <span class="st-section st1" style="width: 118px"><i></i></span>
-                    <span class="st-section st1" style="width: 120px"><i></i></span>
+                    <span class="st-section st3" style="width: 120px"><i></i></span>
                     <span class="st-section st1" style="width: 33px"><i style="border-right: 1px solid #212332;"></i></span>
                     
                     <span class="st-section st1 shape-up" style="width: 214px;">
-                      <i style="width: 214px; height: 70px; background:url(img/d/line-tg.png) 0 0 no-repeat;"></i>
+                      <i></i>
                     </span>
                     <span class="st-section st1 up" style="width: 168px"><i></i></span>
 
-                    <span class="st-section st1 shape-down" style="width: 399px">
-                      <i style="width: 381px; height: 70px; background:url(img/d/line-bg.png) 0 0 no-repeat;"></i>
+                    <span class="st-section shape-down" style="width: 399px">
+                      <i></i>
                     </span>
                   </div>
                   <div class="st-line bottom">
@@ -1093,13 +1093,13 @@
                     <span class="st-section st1" style="width: 120px"><i></i></span>
                     <span class="st-section st1" style="width: 33px"><i style="border-right: 1px solid #212332;"></i></span>
                     
-                    <span class="st-section st1 shape-up" style="width: 214px;">
-                      <i style="width: 214px; height: 70px; background:url(img/d/line-tg.png) 0 0 no-repeat;"></i>
+                    <span class="st-section st3 shape-up" style="width: 214px;">
+                      <i></i>
                     </span>
                     <span class="st-section st1 up" style="width: 168px"><i></i></span>
 
-                    <span class="st-section st1 shape-down" style="width: 399px">
-                      <i style="width: 381px; height: 70px; background:url(img/d/line-bg.png) 0 0 no-repeat;"></i>
+                    <span class="st-section st2 shape-down" style="width: 399px">
+                      <i></i>
                     </span>
                   </div>
                 </div>
@@ -2457,8 +2457,8 @@
                     <span class="st-section st1" style="width: 320px"><i></i></span>
                     <span class="st-section st2" style="width: 49px"><i></i></span>
                     <span class="st-section st1" style="width: 376px"><i></i></span>
-                    <span class="st-section st3" style="width: 201px"><i></i></span>
-                    <span class="st-section st1" style="width: 184px"><i></i></span>
+                    <span class="st-section st3" style="width: 385px"><i></i></span>
+                    <!-- <span class="st-section st1" style="width: 184px"><i></i></span> -->
                   </div>
 
                   <div class="st-line bottom">
@@ -2476,8 +2476,8 @@
                     <span class="st-section st1" style="width: 320px"><i></i></span>
                     <span class="st-section st2" style="width: 49px"><i></i></span>
                     <span class="st-section st1" style="width: 376px"><i></i></span>
-                    <span class="st-section st3" style="width: 201px"><i></i></span>
-                    <span class="st-section st1" style="width: 184px"><i></i></span>
+                    <span class="st-section st3" style="width: 385px"><i></i></span>
+                    <!-- <span class="st-section st1" style="width: 184px"><i></i></span> -->
                   </div>
                 </div>
 
@@ -2584,6 +2584,7 @@
         $(this).siblings('dt.toggle.on').removeClass('on');
       } else {
         $(this).removeClass('on');
+        $(this).closest('dt').siblings().addClass('on');
       }
     });
 
@@ -2611,13 +2612,17 @@
     //     $(this).closest('.st-wrap').find('.st-route-wrap.origin .st-route li').eq(index).removeClass('on');
     //   })
     // });
-    $('.d-status-wrap .type-map .st-route-wrap').each(function(){
-      $(this).find('.st-route li').on('mouseenter', function(){
-        $(this).siblings().removeClass('on');
-        $(this).addClass('on');
-      });
+    // $('.d-status-wrap .type-map .st-route-wrap').each(function(){
+    //   $(this).find('.st-route li').on('mouseenter', function(){
+    //     $(this).siblings().removeClass('on');
+    //     $(this).addClass('on');
+    //   });
+    // });
+    $('.d-status-wrap .type-map .st-wrap#st1 .st-route li').on('mouseenter', function(){
+      $(this).siblings().removeClass('on');
+      $(this).addClass('on');
     });
-    $('.d-status-wrap .type-map .st-wrap').on('mouseleave', function(){
+    $('.d-status-wrap .type-map .st-wrap#st1').on('mouseleave', function(){
       $('.st-route li.on').removeClass('on');
     });
 
