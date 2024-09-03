@@ -1,18 +1,21 @@
 var regularData = [
   {
-    start: '2024-07-01',
+    start: '2024-06-30',
+    end: '2024-07-05',
     title: '[W] VDS | 김철수',
     backgroundColor: '#00bbfe',
     borderColor: '#00bbfe',
   },
   {
     start: '2024-07-01',
+    end: '2024-07-04',
     title: '[W] VDS | 이철수',
     backgroundColor: '#00bbfe',
     borderColor: '#00bbfe',
   },
   {
     start: '2024-07-01',
+    end: '2024-07-03',
     title: '[W] VDS | 김철수',
     backgroundColor: '#00bbfe',
     borderColor: '#00bbfe',
@@ -41,6 +44,13 @@ var regularData = [
     title: '[W] VDS | 김철수',
     backgroundColor: '#4caff2',
     borderColor: '#4caff2',
+  },
+
+  {
+    start: '2024-06-30T15:00:00',
+    end: '2024-06-30T18:00:00',
+    title: '긴급전화 센터설비 | 김우리나라',
+    classNames: 'dot c-19b2e8',
   },
   
 
@@ -111,12 +121,14 @@ var regularData = [
   },
   {
     start: '2024-07-10',
+    end: '2024-07-14',
     title: '[W] 장비/설비 | 김철수',
     backgroundColor: '#a89b8f',
     borderColor: '#a89b8f',
   },
   {
     start: '2024-07-10',
+    
     title: '[W] 장비/설비 | 김철수',
     backgroundColor: '#ad2ec6',
     borderColor: '#ad2ec6',

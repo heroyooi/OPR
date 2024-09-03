@@ -327,6 +327,7 @@
           center: 'prev title next',
           right: null,
         },
+        allDayText: '종일',
         initialDate: '2024-07-01',
         locale: 'ko',
         editable: true, // Drag 이벤트 비활성화
@@ -356,7 +357,7 @@
         datesSet: function() {
           setTimeout(function(){
             drawTotalUI();
-          }, 10)
+          }, 10);
         },
 
         eventContent: function(arg) {
@@ -405,15 +406,16 @@
     });
     $('.calendar-item .tab-btn li a').on('click', function(){
       if ($(this).text() === '주간') {
-        fullCalendar.changeView('timeGridWeek');
-        fullCalendar.setOption('dayMaxEvents', 999);
         $('#calendar.fc').addClass('weekGrid'); // timeGrid
         $('#calendar.fc').removeClass('monthGrid');
+        fullCalendar.changeView('timeGridWeek');
+        fullCalendar.setOption('dayMaxEvents', 999);
       } else {
-        fullCalendar.changeView('dayGridMonth');
-        fullCalendar.setOption('dayMaxEvents', 2);
+        
         $('#calendar.fc').removeClass('weekGrid'); // timeGrid
         $('#calendar.fc').addClass('monthGrid');
+        fullCalendar.changeView('dayGridMonth');
+        fullCalendar.setOption('dayMaxEvents', 2);
       }
     });
     
