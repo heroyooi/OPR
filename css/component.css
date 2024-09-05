@@ -1188,7 +1188,6 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);background-color: rgba(31, 61, 83, 0
 #calendar.fc.weekGrid .fc-view-harness{height:calc(100vh - 300px) !important;}
 #calendar.fc.weekGrid .fc-scroller-harness-liquid{border-bottom:1px solid #3e4157;}
 #calendar.fc.weekGrid .fc-scroller-liquid-absolute{height:calc(100vh - 455px);}
-#calendar.fc.weekGrid td.fc-timegrid-col[role="gridcell"]{}
 
 @media print {
   body, div{position: relative;}

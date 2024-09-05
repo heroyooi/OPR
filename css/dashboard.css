@@ -205,7 +205,7 @@
 .d-status-wrap .type-map .st-route li span{font-size:19px;line-height:1.55;font-weight:700;bottom:16px;}
 .d-status-wrap .type-map .st-route li span.top{bottom:initial;top:48px;}
 .d-status-wrap .type-map .st-route li.last{height:55%;position: absolute;right:0;bottom:0;}
-.d-status-wrap .type-map .s-ico{position: absolute;z-index:1;}
+.d-status-wrap .type-map .s-ico{position: absolute;z-index:2;}
 .d-status-wrap .type-map .s-ico.call.top{top:62px;}
 .d-status-wrap .type-map .s-ico.lcs.top{top:102px;}
 .d-status-wrap .type-map .s-ico.vms.top{top:136px;}
@@ -232,7 +232,7 @@
 .d-status-wrap .type-map .st-navi.prev{left:16px;}
 .d-status-wrap .type-map .st-navi.next{right:16px;transform:rotate(180deg);}
 .d-status-wrap .type-map .st-wrap .st-route-wrap{background:url(../img/d/line-sub-dot.png) 0 50% no-repeat;}
-.d-status-wrap .type-map .st-wrap#st1 .st-route-wrap{background:url(../img/d/line-full-dot.png) 0 50% no-repeat;}
+.d-status-wrap .type-map .st-wrap#st1 .st-route-wrap{background:url(../img/d/line-full-dot.png) 0 50% no-repeat;z-index:1;}
 .d-status-wrap .type-map .st-route-wrap.origin{}
 .d-status-wrap .type-map .st-route-wrap.trick{position:absolute;left:116px;right:116px;top:0;opacity:0;width:auto;z-index:1;}
 
