@@ -253,9 +253,10 @@ var data1_12 = [
 ];
 
 var data1_13 = [
-  { isChecked: "N", column1: '3', column2: '아산만 방조제', column3: 'FOGW-0003', column4: '관심', column5: '250m초과', column6: '규정속도', column7: 'OFF', column8: 'OFF', column9: '점멸', column10: '자동' },
-  { isChecked: "N", column1: '2', column2: '아산만 방조제', column3: 'FOGW-0003', column4: '주의', column5: '250m초과', column6: '규정속도', column7: 'OFF', column8: 'OFF', column9: '점멸', column10: '자동' },
-  { isChecked: "N", column1: '1', column2: '아산만 방조제', column3: 'FOGW-0003', column4: '경계', column5: '250m초과', column6: '규정속도', column7: 'OFF', column8: 'OFF', column9: '점멸', column10: '자동' },
+  { isChecked: "N", column1: '4', column2: '아산만 방조제', column3: 'FOGW-0003', column4: '관심', column5: '250m초과', column6: '규정속도', column7: '-', column8: 'OFF', column9: 'OFF', column10: '점멸', column11: '자동' },
+  { isChecked: "N", column1: '3', column2: '아산만 방조제', column3: 'FOGW-0003', column4: '주의', column5: '250m초과', column6: '규정속도', column7: '-', column8: 'OFF', column9: 'OFF', column10: '점멸', column11: '자동' },
+  { isChecked: "N", column1: '2', column2: '아산만 방조제', column3: 'FOGW-0003', column4: '경계', column5: '250m초과', column6: '규정속도', column7: '-', column8: 'OFF', column9: 'OFF', column10: '점멸', column11: '자동' },
+  { isChecked: "N", column1: '1', column2: '아산만 방조제', column3: 'FOGW-0003', column4: '심각', column5: '250m초과', column6: '규정속도', column7: '-', column8: 'OFF', column9: 'OFF', column10: '점멸', column11: '자동' },
 ];
 
 var data1_14 = [
@@ -359,6 +360,18 @@ var data1_21 = [
   { isChecked: "N", column1: '48', column2: 'VDS-0050', column3: 'OO 지점 VDS 1', column4: '터널', column5: '평택' },
   { isChecked: "N", column1: '47', column2: 'VDS-0050', column3: 'OO 지점 VDS 1', column4: '터널', column5: '평택' },
   { isChecked: "N", column1: '46', column2: 'VDS-0050', column3: 'OO 지점 VDS 1', column4: '터널', column5: '평택' },
+];
+var data1_22 = [
+  { isChecked: "N", column1: '50', column2: 'CCTV-N-0044', column3: 'OO CCTV 3', column4: '평택', column5: '0000-0000' },
+  { isChecked: "N", column1: '49', column2: 'CCTV-N-0044', column3: 'OO CCTV 3', column4: '평택', column5: '0000-0000' },
+  { isChecked: "N", column1: '48', column2: 'CCTV-N-0044', column3: 'OO CCTV 3', column4: '평택', column5: '0000-0000' },
+  { isChecked: "N", column1: '47', column2: 'CCTV-N-0044', column3: 'OO CCTV 3', column4: '평택', column5: '0000-0000' },
+  { isChecked: "N", column1: '46', column2: 'CCTV-N-0044', column3: 'OO CCTV 3', column4: '평택', column5: '0000-0000' },
+  { isChecked: "N", column1: '45', column2: 'CCTV-N-0044', column3: 'OO CCTV 3', column4: '평택', column5: '0000-0000' },
+  { isChecked: "N", column1: '44', column2: 'CCTV-N-0044', column3: 'OO CCTV 3', column4: '평택', column5: '0000-0000' },
+  { isChecked: "N", column1: '43', column2: 'CCTV-N-0044', column3: 'OO CCTV 3', column4: '평택', column5: '0000-0000' },
+  { isChecked: "N", column1: '42', column2: 'CCTV-N-0044', column3: 'OO CCTV 3', column4: '평택', column5: '0000-0000' },
+  { isChecked: "N", column1: '41', column2: 'CCTV-N-0044', column3: 'OO CCTV 3', column4: '평택', column5: '0000-0000' },
 ];
 
 var columns1 = [
@@ -1047,8 +1060,10 @@ var columns1_13 = [
     align: "center",
     sortable: true,
     formatter: function() {
-      if (this.value == '경계') {
-        return '<span class="st-box red">3: ' + this.value + '</span>';
+      if (this.value == '심각') {
+        return '<span class="st-box red">4: ' + this.value + '</span>';
+      } else if (this.value == '경계') {
+        return '<span class="st-box orange deep">3: ' + this.value + '</span>';
       } else if (this.value == '주의') {
         return '<span class="st-box orange">2: ' + this.value + '</span>';
       } else if (this.value == '관심') {
@@ -1099,7 +1114,7 @@ var columns1_13 = [
     sortable: true,
   },
   {
-    key: 'column10',
+    key: 'column11',
     label: '구분',
     width: 120,
     align: "center",
@@ -1711,6 +1726,45 @@ var columns1_21 = [
   },
 ];
 
+var columns1_22 = [
+  // checkColumns,
+  {
+    key: 'column1',
+    label: '순번',
+    width: 60,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column2',
+    label: 'CCTV ID',
+    width: 188,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column3',
+    label: 'CCTV 명',
+    width: 188,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column4',
+    label: '방향',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column5',
+    label: '설치위치',
+    width: 188,
+    align: "center",
+    sortable: true,
+  },
+];
+
 var data2 = [
   { column1: '로우데이터', column2: '로우데이터', column3: '로우데이터', state: 'red', column4: '로우 데이터' },
   { column1: '로우데이터', column2: '로우데이터', column3: '라벨', column3Type: 'label', state: 'orange', column4: '로우 데이터' },
@@ -2032,13 +2086,14 @@ $(document.body).ready(function() {
   var $grid1_19 = $('[data-ax5grid="grid1_19"]');
   var $grid1_20 = $('[data-ax5grid="grid1_20"]');
   var $grid1_21 = $('[data-ax5grid="grid1_21"]');
+  var $grid1_22 = $('[data-ax5grid="grid1_22"]');
   
   var $grid2 = $('[data-ax5grid="grid2"]');
   var $grid3 = $('[data-ax5grid="grid3"]');
   var $grid4 = $('[data-ax5grid="grid4"]');
 
   if (
-    $grid1.length || $grid1_2.length || $grid1_3.length || $grid1_4.length || $grid1_5.length || $grid1_6.length || $grid1_7.length || $grid1_8.length || $grid1_9.length || $grid1_10.length || $grid1_11.length || $grid1_12.length || $grid1_13.length || $grid1_14.length || $grid1_15.length || $grid1_16.length || $grid1_17.length || $grid1_18.length || $grid1_19.length || $grid1_20.length || $grid1_21.length
+    $grid1.length || $grid1_2.length || $grid1_3.length || $grid1_4.length || $grid1_5.length || $grid1_6.length || $grid1_7.length || $grid1_8.length || $grid1_9.length || $grid1_10.length || $grid1_11.length || $grid1_12.length || $grid1_13.length || $grid1_14.length || $grid1_15.length || $grid1_16.length || $grid1_17.length || $grid1_18.length || $grid1_19.length || $grid1_20.length || $grid1_21.length || $grid1_22.length
   ) {
     if ($grid1.length) {
       new ax5.ui.grid(getOptions($grid1, columns1)).setData(data1);
@@ -2082,6 +2137,8 @@ $(document.body).ready(function() {
       new ax5.ui.grid(getOptions($grid1_20, columns1_20)).setData(data1_20);
     } else if ($grid1_21.length) {
       new ax5.ui.grid(getOptions($grid1_21, columns1_21)).setData(data1_21);
+    } else if ($grid1_22.length) {
+      new ax5.ui.grid(getOptions($grid1_22, columns1_22)).setData(data1_22);
     }
 
     $(document).on('click', '#chk-all', function() {

@@ -207,7 +207,8 @@
 .input-wrap .label, .input-wrap .bridge{display:inline-block;font-size:14px;font-weight:500;color:#b2bbce;}
 .input-wrap .s-label{display:inline-block;font-size:14px;font-weight:500;color:#778298;margin-right:8px;margin-left:12px;}
 .input-wrap .s-label:first-child{margin-left:0;}
-.input-wrap .unit{color:#778298;font-size:14px;margin-left:8px;display:inline-block;vertical-align:middle;}
+.input-wrap .unit{color:#778298;font-size:14px;margin-left:8px;display:inline-block;vertical-align:middle;font-weight:600;}
+.input-wrap .unit:first-child{margin-left:0;margin-right:8px;}
 .input-wrap .bridge{margin:0 12px;}
 .input-wrap .dash{margin:0 8px;color:#778298;font-size:14px;}
 .input-wrap .label{margin-right:12px;margin-left:20px;}
@@ -518,6 +519,7 @@ input[type=number]::-webkit-outer-spin-button {
 .cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="body"] [data-ax5grid-panel] table tr td .st-box.red:hover{background-color:#653340;color:#ef4345;}
 .cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="body"] [data-ax5grid-panel] table tr td .st-box.green:hover{background-color:#20583b;color:#0bbe35;}
 .cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="body"] [data-ax5grid-panel] table tr td .st-box.orange:hover{background-color:#695736;color:#fcbb25;}
+.cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="body"] [data-ax5grid-panel] table tr td .st-box.orange.deep:hover{background-color:#714b39;color:#ff7b0e;}
 
 .cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="body"] [data-ax5grid-panel] table tr[data-ax5grid-selected="true"] td,
 .cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="body"] [data-ax5grid-panel] table tr[data-ax5grid-selected="true"] td .st-box.red,
@@ -550,7 +552,8 @@ input[type=number]::-webkit-outer-spin-button {
   display: flex; align-items: center; justify-content: center;
   font-size: 14px;font-weight:500; height: 43px;
 }
-.cs-ax5grid[data-ax5grid] .st-box.red {
+
+/* .cs-ax5grid[data-ax5grid] .st-box.red {
   background-color: #46384b;color: #ef4345;
 }
 .cs-ax5grid[data-ax5grid] .st-box.orange {
@@ -558,7 +561,20 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .cs-ax5grid[data-ax5grid] .st-box.green {
   background-color: rgba(11, 190, 53, 0.1);color: #0bbe35;
+} */
+.cs-ax5grid[data-ax5grid] .st-box.red {
+  background-color: #6c3a4a;color: #ef4345;
 }
+.cs-ax5grid[data-ax5grid] .st-box.orange {
+  background-color: #705e40;color: #fcbb25;
+}
+.cs-ax5grid[data-ax5grid] .st-box.green {
+  background-color: #275f45;color: #0bbe35;
+}
+.cs-ax5grid[data-ax5grid] .st-box.orange.deep {
+  background-color: #714b39;color: #ff7b0e;
+}
+
 .cs-ax5grid[data-ax5grid] .s-label {
   font-size: 14px;color:#fff;line-height:1.5;display:inline-block;padding:2px 8px;border-radius:16px;background-color:#923d48;
 }
@@ -649,6 +665,7 @@ input[type=number]::-webkit-outer-spin-button {
 .btn-base.disabled > *{background-color:#3e4157;color:#778298;cursor:default;pointer-events:none;}
 .btn-base.btn-ico em{font-style:normal;font-weight:inherit;display:inline-block;padding-left:32px;position: relative;}
 .btn-base.btn-ico em .s-ico{position:absolute;left:0;top:-2px;}
+.btn-base.tp2 > *{background-color:#3e4157;color:#b2bbce;}
 /* .btn-base.btn-ico.gray:hover em .s-ico{opacity:1;} */
 .btn-base.btn-ico.gray em .s-ico,
 .btn-base.btn-ico.disabled em .s-ico{opacity:0.3;}
@@ -1210,3 +1227,11 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);background-color: rgba(31, 61, 83, 0
 #calendar.fc .fc-timegrid-col.fc-day-today{background-color: #34374c !important;}
 
 .cs-ax5grid[data-ax5grid] [data-ax5grid-container="root"] [data-ax5grid-container="body"] [data-ax5grid-panel] table tr.tr-2{background-color:transparent;}
+
+/* S: 2024-10 */
+.s-badge{display:inline-block;font-size:14px;font-weight:600;line-height:1.5;border-radius:4px;padding:4px 12px;}
+.s-badge.tp1{background-color:#20583b;color:#0bbe35;}
+.s-badge.tp2{background-color:#695736;color:#fcbb25;}
+.s-badge.tp3{background-color:#6a442f;color:#ff7b0e;}
+.s-badge.tp4{background-color:#653340;color:#ef4345;}
+/* E: 2024-10 */

@@ -156,28 +156,24 @@
               </li>
             </ul>
           </li>
-          <li>
+          <li class="on">
             <a href="#" class="menu toggle">CCTV 운영</a>
             <ul>
+              <li class="on">
+                <a href="#" class="menu">CCTV 프리셋 설정</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
               <li>
-                <a href="#" class="menu">서브 메뉴</a>
+                <a href="#" class="menu">CCTV 프리셋 모니터링</a>
                 <a href="#" class="s-ico star"></a>
               </li>
             </ul>
           </li>
-          <li class="on">
+          <li>
             <a href="#" class="menu toggle">안개경고주의 운영</a>
             <ul>
-              <li class="on">
-                <a href="#" class="menu">안개경고 등급 관리</a>
-                <a href="#" class="s-ico star"></a>
-              </li>
               <li>
-                <a href="#" class="menu">안개경고 운영모드 설정</a>
-                <a href="#" class="s-ico star"></a>
-              </li>
-              <li>
-                <a href="#" class="menu">안개경고 예약 관리</a>
+                <a href="#" class="menu">서브 메뉴</a>
                 <a href="#" class="s-ico star"></a>
               </li>
             </ul>
@@ -200,7 +196,7 @@
             <div class="menu-swiper swiper-container">
               <div class="swiper-wrapper">
                 <div class="swiper-slide on">
-                  <a href="#" class="label">안개경고 등급 관리</a>
+                  <a href="#" class="label">CCTV 프리셋 모니터링</a>
                   <a href="#" class="s-ico close"></a>
                 </div>
               </div>
@@ -215,33 +211,96 @@
           <div class="content-inner">
             <div class="search-area">
               <div class="input-wrap">
-                <span class="label">FOGW 이름/ID</span>
-                <input type="text" class="input-base w-auto" placeholder="이름 또는 ID 검색" id="user_id" />
-
+                <span class="label">CCTV 이름/ID</span>
+                <input type="text" class="input-base" placeholder="이름 또는 ID 검색" style="width: 300px;" />
                 <span class="btn-base btn-ico ml8"><a href="#"><em><span class="s-ico search"></span>검색</em></a></span>
               </div>
-              <div class="btns-wrap">
-                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico step"></span>단계 변경</em></a></span>
-              </div>
             </div><!-- .search-area -->
-            <div class="content-frame c-scrollbar">
-              <div style="position: relative; height:208px;" id="grid1_13-parent">
-                <div class="cs-ax5grid" data-ax5grid="grid1_13" data-ax5grid-config="{}" style="height: 100%"></div>
-              </div>
-              <div class="total-wrap mt12">
-                <div class="total">
-                  <span class="label">총</span>
-                  <span class="count">3</span>
-                  <span class="unit">건</span>
+            <div class="content-frame-wrap">
+              <div class="content-frame c-scrollbar">
+                <div class="pic-area">
+                  <img src="https://placehold.co/796x490" alt="">
                 </div>
-              </div><!-- .total-wrap -->
-            </div><!-- .content-frame -->
+                <ul class="num-list">
+                  <li class="l">
+                    <ul class="list">
+                      <li class="on">
+                        <span class="num">0</span>
+                        <span class="value">디폴트</span>
+                      </li>
+                      <li class="on">
+                        <span class="num">1</span>
+                        <span class="value">긴급전화</span>
+                      </li>
+                      <li class="on">
+                        <span class="num">2</span>
+                        <span class="value">소화전</span>
+                      </li>
+                      <li class="on">
+                        <span class="num">3</span>
+                        <span class="value">CCTV 등록상태</span>
+                      </li>
+                      <li class="on">
+                        <span class="num">4</span>
+                        <span class="value">CCTV 호버/선택 상태</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="r">
+                    <ul class="list">
+                      <li>
+                        <span class="num">5</span>
+                        <span class="value"></span>
+                      </li>
+                      <li>
+                        <span class="num">6</span>
+                        <span class="value"></span>
+                      </li>
+                      <li>
+                        <span class="num">7</span>
+                        <span class="value"></span>
+                      </li>
+                      <li>
+                        <span class="num">8</span>
+                        <span class="value"></span>
+                      </li>
+                      <li>
+                        <span class="num">9</span>
+                        <span class="value"></span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div><!-- .content-frame -->
+              <div class="content-frame c-scrollbar">
+                <div style="position: relative; height:472px;" id="grid1_22-parent">
+                  <div class="cs-ax5grid" data-ax5grid="grid1_22" data-ax5grid-config="{}" style="height: 100%"></div>
+                </div>
+                <div class="total-wrap mt12">
+                  <div class="total">
+                    <span class="label">총</span>
+                    <span class="count">50</span>
+                    <span class="unit">건</span>
+                  </div>
+                  <div class="paging-area">
+                    <a href="#" class="btn-first disabled"></a>
+                    <a href="#" class="btn-prev disabled"></a>
+                    <div class="paging">
+                      <input class="current" type="text" value="1" />
+                      <span class="line">/</span>
+                      <span class="num">5</span>
+                    </div>
+                    <a href="#" class="btn-next"></a>
+                    <a href="#" class="btn-last"></a>
+                  </div>
+                </div><!-- .total-wrap -->
+              </div><!-- .content-frame -->
+            </div><!-- .content-frame-wrap -->
           </div><!-- .content-inner -->
         </div><!-- .content-area -->
       </div><!-- .content-wrap -->
     </div><!-- #container -->
+    <script src="js/ax5uiGridSample.js"></script>
   </div><!-- #wrap -->
-  
-  <script src="js/ax5uiGridSample.js"></script>
 </body>
 </html>

@@ -156,28 +156,24 @@
               </li>
             </ul>
           </li>
-          <li>
+          <li class="on">
             <a href="#" class="menu toggle">CCTV 운영</a>
             <ul>
+              <li class="on">
+                <a href="#" class="menu">CCTV 프리셋 설정</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
               <li>
-                <a href="#" class="menu">서브 메뉴</a>
+                <a href="#" class="menu">CCTV 프리셋 모니터링</a>
                 <a href="#" class="s-ico star"></a>
               </li>
             </ul>
           </li>
-          <li class="on">
+          <li>
             <a href="#" class="menu toggle">안개경고주의 운영</a>
             <ul>
-              <li class="on">
-                <a href="#" class="menu">안개경고 등급 관리</a>
-                <a href="#" class="s-ico star"></a>
-              </li>
               <li>
-                <a href="#" class="menu">안개경고 운영모드 설정</a>
-                <a href="#" class="s-ico star"></a>
-              </li>
-              <li>
-                <a href="#" class="menu">안개경고 예약 관리</a>
+                <a href="#" class="menu">서브 메뉴</a>
                 <a href="#" class="s-ico star"></a>
               </li>
             </ul>
@@ -200,7 +196,7 @@
             <div class="menu-swiper swiper-container">
               <div class="swiper-wrapper">
                 <div class="swiper-slide on">
-                  <a href="#" class="label">안개경고 등급 관리</a>
+                  <a href="#" class="label">CCTV 프리셋 모니터링</a>
                   <a href="#" class="s-ico close"></a>
                 </div>
               </div>
@@ -215,33 +211,111 @@
           <div class="content-inner">
             <div class="search-area">
               <div class="input-wrap">
-                <span class="label">FOGW 이름/ID</span>
-                <input type="text" class="input-base w-auto" placeholder="이름 또는 ID 검색" id="user_id" />
-
+                <span class="label">CCTV 이름/ID</span>
+                <input type="text" class="input-base" placeholder="이름 또는 ID 검색" style="width: 300px;" />
                 <span class="btn-base btn-ico ml8"><a href="#"><em><span class="s-ico search"></span>검색</em></a></span>
               </div>
-              <div class="btns-wrap">
-                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico step"></span>단계 변경</em></a></span>
-              </div>
             </div><!-- .search-area -->
-            <div class="content-frame c-scrollbar">
-              <div style="position: relative; height:208px;" id="grid1_13-parent">
-                <div class="cs-ax5grid" data-ax5grid="grid1_13" data-ax5grid-config="{}" style="height: 100%"></div>
-              </div>
-              <div class="total-wrap mt12">
-                <div class="total">
-                  <span class="label">총</span>
-                  <span class="count">3</span>
-                  <span class="unit">건</span>
+            <div class="content-frame-wrap">
+              <div class="content-frame c-scrollbar">
+                <div class="pic-area">
+                  <img src="https://placehold.co/796x490" alt="">
                 </div>
-              </div><!-- .total-wrap -->
-            </div><!-- .content-frame -->
+                <div class="control-area">
+                  <div class="btn-obj">
+                    <a href="javascript:void(0);" class="plus">+</a>
+                    <a href="javascript:void(0);" class="minus">-</a>
+                  </div>
+                  <a href="javascript:void(0);" class="btn-s b1"></a>
+                  <a href="javascript:void(0);" class="btn-s b2"></a>
+                  <a href="javascript:void(0);" class="btn-s b3"></a>
+                  <a href="javascript:void(0);" class="btn-s b4"></a>
+                  <a href="javascript:void(0);" class="btn-s b5"></a>
+                  <a href="javascript:void(0);" class="btn-s b6"></a>
+                  <a href="javascript:void(0);" class="btn-s b7"></a>
+                  <a href="javascript:void(0);" class="btn-s b8"></a>
+                </div>
+              </div><!-- .content-frame -->
+              <div class="content-obj">
+                <div class="tip-wrap">
+                  <em class="ico"><img src="img/ico-badge-require.png" alt=""></em>
+                  <span>필수항목</span>
+                </div>
+                <div class="content-frame c-scrollbar mt8">
+                  <div class="tb-wrap">
+                    <table summary="VMS 대응 메시지 등록" class="tb-input">
+                      <colgroup>
+                        <col width="160" />
+                        <col width="*" />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row">CCTV ID</th>
+                          <td>
+                            <div class="input-wrap">
+                              <input type="text" class="input-base" value="01-TCCTV-E-0024-01" />
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">CCTV 명</th>
+                          <td>
+                            <div class="input-wrap">
+                              <input type="text" class="input-base" value="남양1터널 CCTV 003" />
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">프리셋 번호 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                          <td>
+                            <div class="btns-wrap evt select-one">
+                              <span class="btn-base"><a href="#">0</a></span>
+                              <span class="btn-base on"><a href="#">1</a></span>
+                              <span class="btn-base"><a href="#">2</a></span>
+                              <span class="btn-base"><a href="#">3</a></span>
+                              <span class="btn-base"><a href="#">4</a></span>
+                              <span class="btn-base"><a href="#">5</a></span>
+                              <span class="btn-base"><a href="#">6</a></span>
+                              <span class="btn-base"><a href="#">7</a></span>
+                              <span class="btn-base"><a href="#">8</a></span>
+                              <span class="btn-base"><a href="#">9</a></span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">프리셋 명 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                          <td>
+                            <div class="input-wrap">
+                              <input type="text" class="input-base" value="돌발 - 긴급전화 줌 인 입력" />
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">시작 이정</th>
+                          <td>
+                            <div class="input-wrap">
+                              <input type="text" class="input-base" placeholder="시작 이정 입력" />
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">종료 이정</th>
+                          <td>
+                            <div class="input-wrap">
+                              <input type="text" class="input-base" placeholder="종료 이정 입력" />
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div><!-- .content-frame -->
+              </div><!-- .content-obj -->
+            </div><!-- .content-frame-wrap -->
           </div><!-- .content-inner -->
         </div><!-- .content-area -->
       </div><!-- .content-wrap -->
     </div><!-- #container -->
   </div><!-- #wrap -->
-  
-  <script src="js/ax5uiGridSample.js"></script>
 </body>
 </html>
