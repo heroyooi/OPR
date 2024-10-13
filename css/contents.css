@@ -443,7 +443,7 @@
 
 /* https://www.cssportal.com/css-clip-path-generator/ */
 .type-map .st-section.shape-up.tp2 i,
-.type-map .st-route-wrap .evt.shape-up .sec.shape.tp2{clip-path: polygon(69.57% 0%, 0% 84.91%, 0% 100%, 14.81% 100%, 71.3% 32.08%, 100% 32.08%, 100% 0%);}
+.type-map .st-route-wrap .evt.shape-up .sec.shape.tp2{clip-path: polygon(30.48% 0%, 0% 84.91%, 0% 100%, 15.24% 100%, 40% 32.08%, 100% 32.08%, 100% 0%);}
 
 .type-map .st-section.shape-down.tp2 i,
 .type-map .st-route-wrap .evt.shape-down .sec.shape.tp2{clip-path: polygon(18.29% 100%, 0% 14.81%, 0% 0%, 9.14% 0%, 24% 68.52%, 100% 68.52%, 100% 100%, 18.29% 100%);}
