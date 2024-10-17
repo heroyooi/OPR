@@ -723,6 +723,11 @@ input[type=number]::-webkit-outer-spin-button {
 .tb-list tr td .status.st3::before,
 .tb-list tr.st3 td .status::before{background-color:#ef4345;}
 .tb-list.td-ellipsis td:not(.no-ellipsis){white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+.tb-list.td-ellipsis td .flow{overflow-x:scroll;white-space:nowrap;text-overflow:ellipsis;cursor:pointer;}
+.tb-list.td-ellipsis td .flow.on{text-overflow:initial;}
+.tb-list.td-ellipsis td .flow::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
 
 .tb-wrapper{position: relative;}
 .tb-wrapper .c-scrollbar::-webkit-scrollbar-track{margin-top:32px;}
