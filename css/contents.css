@@ -237,8 +237,9 @@
 .monitor-list > li.type-4 > dl > dd .weather-info{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:37px;}
 .monitor-list > li.type-4 > dl > dd .weather-info li{width:calc(50% - 8px);}
 .monitor-list > li.type-4 > dl > dd .gage-info .gage-wrap{height:7px;margin-top:8px;}
-.monitor-list > li.type-4 > dl > dd.gage{height:224px;}
-.monitor-list > li.type-5 > dl > dd .tb-wrap.c-scrollbar{height:132px;overflow-y:auto;}
+.monitor-list > li.type-4 > dl > dd.gage{height:220px;}
+.monitor-list > li.type-5 > dl > dd .tb-wrap.c-scrollbar{height:120px;overflow-y:auto;}
+.monitor-list > li.type-5 > dl > dd .tb-wrap .tb-list td{padding:9px;}
 
 .gauge-wrap{display:flex;justify-content:space-between;}
 .gauge-wrap .gauge-label{font-size:14px;line-height:1.5;font-weight:700;color:#778298;}
@@ -388,8 +389,8 @@
 .no-data .info-area .txt{font-size:14px;font-weight:500;color:#b2bbce;display:block;line-height:1.5;margin-top:10px;}
 
 #wrap.full .type-map .st-label{top:112px;}
-#wrap.full .type-map .st-line-wrap{top:250px;}
-#wrap.full .type-map .st-route li.half{height:60%;}
+#wrap.full .type-map .st-line-wrap{top:50%;transform:translateY(-50%);}
+#wrap.full .type-map .st-route li.half{height:50%;}
 #wrap.full .type-map .st-route li span{bottom:16%}
 #wrap.full .type-map .st-route li span.up{top:156px;}
 #wrap.full .type-map .st-route-wrap .evt.top{top:250px;}
@@ -416,10 +417,16 @@
 .control-area{width:180px;height:180px;margin:24px auto 0;background-color:#363b42;position: relative;border-radius:50%;}
 .control-area .btn-obj{width:80px;height:80px;border-radius:50%;position:absolute;left:50px;top:50px;background:url(../img/bg-zoom.png) 50% 50% no-repeat;overflow:hidden;}
 .control-area .btn-obj a{display:block;width:100%;height:40px;font-size:0;}
+
 .control-area .btn-obj a.plus{background:url(../img/ico-16-plus-b-def.png) 50% 50% no-repeat;}
 .control-area .btn-obj a.minus{background:url(../img/ico-16-minus-b-def.png) 50% 50% no-repeat;}
-.control-area .btn-s{position: absolute;display: inline-block;width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:6px solid #b2bbce;}
+
+.control-area .btn-obj a.plus:hover{background:url(../img/ico-16-plus-b-sel.png) 50% 50% no-repeat;}
+.control-area .btn-obj a.minus:hover{background:url(../img/ico-16-minus-b-sel.png) 50% 50% no-repeat;}
+
+.control-area .btn-s{position: absolute;display: inline-block;width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:6px solid #b2bbce;transition:border 0.2s;}
 .control-area .btn-s::before{content:'';display:block;width:30px;height:30px;position:absolute;background-color:gold;left:50%;top:50%;transform:translate(-50%, -50%);opacity:0;}
+.control-area .btn-s:hover{border-bottom-color:#1ac2ff;}
 .control-area .btn-s.b1{transform:rotate(0deg);left:86px;top:15px;}
 .control-area .btn-s.b2{transform:rotate(45deg);left:136px;top:35px;}
 .control-area .btn-s.b3{transform:rotate(90deg);left:160px;top:87px;}
@@ -428,6 +435,35 @@
 .control-area .btn-s.b6{transform:rotate(225deg);left:36px;bottom:35px;}
 .control-area .btn-s.b7{transform:rotate(270deg);left:12px;top:87px;}
 .control-area .btn-s.b8{transform:rotate(315deg);left:36px;top:35px;}
+.control-area .shape {
+  display:block;
+  position:absolute;
+  left:6px;
+  top:6px;
+  width: 69px; /* SVG의 viewBox 크기 */
+  height: 69px;
+  background-color: rgba(26, 194, 255, 0.15);
+  clip-path: path("M49.56 0.85A90 90 0 0 0 0.851 49.559l46.563 19.288a39.6 39.6 0 0 1 21.431-21.432L49.56 0.851z");
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.control-area .shape.s1{transform:rotate(45deg);left:56px;top:-15px;}
+.control-area .shape.s2{transform:rotate(90deg);left:105px;top:6px;}
+.control-area .shape.s3{transform:rotate(135deg);left:125px;top:55px;}
+.control-area .shape.s4{transform:rotate(180deg);left:105px;top:105px;}
+.control-area .shape.s5{transform:rotate(225deg);left:56px;top:126px;}
+.control-area .shape.s6{transform:rotate(270deg);left:6px;top:105px;}
+.control-area .shape.s7{transform:rotate(315deg);left:-15px;top:55px;}
+.control-area .shape.s8{transform:rotate(360deg);left:6px;top:6px;}
+
+.control-area.s1 .shape.s1{opacity:1;}
+.control-area.s2 .shape.s2{opacity:1;}
+.control-area.s3 .shape.s3{opacity:1;}
+.control-area.s4 .shape.s4{opacity:1;}
+.control-area.s5 .shape.s5{opacity:1;}
+.control-area.s6 .shape.s6{opacity:1;}
+.control-area.s7 .shape.s7{opacity:1;}
+.control-area.s8 .shape.s8{opacity:1;}
 
 .num-list{display:flex;gap:8px;margin-top:8px;}
 .num-list > li{width:50%;}

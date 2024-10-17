@@ -216,24 +216,32 @@
                 <span class="btn-base btn-ico ml8"><a href="#"><em><span class="s-ico search"></span>검색</em></a></span>
               </div>
             </div><!-- .search-area -->
-            <div class="content-frame-wrap">
+            <div class="content-frame-wrap remote">
               <div class="content-frame c-scrollbar">
                 <div class="pic-area">
-                  <img src="https://placehold.co/796x490" alt="">
+                  <img src="https://placehold.co/630x476" alt="">
                 </div>
                 <div class="control-area">
                   <div class="btn-obj">
                     <a href="javascript:void(0);" class="plus">+</a>
                     <a href="javascript:void(0);" class="minus">-</a>
                   </div>
-                  <a href="javascript:void(0);" class="btn-s b1"></a>
-                  <a href="javascript:void(0);" class="btn-s b2"></a>
-                  <a href="javascript:void(0);" class="btn-s b3"></a>
-                  <a href="javascript:void(0);" class="btn-s b4"></a>
-                  <a href="javascript:void(0);" class="btn-s b5"></a>
-                  <a href="javascript:void(0);" class="btn-s b6"></a>
-                  <a href="javascript:void(0);" class="btn-s b7"></a>
-                  <a href="javascript:void(0);" class="btn-s b8"></a>
+                  <span class="shape s1"></span>
+                  <span class="shape s2"></span>
+                  <span class="shape s3"></span>
+                  <span class="shape s4"></span>
+                  <span class="shape s5"></span>
+                  <span class="shape s6"></span>
+                  <span class="shape s7"></span>
+                  <span class="shape s8"></span>
+                  <a href="javascript:void(0);" class="btn-s b1" data-id="1"></a>
+                  <a href="javascript:void(0);" class="btn-s b2" data-id="2"></a>
+                  <a href="javascript:void(0);" class="btn-s b3" data-id="3"></a>
+                  <a href="javascript:void(0);" class="btn-s b4" data-id="4"></a>
+                  <a href="javascript:void(0);" class="btn-s b5" data-id="5"></a>
+                  <a href="javascript:void(0);" class="btn-s b6" data-id="6"></a>
+                  <a href="javascript:void(0);" class="btn-s b7" data-id="7"></a>
+                  <a href="javascript:void(0);" class="btn-s b8" data-id="8"></a>
                 </div>
               </div><!-- .content-frame -->
               <div class="content-obj">
@@ -317,5 +325,21 @@
       </div><!-- .content-wrap -->
     </div><!-- #container -->
   </div><!-- #wrap -->
+  <script>
+    $('.control-area .btn-s').on('mouseenter', function(){
+      var index = $(this).data('id');
+      var $control = $(this).closest('.control-area');
+      $control.removeClass(function(index, className) {
+        return (className.match(/s[1-8]/g) || []).join(' ');
+      });
+      $control.addClass('s' + index);
+    });
+    $('.control-area .btn-s').on('mouseleave', function(){
+      var $control = $(this).closest('.control-area');
+      $control.removeClass(function(index, className) {
+        return (className.match(/s[1-8]/g) || []).join(' ');
+      });
+    });
+  </script>
 </body>
 </html>

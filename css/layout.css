@@ -96,6 +96,11 @@ body{width:100%;overflow:hidden;}
 .content-frame-wrap.vds > .content-frame:nth-child(1){width:496px;flex-shrink:0;}
 .content-frame-wrap.vds > .content-frame:nth-child(2){flex-grow:1;}
 
+.content-frame-wrap.remote{gap:0 20px;}
+.content-frame-wrap.remote > .content-frame:nth-child(1){width:630px;flex-shrink:0;}
+.content-frame-wrap.remote > .content-frame:nth-child(2),
+.content-frame-wrap.remote > .content-obj:nth-child(2){flex-grow:1;}
+
 .content-frame-wrap.monitoring{gap:0;}
 .content-frame-wrap.monitoring .content-frame{margin-top:0;}
 .content-frame-wrap.monitoring > .content-frame:nth-child(1),
