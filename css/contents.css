@@ -390,11 +390,11 @@
 .no-data .info-area .s-ico{margin:0 auto;}
 .no-data .info-area .txt{font-size:14px;font-weight:500;color:#b2bbce;display:block;line-height:1.5;margin-top:10px;}
 
-#wrap.full .type-map .st-label{top:112px;}
+#wrap.full .type-map .st-label{top:70px;}
 #wrap.full .type-map .st-line-wrap{top:50%;transform:translateY(-50%);}
 #wrap.full .type-map .st-route li.half{height:50%;}
 #wrap.full .type-map .st-route li span{bottom:16%}
-#wrap.full .type-map .st-route li span.up{top:156px;top:80px;}
+#wrap.full .type-map .st-route li span.up{top:100px;}
 #wrap.full .type-map .st-route-wrap .evt.top{top:250px;}
 #wrap.full .type-map .st-route-wrap .evt.top.shape-up{top:205px;}
 #wrap.full .type-map .st-route-wrap .evt.top.shape-down{top:259px;}
