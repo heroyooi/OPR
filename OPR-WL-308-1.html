@@ -246,7 +246,7 @@
                 <span class="label">링크 ID</span>
                 <select class="select-base" style="width: 200px;">
                   <option value="0">선택</option>
-                  <option value="1" selected>예산IC - 예산 JCT</option>
+                  <option value="1" selected>링크 ID</option>
                   <option value="2">값2</option>
                   <option value="3">값3</option>
                 </select>
@@ -259,22 +259,43 @@
             <div class="content-frame-wrap">
               <div class="content-frame c-scrollbar">
                 <div class="map-area" style="background-color: #000;">
-                  <span class="s-ico poi" style="position:absolute; left: 387px; top: 256px;"></span>
+                  <a href="javascript:;" class="map-point" style="left: 422px; top: 259px;"></a>
+                  <span class="map-tip" style="left: 385px; top: 223px;">1234567891</span>
                   <div class="map-navi">
                     <a href="#" class="s-ico plus"></a>
                     <a href="#" class="s-ico minus"></a>
                   </div>
-                  <div class="map-tooltip" style="left: 405px; top: 372px;">
-                    <ul>
-                      <li><a href="#">주소불러오기</a></li>
-                    </ul>
-                  </div>
+                  <span class="compass"><img src="img/ima-compass.png" alt=""></span>
                 </div>
               </div><!-- .content-frame -->
               <div class="content-obj">
                 <div class="tip-wrap">
-                  <em class="ico"><img src="img/ico-badge-require.png" alt=""></em>
-                  <span>필수항목</span>
+                  <a href="#" class="btn-ico"></a>
+                  <div class="tip-popup" style="width: 308px;">
+                    <a href="#" class="s-ico close gray"></a>
+                    <ul>
+                      <li>
+                        <span class="label">PHF</span>
+                        <p class="con">첨두시간 계수(일별) <br />0에 가까울 수록 혼잡도가 높음 <br />1에 가까울 수록 혼잡도가 낮음</p>
+                      </li>
+                      <li>
+                        <span class="label">ADT</span>
+                        <p class="con">평균 일 교통량(월별)</p>
+                      </li>
+                      <li>
+                        <span class="label">AWT</span>
+                        <p class="con">평균 주중 교통량(월별, 주말 제외)</p>
+                      </li>
+                      <li>
+                        <span class="label">ADT &gt; AWT</span>
+                        <p class="con">주말 교통량이 평일 교통량보다 많음</p>
+                      </li>
+                      <li>
+                        <span class="label">ADT &lt; AWT</span>
+                        <p class="con">평일 교통량이 주말 교통량보다 많음</p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="content-frame c-scrollbar mt8">
                   <div class="chart-area" style="min-height: 608px;">
@@ -299,6 +320,26 @@
       window.addEventListener('resize', function () {
         barLineChart.resize();
       });
+
+      $('.tip-wrap .btn-ico').on('click', function(e){
+        e.preventDefault();
+        if (!$(this).hasClass('on')) {
+          $(this).addClass('on');
+          $(this).next('.tip-popup').addClass('on');
+        } else {
+          $(this).removeClass('on');
+          $(this).next('.tip-popup').removeClass('on');
+        }
+      });
+      $('.tip-popup .s-ico.close').on('click', function(){
+        $(this).closest('.tip-popup').removeClass('on');
+        $(this).closest('.tip-popup').prev('.btn-ico').removeClass('on');
+      });
+
+      var query = $.urlParam('sample');
+      if (query === 'tip') {
+        $('.tip-wrap .btn-ico').click();
+      }
     </script>
   </div><!-- #wrap -->
 </body>
