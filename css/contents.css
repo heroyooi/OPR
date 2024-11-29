@@ -521,4 +521,34 @@
 .tip-popup li:first-child{margin-top:0;}
 .tip-popup li .label{color:#fff;font-weight:600;}
 .tip-popup li .con{line-height:1.5;color:#b2bbce;}
+
+.status-detail{display:flex;flex-wrap:wrap;}
+.status-detail > li{width:50%;border-bottom:1px solid #212332;border-left:1px solid #212332;}
+.status-detail > li.full{width:100%;}
+.status-detail > li:nth-child(odd){border-left:0;}
+.status-detail > li > dl > dt{font-size:16px;font-weight:700;color:#19b2e8;padding: 16px 16px 8px;background-color: rgba(26, 194, 255, 0.15);}
+.status-detail > li > dl > dd{padding:16px 16px 30px;}
+.status-detail > li > dl > dd.state{padding:23px 24px 23px 32px;min-height:163px;display:flex;flex-direction:column;justify-content:center;}
+.status-detail > li > dl > dd .visual-area{display:flex;justify-content:space-between;align-items:center;}
+.status-detail > li > dl > dd .visual-area .visual span{display:block;}
+.status-detail > li > dl > dd .visual-area .visual .label{font-size:16px;font-weight:700;line-height:1.5;color:#b2bbce;}
+.status-detail > li > dl > dd .visual-area .visual .value{font-size:32px;font-weight:700;color:#fff;line-height:1.4;}
+.status-detail > li > dl > dd .visual-area .visual .value.c-green{color:#0bbe35;}
+.status-detail > li > dl > dd .visual-area .visual .value.c-yellow{color:#fcbb25;}
+.status-detail > li > dl > dd .visual-area .visual .value.c-orange{color:#ff7b0e;}
+.status-detail > li > dl > dd .visual-area .visual .value.c-red{color:#ef4345;}
+.status-detail > li > dl > dd .visual-area + .btns-wrap{margin-top:8px;}
+
+.status-detail > li .st-table .col-list li{width:100%;height:40px;}
+.status-detail > li .st-table .col-list li:nth-child(2){border-top:1px solid #212332;}
+.status-detail > li .st-table .col-list li:nth-child(even){border-left:0;}
+.st-table-area.inner{width:50%;padding:0;}
+.st-table-area.inner .st-table:nth-child(1){width:55%;}
+.st-table-area.inner .st-table:nth-child(2){width:45%;}
+
+.rwis-polar-wrap{display:flex;align-items: center;justify-content: space-between;}
+.rwis-chart-tit{font-size:14px;font-weight:600;color:#b2bbce;text-align:center;margin-bottom:16px;}
+.radio-list.radio-time{display:inline-block;margin-left:20px;}
+.radio-list.radio-time li{display:inline-block;margin-left:8px;}
+.radio-list.radio-time li:first-child{margin-left:0;}
 /* E: 2024-11 */

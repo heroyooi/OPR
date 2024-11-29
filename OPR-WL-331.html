@@ -252,47 +252,47 @@
   </div><!-- #wrap -->
   
   <script src="js/ax5uiGridSample.js"></script>
-    <script>
-      tui.DatePicker.localeTexts['customKey'] = {
-        titles: {
-            // days
-            DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-            // daysShort
-            D: ['일', '월', '화', '수', '목', '금', '토'],
-            // months
-            MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-            // monthsShort
-            MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
-        },
-        titleFormat: 'yyyy.MMM',
-        todayFormat: '오늘 : yyyy.MMMM.dd',
-        date: 'Date',
-        time: 'Time'
-      };
-      
-      var today1 = new Date();
-      var picker1 = tui.DatePicker.createRangePicker({
-        language: 'customKey',
-        startpicker: {
-          date: today1,
-          input: '#startpicker-input1',
-          container: '#startpicker-container1'
-        },
-        endpicker: {
-          date: today1,
-          input: '#endpicker-input1',
-          container: '#endpicker-container1'
-        },
-        selectableRanges: [
-          [today1, new Date(today1.getFullYear() + 1, today1.getMonth(), today1.getDate())]
-        ],
-        format: 'YYYY-MM-dd',
-        // showAlways: true,
-      });
-      
-      picker1.on('change:end', () => {
-          console.log(123);
-      });
-    </script>
+  <script>
+    tui.DatePicker.localeTexts['customKey'] = {
+      titles: {
+          // days
+          DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+          // daysShort
+          D: ['일', '월', '화', '수', '목', '금', '토'],
+          // months
+          MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+          // monthsShort
+          MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+      },
+      titleFormat: 'yyyy.MMM',
+      todayFormat: '오늘 : yyyy.MMMM.dd',
+      date: 'Date',
+      time: 'Time'
+    };
+    
+    var today1 = new Date();
+    var picker1 = tui.DatePicker.createRangePicker({
+      language: 'customKey',
+      startpicker: {
+        date: today1,
+        input: '#startpicker-input1',
+        container: '#startpicker-container1'
+      },
+      endpicker: {
+        date: today1,
+        input: '#endpicker-input1',
+        container: '#endpicker-container1'
+      },
+      selectableRanges: [
+        [today1, new Date(today1.getFullYear() + 1, today1.getMonth(), today1.getDate())]
+      ],
+      format: 'YYYY-MM-dd',
+      // showAlways: true,
+    });
+    
+    picker1.on('change:end', () => {
+        console.log(123);
+    });
+  </script>
 </body>
 </html>

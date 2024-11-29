@@ -144,3 +144,10 @@ body{width:100%;overflow:hidden;}
 #wrap.full .content-area .content-frame-wrap{height:100%;}
 #wrap.full .content-area .content-frame{height:100% !important;}
 #wrap.full .monitor-list > li > dl > dd .fac-info li{padding:25px 12px;}
+
+/* S: 2024-11 */
+.content-frame-wrap.type-2{gap:0;}
+.content-frame-wrap.type-2 .content-frame{margin-top:0;border-radius:0;}
+.content-frame-wrap.type-2 .map-area{border-radius:0;}
+.content-wrap .content-top .s-ico.reset{position: absolute;right:52px;top:14px;z-index:1;}
+/* E: 2024-11 */

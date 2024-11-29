@@ -1940,4 +1940,274 @@ var options = {
             }
         ]
     },
+
+
+    r_line: {
+        color: ['#00bbfe', '#2f78ff', '#e3c208'],
+        title: {
+            show: false,
+            // text: '통행시간',
+            // textStyle: {
+            //     fontSize: 14,
+            //     color: '#b2bbce',
+            //     fontFamily: 'Pretendard',
+            // },
+            // top: '0%', // 제목을 위쪽으로
+            // left: 'center'
+        },
+        tooltip: {
+            trigger: 'axis',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            textStyle: {
+                color: '#ffffff',
+                fontFamily: 'Pretendard',
+                fontSize: 12,
+                fontWeight: '600'
+            },
+            borderWidth: 0,
+        },
+        legend: {
+            data: ['기온', '습도', '풍속'],
+            textStyle: {
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+            },
+            top: '0%', // 범례를 제목 아래로
+        },
+        grid: {
+            left: '0%',
+            right: '0%',
+            bottom: '0%',
+            containLabel: true,
+            top: '20%', // 그래프 영역을 아래로 이동
+        },
+        toolbox: {
+            // feature: {
+            //     saveAsImage: {}
+            // }
+            show: false
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: true,
+            data: ['RWIS1', 'RWIS', 'RWIS3'],
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157'
+                }
+            },
+            axisLabel: {
+                textStyle: {
+                    fontSize: 11,
+                    fontWeight: 600,
+                    fontFamily: 'Pretendard',
+                    color: '#b2bbce'
+                },
+                // rotate: 45, 
+                interval: 0,
+            },
+        },
+        yAxis: {
+            type: 'value',
+            position: 'left',
+            alignTicks: true,
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157',
+                },
+            },
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157'
+                },
+            },
+            axisLabel: {
+                textStyle: {
+                    fontSize: 11,
+                    fontWeight: 600,
+                    fontFamily: 'Pretendard',
+                    color: '#b2bbce'
+                }
+            },
+            min: 0,
+            max: 100,
+            interval: 20,
+        },
+        series: [
+            {
+                name: '기온',
+                type: 'line',
+                symbol: 'circle',
+                symbolSize: 8,
+                data: [55, 70, 40]
+            },
+            {
+                name: '습도',
+                type: 'line',
+                symbol: 'circle',
+                symbolSize: 8,
+                data: [50, 55, 40]
+            },
+            {
+                name: '풍속',
+                type: 'line',
+                symbol: 'circle',
+                symbolSize: 8,
+                data: [5, 25, 60]
+            },
+        ]
+    },
+    r_polar: {
+        polar: {
+            radius: ['10%', '90%'],
+            center: ['50%', '40%'],
+        },
+        angleAxis: {
+            type: 'category',
+            data: ['동', '서', '남', '북'],
+            axisLabel: {
+                show: false
+            },
+            axisLine: {
+                show: false
+            },
+            splitLine: {
+                show: false
+            }
+        },
+        radiusAxis: {
+            type: 'value',
+            max: 5,
+            splitNumber: 4,
+            axisLine: {
+                show: false,
+                lineStyle: {
+                    color: '#3e4157',
+                }
+            },
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157',
+                    width: 5
+                }
+            },
+            axisLabel: {
+                show: false
+            }
+        },
+        series: [
+            {
+                type: 'bar',
+                data: [0, 0, 0, 5],
+                coordinateSystem: 'polar',
+                name: 'A',
+                stack: 'a',
+                itemStyle: {
+                    color: '#2f78ff'
+                },
+                emphasis: {
+                    focus: 'series'
+                }
+            },
+        ],
+        legend: {
+            show: false,
+        },
+        graphic: [
+            {
+                type: 'text',
+                left: 'center',
+                bottom: '0%', // 차트 하단에 배치
+                style: {
+                    fontFamily: 'Pretendard',
+                    fontSize: 11,
+                    fontWeight: 600,
+                    text: '01-RWIS-N-0050-01', // 표시할 텍스트
+                    fill: '#b2bbce', // 글꼴 색상
+                    textAlign: 'center', // 텍스트 가운데 정렬
+                },
+            },
+        ],
+    },
+    r_pie: {
+        color: ['#00bbfe', '#2f78ff', '#853cfc', '#00be9c', '#e3c208', '#ef4345', '#0bbe35', '#ec7e19', '#ad2ec6', '#a89b8f', '#d83a73', '#778298'],
+        title: {
+            text: '돌발상황 발생량 통계',
+            textStyle: {
+                fontSize: 14,
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+            },
+            left: 'center'
+        },
+        tooltip: {
+            trigger: 'item',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)', // 툴팁 배경색상 설정
+            textStyle: {
+                color: '#fff', // 툴팁 글씨색상 설정
+                fontFamily: 'Pretendard',
+                fontSize: 12,
+                fontWeight: '600'
+            },
+            borderWidth: 0,
+            formatter: '{b} {d}%'
+        },
+        legend: {
+            // right: '0%', // 범례의 위치 설정
+            top: '10%', // 범례의 상단 위치 설정 (화면 상단 중앙)
+            left: 'center',
+            itemWidth: 16, // 아이템 너비
+            itemHeight: 8, // 아이템 높이
+            
+            itemGap: 5, // 항목 간 상하 간격 조정
+            textStyle: {
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+            },
+            formatter: function (name) {
+                return name; // 색상과 텍스트를 포함한 포맷을 설정
+            }
+        },
+        series: [
+            {
+                type: 'pie',
+                radius: '60%',
+                center: ['48%', '65%'],
+                data: [
+                    { value: 55, name: '차량고장' },
+                    { value: 14, name: '교통사고' },
+                    { value: 10, name: '장애물' },
+                    { value: 5, name: '차량증가/정체' },
+                    { value: 2, name: '강우' },
+                    { value: 2, name: '강설' },
+                    { value: 2, name: '노면결빙' },
+                    { value: 2, name: '안개' },
+                    { value: 2, name: '위험물질 방출' },
+                    { value: 2, name: '지진' },
+                    { value: 2, name: '산사태' },
+                    { value: 2, name: '역주행' },
+                ],
+                label: {
+                    formatter: '{b} {d}%', // 라벨 포맷 설정
+                    textStyle: {
+                        fontSize: 12,
+                        color: '#b2bbce',
+                        fontFamily: 'Pretendard',
+                    }
+                },
+                emphasis: {
+                    itemStyle: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    },
+                    
+                }
+            }
+        ]
+    },
 }

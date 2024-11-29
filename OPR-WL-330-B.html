@@ -149,20 +149,24 @@
               </li>
             </ul>
           </li>
-          <li class="on">
+          <li>
             <a href="#" class="menu toggle">교통지표 통계</a>
             <ul>
-              <li class="on">
+              <li>
                 <a href="#" class="menu">교통지표 통계 조회</a>
                 <a href="#" class="s-ico star"></a>
               </li>
             </ul>
           </li>
-          <li>
+          <li class="on">
             <a href="#" class="menu toggle">DSRC 통계</a>
             <ul>
+              <li class="on">
+                <a href="#" class="menu">DSRC 구간 통계</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
               <li>
-                <a href="#" class="menu">서브 메뉴</a>
+                <a href="#" class="menu">DSRC 노변 기지국 통계</a>
                 <a href="#" class="s-ico star"></a>
               </li>
             </ul>
@@ -194,7 +198,7 @@
             <div class="menu-swiper swiper-container">
               <div class="swiper-wrapper">
                 <div class="swiper-slide on">
-                  <a href="#" class="label">교통지표 통계 조회</a>
+                  <a href="#" class="label">DSRC 구간 통계</a>
                   <a href="#" class="s-ico close"></a>
                 </div>
               </div>
@@ -208,105 +212,93 @@
         </div><!-- .content-top -->
         <div class="content-area">
           <div class="content-inner">
-            <ul class="tab-btn">
-              <li class="on"><a href="#">월별첨두시간 혼잡도 및 교통량</a></li>
-              <li><a href="#">연간 교통량 변화 추이</a></li>
-              <li><a href="#">구간 내 링크 별 월간 교통량 비교</a></li>
-              <li><a href="#">구간 내 링크 별 연간 교통량 비교</a></li>
-            </ul>
-            <div class="search-area mt16">
+            <div class="search-area">
               <div class="input-wrap input-datepicker">
-                <span class="label">년도</span>
-                <select class="select-base" style="width: 110px;">
-                  <option value="0" selected>선택</option>
-                  <option value="1">2004</option>
-                  <option value="2">값2</option>
-                  <option value="3">값3</option>
-                </select>
-                <span class="label">월</span>
-                <select class="select-base" style="width: 110px;">
-                  <option value="0" selected>선택</option>
-                  <option value="1">2004</option>
-                  <option value="2">값2</option>
-                  <option value="3">값3</option>
-                </select>
-                <span class="label">방향</span>
-                <select class="select-base" style="width: 110px;">
-                  <option value="0" selected>선택</option>
-                  <option value="1">2004</option>
-                  <option value="2">값2</option>
-                  <option value="3">값3</option>
-                </select>
-                <span class="label">구간</span>
-                <select class="select-base" style="width: 200px;">
-                  <option value="0">선택</option>
-                  <option value="1" selected>예산IC - 예산 JCT</option>
-                  <option value="2">값2</option>
-                  <option value="3">값3</option>
-                </select>
-                <span class="label">링크 ID</span>
-                <select class="select-base" style="width: 200px;">
-                  <option value="0">선택</option>
-                  <option value="1" selected>링크 ID</option>
-                  <option value="2">값2</option>
-                  <option value="3">값3</option>
-                </select>
+                <span class="label">조회일시</span>
+                <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom" style="width: 136px;">
+                  <input id="startpicker-input1" type="text" aria-label="Date">
+                  <span class="tui-ico-date"></span>
+                  <div id="startpicker-container1" style="margin-left: -1px;"></div>
+                </div>
+                <span class="bridge">~</span>
+                <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom" style="width: 136px;">
+                  <input id="endpicker-input1" type="text" aria-label="Date">
+                  <span class="tui-ico-date"></span>
+                  <div id="endpicker-container1" style="margin-left: -1px;"></div>
+                </div>
+
+                <span class="label">RWIS ID</span>         
+                <input type="text" class="input-base" placeholder="RWIS ID 검색" style="width: 180px;" />       
+
+                <ul class="radio-list radio-time">
+                  <li>
+                    <span class="radio-base f-label">
+                      <input type="radio" id="radio-time-1" name="radio-time" checked="">
+                      <label for="radio-time-1">시간</label>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="radio-base">
+                      <input type="radio" id="radio-time-2" name="radio-time">
+                      <label for="radio-time-2">월</label>
+                    </span>
+                  </li>
+                </ul>
                 <span class="btn-base btn-ico ml8"><a href="#"><em><span class="s-ico search"></span>검색</em></a></span>
               </div>
               <div class="btns-wrap">
-                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico download"></span>데이터 다운로드</em></a></span>
+                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico download"></span>전체 다운로드</em></a></span>
+                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico exceldown"></span>엑셀 다운로드</em></a></span>
               </div>
             </div><!-- .search-area -->
-            <div class="content-frame-wrap">
-              <div class="content-frame c-scrollbar">
-                <div class="map-area" style="background-color: #000;">
-                  <a href="javascript:;" class="map-point" style="left: 422px; top: 259px;"></a>
-                  <span class="map-tip" style="left: 385px; top: 223px;">1234567891</span>
-                  <div class="map-navi">
-                    <a href="#" class="s-ico plus"></a>
-                    <a href="#" class="s-ico minus"></a>
-                  </div>
-                  <span class="compass"><img src="img/ima-compass.png" alt=""></span>
-                </div>
-              </div><!-- .content-frame -->
-              <div class="content-obj">
-                <div class="tip-wrap">
-                  <a href="#" class="btn-ico"></a>
-                  <div class="tip-popup" style="width: 308px;">
-                    <a href="#" class="s-ico close gray"></a>
-                    <ul>
-                      <li>
-                        <span class="label">PHF</span>
-                        <p class="con">첨두시간 계수(일별) <br />0에 가까울 수록 혼잡도가 높음 <br />1에 가까울 수록 혼잡도가 낮음</p>
-                      </li>
-                      <li>
-                        <span class="label">ADT</span>
-                        <p class="con">평균 일 교통량(월별)</p>
-                      </li>
-                      <li>
-                        <span class="label">AWT</span>
-                        <p class="con">평균 주중 교통량(월별, 주말 제외)</p>
-                      </li>
-                      <li>
-                        <span class="label">ADT &gt; AWT</span>
-                        <p class="con">주말 교통량이 평일 교통량보다 많음</p>
-                      </li>
-                      <li>
-                        <span class="label">ADT &lt; AWT</span>
-                        <p class="con">평일 교통량이 주말 교통량보다 많음</p>
-                      </li>
+            <div class="content-line">
+              
+              <div class="content-frame-wrap chart">
+                <div class="content-frame c-scrollbar">
+                  <div class="tit-area">
+                    <p class="tit">RWIS 기상통계</p>
+                    <ul class="tab-btn">
+                      <li class="on"><a href="#">주간</a></li>
+                      <li><a href="#">야간</a></li>
                     </ul>
                   </div>
-                </div>
-                <div class="content-frame c-scrollbar mt8">
-                  <div class="chart-area" style="min-height: 608px;">
+                  <div class="chart-area mt8">
                     <div class="inner">
-                      <div id="barLineChart" style="width: 100%; height: 576px;"></div>
+                      <p class="rwis-chart-tit">평균 풍향</p>
+                      <div class="rwis-polar-wrap">
+                        <div id="rwisPolarChart1" style="width: 140px; height: 160px;"></div>
+                        <div id="rwisPolarChart2" style="width: 140px; height: 160px;"></div>
+                        <div id="rwisPolarChart3" style="width: 140px; height: 160px;"></div>
+                      </div>
+                      <div id="rwisLineChart" style="width: 100%; height: 238px; margin-top: 30px;"></div>
                     </div>
                   </div>
                 </div><!-- .content-frame -->
-              </div><!-- .content-obj -->
-            </div><!-- .content-frame-wrap -->
+                <div class="content-frame c-scrollbar">
+                  <div style="position: relative; height:516px;" id="grid1_23-parent">
+                    <div class="cs-ax5grid" data-ax5grid="grid1_23" data-ax5grid-config="{}" style="height: 100%"></div>
+                  </div>
+                  <div class="total-wrap mt12">
+                    <div class="total">
+                      <span class="label">총</span>
+                      <span class="count">50</span>
+                      <span class="unit">건</span>
+                    </div>
+                    <div class="paging-area">
+                      <a href="#" class="btn-first disabled"></a>
+                      <a href="#" class="btn-prev disabled"></a>
+                      <div class="paging">
+                        <input class="current" type="text" value="1" />
+                        <span class="line">/</span>
+                        <span class="num">5</span>
+                      </div>
+                      <a href="#" class="btn-next"></a>
+                      <a href="#" class="btn-last"></a>
+                    </div>
+                  </div><!-- .total-wrap -->
+                </div><!-- .content-frame -->
+              </div><!-- .content-frame-wrap -->
+            </div><!-- .content-line -->
           </div><!-- .content-inner -->
         </div><!-- .content-area -->
       </div><!-- .content-wrap -->
@@ -316,31 +308,55 @@
     <script src="js/echartOptions.js"></script>
     <script src="js/ax5uiGridSample.js"></script>
     <script>
-      var barLineChart = echarts.init(document.getElementById('barLineChart'));
-      barLineChart.setOption(options['barLine']);
-      window.addEventListener('resize', function () {
-        barLineChart.resize();
+      tui.DatePicker.localeTexts['customKey'] = {
+        titles: {
+            // days
+            DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+            // daysShort
+            D: ['일', '월', '화', '수', '목', '금', '토'],
+            // months
+            MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+            // monthsShort
+            MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+        },
+        titleFormat: 'yyyy.MMM',
+        todayFormat: '오늘 : yyyy.MMMM.dd',
+        date: 'Date',
+        time: 'Time'
+      };
+
+      var today1 = new Date();
+      var picker1 = tui.DatePicker.createRangePicker({
+        language: 'customKey',
+        startpicker: {
+          date: today1,
+          input: '#startpicker-input1',
+          container: '#startpicker-container1'
+        },
+        endpicker: {
+          date: today1,
+          input: '#endpicker-input1',
+          container: '#endpicker-container1'
+        },
+        selectableRanges: [
+          [today1, new Date(today1.getFullYear() + 1, today1.getMonth(), today1.getDate())]
+        ],
+        format: 'YYYY-MM-dd',
+        // showAlways: true,
+      });
+      
+      picker1.on('change:end', () => {
+          console.log(123);
       });
 
-      $('.tip-wrap .btn-ico').on('click', function(e){
-        e.preventDefault();
-        if (!$(this).hasClass('on')) {
-          $(this).addClass('on');
-          $(this).next('.tip-popup').addClass('on');
-        } else {
-          $(this).removeClass('on');
-          $(this).next('.tip-popup').removeClass('on');
-        }
-      });
-      $('.tip-popup .s-ico.close').on('click', function(){
-        $(this).closest('.tip-popup').removeClass('on');
-        $(this).closest('.tip-popup').prev('.btn-ico').removeClass('on');
-      });
-
-      var query = $.urlParam('sample');
-      if (query === 'tip') {
-        $('.tip-wrap .btn-ico').click();
-      }
+      var rwisLineChart = echarts.init(document.getElementById('rwisLineChart'));
+      var rwisPolarChart1 = echarts.init(document.getElementById('rwisPolarChart1'));
+      var rwisPolarChart2 = echarts.init(document.getElementById('rwisPolarChart2'));
+      var rwisPolarChart3 = echarts.init(document.getElementById('rwisPolarChart3'));
+      rwisLineChart.setOption(options['r_line']);
+      rwisPolarChart1.setOption(options['r_polar']);
+      rwisPolarChart2.setOption(options['r_polar']);
+      rwisPolarChart3.setOption(options['r_polar']);
     </script>
   </div><!-- #wrap -->
 </body>

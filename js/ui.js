@@ -417,9 +417,17 @@ var GUI = window.GUI || (function(){
         $wrapper.css('height', $(window).height());
         $content.css('height', $(window).height() - $header.outerHeight() - _pd - $top.outerHeight());
         // $frame.css('height', $(window).height() - $header.outerHeight() - _pd - $top.outerHeight() - ($search.outerHeight() || $tit.outerHeight()) - _mt - _pd);
-        if ($frame.closest('.content-frame-wrap').hasClass('monitoring')) {
-          $frame.each(function(){ // OPR-WL-226.html
-            $(this).css('height', $(window).height() - $(this).offset().top - _pd / 2);
+        if ($frame.closest('.content-frame-wrap').hasClass('monitoring') || $frame.closest('.content-frame-wrap').hasClass('type-2')) {
+          $frame.each(function(){ // OPR-WL-226.html (.monitoring), OPR-WL-239.html (.type-2)
+            if ($(this).closest('.st-table-area').length == 0) {
+              $(this).css('height', $(window).height() - $(this).offset().top - _pd / 2);
+            } else {
+              if ($frame.closest('.content-frame-wrap').hasClass('type-2')) {
+                $(this).css('height', $(window).height() - $(this).offset().top - _pd / 2 - 17);
+              } else {
+                $(this).css('height', $(window).height() - $(this).offset().top - _pd / 2);
+              }
+            }
           });
         } else {
           if ($frame.hasClass('mt0')) {
@@ -427,14 +435,12 @@ var GUI = window.GUI || (function(){
               $(this).css('height', $(window).height() - $header.outerHeight() - _pd - $top.outerHeight()); // OPR-WL-231.html
             });
           } else {
-            console.log(3)
             $frame.each(function(){
               $(this).css('height', $(window).height() - $(this).offset().top - _pd);
             });
           }
         }
         
-
         // OPR-WL-206.html?popup=record
         $popup_frame.each(function(){
           $(this).css('max-height', $(window).height() - _pop_pd - _pop_title - _pop_btn);

@@ -374,6 +374,33 @@ var data1_22 = [
   { isChecked: "N", column1: '41', column2: 'CCTV-N-0044', column3: 'OO CCTV 3', column4: '평택', column5: '0000-0000' },
 ];
 
+// 2024-11
+var data1_23 = [
+  { isChecked: "N", column1: '50', column2: '2024-10-25 00:00:00', column3: '2024-10-25 00:00:00', column4: '00', column5: '00', column6: '00', column7: '00', column8: '00', column9: '00', column10: '남남동', column11: '남남서' },
+  { isChecked: "N", column1: '49', column2: '2024-10-25 00:00:00', column3: '2024-10-25 00:00:00', column4: '00', column5: '00', column6: '00', column7: '00', column8: '00', column9: '00', column10: '남남동', column11: '남남서' },
+  { isChecked: "N", column1: '48', column2: '2024-10-25 00:00:00', column3: '2024-10-25 00:00:00', column4: '00', column5: '00', column6: '00', column7: '00', column8: '00', column9: '00', column10: '남남동', column11: '남남서' },
+  { isChecked: "N", column1: '47', column2: '2024-10-25 00:00:00', column3: '2024-10-25 00:00:00', column4: '00', column5: '00', column6: '00', column7: '00', column8: '00', column9: '00', column10: '남남동', column11: '남남서' },
+  { isChecked: "N", column1: '46', column2: '2024-10-25 00:00:00', column3: '2024-10-25 00:00:00', column4: '00', column5: '00', column6: '00', column7: '00', column8: '00', column9: '00', column10: '남남동', column11: '남남서' },
+  { isChecked: "N", column1: '45', column2: '2024-10-25 00:00:00', column3: '2024-10-25 00:00:00', column4: '00', column5: '00', column6: '00', column7: '00', column8: '00', column9: '00', column10: '남남동', column11: '남남서' },
+  { isChecked: "N", column1: '44', column2: '2024-10-25 00:00:00', column3: '2024-10-25 00:00:00', column4: '00', column5: '00', column6: '00', column7: '00', column8: '00', column9: '00', column10: '남남동', column11: '남남서' },
+  { isChecked: "N", column1: '43', column2: '2024-10-25 00:00:00', column3: '2024-10-25 00:00:00', column4: '00', column5: '00', column6: '00', column7: '00', column8: '00', column9: '00', column10: '남남동', column11: '남남서' },
+  { isChecked: "N", column1: '42', column2: '2024-10-25 00:00:00', column3: '2024-10-25 00:00:00', column4: '00', column5: '00', column6: '00', column7: '00', column8: '00', column9: '00', column10: '남남동', column11: '남남서' },
+  { isChecked: "N", column1: '41', column2: '2024-10-25 00:00:00', column3: '2024-10-25 00:00:00', column4: '00', column5: '00', column6: '00', column7: '00', column8: '00', column9: '00', column10: '남남동', column11: '남남서' },
+  { isChecked: "N", column1: '40', column2: '2024-10-25 00:00:00', column3: '2024-10-25 00:00:00', column4: '00', column5: '00', column6: '00', column7: '00', column8: '00', column9: '00', column10: '남남동', column11: '남남서' },
+];
+var data1_24 = [
+  { isChecked: "N", column1: '50', column2: '2024-10-25', column3: '00', column4: '00', column5: '00', column6: '00', column7: '00', column8: '00', column9: '00', column10: '00', column11: '00', column12: '00', column13: '00', column14: '00', column15: '00' },
+  { isChecked: "N", column1: '49', column2: '2024-10-25', column3: '00', column4: '00', column5: '00', column6: '00', column7: '00', column8: '00', column9: '00', column10: '00', column11: '00', column12: '00', column13: '00', column14: '00', column15: '00' },
+  { isChecked: "N", column1: '48', column2: '2024-10-25', column3: '00', column4: '00', column5: '00', column6: '00', column7: '00', column8: '00', column9: '00', column10: '00', column11: '00', column12: '00', column13: '00', column14: '00', column15: '00' },
+  { isChecked: "N", column1: '47', column2: '2024-10-25', column3: '00', column4: '00', column5: '00', column6: '00', column7: '00', column8: '00', column9: '00', column10: '00', column11: '00', column12: '00', column13: '00', column14: '00', column15: '00' },
+  { isChecked: "N", column1: '46', column2: '2024-10-25', column3: '00', column4: '00', column5: '00', column6: '00', column7: '00', column8: '00', column9: '00', column10: '00', column11: '00', column12: '00', column13: '00', column14: '00', column15: '00' },
+  { isChecked: "N", column1: '45', column2: '2024-10-25', column3: '00', column4: '00', column5: '00', column6: '00', column7: '00', column8: '00', column9: '00', column10: '00', column11: '00', column12: '00', column13: '00', column14: '00', column15: '00' },
+  { isChecked: "N", column1: '44', column2: '2024-10-25', column3: '00', column4: '00', column5: '00', column6: '00', column7: '00', column8: '00', column9: '00', column10: '00', column11: '00', column12: '00', column13: '00', column14: '00', column15: '00' },
+  { isChecked: "N", column1: '43', column2: '2024-10-25', column3: '00', column4: '00', column5: '00', column6: '00', column7: '00', column8: '00', column9: '00', column10: '00', column11: '00', column12: '00', column13: '00', column14: '00', column15: '00' },
+  { isChecked: "N", column1: '42', column2: '2024-10-25', column3: '00', column4: '00', column5: '00', column6: '00', column7: '00', column8: '00', column9: '00', column10: '00', column11: '00', column12: '00', column13: '00', column14: '00', column15: '00' },
+  { isChecked: "N", column1: '41', column2: '2024-10-25', column3: '00', column4: '00', column5: '00', column6: '00', column7: '00', column8: '00', column9: '00', column10: '00', column11: '00', column12: '00', column13: '00', column14: '00', column15: '00' },
+];
+
 var columns1 = [
   // checkColumns,
   {
@@ -1765,6 +1792,221 @@ var columns1_22 = [
   },
 ];
 
+// 2024-11
+var columns1_23 = [
+  {
+    key: 'column1',
+    label: '순번',
+    width: 60,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column2',
+    label: '일자',
+    width: 170,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column3',
+    label: '제어기 ID',
+    width: 170,
+    align: "center",
+    sortable: true,
+  },
+  {
+    label: '기온 (℃)',
+    columns: [
+      {
+        key: 'column4',
+        label: '최고',
+        width: 80,
+        align: 'center',
+        sortable: true,
+      },
+      {
+        key: 'column5',
+        label: '최저',
+        width: 80,
+        align: 'center',
+        sortable: true,
+      }
+    ]
+  },
+  {
+    label: '습도 (%)',
+    columns: [
+      {
+        key: 'column6',
+        label: '최고',
+        width: 80,
+        align: 'center',
+        sortable: true,
+      },
+      {
+        key: 'column7',
+        label: '최저',
+        width: 80,
+        align: 'center',
+        sortable: true,
+      },
+    ]
+  },
+  {
+    label: '풍속 (m/s)',
+    columns: [
+      {
+        key: 'column8',
+        label: '최고',
+        width: 80,
+        align: 'center',
+        sortable: true,
+      },
+      {
+        key: 'column9',
+        label: '최저',
+        width: 80,
+        align: 'center',
+        sortable: true,
+      }
+    ]
+  },
+  {
+    label: '풍향',
+    columns: [
+      {
+        key: 'column10',
+        label: '최고',
+        width: 80,
+        align: 'center',
+        sortable: true,
+      },
+      {
+        key: 'column11',
+        label: '최저',
+        width: 80,
+        align: 'center',
+        sortable: true,
+      }
+    ]
+  },
+];
+var columns1_24 = [
+  {
+    key: 'column1',
+    label: '순번',
+    width: 60,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column2',
+    label: '일자',
+    width: 100,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column3',
+    label: '합계',
+    width: 62,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column4',
+    label: '차량고장',
+    width: 62,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column4',
+    label: '교통사고',
+    width: 62,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column5',
+    label: '장애물',
+    width: 62,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column6',
+    label: '차량증가/<br />정체',
+    width: 62,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column7',
+    label: '강우',
+    width: 62,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column8',
+    label: '강우',
+    width: 62,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column9',
+    label: '강설',
+    width: 62,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column10',
+    label: '노면결빙',
+    width: 62,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column11',
+    label: '안개',
+    width: 62,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column12',
+    label: '위험물질<br />방출',
+    width: 62,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column13',
+    label: '지진',
+    width: 62,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column14',
+    label: '산사태',
+    width: 62,
+    align: "center",
+    sortable: true,
+  },
+  {
+    key: 'column15',
+    label: '역주행',
+    width: 62,
+    align: "center",
+    sortable: true,
+  },
+];
+
 var data2 = [
   { column1: '로우데이터', column2: '로우데이터', column3: '로우데이터', state: 'red', column4: '로우 데이터' },
   { column1: '로우데이터', column2: '로우데이터', column3: '라벨', column3Type: 'label', state: 'orange', column4: '로우 데이터' },
@@ -2087,13 +2329,15 @@ $(document.body).ready(function() {
   var $grid1_20 = $('[data-ax5grid="grid1_20"]');
   var $grid1_21 = $('[data-ax5grid="grid1_21"]');
   var $grid1_22 = $('[data-ax5grid="grid1_22"]');
+  var $grid1_23 = $('[data-ax5grid="grid1_23"]');
+  var $grid1_24 = $('[data-ax5grid="grid1_24"]');
   
   var $grid2 = $('[data-ax5grid="grid2"]');
   var $grid3 = $('[data-ax5grid="grid3"]');
   var $grid4 = $('[data-ax5grid="grid4"]');
 
   if (
-    $grid1.length || $grid1_2.length || $grid1_3.length || $grid1_4.length || $grid1_5.length || $grid1_6.length || $grid1_7.length || $grid1_8.length || $grid1_9.length || $grid1_10.length || $grid1_11.length || $grid1_12.length || $grid1_13.length || $grid1_14.length || $grid1_15.length || $grid1_16.length || $grid1_17.length || $grid1_18.length || $grid1_19.length || $grid1_20.length || $grid1_21.length || $grid1_22.length
+    $grid1.length || $grid1_2.length || $grid1_3.length || $grid1_4.length || $grid1_5.length || $grid1_6.length || $grid1_7.length || $grid1_8.length || $grid1_9.length || $grid1_10.length || $grid1_11.length || $grid1_12.length || $grid1_13.length || $grid1_14.length || $grid1_15.length || $grid1_16.length || $grid1_17.length || $grid1_18.length || $grid1_19.length || $grid1_20.length || $grid1_21.length || $grid1_22.length || $grid1_23.length || $grid1_24.length
   ) {
     if ($grid1.length) {
       new ax5.ui.grid(getOptions($grid1, columns1)).setData(data1);
@@ -2139,6 +2383,10 @@ $(document.body).ready(function() {
       new ax5.ui.grid(getOptions($grid1_21, columns1_21)).setData(data1_21);
     } else if ($grid1_22.length) {
       new ax5.ui.grid(getOptions($grid1_22, columns1_22)).setData(data1_22);
+    } else if ($grid1_23.length) {
+      new ax5.ui.grid(getOptions($grid1_23, columns1_23)).setData(data1_23); // 2024-11
+    } else if ($grid1_24.length) {
+      new ax5.ui.grid(getOptions($grid1_24, columns1_24)).setData(data1_24); // 2024-11
     }
 
     $(document).on('click', '#chk-all', function() {
