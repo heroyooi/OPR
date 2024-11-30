@@ -150,4 +150,9 @@ body{width:100%;overflow:hidden;}
 .content-frame-wrap.type-2 .content-frame{margin-top:0;border-radius:0;}
 .content-frame-wrap.type-2 .map-area{border-radius:0;}
 .content-wrap .content-top .s-ico.reset{position: absolute;right:52px;top:14px;z-index:1;}
+
+.content-frame-wrap.type-3{gap:0 20px;}
+.content-frame-wrap.type-3 > .content-frame:nth-child(1){flex-grow:1;}
+.content-frame-wrap.type-3 > .content-obj:nth-child(2),
+.content-frame-wrap.type-3 > .content-frame:nth-child(2){width:550px;flex-shrink:0;}
 /* E: 2024-11 */

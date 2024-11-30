@@ -1,273 +1,278 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>퍼블리싱 - 코딩맵</title>
-  <link rel="stylesheet" type="text/css" href="./_guide/guide.css" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>퍼블리싱 - 코딩맵</title>
+	<link rel="stylesheet" type="text/css" href="./_guide/guide.css" />
 	<script type="text/javascript" src="./_guide/dtree.js"></script>
 </head>
+
 <body>
-  <div class="guide-wrapper">
-    <div id="content_guide_list">
-      <h1>퍼블리싱 진행표</h1>
-      <h2>진행 표시</h2>
-      <ul>
-  			<li><span style="color:#aeaeae;">■ 작업전</span></li>
-  			<li><span style="color:green;">■ 작업중</span></li>
-  			<li><span style="color:#5727ff;">■ 완료</span></li>
-  			<li><span style="color:#37b4e7;">■ 신규</span></li>
-  			<li><span style="color:#f55;">■ 수정</span></li>
-      </ul>
-      <span id="t_title"></span>
-    </div>
-    <div class="dtree">
-  		<div class="area_btn">
-  			<a href="javascript: b.openAll();"><img src="./_guide/img/btn_expand.gif" alt="Expand All" /></a>
-  			<a href="javascript: b.closeAll();"><img src="./_guide/img/btn_collapse.gif" alt="Collapse All" /></a>
-  		</div>
-  		<script type="text/javascript">
-			//<![CDATA[
-			b = new dTree('b');
+	<div class="guide-wrapper">
+		<div id="content_guide_list">
+			<h1>퍼블리싱 진행표</h1>
+			<h2>진행 표시</h2>
+			<ul>
+				<li><span style="color:#aeaeae;">■ 작업전</span></li>
+				<li><span style="color:green;">■ 작업중</span></li>
+				<li><span style="color:#5727ff;">■ 완료</span></li>
+				<li><span style="color:#37b4e7;">■ 신규</span></li>
+				<li><span style="color:#f55;">■ 수정</span></li>
+			</ul>
+			<span id="t_title"></span>
+		</div>
+		<div class="dtree">
+			<div class="area_btn">
+				<a href="javascript: b.openAll();"><img src="./_guide/img/btn_expand.gif" alt="Expand All" /></a>
+				<a href="javascript: b.closeAll();"><img src="./_guide/img/btn_collapse.gif" alt="Collapse All" /></a>
+			</div>
+			<script type="text/javascript">
+				//<![CDATA[
+				b = new dTree('b');
 
-			b.add(0, -1, '운영단말 관리시스템 - 서부내륙');
+				b.add(0, -1, '운영단말 관리시스템 - 서부내륙');
 
-			b.add(1, 0, '01 LOGIN : 완료' );
-			b.add(1.011, 1, '1-1) OPR-WL-001','OPR-WL-001.html', '완료', '_blank');
-			b.add(1.012, 1, '1-2) OPR-WL-001 : 오류','OPR-WL-001.html?sample=valid', '완료', '_blank');
+				b.add(1, 0, '01 LOGIN : 완료');
+				b.add(1.011, 1, '1-1) OPR-WL-001', 'OPR-WL-001.html', '완료', '_blank');
+				b.add(1.012, 1, '1-2) OPR-WL-001 : 오류', 'OPR-WL-001.html?sample=valid', '완료', '_blank');
 
-			b.add(2, 0, '00 MAIN+알림센터 : (토스트팝업 UI제외) 완료' );
-			b.add(2.021, 2, '1-1) OPR-WL-002','OPR-WL-002.html', '완료', '_blank');
-			b.add(2.022, 2, '1-2) OPR-WL-003 : Pop-up Toast','OPR-WL-002.html?sample=toast', '완료', '_blank');
-			b.add(2.023, 2, '1-3) OPR-WL-003 : Toast/CCTV','OPR-WL-002.html?sample=toastcctv', '완료', '_blank');
-			b.add(2.024, 2, '1-4) OPR-WL-003 : Tootip 돌발정보','OPR-WL-002.html?sample=warning', '완료', '_blank');
-			b.add(2.031, 2, '2-1) OPR-WL-005','OPR-WL-005.html', '완료', '_blank');
-			b.add(2.032, 2, '2-2) OPR-WL-007','OPR-WL-005.html?popup=3', '완료', '_blank');
+				b.add(2, 0, '00 MAIN+알림센터 : (토스트팝업 UI제외) 완료');
+				b.add(2.021, 2, '1-1) OPR-WL-002', 'OPR-WL-002.html', '완료', '_blank');
+				b.add(2.022, 2, '1-2) OPR-WL-003 : Pop-up Toast', 'OPR-WL-002.html?sample=toast', '완료', '_blank');
+				b.add(2.023, 2, '1-3) OPR-WL-003 : Toast/CCTV', 'OPR-WL-002.html?sample=toastcctv', '완료', '_blank');
+				b.add(2.024, 2, '1-4) OPR-WL-003 : Tootip 돌발정보', 'OPR-WL-002.html?sample=warning', '완료', '_blank');
+				b.add(2.031, 2, '2-1) OPR-WL-005', 'OPR-WL-005.html', '완료', '_blank');
+				b.add(2.032, 2, '2-2) OPR-WL-007', 'OPR-WL-005.html?popup=3', '완료', '_blank');
 
-			b.add(3, 0, '01 시스템관리 : 완료');
-			b.add(3.01, 3, '1) OPR-WL-011', 'OPR-WL-011.html', '완료', '_blank');
-			b.add(3.02, 3, '2) OPR-WL-013', 'OPR-WL-013.html', '완료', '_blank');
-			b.add(3.03, 3, '3) OPR-WL-014', 'OPR-WL-014.html', '완료', '_blank');
-			b.add(3.04, 3, '4) OPR-WL-016', 'OPR-WL-016.html', '완료', '_blank');
-			b.add(3.05, 3, '5) OPR-WL-017', 'OPR-WL-017.html', '완료', '_blank');
-			b.add(3.06, 3, '6) OPR-WL-019 - 팝업', 'OPR-WL-017.html?popup=3', '완료', '_blank');
-			b.add(3.07, 3, '7) OPR-WL-020', 'OPR-WL-020.html', '완료', '_blank');
-			b.add(3.08, 3, '8) OPR-WL-021', 'OPR-WL-021.html', '완료', '_blank');
-			b.add(3.09, 3, '9) OPR-WL-022', 'OPR-WL-022.html', '완료', '_blank');
-			b.add(3.10, 3, '10) OPR-WL-023 - Sortable', 'OPR-WL-023.html', '완료', '_blank');
+				b.add(3, 0, '01 시스템관리 : 완료');
+				b.add(3.01, 3, '1) OPR-WL-011', 'OPR-WL-011.html', '완료', '_blank');
+				b.add(3.02, 3, '2) OPR-WL-013', 'OPR-WL-013.html', '완료', '_blank');
+				b.add(3.03, 3, '3) OPR-WL-014', 'OPR-WL-014.html', '완료', '_blank');
+				b.add(3.04, 3, '4) OPR-WL-016', 'OPR-WL-016.html', '완료', '_blank');
+				b.add(3.05, 3, '5) OPR-WL-017', 'OPR-WL-017.html', '완료', '_blank');
+				b.add(3.06, 3, '6) OPR-WL-019 - 팝업', 'OPR-WL-017.html?popup=3', '완료', '_blank');
+				b.add(3.07, 3, '7) OPR-WL-020', 'OPR-WL-020.html', '완료', '_blank');
+				b.add(3.08, 3, '8) OPR-WL-021', 'OPR-WL-021.html', '완료', '_blank');
+				b.add(3.09, 3, '9) OPR-WL-022', 'OPR-WL-022.html', '완료', '_blank');
+				b.add(3.10, 3, '10) OPR-WL-023 - Sortable', 'OPR-WL-023.html', '완료', '_blank');
 
-			b.add(4, 0, '02 기초정보관리  : 완료');
-			b.add(4.01, 4, '1) OPR-WL-024', 'OPR-WL-024.html', '완료', '_blank');
-			b.add(4.02, 4, '2) OPR-WL-025', 'OPR-WL-025.html', '완료', '_blank');
-			b.add(4.031, 4, '3-1) OPR-WL-026', 'OPR-WL-026.html', '완료', '_blank');
-			b.add(4.032, 4, '3-2) OPR-WL-027 - 팝업', 'OPR-WL-026.html?popup=addLink', '완료', '_blank');
-			b.add(4.041, 4, '4-1) OPR-WL-029', 'OPR-WL-029.html', '완료', '_blank');
-			b.add(4.042, 4, '4-2) OPR-WL-031 - 팝업', 'OPR-WL-029.html?popup=addVDS', '완료', '_blank');
-			b.add(4.05, 4, '5) OPR-WL-077', 'OPR-WL-077.html', '완료', '_blank');
-			b.add(4.06, 4, '6) OPR-WL-080', 'OPR-WL-080.html', '완료', '_blank');
-			b.add(4.07, 4, '7) OPR-WL-082', 'OPR-WL-082.html', '완료', '_blank');
+				b.add(4, 0, '02 기초정보관리  : 완료');
+				b.add(4.01, 4, '1) OPR-WL-024', 'OPR-WL-024.html', '완료', '_blank');
+				b.add(4.02, 4, '2) OPR-WL-025', 'OPR-WL-025.html', '완료', '_blank');
+				b.add(4.031, 4, '3-1) OPR-WL-026', 'OPR-WL-026.html', '완료', '_blank');
+				b.add(4.032, 4, '3-2) OPR-WL-027 - 팝업', 'OPR-WL-026.html?popup=addLink', '완료', '_blank');
+				b.add(4.041, 4, '4-1) OPR-WL-029', 'OPR-WL-029.html', '완료', '_blank');
+				b.add(4.042, 4, '4-2) OPR-WL-031 - 팝업', 'OPR-WL-029.html?popup=addVDS', '완료', '_blank');
+				b.add(4.05, 4, '5) OPR-WL-077', 'OPR-WL-077.html', '완료', '_blank');
+				b.add(4.06, 4, '6) OPR-WL-080', 'OPR-WL-080.html', '완료', '_blank');
+				b.add(4.07, 4, '7) OPR-WL-082', 'OPR-WL-082.html', '완료', '_blank');
 
-			b.add(5, 0, '03 FTMS 제어 : 확인중');
-			b.add(5.01, 5, '1) OPR-WL-132', 'OPR-WL-132.html', '완료', '_blank');
-			b.add(5.02, 5, '2) OPR-WL-133', 'OPR-WL-133.html', '완료', '_blank');
-			b.add(5.03, 5, '3) OPR-WL-142', 'OPR-WL-142.html', '완료', '_blank');
+				b.add(5, 0, '03 FTMS 제어 : 확인중');
+				b.add(5.01, 5, '1) OPR-WL-132', 'OPR-WL-132.html', '완료', '_blank');
+				b.add(5.02, 5, '2) OPR-WL-133', 'OPR-WL-133.html', '완료', '_blank');
+				b.add(5.03, 5, '3) OPR-WL-142', 'OPR-WL-142.html', '완료', '_blank');
 
-			b.add(6, 0, '[4.운영관리](51)');
-			b.add(6.01, 6, '1) OPR-WL-155', 'OPR-WL-155.html', '완료', '_blank');
-			b.add(6.02, 6, '2) OPR-WL-156', 'OPR-WL-156.html', '완료', '_blank');
-			
-			b.add(6.0311, 6, '3-1-1) OPR-WL-162 - VMS 표출 영역(2 x 10)', 'OPR-WL-162.html?type=2x10', '완료', '_blank');
-			b.add(6.0312, 6, '3-1-2) OPR-WL-162 - VMS 표출 영역(3 x 13)', 'OPR-WL-162.html?type=3x13', '완료', '_blank');
-			b.add(6.0313, 6, '3-1-3) OPR-WL-162 - VMS 표출 영역(4 x 25)', 'OPR-WL-162.html?type=4x25', '완료', '_blank');
-			b.add(6.0314, 6, '3-1-4) OPR-WL-162 - VMS 표출 영역(6 x 7)', 'OPR-WL-162.html?type=6x7', '완료', '_blank');
-			b.add(6.0315, 6, '3-1-5) OPR-WL-162 - VMS 표출 영역(9 x 10)', 'OPR-WL-162.html?type=9x10', '완료', '_blank');
-			b.add(6.0316, 6, '3-1-6) OPR-WL-162 - VMS 표출 영역(1 x 8)', 'OPR-WL-162.html?type=1x8', '완료', '_blank');
-			b.add(6.0317, 6, '3-1-7) OPR-WL-162 - VMS 표출 영역(1 x 2)', 'OPR-WL-162.html?type=1x2', '완료', '_blank');
-			b.add(6.032, 6, '3-2) OPR-WL-162 - fill-in 자동완성', 'OPR-WL-162.html?sample=autocomplete', '완료', '_blank');
-			b.add(6.033, 6, '3-3) OPR-WL-162 - fill-in 결과', 'OPR-WL-162.html?sample=result', '완료', '_blank');
+				b.add(6, 0, '[4.운영관리](51)');
+				b.add(6.01, 6, '1) OPR-WL-155', 'OPR-WL-155.html', '완료', '_blank');
+				b.add(6.02, 6, '2) OPR-WL-156', 'OPR-WL-156.html', '완료', '_blank');
 
-			b.add(6.0341, 6, '3-4-1) OPR-WL-162-2 - LCS 표출 영역(2 x 10)', 'OPR-WL-162-2.html?type=2x10', '완료', '_blank');
-			b.add(6.0342, 6, '3-4-2) OPR-WL-162-2 - LCS 표출 영역(3 x 13)', 'OPR-WL-162-2.html?type=3x13', '완료', '_blank');
-			b.add(6.0343, 6, '3-4-3) OPR-WL-162-2 - LCS 표출 영역(4 x 25)', 'OPR-WL-162-2.html?type=4x25', '완료', '_blank');
-			b.add(6.0344, 6, '3-4-4) OPR-WL-162-2 - LCS 표출 영역(6 x 7)', 'OPR-WL-162-2.html?type=6x7', '완료', '_blank');
-			b.add(6.0345, 6, '3-4-5) OPR-WL-162-2 - LCS 표출 영역(9 x 10)', 'OPR-WL-162-2.html?type=9x10', '완료', '_blank');
-			// b.add(6.0346, 6, '3-4-6) OPR-WL-162-2 - LCS 표출 영역(1 x 8)', 'OPR-WL-162-2.html?type=1x8', '완료', '_blank');
-			// b.add(6.0347, 6, '3-4-7) OPR-WL-162-2 - LCS 표출 영역(1 x 2)', 'OPR-WL-162-2.html?type=1x2', '완료', '_blank');
-			
-			b.add(6.0346, 6, '3-4-6) OPR-WL-185 - LCS 표출 영역(1 x 8)', 'OPR-WL-185.html', '완료', '_blank');
-			b.add(6.0347, 6, '3-4-7) OPR-WL-186 - LCS 표출 영역(1 x 2)', 'OPR-WL-186.html', '완료', '_blank');
-		
-			b.add(6.041, 6, '4-1) OPR-WL-163 - VMS 표출 영역(2 x 10)', 'OPR-WL-163.html?type=2x10', '완료', '_blank');
-			b.add(6.042, 6, '4-2) OPR-WL-163 - VMS 표출 영역(3 x 13)', 'OPR-WL-163.html?type=3x13', '완료', '_blank');
-			b.add(6.043, 6, '4-3) OPR-WL-163 - VMS 표출 영역(4 x 25)', 'OPR-WL-163.html?type=4x25', '완료', '_blank');
-			b.add(6.044, 6, '4-4) OPR-WL-163 - VMS 표출 영역(6 x 7)', 'OPR-WL-163.html?type=6x7', '완료', '_blank');
-			b.add(6.045, 6, '4-5) OPR-WL-163 - VMS 표출 영역(9 x 10)', 'OPR-WL-163.html?type=9x10', '완료', '_blank');
-			b.add(6.046, 6, '4-6) OPR-WL-163 - VMS 표출 영역(1 x 8)', 'OPR-WL-163.html?type=1x8', '완료', '_blank');
-			b.add(6.047, 6, '4-7) OPR-WL-163 - VMS 표출 영역(1 x 2)', 'OPR-WL-163.html?type=1x2', '완료', '_blank');
+				b.add(6.0311, 6, '3-1-1) OPR-WL-162 - VMS 표출 영역(2 x 10)', 'OPR-WL-162.html?type=2x10', '완료', '_blank');
+				b.add(6.0312, 6, '3-1-2) OPR-WL-162 - VMS 표출 영역(3 x 13)', 'OPR-WL-162.html?type=3x13', '완료', '_blank');
+				b.add(6.0313, 6, '3-1-3) OPR-WL-162 - VMS 표출 영역(4 x 25)', 'OPR-WL-162.html?type=4x25', '완료', '_blank');
+				b.add(6.0314, 6, '3-1-4) OPR-WL-162 - VMS 표출 영역(6 x 7)', 'OPR-WL-162.html?type=6x7', '완료', '_blank');
+				b.add(6.0315, 6, '3-1-5) OPR-WL-162 - VMS 표출 영역(9 x 10)', 'OPR-WL-162.html?type=9x10', '완료', '_blank');
+				b.add(6.0316, 6, '3-1-6) OPR-WL-162 - VMS 표출 영역(1 x 8)', 'OPR-WL-162.html?type=1x8', '완료', '_blank');
+				b.add(6.0317, 6, '3-1-7) OPR-WL-162 - VMS 표출 영역(1 x 2)', 'OPR-WL-162.html?type=1x2', '완료', '_blank');
+				b.add(6.032, 6, '3-2) OPR-WL-162 - fill-in 자동완성', 'OPR-WL-162.html?sample=autocomplete', '완료', '_blank');
+				b.add(6.033, 6, '3-3) OPR-WL-162 - fill-in 결과', 'OPR-WL-162.html?sample=result', '완료', '_blank');
 
-			b.add(6.05, 6, '5) OPR-WL-169 - 팝업', 'OPR-WL-162.html?popup=addVms', '완료', '_blank');
-			b.add(6.061, 6, '6-1) OPR-WL-173 - Sortable', 'OPR-WL-173.html', '완료', '_blank');
-			b.add(6.062, 6, '6-2) OPR-WL-174 - Sortable', 'OPR-WL-174.html', '완료', '_blank');
-			b.add(6.071, 6, '7-1) OPR-WL-176', 'OPR-WL-176.html', '완료', '_blank');
-			b.add(6.072, 6, '7-2) OPR-WL-177', 'OPR-WL-177.html', '완료', '_blank');
-			b.add(6.08, 6, '8) OPR-WL-202', 'OPR-WL-202.html', '완료', '_blank');
-			b.add(6.09, 6, '9) OPR-WL-203', 'OPR-WL-203.html', '완료', '_blank'); 
+				b.add(6.0341, 6, '3-4-1) OPR-WL-162-2 - LCS 표출 영역(2 x 10)', 'OPR-WL-162-2.html?type=2x10', '완료', '_blank');
+				b.add(6.0342, 6, '3-4-2) OPR-WL-162-2 - LCS 표출 영역(3 x 13)', 'OPR-WL-162-2.html?type=3x13', '완료', '_blank');
+				b.add(6.0343, 6, '3-4-3) OPR-WL-162-2 - LCS 표출 영역(4 x 25)', 'OPR-WL-162-2.html?type=4x25', '완료', '_blank');
+				b.add(6.0344, 6, '3-4-4) OPR-WL-162-2 - LCS 표출 영역(6 x 7)', 'OPR-WL-162-2.html?type=6x7', '완료', '_blank');
+				b.add(6.0345, 6, '3-4-5) OPR-WL-162-2 - LCS 표출 영역(9 x 10)', 'OPR-WL-162-2.html?type=9x10', '완료', '_blank');
+				// b.add(6.0346, 6, '3-4-6) OPR-WL-162-2 - LCS 표출 영역(1 x 8)', 'OPR-WL-162-2.html?type=1x8', '완료', '_blank');
+				// b.add(6.0347, 6, '3-4-7) OPR-WL-162-2 - LCS 표출 영역(1 x 2)', 'OPR-WL-162-2.html?type=1x2', '완료', '_blank');
 
-			b.add(7, 0, '[5.상황관리](20)');
-			b.add(7.011, 7, '1-1) OPR-WL-206', 'OPR-WL-206.html', '완료', '_blank');
-			b.add(7.012, 7, '1-2) OPR-WL-207 - 팝업', 'OPR-WL-206.html?popup=record', '완료', '_blank');
-			b.add(7.021, 7, '2-1) OPR-WL-210', 'OPR-WL-210.html', '완료', '_blank');
-			b.add(7.022, 7, '2-2) OPR-WL-210 - 팝업', 'OPR-WL-210.html?popup=record', '완료', '_blank');
-			b.add(7.03, 7, '3) OPR-WL-217', 'OPR-WL-217.html', '완료', '_blank');
-			b.add(7.04, 7, '4) OPR-WL-218', 'OPR-WL-218.html', '완료', '_blank');
-			b.add(7.05, 7, '5) OPR-WL-220', 'OPR-WL-220.html', '완료', '_blank');
+				b.add(6.0346, 6, '3-4-6) OPR-WL-185 - LCS 표출 영역(1 x 8)', 'OPR-WL-185.html', '완료', '_blank');
+				b.add(6.0347, 6, '3-4-7) OPR-WL-186 - LCS 표출 영역(1 x 2)', 'OPR-WL-186.html', '완료', '_blank');
 
-			b.add(8, 0, '[6.모니터링](30)');
-			b.add(8.011, 8, '1-1) OPR-WL-226', 'OPR-WL-226.html?sample=tooltip', '완료', '_blank');
-			b.add(8.012, 8, '1-2) OPR-WL-226 : ToolTip Close', 'OPR-WL-226.html', '완료', '_blank');
-			b.add(8.013, 8, '1-3) OPR-WL-229 : 확장', 'OPR-WL-226.html?sample=expand', '완료', '_blank');
-			b.add(8.021, 8, '2-1) OPR-WL-231', 'OPR-WL-231.html', '완료', '_blank');
-			b.add(8.022, 8, '2-2) OPR-WL-231 : 확장', 'OPR-WL-231.html?sample=expand', '완료', '_blank');
-			b.add(8.031, 8, '3-1) OPR-WL-232', 'OPR-WL-232.html', '완료', '_blank');
-			b.add(8.032, 8, '3-2) OPR-WL-232 : 1단8열', 'OPR-WL-232.html?type=2', '완료', '_blank');
-			b.add(8.033, 8, '3-3) OPR-WL-232 : 1단2열', 'OPR-WL-232.html?type=3', '완료', '_blank');
-			b.add(8.041, 8, '4-1) OPR-WL-236 : 9분할', 'OPR-WL-236.html', '완료', '_blank');
-			b.add(8.042, 8, '4-2) OPR-WL-236 : 4분할', 'OPR-WL-236.html?type=4', '완료', '_blank');
-			b.add(8.043, 8, '4-3) OPR-WL-236 : 16분할', 'OPR-WL-236.html?type=16', '완료', '_blank');
-			b.add(8.05, 8, '5) OPR-WL-240', 'OPR-WL-240.html', '완료', '_blank');
-			b.add(8.061, 8, '6-1) OPR-WL-241', 'OPR-WL-241.html', '완료', '_blank');
-			b.add(8.0621, 8, '6-2-1) OPR-WL-249', 'OPR-WL-241.html?popup=state', '완료', '_blank');
-			b.add(8.0622, 8, '6-2-2) OPR-WL-242 : 단일건', 'OPR-WL-241.html?popup=state&data=1', '완료', '_blank');
+				b.add(6.041, 6, '4-1) OPR-WL-163 - VMS 표출 영역(2 x 10)', 'OPR-WL-163.html?type=2x10', '완료', '_blank');
+				b.add(6.042, 6, '4-2) OPR-WL-163 - VMS 표출 영역(3 x 13)', 'OPR-WL-163.html?type=3x13', '완료', '_blank');
+				b.add(6.043, 6, '4-3) OPR-WL-163 - VMS 표출 영역(4 x 25)', 'OPR-WL-163.html?type=4x25', '완료', '_blank');
+				b.add(6.044, 6, '4-4) OPR-WL-163 - VMS 표출 영역(6 x 7)', 'OPR-WL-163.html?type=6x7', '완료', '_blank');
+				b.add(6.045, 6, '4-5) OPR-WL-163 - VMS 표출 영역(9 x 10)', 'OPR-WL-163.html?type=9x10', '완료', '_blank');
+				b.add(6.046, 6, '4-6) OPR-WL-163 - VMS 표출 영역(1 x 8)', 'OPR-WL-163.html?type=1x8', '완료', '_blank');
+				b.add(6.047, 6, '4-7) OPR-WL-163 - VMS 표출 영역(1 x 2)', 'OPR-WL-163.html?type=1x2', '완료', '_blank');
 
-			b.add(9, 0, '[7.이력조회](48)');
-			b.add(9.01, 9, '1) OPR-WL-256 - B', 'OPR-WL-256.html', '완료', '_blank');
-			b.add(9.02, 9, '2) OPR-WL-258', 'OPR-WL-258.html', '완료', '_blank');
-			b.add(9.03, 9, '3) OPR-WL-259', 'OPR-WL-259.html', '완료', '_blank');
-			b.add(9.04, 9, '4) OPR-WL-260', 'OPR-WL-260.html', '완료', '_blank');
+				b.add(6.05, 6, '5) OPR-WL-169 - 팝업', 'OPR-WL-162.html?popup=addVms', '완료', '_blank');
+				b.add(6.061, 6, '6-1) OPR-WL-173 - Sortable', 'OPR-WL-173.html', '완료', '_blank');
+				b.add(6.062, 6, '6-2) OPR-WL-174 - Sortable', 'OPR-WL-174.html', '완료', '_blank');
+				b.add(6.071, 6, '7-1) OPR-WL-176', 'OPR-WL-176.html', '완료', '_blank');
+				b.add(6.072, 6, '7-2) OPR-WL-177', 'OPR-WL-177.html', '완료', '_blank');
+				b.add(6.08, 6, '8) OPR-WL-202', 'OPR-WL-202.html', '완료', '_blank');
+				b.add(6.09, 6, '9) OPR-WL-203', 'OPR-WL-203.html', '완료', '_blank');
 
-			b.add(10, 0, '[8.통계조회](16)');
-			b.add(10.01, 10, '1) OPR-WL-303', 'OPR-WL-303.html', '완료', '_blank');
-			b.add(10.02, 10, '2) OPR-WL-307', 'OPR-WL-307.html', '완료', '_blank');
-			b.add(10.03, 10, '3) OPR-WL-308', 'OPR-WL-308.html', '완료', '_blank');
-			b.add(10.04, 10, '4) OPR-WL-328', 'OPR-WL-328.html', '완료', '_blank');
+				b.add(7, 0, '[5.상황관리](20)');
+				b.add(7.011, 7, '1-1) OPR-WL-206', 'OPR-WL-206.html', '완료', '_blank');
+				b.add(7.012, 7, '1-2) OPR-WL-207 - 팝업', 'OPR-WL-206.html?popup=record', '완료', '_blank');
+				b.add(7.021, 7, '2-1) OPR-WL-210', 'OPR-WL-210.html', '완료', '_blank');
+				b.add(7.022, 7, '2-2) OPR-WL-210 - 팝업', 'OPR-WL-210.html?popup=record', '완료', '_blank');
+				b.add(7.03, 7, '3) OPR-WL-217', 'OPR-WL-217.html', '완료', '_blank');
+				b.add(7.04, 7, '4) OPR-WL-218', 'OPR-WL-218.html', '완료', '_blank');
+				b.add(7.05, 7, '5) OPR-WL-220', 'OPR-WL-220.html', '완료', '_blank');
 
-			b.add(11, 0, '[9.현장장비 점건관리](63)');
-			b.add(11.011, 11, '1-1) OPR-WL-316 - 달력', 'OPR-WL-316.html', '완료', '_blank');
-			b.add(11.012, 11, '1-2) OPR-WL-316-1 - 달력', 'OPR-WL-316.html?sample=weekand', '완료', '_blank');
-			b.add(11.013, 11, '1-3) OPR-WL-317 - 팝업(센터설비 색상 범례)', 'OPR-WL-316.html?popup=legend1', '완료', '_blank');
-			b.add(11.014, 11, '1-4) OPR-WL-317 - 팝업(현장설비 색상 범례)', 'OPR-WL-316.html?popup=legend2', '완료', '_blank');
-			b.add(11.02, 11, '2) OPR-WL-318', 'OPR-WL-318.html', '완료', '_blank');
-			b.add(11.03, 11, '3) OPR-WL-318-1', 'OPR-WL-318-1.html', '완료', '_blank');
-			b.add(11.04, 11, '4) OPR-WL-321', 'OPR-WL-321.html', '완료', '_blank');
-			b.add(11.05, 11, '5) OPR-WL-331', 'OPR-WL-331.html', '완료', '_blank');
-			b.add(11.061, 11, '6-1) OPR-WL-331-1', 'OPR-WL-331-1.html', '완료', '_blank');
-			b.add(11.062, 11, '6-2) OPR-WL-331-1 - 팝업', 'OPR-WL-331-1.html?popup=ftmsType', '완료', '_blank');
-			b.add(11.07, 11, '7) OPR-WL-332', 'OPR-WL-332.html', '완료', '_blank');
-			b.add(11.08, 11, '8) OPR-WL-344-1', 'OPR-WL-344-1.html', '완료', '_blank');
-			b.add(11.09, 11, '9) OPR-WL-342-1', 'OPR-WL-342-1.html', '완료', '_blank');
-			b.add(11.10, 11, '10) OPR-WL-349', 'OPR-WL-349.html', '완료', '_blank');
-			b.add(11.11, 11, '11) OPR-WL-350', 'OPR-WL-350.html', '완료', '_blank');
-			b.add(11.121, 11, '12-1) OPR-WL-357', 'OPR-WL-357.html', '완료', '_blank');
-			b.add(11.122, 11, '12-2) OPR-WL-357-1 - 팝업', 'OPR-WL-357.html?popup=search', '완료', '_blank');
-			b.add(11.131, 11, '13-1) OPR-WL-356 / OPR-WL-358 - 프린트 팝업1', 'OPR-WL-356.html?print=1', '완료', '_blank');
-			b.add(11.132, 11, '13-1) OPR-WL-356 / OPR-WL-358 - 프린트 팝업2', 'OPR-WL-356.html?print=2', '완료', '_blank');
-			b.add(11.133, 11, '13-1) OPR-WL-356 / OPR-WL-358 - 프린트 팝업3', 'OPR-WL-356.html?print=3', '완료', '_blank');
+				b.add(8, 0, '[6.모니터링](30)');
+				b.add(8.011, 8, '1-1) OPR-WL-226', 'OPR-WL-226.html?sample=tooltip', '완료', '_blank');
+				b.add(8.012, 8, '1-2) OPR-WL-226 : ToolTip Close', 'OPR-WL-226.html', '완료', '_blank');
+				b.add(8.013, 8, '1-3) OPR-WL-229 : 확장', 'OPR-WL-226.html?sample=expand', '완료', '_blank');
+				b.add(8.021, 8, '2-1) OPR-WL-231', 'OPR-WL-231.html', '완료', '_blank');
+				b.add(8.022, 8, '2-2) OPR-WL-231 : 확장', 'OPR-WL-231.html?sample=expand', '완료', '_blank');
+				b.add(8.031, 8, '3-1) OPR-WL-232', 'OPR-WL-232.html', '완료', '_blank');
+				b.add(8.032, 8, '3-2) OPR-WL-232 : 1단8열', 'OPR-WL-232.html?type=2', '완료', '_blank');
+				b.add(8.033, 8, '3-3) OPR-WL-232 : 1단2열', 'OPR-WL-232.html?type=3', '완료', '_blank');
+				b.add(8.041, 8, '4-1) OPR-WL-236 : 9분할', 'OPR-WL-236.html', '완료', '_blank');
+				b.add(8.042, 8, '4-2) OPR-WL-236 : 4분할', 'OPR-WL-236.html?type=4', '완료', '_blank');
+				b.add(8.043, 8, '4-3) OPR-WL-236 : 16분할', 'OPR-WL-236.html?type=16', '완료', '_blank');
+				b.add(8.05, 8, '5) OPR-WL-240', 'OPR-WL-240.html', '완료', '_blank');
+				b.add(8.061, 8, '6-1) OPR-WL-241', 'OPR-WL-241.html', '완료', '_blank');
+				b.add(8.0621, 8, '6-2-1) OPR-WL-249', 'OPR-WL-241.html?popup=state', '완료', '_blank');
+				b.add(8.0622, 8, '6-2-2) OPR-WL-242 : 단일건', 'OPR-WL-241.html?popup=state&data=1', '완료', '_blank');
 
-			b.add(12, 0, '[10.안전관리](11)');
-			b.add(12.011, 12, '1-1) OPR-WL-380', 'OPR-WL-380.html', '완료', '_blank');
-			b.add(12.012, 12, '1-2) OPR-WL-381 - 팝업', 'OPR-WL-380.html?popup=record', '완료', '_blank');
-			b.add(12.021, 12, '2-1) OPR-WL-383', 'OPR-WL-383.html', '완료', '_blank');
-			b.add(12.022, 12, '2-2) OPR-WL-000', 'OPR-WL-000.html', '완료', '_blank');
-			b.add(12.03, 12, '3) OPR-WL-384', 'OPR-WL-384.html', '완료', '_blank');
-			b.add(12.04, 12, '4) OPR-WL-385', 'OPR-WL-385.html', '완료', '_blank');
-			b.add(12.05, 12, '5) OPR-WL-386', 'OPR-WL-386.html', '완료', '_blank');
-			b.add(12.06, 12, '6) OPR-WL-387', 'OPR-WL-387.html', '완료', '_blank');
-			b.add(12.07, 12, '7) OPR-WL-389', 'OPR-WL-389.html', '완료', '_blank');
+				b.add(9, 0, '[7.이력조회](48)');
+				b.add(9.01, 9, '1) OPR-WL-256 - B', 'OPR-WL-256.html', '완료', '_blank');
+				b.add(9.02, 9, '2) OPR-WL-258', 'OPR-WL-258.html', '완료', '_blank');
+				b.add(9.03, 9, '3) OPR-WL-259', 'OPR-WL-259.html', '완료', '_blank');
+				b.add(9.04, 9, '4) OPR-WL-260', 'OPR-WL-260.html', '완료', '_blank');
 
-			b.add(13, 0, '[11.작업 및 유지보수 이력관리](42)');
-			b.add(13.01, 13, '1) OPR-WL-390-1', 'OPR-WL-390-1.html', '완료', '_blank');
-			b.add(13.02, 13, '2) OPR-WL-391', 'OPR-WL-391.html', '완료', '_blank');
-			b.add(13.031, 13, '3) OPR-WL-403-1', 'OPR-WL-403.html', '완료', '_blank');
-			b.add(13.032, 13, '3) OPR-WL-402 - 팝업', 'OPR-WL-403.html?popup=delete', '완료', '_blank');
-			b.add(13.041, 13, '4-1) OPR-WL-409-1', 'OPR-WL-409-1.html', '완료', '_blank');
-			b.add(13.042, 13, '4-2) OPR-WL-415', 'OPR-WL-409-1.html?popup=record', '완료', '_blank');
-			b.add(13.043, 13, '4-3) OPR-WL-416-1', 'OPR-WL-409-1.html?popup=search', '완료', '_blank');
+				b.add(10, 0, '[8.통계조회](16)');
+				b.add(10.01, 10, '1) OPR-WL-303', 'OPR-WL-303.html', '완료', '_blank');
+				b.add(10.02, 10, '2) OPR-WL-307', 'OPR-WL-307.html', '완료', '_blank');
+				b.add(10.03, 10, '3) OPR-WL-308', 'OPR-WL-308.html', '완료', '_blank');
+				b.add(10.04, 10, '4) OPR-WL-328', 'OPR-WL-328.html', '완료', '_blank');
 
-			b.add(14, 0, '상황판');
-			b.add(14.011, 14, '1-1) WIH Dashboard : STA-WL-002 평시(메뉴 off)', 'STA-WL-002.html', '완료', '_blank');
-			b.add(14.0121, 14, '1-2-1) WIH Dashboard : STA-WL-003 평시(메뉴 on)', 'STA-WL-002.html?sample=menu', '완료', '_blank');
-			b.add(14.0122, 14, '1-2-2) WIH Dashboard : STA-WL-003 노선구간 > 상세(포승 IC ~ 포승 JCT)', 'STA-WL-002.html?sample=menu&stline=2', '완료', '_blank');
-			b.add(14.0123, 14, '1-2-3) WIH Dashboard : STA-WL-003 노선구간 > 상세(현덕 JCT ~ 포승 IC)', 'STA-WL-002.html?sample=menu&stline=3', '완료', '_blank');
-			b.add(14.0124, 14, '1-2-4) WIH Dashboard : STA-WL-003 노선구간 > 상세(현덕 JCT ~ 안중 IC (지선))', 'STA-WL-002.html?sample=menu&stline=4', '완료', '_blank');
-			b.add(14.0125, 14, '1-2-5) WIH Dashboard : STA-WL-003 노선구간 > 상세(평택호휴게소 하이패스 IC ~ 현덕 JCT)', 'STA-WL-002.html?sample=menu&stline=5', '완료', '_blank');
-			b.add(14.0126, 14, '1-2-6) WIH Dashboard : STA-WL-003 노선구간 > 상세(영인 IC ~ 평택호휴게소 하이패스 IC)', 'STA-WL-002.html?sample=menu&stline=6', '완료', '_blank');
-			b.add(14.0127, 14, '1-2-7) WIH Dashboard : STA-WL-003 노선구간 > 상세(아산 JCT ~ 영인 IC)', 'STA-WL-002.html?sample=menu&stline=7', '완료', '_blank');
-			b.add(14.0128, 14, '1-2-8) WIH Dashboard : STA-WL-003 노선구간 > 상세(신창 IC ~ 아산 JCT)', 'STA-WL-002.html?sample=menu&stline=8', '완료', '_blank');
-			b.add(14.0129, 14, '1-2-9) WIH Dashboard : STA-WL-003 노선구간 > 상세(예산 추사고택(신암) IC ~ 신창 IC)', 'STA-WL-002.html?sample=menu&stline=9', '완료', '_blank');
-			b.add(14.01290, 14, '1-2-10) WIH Dashboard : STA-WL-003 노선구간 > 상세(예산 JCT ~ 예산 추사고택(신암) IC)', 'STA-WL-002.html?sample=menu&stline=10', '완료', '_blank');
-			b.add(14.01291, 14, '1-2-11) WIH Dashboard : STA-WL-003 노선구간 > 상세(예산 예당호휴게소 하이패스 IC ~ 예산 JCT)', 'STA-WL-002.html?sample=menu&stline=11', '완료', '_blank');
-			b.add(14.01292, 14, '1-2-12) WIH Dashboard : STA-WL-003 노선구간 > 상세(봉수산터널 ~ 예산 예당호휴게소 하이패스 IC)', 'STA-WL-002.html?sample=menu&stline=12', '완료', '_blank');
-			b.add(14.01293, 14, '1-2-13) WIH Dashboard : STA-WL-003 노선구간 > 상세(청양 IC ~ 봉수산터널)', 'STA-WL-002.html?sample=menu&stline=13', '완료', '_blank');
-			b.add(14.01294, 14, '1-2-14) WIH Dashboard : STA-WL-003 노선구간 > 상세(은산3터널 ~ 청양 IC)', 'STA-WL-002.html?sample=menu&stline=14', '완료', '_blank');
-			b.add(14.01295, 14, '1-2-15) WIH Dashboard : STA-WL-003 노선구간 > 상세(부여 JCT ~ 은산3터널)', 'STA-WL-002.html?sample=menu&stline=15', '완료', '_blank');
-			b.add(14.01296, 14, '1-2-16) WIH Dashboard : STA-WL-003 노선구간 > 상세(부여 IC ~ 부여 JCT)', 'STA-WL-002.html?sample=menu&stline=16', '완료', '_blank');
-			b.add(14.013, 14, '1-3) WIH Dashboard : STA-WL-009 평시(구간확대)', 'STA-WL-002.html?sample=zoom', '완료', '_blank');
-			b.add(14.014, 14, '1-4) WIH Dashboard : STA-WL-009 평시(돌발정보 없음)', 'STA-WL-002.html?sample=nodata', '완료', '_blank');
-			b.add(14.021, 14, '2-1) WIH Dashboard : STA-WL-015 돌발', 'STA-WL-015.html', '완료', '_blank');
-			b.add(14.022, 14, '2-2) WIH Dashboard : STA-WL-015 돌발(상세보기)', 'STA-WL-015.html?sample=detail', '완료', '_blank');
-			b.add(14.023, 14, '2-3) WIH Dashboard : STA-WL-017 돌발(cctv 팝업)', 'STA-WL-015.html?popup=cctv', '완료', '_blank');
-			b.add(14.024, 14, '2-4) WIH Dashboard : STA-WL-015 돌발(종료알림)', 'STA-WL-015.html?popup=notice', '완료', '_blank');
-			b.add(14.031, 14, '3-1) WIH Dashboard : STA-WL-018 브리핑 (타입랩스)', 'STA-WL-018.html', '완료', '_blank');
-			b.add(14.032, 14, '3-2) WIH Dashboard : STA-WL-018 브리핑 (발생량)', 'STA-WL-021.html', '완료', '_blank');
+				b.add(11, 0, '[9.현장장비 점건관리](63)');
+				b.add(11.011, 11, '1-1) OPR-WL-316 - 달력', 'OPR-WL-316.html', '완료', '_blank');
+				b.add(11.012, 11, '1-2) OPR-WL-316-1 - 달력', 'OPR-WL-316.html?sample=weekand', '완료', '_blank');
+				b.add(11.013, 11, '1-3) OPR-WL-317 - 팝업(센터설비 색상 범례)', 'OPR-WL-316.html?popup=legend1', '완료', '_blank');
+				b.add(11.014, 11, '1-4) OPR-WL-317 - 팝업(현장설비 색상 범례)', 'OPR-WL-316.html?popup=legend2', '완료', '_blank');
+				b.add(11.02, 11, '2) OPR-WL-318', 'OPR-WL-318.html', '완료', '_blank');
+				b.add(11.03, 11, '3) OPR-WL-318-1', 'OPR-WL-318-1.html', '완료', '_blank');
+				b.add(11.04, 11, '4) OPR-WL-321', 'OPR-WL-321.html', '완료', '_blank');
+				b.add(11.05, 11, '5) OPR-WL-331', 'OPR-WL-331.html', '완료', '_blank');
+				b.add(11.061, 11, '6-1) OPR-WL-331-1', 'OPR-WL-331-1.html', '완료', '_blank');
+				b.add(11.062, 11, '6-2) OPR-WL-331-1 - 팝업', 'OPR-WL-331-1.html?popup=ftmsType', '완료', '_blank');
+				b.add(11.07, 11, '7) OPR-WL-332', 'OPR-WL-332.html', '완료', '_blank');
+				b.add(11.08, 11, '8) OPR-WL-344-1', 'OPR-WL-344-1.html', '완료', '_blank');
+				b.add(11.09, 11, '9) OPR-WL-342-1', 'OPR-WL-342-1.html', '완료', '_blank');
+				b.add(11.10, 11, '10) OPR-WL-349', 'OPR-WL-349.html', '완료', '_blank');
+				b.add(11.11, 11, '11) OPR-WL-350', 'OPR-WL-350.html', '완료', '_blank');
+				b.add(11.121, 11, '12-1) OPR-WL-357', 'OPR-WL-357.html', '완료', '_blank');
+				b.add(11.122, 11, '12-2) OPR-WL-357-1 - 팝업', 'OPR-WL-357.html?popup=search', '완료', '_blank');
+				b.add(11.131, 11, '13-1) OPR-WL-356 / OPR-WL-358 - 프린트 팝업1', 'OPR-WL-356.html?print=1', '완료', '_blank');
+				b.add(11.132, 11, '13-1) OPR-WL-356 / OPR-WL-358 - 프린트 팝업2', 'OPR-WL-356.html?print=2', '완료', '_blank');
+				b.add(11.133, 11, '13-1) OPR-WL-356 / OPR-WL-358 - 프린트 팝업3', 'OPR-WL-356.html?print=3', '완료', '_blank');
 
-			b.add(15, 0, '15. 컴포넌트');  
-			b.add(15.01, 15, '1) 컴포넌트 가이드', 'component.html', '완료', '_blank');
-			b.add(15.02, 15, '2) 슬라이드 메뉴 다수 케이스', 'OPR-WL-menu_sample.html', '완료', '_blank');
-			b.add(15.03, 15, '3) ax5ui 테이블 가이드', 'ax5ui.html', '완료', '_blank');
-			b.add(15.041, 15, '4-1) 테이블 리스트 페이지(OPR-WL-011)', 'OPR-WL-011.html', '완료', '_blank');
-			b.add(15.042, 15, '4-2) 테이블 리스트 페이지(OPR-WL-011) - 테이블 내부 스크롤 생성', 'OPR-WL-011_sample.html', '완료', '_blank');
-			b.add(15.051, 15, '5-1) 테이블 뷰 페이지(OPR-WL-013)', 'OPR-WL-013.html', '완료', '_blank');
-			b.add(15.052, 15, '5-2) 테이블 뷰 페이지(OPR-WL-013) - 컨텐츠 스크롤 생성', 'OPR-WL-013_sample.html', '완료', '_blank');
-			b.add(15.06, 15, '6) 데이트피커', 'datepicker.html', '완료', '_blank');
-			b.add(15.07, 15, '7) 셀렉트박스', 'selectbox.html', '완료', '_blank');
+				b.add(12, 0, '[10.안전관리](11)');
+				b.add(12.011, 12, '1-1) OPR-WL-380', 'OPR-WL-380.html', '완료', '_blank');
+				b.add(12.012, 12, '1-2) OPR-WL-381 - 팝업', 'OPR-WL-380.html?popup=record', '완료', '_blank');
+				b.add(12.021, 12, '2-1) OPR-WL-383', 'OPR-WL-383.html', '완료', '_blank');
+				b.add(12.022, 12, '2-2) OPR-WL-000', 'OPR-WL-000.html', '완료', '_blank');
+				b.add(12.03, 12, '3) OPR-WL-384', 'OPR-WL-384.html', '완료', '_blank');
+				b.add(12.04, 12, '4) OPR-WL-385', 'OPR-WL-385.html', '완료', '_blank');
+				b.add(12.05, 12, '5) OPR-WL-386', 'OPR-WL-386.html', '완료', '_blank');
+				b.add(12.06, 12, '6) OPR-WL-387', 'OPR-WL-387.html', '완료', '_blank');
+				b.add(12.07, 12, '7) OPR-WL-389', 'OPR-WL-389.html', '완료', '_blank');
 
-			b.add(16, 0, '16. 운영단말 개선대상 2410');  
-			b.add(16.011, 16, '1-1) 수정:OPR-WL-001-B - 팝업', 'OPR-WL-001.html?popup=findId', '완료', '_blank');
-			b.add(16.012, 16, '1-2) 수정:OPR-WL-001-C - 팝업 - 결과(성공)', 'OPR-WL-001.html?popup=findId&sample=success', '완료', '_blank');
-			b.add(16.013, 16, '1-3) 수정:OPR-WL-001-D - 팝업 - 결과(실패)', 'OPR-WL-001.html?popup=findId&sample=fail', '완료', '_blank');
-			b.add(16.02, 16, '2) 수정:OPR-WL-197', 'OPR-WL-197.html', '완료', '_blank');
-			b.add(16.03, 16, '3) 수정:OPR-WL-198', 'OPR-WL-198.html', '완료', '_blank');
-			b.add(16.04, 16, '4) 수정:OPR-WL-202', 'OPR-WL-202.html', '완료', '_blank');
-			b.add(16.05, 16, '5) 수정:OPR-WL-203', 'OPR-WL-203-2.html', '완료', '_blank');
-			b.add(16.061, 16, '6-1) 수정:OPR-WL-231', 'OPR-WL-231-2.html', '완료', '_blank');
-			b.add(16.062, 16, '6-2) 수정:OPR-WL-231 : 확장', 'OPR-WL-231-2.html?sample=expand', '완료', '_blank');
-			b.add(16.071, 16, '7-1) 추가기능:OPR-WL-232 - PPT 10번', 'OPR-WL-232.html', '완료', '_blank');
-			b.add(16.072, 16, '7-2) 추가기능:OPR-WL-232 - PPT 11번', 'OPR-WL-232.html?type=4', '완료', '_blank');
-			b.add(16.073, 16, '7-3) 추가기능:OPR-WL-227 - PPT 12~13번', 'OPR-WL-226.html', '완료', '_blank');
+				b.add(13, 0, '[11.작업 및 유지보수 이력관리](42)');
+				b.add(13.01, 13, '1) OPR-WL-390-1', 'OPR-WL-390-1.html', '완료', '_blank');
+				b.add(13.02, 13, '2) OPR-WL-391', 'OPR-WL-391.html', '완료', '_blank');
+				b.add(13.031, 13, '3) OPR-WL-403-1', 'OPR-WL-403.html', '완료', '_blank');
+				b.add(13.032, 13, '3) OPR-WL-402 - 팝업', 'OPR-WL-403.html?popup=delete', '완료', '_blank');
+				b.add(13.041, 13, '4-1) OPR-WL-409-1', 'OPR-WL-409-1.html', '완료', '_blank');
+				b.add(13.042, 13, '4-2) OPR-WL-415', 'OPR-WL-409-1.html?popup=record', '완료', '_blank');
+				b.add(13.043, 13, '4-3) OPR-WL-416-1', 'OPR-WL-409-1.html?popup=search', '완료', '_blank');
 
-			b.add(17, 0, '17. 운영단말 개선대상 2411 - 1순위');
-			b.add(17.011, 17, '1-1) 수정2nd:OPR-WL-308', 'OPR-WL-308-1.html', '완료', '_blank');
-			b.add(17.012, 17, '1-2) 수정2nd:OPR-WL-308 : 툴팁오픈', 'OPR-WL-308-1.html?sample=tip', '완료', '_blank');
-			b.add(17.02, 17, '2) 수정2nd:OPR-WL-239', 'OPR-WL-239.html', '완료', '_blank');
-			b.add(17.03, 17, '3) 수정2nd:OPR-WL-330-B', 'OPR-WL-330-B.html', '완료', '_blank');
-			b.add(17.04, 17, '4) 수정2nd:OPR-WL-303', 'OPR-WL-303-1.html', '완료', '_blank');
-			b.add(17.05, 17, '5) 컴포넌트 가이드 - 신규', 'component_2411.html', '완료', '_blank');
+				b.add(14, 0, '상황판');
+				b.add(14.011, 14, '1-1) WIH Dashboard : STA-WL-002 평시(메뉴 off)', 'STA-WL-002.html', '완료', '_blank');
+				b.add(14.0121, 14, '1-2-1) WIH Dashboard : STA-WL-003 평시(메뉴 on)', 'STA-WL-002.html?sample=menu', '완료', '_blank');
+				b.add(14.0122, 14, '1-2-2) WIH Dashboard : STA-WL-003 노선구간 > 상세(포승 IC ~ 포승 JCT)', 'STA-WL-002.html?sample=menu&stline=2', '완료', '_blank');
+				b.add(14.0123, 14, '1-2-3) WIH Dashboard : STA-WL-003 노선구간 > 상세(현덕 JCT ~ 포승 IC)', 'STA-WL-002.html?sample=menu&stline=3', '완료', '_blank');
+				b.add(14.0124, 14, '1-2-4) WIH Dashboard : STA-WL-003 노선구간 > 상세(현덕 JCT ~ 안중 IC (지선))', 'STA-WL-002.html?sample=menu&stline=4', '완료', '_blank');
+				b.add(14.0125, 14, '1-2-5) WIH Dashboard : STA-WL-003 노선구간 > 상세(평택호휴게소 하이패스 IC ~ 현덕 JCT)', 'STA-WL-002.html?sample=menu&stline=5', '완료', '_blank');
+				b.add(14.0126, 14, '1-2-6) WIH Dashboard : STA-WL-003 노선구간 > 상세(영인 IC ~ 평택호휴게소 하이패스 IC)', 'STA-WL-002.html?sample=menu&stline=6', '완료', '_blank');
+				b.add(14.0127, 14, '1-2-7) WIH Dashboard : STA-WL-003 노선구간 > 상세(아산 JCT ~ 영인 IC)', 'STA-WL-002.html?sample=menu&stline=7', '완료', '_blank');
+				b.add(14.0128, 14, '1-2-8) WIH Dashboard : STA-WL-003 노선구간 > 상세(신창 IC ~ 아산 JCT)', 'STA-WL-002.html?sample=menu&stline=8', '완료', '_blank');
+				b.add(14.0129, 14, '1-2-9) WIH Dashboard : STA-WL-003 노선구간 > 상세(예산 추사고택(신암) IC ~ 신창 IC)', 'STA-WL-002.html?sample=menu&stline=9', '완료', '_blank');
+				b.add(14.01290, 14, '1-2-10) WIH Dashboard : STA-WL-003 노선구간 > 상세(예산 JCT ~ 예산 추사고택(신암) IC)', 'STA-WL-002.html?sample=menu&stline=10', '완료', '_blank');
+				b.add(14.01291, 14, '1-2-11) WIH Dashboard : STA-WL-003 노선구간 > 상세(예산 예당호휴게소 하이패스 IC ~ 예산 JCT)', 'STA-WL-002.html?sample=menu&stline=11', '완료', '_blank');
+				b.add(14.01292, 14, '1-2-12) WIH Dashboard : STA-WL-003 노선구간 > 상세(봉수산터널 ~ 예산 예당호휴게소 하이패스 IC)', 'STA-WL-002.html?sample=menu&stline=12', '완료', '_blank');
+				b.add(14.01293, 14, '1-2-13) WIH Dashboard : STA-WL-003 노선구간 > 상세(청양 IC ~ 봉수산터널)', 'STA-WL-002.html?sample=menu&stline=13', '완료', '_blank');
+				b.add(14.01294, 14, '1-2-14) WIH Dashboard : STA-WL-003 노선구간 > 상세(은산3터널 ~ 청양 IC)', 'STA-WL-002.html?sample=menu&stline=14', '완료', '_blank');
+				b.add(14.01295, 14, '1-2-15) WIH Dashboard : STA-WL-003 노선구간 > 상세(부여 JCT ~ 은산3터널)', 'STA-WL-002.html?sample=menu&stline=15', '완료', '_blank');
+				b.add(14.01296, 14, '1-2-16) WIH Dashboard : STA-WL-003 노선구간 > 상세(부여 IC ~ 부여 JCT)', 'STA-WL-002.html?sample=menu&stline=16', '완료', '_blank');
+				b.add(14.013, 14, '1-3) WIH Dashboard : STA-WL-009 평시(구간확대)', 'STA-WL-002.html?sample=zoom', '완료', '_blank');
+				b.add(14.014, 14, '1-4) WIH Dashboard : STA-WL-009 평시(돌발정보 없음)', 'STA-WL-002.html?sample=nodata', '완료', '_blank');
+				b.add(14.021, 14, '2-1) WIH Dashboard : STA-WL-015 돌발', 'STA-WL-015.html', '완료', '_blank');
+				b.add(14.022, 14, '2-2) WIH Dashboard : STA-WL-015 돌발(상세보기)', 'STA-WL-015.html?sample=detail', '완료', '_blank');
+				b.add(14.023, 14, '2-3) WIH Dashboard : STA-WL-017 돌발(cctv 팝업)', 'STA-WL-015.html?popup=cctv', '완료', '_blank');
+				b.add(14.024, 14, '2-4) WIH Dashboard : STA-WL-015 돌발(종료알림)', 'STA-WL-015.html?popup=notice', '완료', '_blank');
+				b.add(14.031, 14, '3-1) WIH Dashboard : STA-WL-018 브리핑 (타입랩스)', 'STA-WL-018.html', '완료', '_blank');
+				b.add(14.032, 14, '3-2) WIH Dashboard : STA-WL-018 브리핑 (발생량)', 'STA-WL-021.html', '완료', '_blank');
 
-			b.add(18, 0, '18. 운영단말 개선대상 2411 - 2순위');
-			b.add(18.01, 18, '1) 수정2nd:OPR-WL-155 : 미선택 예시', 'OPR-WL-155.html', '작업전', '_blank');
-			b.add(18.02, 18, '2) 수정2nd:OPR-WL-237', 'OPR-WL-237.html', '작업전', '_blank');
-			b.add(18.03, 18, '3) OPR-WL-422', 'OPR-WL-422.html', '작업전', '_blank');
-			b.add(18.04, 18, '4) #Popup : 사고처리결과대장', 'OPR-WL-422.html?print=1', '작업전', '_blank'); // OPR-WL-356.html?print=1
-			b.add(18.051, 18, '5-1) 수정2nd:OPR-WL-236', 'OPR-WL-236.html', '작업전', '_blank');
-			b.add(18.052, 18, '5-2) 수정2nd:OPR-WL-236 > 4분할및등록예시', 'OPR-WL-236.html?type=4', '작업전', '_blank');
-			b.add(18.053, 18, '5-3) 수정2nd:OPR-WL-236 > 9분할및등록예시', 'OPR-WL-236.html?type=9', '작업전', '_blank');
-			b.add(18.053, 18, '5-3) 수정2nd:OPR-WL-236 > 16분할및등록예시', 'OPR-WL-236.html?type=16', '작업전', '_blank');
+				b.add(15, 0, '15. 컴포넌트');
+				b.add(15.01, 15, '1) 컴포넌트 가이드', 'component.html', '완료', '_blank');
+				b.add(15.02, 15, '2) 슬라이드 메뉴 다수 케이스', 'OPR-WL-menu_sample.html', '완료', '_blank');
+				b.add(15.03, 15, '3) ax5ui 테이블 가이드', 'ax5ui.html', '완료', '_blank');
+				b.add(15.041, 15, '4-1) 테이블 리스트 페이지(OPR-WL-011)', 'OPR-WL-011.html', '완료', '_blank');
+				b.add(15.042, 15, '4-2) 테이블 리스트 페이지(OPR-WL-011) - 테이블 내부 스크롤 생성', 'OPR-WL-011_sample.html', '완료', '_blank');
+				b.add(15.051, 15, '5-1) 테이블 뷰 페이지(OPR-WL-013)', 'OPR-WL-013.html', '완료', '_blank');
+				b.add(15.052, 15, '5-2) 테이블 뷰 페이지(OPR-WL-013) - 컨텐츠 스크롤 생성', 'OPR-WL-013_sample.html', '완료', '_blank');
+				b.add(15.06, 15, '6) 데이트피커', 'datepicker.html', '완료', '_blank');
+				b.add(15.07, 15, '7) 셀렉트박스', 'selectbox.html', '완료', '_blank');
 
-			document.write(b);
-			//]]>
-  		</script>
-  	</div>
-  </div>
+				b.add(16, 0, '16. 운영단말 개선대상 2410');
+				b.add(16.011, 16, '1-1) 수정:OPR-WL-001-B - 팝업', 'OPR-WL-001.html?popup=findId', '완료', '_blank');
+				b.add(16.012, 16, '1-2) 수정:OPR-WL-001-C - 팝업 - 결과(성공)', 'OPR-WL-001.html?popup=findId&sample=success', '완료', '_blank');
+				b.add(16.013, 16, '1-3) 수정:OPR-WL-001-D - 팝업 - 결과(실패)', 'OPR-WL-001.html?popup=findId&sample=fail', '완료', '_blank');
+				b.add(16.02, 16, '2) 수정:OPR-WL-197', 'OPR-WL-197.html', '완료', '_blank');
+				b.add(16.03, 16, '3) 수정:OPR-WL-198', 'OPR-WL-198.html', '완료', '_blank');
+				b.add(16.04, 16, '4) 수정:OPR-WL-202', 'OPR-WL-202.html', '완료', '_blank');
+				b.add(16.05, 16, '5) 수정:OPR-WL-203', 'OPR-WL-203-2.html', '완료', '_blank');
+				b.add(16.061, 16, '6-1) 수정:OPR-WL-231', 'OPR-WL-231-2.html', '완료', '_blank');
+				b.add(16.062, 16, '6-2) 수정:OPR-WL-231 : 확장', 'OPR-WL-231-2.html?sample=expand', '완료', '_blank');
+				b.add(16.071, 16, '7-1) 추가기능:OPR-WL-232 - PPT 10번', 'OPR-WL-232.html', '완료', '_blank');
+				b.add(16.072, 16, '7-2) 추가기능:OPR-WL-232 - PPT 11번', 'OPR-WL-232.html?type=4', '완료', '_blank');
+				b.add(16.073, 16, '7-3) 추가기능:OPR-WL-227 - PPT 12~13번', 'OPR-WL-226.html', '완료', '_blank');
+
+				b.add(17, 0, '17. 운영단말 개선대상 2411 - 1순위');
+				b.add(17.011, 17, '1-1) 수정2nd:OPR-WL-308', 'OPR-WL-308-1.html', '완료', '_blank');
+				b.add(17.012, 17, '1-2) 수정2nd:OPR-WL-308 : 툴팁오픈', 'OPR-WL-308-1.html?sample=tip', '완료', '_blank');
+				b.add(17.02, 17, '2) 수정2nd:OPR-WL-239', 'OPR-WL-239.html', '완료', '_blank');
+				b.add(17.03, 17, '3) 수정2nd:OPR-WL-330-B', 'OPR-WL-330-B.html', '완료', '_blank');
+				b.add(17.04, 17, '4) 수정2nd:OPR-WL-303', 'OPR-WL-303-1.html', '완료', '_blank');
+				b.add(17.05, 17, '5) 컴포넌트 가이드 - 신규', 'component_2411.html', '완료', '_blank');
+
+				b.add(18, 0, '18. 운영단말 개선대상 2411 - 2순위');
+				b.add(18.01, 18, '1) 수정2nd:OPR-WL-155 : 미선택 예시', 'OPR-WL-155.html', '완료', '_blank');
+				b.add(18.02, 18, '2) 수정2nd:OPR-WL-237', 'OPR-WL-237.html', '완료', '_blank');
+				b.add(18.03, 18, '3) OPR-WL-422', 'OPR-WL-422.html', '완료', '_blank');
+				b.add(18.04, 18, '4) #Popup : 사고처리결과대장', 'OPR-WL-422.html?print=1', '완료', '_blank'); // OPR-WL-356.html?print=1
+
+				b.add(19, 0, '19. 운영단말 개선대상 2412 - 미확정');
+				b.add(19.011, 19, '1-1) 수정2nd:OPR-WL-236', 'OPR-WL-236-1.html', '작업전', '_blank');
+				b.add(19.012, 19, '1-2) 수정2nd:OPR-WL-236 > 4분할및등록예시', 'OPR-WL-236-1.html?type=4', '작업전', '_blank');
+				b.add(19.013, 19, '1-3) 수정2nd:OPR-WL-236 > 9분할및등록예시', 'OPR-WL-236-1.html?type=9', '작업전', '_blank');
+				b.add(19.014, 19, '1-3) 수정2nd:OPR-WL-236 > 16분할및등록예시', 'OPR-WL-236-1.html?type=16', '작업전', '_blank');
+
+				document.write(b);
+				//]]>
+			</script>
+		</div>
+	</div>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +18,7 @@
   <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
   <script src="js/ui.js"></script>
 </head>
+
 <body>
   <div id="wrap" class="c-scrollbar">
     <div id="header">
@@ -227,8 +229,8 @@
                   <div id="endpicker-container1" style="margin-left: -1px;"></div>
                 </div>
 
-                <span class="label">RWIS ID</span>         
-                <input type="text" class="input-base" placeholder="RWIS ID 검색" style="width: 180px;" />       
+                <span class="label">RWIS ID</span>
+                <input type="text" class="input-base" placeholder="RWIS ID 검색" style="width: 180px;" />
 
                 <ul class="radio-list radio-time ml20">
                   <li>
@@ -247,12 +249,14 @@
                 <span class="btn-base btn-ico ml8"><a href="#"><em><span class="s-ico search"></span>검색</em></a></span>
               </div>
               <div class="btns-wrap">
-                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico download"></span>전체 다운로드</em></a></span>
-                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico exceldown"></span>엑셀 다운로드</em></a></span>
+                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico download"></span>전체
+                      다운로드</em></a></span>
+                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico exceldown"></span>엑셀
+                      다운로드</em></a></span>
               </div>
             </div><!-- .search-area -->
             <div class="content-line">
-              
+
               <div class="content-frame-wrap chart">
                 <div class="content-frame c-scrollbar">
                   <div class="tit-area">
@@ -310,14 +314,14 @@
     <script>
       tui.DatePicker.localeTexts['customKey'] = {
         titles: {
-            // days
-            DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-            // daysShort
-            D: ['일', '월', '화', '수', '목', '금', '토'],
-            // months
-            MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-            // monthsShort
-            MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+          // days
+          DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+          // daysShort
+          D: ['일', '월', '화', '수', '목', '금', '토'],
+          // months
+          MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+          // monthsShort
+          MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
         },
         titleFormat: 'yyyy.MMM',
         todayFormat: '오늘 : yyyy.MMMM.dd',
@@ -344,9 +348,9 @@
         format: 'YYYY-MM-dd',
         // showAlways: true,
       });
-      
+
       picker1.on('change:end', () => {
-          console.log(123);
+        console.log(123);
       });
 
       var rwisLineChart = echarts.init(document.getElementById('rwisLineChart'));
@@ -360,4 +364,5 @@
     </script>
   </div><!-- #wrap -->
 </body>
+
 </html>

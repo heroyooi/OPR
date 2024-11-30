@@ -1,0 +1,116 @@
+.combobox-list {
+  position: relative;
+  font-size: 14px;
+  /* overflow: hidden; */
+}
+
+.combobox .group {
+  display: flex;
+  /* padding: 4px; */
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #3e4157;
+  border: 1px solid #495367;
+  width: 120px;
+  align-items: center;
+}
+
+.combobox input,
+.combobox button {
+  color: black;
+  box-sizing: border-box;
+  height: 38px;
+  padding: 0;
+  margin: 0;
+  vertical-align: bottom;
+  position: relative;
+  cursor: pointer;
+}
+
+.combobox input {
+  width: 100%;
+  border-right: none;
+  outline: none;
+  padding: 0 0 0 16px;
+  background-color: #3e4157;
+  border: 0;
+  color: #b2bbce;
+}
+
+.combobox button {
+  background:url(../img/ico-24-arrow-on.png) 50% 50% no-repeat;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-left: none;
+  outline: none;
+  /* color: rgb(0 90 156); */
+}
+
+/* .combobox button[aria-expanded="true"] svg {
+  transform: rotate(180deg) translate(0, -3px);
+} */
+
+ul[role="listbox"] {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  list-style: none;
+  /* background-color: white; */
+  display: none;
+  box-sizing: border-box;
+  /* border: 2px currentcolor solid; */
+  max-height: 250px;
+  /* width: 168px; */
+  width: 120px;
+  overflow: scroll;
+  overflow-x: hidden;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #3e4157;
+  border: 1px solid #495367;
+}
+
+
+ul[role="listbox"] li[role="option"] {
+  font-size: 14px;
+  color: #b2bbce;
+  margin: 0;
+  display: block;
+  padding: 6.5px 16px;
+}
+
+/* focus and hover styling */
+
+.combobox .group.focus,
+.combobox .group:hover {
+  /* padding: 2px;
+  border: 2px solid currentcolor;
+  border-radius: 4px; */
+}
+
+.combobox .group.focus polygon,
+.combobox .group:hover polygon {
+  fill-opacity: 1;
+}
+
+.combobox .group.focus input,
+.combobox .group.focus button,
+.combobox .group input:hover,
+.combobox .group button:hover {
+  /* background-color: #def; */
+}
+
+[role="listbox"].focus [role="option"][aria-selected="true"],
+[role="listbox"] [role="option"]:hover {
+  /* background-color: #def;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-top: 2px solid currentcolor;
+  border-bottom: 2px solid currentcolor; */
+  background-color: #2e69d1;
+  color: #fff;
+}

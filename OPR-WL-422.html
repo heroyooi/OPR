@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>서부내륙고속도로 통합운영단말</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrap" class="c-scrollbar">
+    <div id="header">
+      <h1><a href="#"><img src="img/wih-logo-io.png" alt=""></a></h1>
+      <div class="item-area">
+        <ul id="gnb">
+          <li><a href="#">시스템관리</a></li>
+          <li><a href="#">기초정보관리</a></li>
+          <li><a href="#">FTMS 제어</a></li>
+          <li><a href="#">운영관리</a></li>
+          <li><a href="#">상황관리</a></li>
+          <li><a href="#">모니터링</a></li>
+          <li><a href="#">이력조회</a></li>
+          <li><a href="#">통계조회</a></li>
+          <li><a href="#">현장장비 점검관리</a></li>
+          <li><a href="#">안전관리</a></li>
+          <li><a href="#">작업 및 유지보수 이력 관리</a></li>
+        </ul>
+        <ul id="utilmenu">
+          <li><a href="#" class="s-ico notify w-label new"><span>고윤정님</span></a></li>
+          <li><a href="#" class="s-ico bookmark"></a></li>
+          <li><a href="#" class="s-ico logout"></a></li>
+        </ul>
+        <div class="bookmark-area">
+          <ul>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">RWIS 제어기 기초정보관리</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기 최대 10개</span>
+              </a>
+            </li>
+          </ul>
+          <div class="bookmark-item">
+            <a href="#" class="btn-text">즐겨찾기 관리 <span class="s-ico arrow"></span></a>
+            <a href="#" class="s-ico close gray"></a>
+          </div>
+        </div><!-- .bookmark-area -->
+      </div>
+    </div><!--#header -->
+    <div id="container" class="ver-lnb">
+      <div class="left-wrap">
+        <h3 class="tit">도로운영관리</h3>
+        <ul class="lnb-list">
+          <li>
+            <a href="#" class="menu toggle">교통사고 관리</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li class="on">
+            <a href="#" class="menu toggle">순찰일지</a>
+            <ul>
+              <li>
+                <a href="#" class="menu">순찰일지</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+              <li class="on">
+                <a href="#" class="menu">총괄 조치 내역</a>
+                <a href="#" class="s-ico star"></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="menu toggle">순찰차량 관리</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+        </ul>
+      </div><!-- .left-wrap -->
+      <div class="content-wrap">
+        <div class="content-top">
+          <div class="menu-area">
+            <a href="#" class="s-ico home"></a>
+            <div class="menu-swiper swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide on">
+                  <a href="#" class="label">총괄 조치 내역</a>
+                  <a href="#" class="s-ico close"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="navi-area">
+            <a href="" class="s-ico arrow-l"></a>
+            <a href="" class="s-ico arrow-r"></a>
+          </div>
+          <a href="" class="s-ico reset tp2"></a>
+        </div><!-- .content-top -->
+        <div class="content-area">
+          <div class="content-inner">
+            <div class="search-area">
+              <div class="input-wrap input-datepicker">
+                <span class="label">기준년월</span>
+                <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom">
+                  <input id="datepicker-input" type="text" aria-label="Date">
+                  <span class="tui-ico-date"></span>
+                  <div class="date_wrapper" id="general" style="margin-left: -1px;"></div>
+                </div>
+
+                <span class="label">검색</span>
+
+                <!--
+                <select id="user_mobile_1" class="select-base" style="width: 120px;">
+                  <option value="0" selected>구분</option>
+                  <option value="1">02</option>
+                  <option value="2">값2</option>
+                  <option value="3">값3</option>
+                </select>
+                -->
+
+                <div class="combobox combobox-list">
+                  <div class="group">
+                    <input id="cb1-input" class="cb_edit" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="cb1-listbox" placeholder="구분">
+                    <button id="cb1-button" tabindex="-1" aria-label="States" aria-expanded="false" aria-controls="cb1-listbox">
+                      <!--
+                      <svg width="18" height="16" aria-hidden="true" focusable="false" style="forced-color-adjust: auto">
+                        <polygon class="arrow" stroke-width="0" fill-opacity="0.75" fill="currentcolor" points="3,6 15,6 9,14"></polygon>
+                      </svg>
+                      -->
+                    </button>
+                  </div>
+                  <ul id="cb1-listbox" role="listbox" aria-label="States" class="c-scrollbar">
+                    <li id="lb1-al" role="option">Alabama</li>
+                    <li id="lb1-ak" role="option">Alaska</li>
+                    <li id="lb1-as" role="option">American Samoa</li>
+                    <li id="lb1-az" role="option">Arizona</li>
+                    <li id="lb1-ar" role="option">Arkansas</li>
+                    <li id="lb1-ca" role="option">California</li>
+                    <li id="lb1-co" role="option">Colorado</li>
+                    <li id="lb1-ct" role="option">Connecticut</li>
+                    <li id="lb1-de" role="option">Delaware</li>
+                    <li id="lb1-dc" role="option">District of Columbia</li>
+                    <li id="lb1-fl" role="option">Florida</li>
+                    <li id="lb1-ga" role="option">Georgia</li>
+                    <li id="lb1-gm" role="option">Guam</li>
+                    <li id="lb1-hi" role="option">Hawaii</li>
+                    <li id="lb1-id" role="option">Idaho</li>
+                    <li id="lb1-il" role="option">Illinois</li>
+                    <li id="lb1-in" role="option">Indiana</li>
+                    <li id="lb1-ia" role="option">Iowa</li>
+                    <li id="lb1-ks" role="option">Kansas</li>
+                    <li id="lb1-ky" role="option">Kentucky</li>
+                    <li id="lb1-la" role="option">Louisiana</li>
+                    <li id="lb1-me" role="option">Maine</li>
+                    <li id="lb1-md" role="option">Maryland</li>
+                    <li id="lb1-ma" role="option">Massachusetts</li>
+                    <li id="lb1-mi" role="option">Michigan</li>
+                    <li id="lb1-mn" role="option">Minnesota</li>
+                    <li id="lb1-ms" role="option">Mississippi</li>
+                    <li id="lb1-mo" role="option">Missouri</li>
+                    <li id="lb1-mt" role="option">Montana</li>
+                    <li id="lb1-ne" role="option">Nebraska</li>
+                    <li id="lb1-nv" role="option">Nevada</li>
+                    <li id="lb1-nh" role="option">New Hampshire</li>
+                    <li id="lb1-nj" role="option">New Jersey</li>
+                    <li id="lb1-nm" role="option">New Mexico</li>
+                    <li id="lb1-ny" role="option">New York</li>
+                    <li id="lb1-nc" role="option">North Carolina</li>
+                    <li id="lb1-nd" role="option">North Dakota</li>
+                    <li id="lb1-mp" role="option">Northern Marianas Islands</li>
+                    <li id="lb1-oh" role="option">Ohio</li>
+                    <li id="lb1-ok" role="option">Oklahoma</li>
+                    <li id="lb1-or" role="option">Oregon</li>
+                    <li id="lb1-pa" role="option">Pennsylvania</li>
+                    <li id="lb1-pr" role="option">Puerto Rico</li>
+                    <li id="lb1-ri" role="option">Rhode Island</li>
+                    <li id="lb1-sc" role="option">South Carolina</li>
+                    <li id="lb1-sd" role="option">South Dakota</li>
+                    <li id="lb1-tn" role="option">Tennessee</li>
+                    <li id="lb1-tx" role="option">Texas</li>
+                    <li id="lb1-ut" role="option">Utah</li>
+                    <li id="lb1-ve" role="option">Vermont</li>
+                    <li id="lb1-va" role="option">Virginia</li>
+                    <li id="lb1-vi" role="option">Virgin Islands</li>
+                    <li id="lb1-wa" role="option">Washington</li>
+                    <li id="lb1-wv" role="option">West Virginia</li>
+                    <li id="lb1-wi" role="option">Wisconsin</li>
+                    <li id="lb1-wy" role="option">Wyoming</li>
+                  </ul>
+                </div>
+
+                <input type="text" class="input-base ml12" placeholder="키워드 입력" style="width: 300px" />
+                <span class="btn-base btn-ico ml8"><a href="#"><em><span class="s-ico search"></span>검색</em></a></span>
+              </div>
+              <div class="btns-wrap">
+                <span class="btn-base btn-ico gray"><a href="#"><em><span class="s-ico delete"></span>삭제</em></a></span>
+                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico modify"></span>수정</em></a></span>
+                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico regist"></span>등록</em></a></span>
+                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico download"></span>전체 다운로드</em></a></span>
+                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico exceldown"></span>엑셀 다운로드</em></a></span>
+              </div>
+            </div><!-- .search-area -->
+            <div class="month-info-area">
+              <p class="tit">10월</p>
+              <ul>
+                <li>
+                  <dl class="orange">
+                    <dt>타이어교체</dt>
+                    <dd>1</dd>
+                  </dl>
+                  <dl class="amber">
+                    <dt>교통사고 후방지원</dt>
+                    <dd>1</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl class="orange">
+                    <dt>연료유 보충</dt>
+                    <dd>0</dd>
+                  </dl>
+                  <dl class="amber">
+                    <dt>고장차량 후방지원</dt>
+                    <dd>1</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl class="orange">
+                    <dt>배터리충전지원</dt>
+                    <dd>0</dd>
+                  </dl>
+                  <dl class="amber">
+                    <dt>기타 후방지원</dt>
+                    <dd>1</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl class="orange">
+                    <dt>기타 지원</dt>
+                    <dd>0</dd>
+                  </dl>
+                  <dl class="red">
+                    <dt>주정차 계도</dt>
+                    <dd>1</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl class="lime">
+                    <dt>낙하물 수거</dt>
+                    <dd>1</dd>
+                  </dl>
+                  <dl class="red">
+                    <dt>보행자/2륜차</dt>
+                    <dd>0</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl class="lime">
+                    <dt>동물사체 처리</dt>
+                    <dd>1</dd>
+                  </dl>
+                  <dl class="red">
+                    <dt>운행제한차량</dt>
+                    <dd>0</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl class="lime">
+                    <dt>불법광고물 제거</dt>
+                    <dd>1</dd>
+                  </dl>
+                  <dl class="blue">
+                    <dt>공사장 안전점검</dt>
+                    <dd>1</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl class="violet">
+                    <dt>기타</dt>
+                    <dd>1</dd>
+                  </dl>
+                  <dl class="blue">
+                    <dt>시설물 점검</dt>
+                    <dd>1</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl class="green">
+                    <dt>긴급견인</dt>
+                    <dd>1</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl class="slate">
+                    <dt>총계</dt>
+                    <dd>1</dd>
+                  </dl>
+                </li>
+              </ul>
+            </div><!-- .month-info-area -->
+            <div class="content-frame c-scrollbar">
+              <div style="position: relative; height:472px;" id="grid1_25-parent">
+                <div class="cs-ax5grid" data-ax5grid="grid1_25" data-ax5grid-config="{}" style="height: 100%"></div>
+              </div>
+              <div class="total-wrap mt12">
+                <div class="total">
+                  <span class="label">총</span>
+                  <span class="count">50</span>
+                  <span class="unit">건</span>
+                </div>
+                <div class="paging-area">
+                  <a href="#" class="btn-first disabled"></a>
+                  <a href="#" class="btn-prev disabled"></a>
+                  <div class="paging">
+                    <input class="current" type="text" value="1" />
+                    <span class="line">/</span>
+                    <span class="num">5</span>
+                  </div>
+                  <a href="#" class="btn-next"></a>
+                  <a href="#" class="btn-last"></a>
+                </div>
+              </div><!-- .total-wrap -->
+            </div><!-- .content-frame -->
+          </div><!-- .content-inner -->
+        </div><!-- .content-area -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+
+    <div class="popup-dimm"></div>
+    <div class="popup-report" id="report1">
+      <div class="header">
+        <ul>
+          <li><a href="javascript:void(0);" class="print" onclick="window.print();"></a></li>
+          <li><a href="javascript:void(0);" class="pdf"></a></li>
+          <li><a href="javascript:void(0);" class="cancel"></a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <p class="tit">사고처리결과대장</p>
+        <div class="tb-wrap">
+          <table summary="사고처리결과대장 요약">
+            <colgroup>
+              <col width="*" />
+              <col width="16.666%" />
+              <col width="16.666%" />
+              <col width="16.666%" />
+              <col width="16.666%" />
+              <col width="16.666%" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">사고일시</th>
+                <td colspan="2">2024년 6월 24일 14:44</td>
+                <th scope="row">기상</th>
+                <td colspan="2">맑음</td>
+              </tr>
+              <tr>
+                <th scope="row">사고장소</th>
+                <td colspan="5">성복터널(용인) 5.1K</td>
+              </tr>
+              <tr>
+                <th scope="row">사고유형</th>
+                <td>차대차</td>
+                <th scope="row">사고원인</th>
+                <td>기타(원인불명)</td>
+                <th scope="row">사고급수</th>
+                <td>C</td>
+              </tr>
+              <tr>
+                <th scope="row">보고자</th>
+                <td>김철수</td>
+                <th scope="row">보고구분</th>
+                <td>-</td>
+                <th scope="row">교통제한</th>
+                <td>3차로차단</td>
+              </tr>
+              <tr>
+                <th scope="row">인명피해</th>
+                <td colspan="5">
+                  <ul class="count-list">
+                    <li>
+                      <span>사망자수</span>
+                      <span><em>0</em>명</span>,
+                    </li>
+                    <li>
+                      <span>중상자수</span>
+                      <span><em>0</em>명</span>,
+                    </li>
+                    <li>
+                      <span>경사자자수</span>
+                      <span><em class="on">1</em>명</span>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">시설피해</th>
+                <td>김철수</td>
+                <th scope="row">보고구분</th>
+                <td>-</td>
+                <th scope="row">복구일자</th>
+                <td>0000년 00월 <br />00일</td>
+              </tr>
+              <tr>
+                <th scope="row">사고내용</th>
+                <td colspan="5">서울방향 금토TG 상7차로 진입 중 전방주시태만으로 인해 선행차량 후미를 추돌후 연이어 충격흡수시설을 충격하고 상7차로에 멈춰 선 2중 추돌 및 대물사고</td>
+              <tr>
+                <tr>
+                  <th scope="row">조치사항</th>
+                  <td colspan="5"></td>
+                <tr>
+            </tbody>
+          </table>
+        </div><!-- .tb-wrap -->
+
+        <p class="s-tit">접보사항</p>
+        <div class="tb-wrap">
+          <table summary="접보사항 요약">
+            <colgroup>
+              <col width="*" />
+              <col width="16.666%" />
+              <col width="16.666%" />
+              <col width="16.666%" />
+              <col width="16.666%" />
+              <col width="16.666%" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">접보방법</th>
+                <td colspan="2">고순대제보</td>
+                <th scope="row">접보시간</th>
+                <td colspan="2">4</td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- .tb-wrap -->
+
+        <p class="s-tit">현장도착 및 처리시간</p>
+        <div class="tb-wrap">
+          <table summary="현장도착 및 처리시간 요약" class="list">
+            <colgroup>
+              <col width="*" />
+              <col width="14.2857%" />
+              <col width="14.2857%" />
+              <col width="14.2857%" />
+              <col width="14.2857%" />
+              <col width="14.2857%" />
+              <col width="14.2857%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">고객지원반</th>
+                <th scope="col">119</th>
+                <th scope="col">112</th>
+                <th scope="col">견인차량</th>
+                <th scope="col">환자이송</th>
+                <th scope="col">견인완료</th>
+                <th scope="col">정상소통</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>15:33</td>
+                <td>15:33</td>
+                <td>15:33</td>
+                <td>15:33</td>
+                <td>15:33</td>
+                <td>15:33</td>
+                <td>15:33</td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- .tb-wrap -->
+
+        <p class="s-tit">도로현황</p>
+        <div class="tb-wrap">
+          <table summary="도로현황 요약" class="list">
+            <colgroup>
+              <col width="20%" />
+              <col width="20%" />
+              <col width="30%" />
+              <col width="30%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">방책시설</th>
+                <th scope="col" rowspan="2">포장상태</th>
+                <th scope="col" rowspan="2">노면상태</th>
+              </tr>
+              <tr>
+                <th scope="col">중분대</th>
+                <th scope="col">갓길</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>O</td>
+                <td>O</td>
+                <td>양호</td>
+                <td>건조</td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- .tb-wrap -->
+
+        <p class="s-tit">사고차량</p>
+        <div class="tb-wrap">
+          <table summary="사고차량 요약" class="list">
+            <colgroup>
+              <col width="8%" />
+              <col width="8%" />
+              <col width="8%" />
+              <col width="24%" />
+              <col width="20%" />
+              <col width="8%" />
+              <col width="8%" />
+              <col width="8%" />
+              <col width="8%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col" colspan="3">피해구분</th>
+                <th scope="col" rowspan="2">차량번호</th>
+                <th scope="col" rowspan="2">차종</th>
+                <th scope="col" colspan="4">운전자</th>
+              </tr>
+              <tr>
+                <th scope="col">사망</th>
+                <th scope="col">부상</th>
+                <th scope="col">차량</th>
+                <th scope="col">성명</th>
+                <th scope="col">성별</th>
+                <th scope="col">연령</th>
+                <th scope="col">상태</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>경기수원가2468</td>
+                <td>2.5t 견인차</td>
+                <td>이길동</td>
+                <td>남</td>
+                <td>84</td>
+                <td>경상</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>경기수원가2468</td>
+                <td>2.5t 견인차</td>
+                <td>이길동</td>
+                <td>남</td>
+                <td>84</td>
+                <td>경상</td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- .tb-wrap -->
+
+        <p class="s-tit">사망자정보</p>
+        <div class="tb-wrap">
+          <table summary="사망자정보 요약" class="list">
+            <colgroup>
+              <col width="16.666%" />
+              <col width="16.666%" />
+              <col width="16.666%" />
+              <col width="20%" />
+              <col width="*" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">성명</th>
+                <th scope="col">성별</th>
+                <th scope="col">연령</th>
+                <th scope="col">후송병원</th>
+                <th scope="col">기타</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- .tb-wrap -->
+
+        <p class="s-tit">사진 첨부</p>
+        <div class="tb-wrap">
+          <table summary="사진 첨부 요약" class="list">
+            <tbody>
+              <tr>
+                <td>
+                  <div class="pic-area">
+                    <span class="pic"><img src="https://placehold.co/322x198/EEE/31343C" alt=""></span>
+                    <span class="pic"><img src="https://placehold.co/101x163/EEE/31343C" alt=""></span>
+                    <span class="pic"><img src="https://placehold.co/263x162/EEE/31343C" alt=""></span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- .tb-wrap -->
+
+        <div class="footer">
+          <span class="logo"><img src="img/wih-logo-color.png" alt="서부내륙고속도로" /></span>
+          <span class="date">2024년 04월11일</span>
+        </div><!-- .footer -->
+      </div><!-- .content -->
+    </div><!-- .popup-report -->
+
+  </div><!-- #wrap -->
+  <script src="js/ax5uiGridSample.js"></script>
+  <script>
+    tui.DatePicker.localeTexts['customKey'] = {
+      titles: {
+          // days
+          DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+          // daysShort
+          D: ['일', '월', '화', '수', '목', '금', '토'],
+          // months
+          MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+          // monthsShort
+          MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+      },
+      titleFormat: 'yyyy.MMM',
+      todayFormat: '오늘 : yyyy.MMMM.dd',
+      date: 'Date',
+      time: 'Time'
+    };
+
+    var datepicker = new tui.DatePicker('.date_wrapper#general', {
+      language: 'customKey',
+      date: new Date(),
+      input: {
+        element: '#datepicker-input',
+        format: 'YYYY-MM-dd',
+      }
+    });
+
+    var comboboxes = document.querySelectorAll('.combobox-list');
+
+    for (var i = 0; i < comboboxes.length; i++) {
+      var combobox = comboboxes[i];
+      var comboboxNode = combobox.querySelector('input');
+      var buttonNode = combobox.querySelector('button');
+      var listboxNode = combobox.querySelector('[role="listbox"]');
+      new ComboboxAutocomplete(comboboxNode, buttonNode, listboxNode);
+    }
+
+    $('.month-info-area > ul > li dl').each(function(){
+      if ($(this).find('dd').text() != 0) {
+        $(this).find('dd').addClass('filled');
+      }
+    });
+
+    function openPrintPopup(id) {
+      $('.popup-dimm, .popup-report#' + id).show();
+    }
+
+    $('.popup-dimm').on('click', function(){
+      $('.popup-dimm, .popup-report').hide();
+    });
+    $('.popup-report .cancel').on('click', function(e){
+      e.preventDefault();
+      $('.popup-dimm').hide();
+      $(this).closest('.popup-report').hide();
+    })
+
+    var qprint = $.urlParam('print');
+    if (qprint == '1') {
+      openPrintPopup('report1');
+    }
+  </script>
+</body>
+</html>
