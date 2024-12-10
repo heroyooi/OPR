@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>서부내륙고속도로 통합운영단말</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+
+<body>
+  <div id="wrap" class="parking-wrap"><!-- .without-navi -->
+    <div class="parking-navi c-scrollbar">
+      <select class="select-base">
+        <option value="0">선택</option>
+        <option value="1" selected>예산 예당호 휴게소(익산 방향)</option>
+        <option value="2">값2</option>
+        <option value="3">값3</option>
+      </select>
+      <dl class="parking-status">
+        <dt>
+          <span class="label">주차 현황 (합계)</span>
+          <span class="count"><em>257</em> / 272</span>
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <span class="label">일반</span>
+              <span class="result">162 / 216</span>
+            </li>
+            <li>
+              <span class="label">대형</span>
+              <span class="result">28 / 34</span>
+            </li>
+            <li class="error">
+              <span class="label">장애인</span>
+              <span class="result">8 / 8</span>
+            </li>
+            <li>
+              <span class="label">전기차</span>
+              <span class="result">9 / 14</span>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+      <p class="parking-ctype">마스터 제어기: GW-A01</p>
+      <ul class="parking-clist">
+        <li class="blue">
+          <dl>
+            <dt>CC-A01</dt>
+            <dd style="background-image: url(https://placehold.co/385x207/111111/FFFFFF/png)"></dd>
+          </dl>
+        </li>
+        <li class="green">
+          <dl>
+            <dt>CC-A02</dt>
+            <dd style="background-image: url(https://placehold.co/385x207/111111/FFFFFF/png)"></dd>
+          </dl>
+        </li>
+        <li class="yellow">
+          <dl>
+            <dt>CC-A03</dt>
+            <dd></dd>
+          </dl>
+        </li>
+      </ul>
+    </div><!-- .parking-navi -->
+    <div class="parking-frame c-scrollbar">
+      <div class="parking-area"></div>
+    </div><!-- .parking-frame -->
+  </div><!-- #wrap -->
+  <script>
+    $(window).on('load resize', function(){
+      if ($(window).height() > 930) {
+        var calH = ($(window).height() - $('.parking-clist').offset().top) / 3 - 60;
+        $('.parking-clist > li dd').css('height', calH);
+      }
+    });
+    
+  </script>
+</body>
+
+</html>

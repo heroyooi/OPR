@@ -215,13 +215,23 @@
             <div class="content-frame-wrap type-3">
               <div class="content-frame c-scrollbar">
                 <div class="map-area" style="background-color: #000;">
-                  <span class="s-ico cctv" style="position:absolute; left: 432px; top: 153px;"></span>
-                  <span class="s-ico cctv" style="position:absolute; left: 491px; top: 188px;"></span>
-                  <span class="s-ico cctv" style="position:absolute; left: 363px; top: 272px;"></span>
-                  <span class="s-ico cctv" style="position:absolute; left: 419px; top: 295px;"></span>
-                  <span class="s-ico cctv" style="position:absolute; left: 369px; top: 499px;"></span>
-                  <span class="s-ico cctv" style="position:absolute; left: 419px; top: 478px;"></span>
-                  <span class="s-ico cctv" style="position:absolute; left: 437px; bottom: 15px;"></span>
+                  <span class="s-ico cctv tp2" style="position:absolute; left: 432px; top: 153px;"></span>
+                  <span class="s-ico cctv tp2" style="position:absolute; left: 511px; top: 188px;"></span>
+                  <span class="s-ico cctv tp2" style="position:absolute; left: 363px; top: 272px;"></span>
+                  
+                  <span class="s-ico cctv tp2 evt" style="position:absolute; left: 412px; top: 294px;"></span>
+                  <div class="map-tooltip evt" style="left: 442px; top: 319px; display: none;">
+                    <ul>
+                      <li><a href="#">CCTV-0075</a></li>
+                    </ul>
+                  </div>
+
+                  <span class="s-ico cctv tp2" style="position:absolute; left: 342px; top: 283px;"></span>
+                  <span class="s-ico cctv tp2" style="position:absolute; left: 363px; top: 313px;"></span>
+                  <span class="s-ico cctv tp2" style="position:absolute; left: 369px; top: 499px;"></span>
+                  <span class="s-ico cctv tp2" style="position:absolute; left: 419px; top: 478px;"></span>
+                  <span class="s-ico cctv tp2" style="position:absolute; left: 437px; bottom: 15px;"></span>
+                  
                   <div class="map-navi">
                     <a href="#" class="s-ico plus"></a>
                     <a href="#" class="s-ico minus"></a>
@@ -237,18 +247,134 @@
                     <option value="2">9분할</option>
                     <option value="3">16분할</option>
                   </select>
-                  <a href="" class="s-ico reset tp2"></a>
+                  <a href="" class="s-ico reset tp2 box"></a>
                 </div>
                 <div class="vms-area type-3 mt8">
-                  <div class="inner">
+                  <div class="inner noData">
                     <div class="s-ico-area">
                       <span class="s-ico standby"></span>
                       <span class="s-txt">CCTV를 등록해주세요.</span>
                     </div>
                   </div>
+                  <div class="inner cctv-data" id="cctv4" style="display: none;">
+                    <ul class="cctv-list tp4">
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                    </ul> 
+                  </div>
+                  <div class="inner cctv-data" id="cctv9" style="display: none;">
+                    <ul class="cctv-list tp9">
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                    </ul> 
+                  </div>
+                  <div class="inner cctv-data" id="cctv16" style="display: none;">
+                    <ul class="cctv-list tp16">
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li>
+                        <img src="https://placehold.co/600x300/111111/FFFFFF/png" alt="">
+                        <a href="#" class="s-ico close gray"></a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                    </ul> 
+                  </div>
                 </div>
                 <div class="content-frame c-scrollbar">
-                  <ul class="num-list">
+                  <ul class="num-list noData">
                     <li class="full">
                       <ul class="list">
                         <li>
@@ -274,6 +400,50 @@
                       </ul>
                     </li>
                   </ul>
+                  <ul class="num-list" id="list-result" style="display: none;">
+                    <li class="full">
+                      <ul id="simpleList" class="list list-group">
+                        <li class="list-group-item w_delete on">
+                          <span class="num">1</span>
+                          <span class="value sdata">
+                            <span class="s1">CCTV-0075</span>
+                            <span class="s2">드래그앤드롭으로 순서변경 가능</span>
+                            <span class="s3">터널</span>
+                            <span class="s4">평택</span>
+                          </span>
+                          <a href="#" class="btn-delete"></a>
+                        </li>
+                        <li class="list-group-item w_delete on">
+                          <span class="num">2</span>
+                          <span class="value sdata">
+                            <span class="s1">CCTV-0075</span>
+                            <span class="s2">CCTV주소 > 현재 선택한 CCTV</span>
+                            <span class="s3">터널</span>
+                            <span class="s4">평택</span>
+                          </span>
+                          <a href="#" class="btn-delete"></a>
+                        </li>
+                        <li class="list-group-item w_delete on">
+                          <span class="num">3</span>
+                          <span class="value sdata">
+                            <span class="s1">CCTV-0075</span>
+                            <span class="s2">CCTV장비위치 주소 길어지면 주소 길어지면 주소 길어지면 주소 길어지면 주소 길어지면</span>
+                            <span class="s3">터널</span>
+                            <span class="s4">평택</span>
+                          </span>
+                          <a href="#" class="btn-delete"></a>
+                        </li>
+                        <li class="list-group-item">
+                          <span class="num">4</span>
+                          <span class="value"></span>
+                        </li>
+                        <li class="list-group-item">
+                          <span class="num">5</span>
+                          <span class="value"></span>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
                 </div><!-- .content-frame -->
               </div>
             </div><!-- .content-frame-wrap -->
@@ -283,6 +453,7 @@
     </div><!-- #container -->
 
     <script src="js/ax5uiGridSample.js"></script>
+    <script src="js/Sortable.js"></script>
     <script>
       $('.cctv-list > li .s-ico.close.gray').on('click', function (e) {
         e.preventDefault();
@@ -291,15 +462,47 @@
         $(this).closest('li').remove();
       });
 
+      $('.s-ico.cctv').on('click', function(){
+        $(this).toggleClass('on');
+      });
+
+      Sortable.create(simpleList, {
+        animation: 150,
+        filter: ".disabled",
+        onMove: function (evt) {
+          return !evt.related.classList.contains('disabled');
+        },
+        onEnd: function() {
+          $('#simpleList li').each(function(i){
+            $(this).find('.num').text(i + 1);
+          });
+        }
+      });
+
+      $('.num-list > li .list li .btn-delete').on('click', function(){
+        $(this).closest('li').remove();
+        $('#simpleList li').each(function(i){
+          $(this).find('.num').text(i + 1);
+        });
+      });
+
       var qtype = $.urlParam('type');
       if (qtype) {
+        $('.s-ico.evt').addClass('on');
+        $('.map-tooltip.evt').show();
         setTimeout(() => {
           if (qtype == '4') {
-            $('.cctv-list#cctv1').hide();
-            $('.cctv-list#cctv2').show();
+            $('.noData').css('display', 'none');
+            $('#list-result, #cctv4').css('display', 'block');
+            $('.time-area .select-base').prop('selectedIndex', 1);
+          } else if (qtype == '9') {
+            $('.noData').css('display', 'none');
+            $('#list-result, #cctv9').css('display', 'block');
+            $('.time-area .select-base').prop('selectedIndex', 2);
           } else if (qtype == '16') {
-            $('.cctv-list#cctv1').hide();
-            $('.cctv-list#cctv3').show();
+            $('.noData').css('display', 'none');
+            $('#list-result, #cctv16').css('display', 'block');
+            $('.time-area .select-base').prop('selectedIndex', 3);
           }
         }, 250);
       }

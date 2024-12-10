@@ -156,3 +156,32 @@ body{width:100%;overflow:hidden;}
 .content-frame-wrap.type-3 > .content-obj:nth-child(2),
 .content-frame-wrap.type-3 > .content-frame:nth-child(2){width:550px;flex-shrink:0;}
 /* E: 2024-11 */
+
+/* S: 2024-12 */
+#wrap.parking-wrap{padding-top:0;}
+#wrap.parking-wrap.without-navi .parking-navi{display:none;}
+#wrap.parking-wrap.without-navi .parking-frame{padding-left:0;}
+.parking-wrap .parking-navi{position:fixed;left:0;top:0;width:428px;height:100%;padding:20px;z-index:10;min-height:930px;}
+.parking-wrap .parking-frame{padding-left:428px;height:100%;}
+.parking-wrap .parking-area{width:2580px;height:1080px;position: relative;background:url(../img/park/bg-yyi.png) 0 0 no-repeat;}
+.parking-status{margin-top:16px;border-radius:4px;overflow:hidden;}
+.parking-status dt{background-color:#3e4157;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;}
+.parking-status dt span{font-size:16px;font-weight:700;line-height:1.5;color:#b2bbce;}
+.parking-status dt .count em{color:#00bbfe;font-weight:inherit;}
+.parking-status dd ul{display:flex;flex-wrap:wrap;}
+.parking-status dd li{display:flex;width:50%;justify-content:space-between;padding:12px;background-color:#385470;font-size:16px;color:#1ac2ff;line-height:1.5;font-weight:700;margin-top:1px;}
+.parking-status dd li.error{background-color:#46384b;color:#ef4345;}
+.parking-status dd li:nth-child(even){border-left:1px solid #212332;}
+.parking-ctype{margin-top:16px;padding:8px;padding: 8px;border-radius: 4px;background-color: #22779f;text-align:center;font-size:16px;font-weight:700;color:#fff;line-height:1.5;}
+.parking-clist{margin-top:17px;}
+.parking-clist > li{margin-top:17px;border-radius:3px;overflow:hidden;}
+.parking-clist > li:first-child{margin-top:0;}
+.parking-clist > li.blue{border:1px solid rgba(0, 187, 254, 0.8);}
+.parking-clist > li.green{border:1px solid rgba(11, 190, 53, 0.8);}
+.parking-clist > li.yellow{border:1px solid rgba(252, 187, 37, 0.8);}
+.parking-clist > li.blue dt{background-color: rgba(0, 187, 254, 0.8);}
+.parking-clist > li.green dt{background-color: rgba(11, 190, 53, 0.8);}
+.parking-clist > li.yellow dt{background-color: rgba(252, 187, 37, 0.8);}
+.parking-clist > li dt{font-size:16px;font-weight:700;color:#fff;line-height:1.5;text-align:center;padding:8px;}
+.parking-clist > li dd{background-color:rgba(73, 83, 103, 0.4);background-position:50% 50%;background-size:cover;background-repeat:no-repeat;height:208px;}
+/* E: 2024-12 */

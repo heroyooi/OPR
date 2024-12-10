@@ -9,6 +9,7 @@
 .c-scrollbar::-webkit-scrollbar:horizontal{height:8px;background:transparent;}
 .c-scrollbar::-webkit-scrollbar-thumb:horizontal{background-color: #495367;}
 .c-scrollbar::-webkit-scrollbar-thumb:horizontal:hover{background-color:#778298;}
+.c-scrollbar::-webkit-scrollbar-corner {background-color: #34374c;}
 
 /* tab */
 .tab-base, .tab-btn{display:flex;}
@@ -1265,6 +1266,7 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);background-color: rgba(31, 61, 83, 0
 .radio-base.f-label input + label:before{left:initial;right:0;}
 
 .s-ico.reset.tp2{background-image:url(../img/ico-16-reset-dis.png);width:16px;height:16px;}
+.s-ico.reset.box{width:40px;height:40px;border-radius: 4px;background-color: #3e4157;background-image:url(../img/ico-24-reset-dis.png);}
 .s-ico.standby.new{background:url(../img/ico-standby-n.png) 50% 50% no-repeat;width:53px;}
 .s-ico.avc{width:26px;height:31px;background:url(../img/ico-poi-avc-def.png) 50% 50% no-repeat;cursor:pointer;}
 .s-ico.avc.on,
