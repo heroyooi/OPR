@@ -222,7 +222,7 @@
                     <span class="value">248/900</span>
                   </div>
                   <div class="btns-wrap">
-                    <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico view"></span>휴게소 주차장 상세 보기</em></a></span>
+                    <span class="btn-base btn-ico" onclick="openFullScreenPopup('./OPR-WL-PARKING1.html')"><a href="javascript:void(0);"><em><span class="s-ico view"></span>휴게소 주차장 상세 보기</em></a></span>
                   </div>
                 </li>
                 <li>
@@ -257,7 +257,7 @@
                     <span class="value">127/612</span>
                   </div>
                   <div class="btns-wrap">
-                    <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico view"></span>휴게소 주차장 상세 보기</em></a></span>
+                    <span class="btn-base btn-ico" onclick="openFullScreenPopup('./OPR-WL-PARKING1.html')"><a href="javascript:void(0);"><em><span class="s-ico view"></span>휴게소 주차장 상세 보기</em></a></span>
                   </div>
                 </li>
               </ul>
@@ -287,6 +287,14 @@
             $('.cctv-list#cctv3').show();
           }
         }, 250);
+      }
+      
+      function openFullScreenPopup(filepath) {
+        const screenWidth = screen.width;
+        const screenHeight = screen.height;
+        // const screenWidth = window.outerWidth;
+        // const screenHeight = window.outerHeight;
+        window.open(filepath, '_blank', `width=${screenWidth},height=${screenHeight},top=0,left=0`);
       }
     </script>
   </div><!-- #wrap -->

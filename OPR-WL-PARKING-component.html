@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>서부내륙고속도로 통합운영단말</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+  <script src="js/ui.js"></script>
+  <style>
+    .pk-group{gap:16px;flex-direction:column;position: static;padding:30px;}
+    .pk-example{gap:16px;display:flex;align-items: flex-start;flex-wrap:wrap;}
+    .pk-info-wrap{position: static;display: block;}
+    .pk-ico{position: static;}
+  </style>
+</head>
+
+<body>
+  <div id="wrap" class="parking-wrap c-scrollbar">
+    <div class="pk-group">
+      <div class="pk-example">
+        <span class="pk-obj blue sm">000</span>
+        <span class="pk-obj blue sm horizon">000</span>
+        <span class="pk-obj blue sm disabled">000</span>
+        <span class="pk-obj blue sm disabled horizon">000</span>
+        <span class="pk-obj blue md">000</span>
+        <span class="pk-obj blue md horizon">000</span>
+        <span class="pk-obj blue lg">000</span>
+        <span class="pk-obj blue lg horizon">000</span>
+      </div>
+
+      <div class="pk-example">
+        <span class="pk-obj gray sm">000</span>
+        <span class="pk-obj gray sm horizon">000</span>
+        <span class="pk-obj gray sm disabled">000</span>
+        <span class="pk-obj gray sm disabled horizon">000</span>
+        <span class="pk-obj gray md">000</span>
+        <span class="pk-obj gray md horizon">000</span>
+        <span class="pk-obj gray lg">000</span>
+        <span class="pk-obj gray lg horizon">000</span>
+      </div>
+
+      <div class="pk-example">
+        <span class="pk-obj red sm">000</span>
+        <span class="pk-obj red sm horizon">000</span>
+        <span class="pk-obj red sm disabled">000</span>
+        <span class="pk-obj red sm disabled horizon">000</span>
+        <span class="pk-obj red md">000</span>
+        <span class="pk-obj red md horizon">000</span>
+        <span class="pk-obj red lg">000</span>
+        <span class="pk-obj red lg horizon">000</span>
+      </div>
+
+      <div class="pk-example">
+        <span class="pk-obj blue sm disabled">000</span>
+        <span class="pk-obj blue sm electric">000</span>
+        <span class="pk-ico vms"></span>
+        <span class="pk-ico vms on"></span>
+      </div>
+
+      <div class="pk-example">
+        <div class="pk-info-wrap">
+          <p class="tit arrow-bottom">5구역 전광판 14</p>
+          <div class="pk-info-area">
+            <ul class="pk-info-list">
+              <li>
+                <span class="result green">56</span>
+                <div class="label-area">
+                  <div>
+                    <p class="label">주 차 가 능</p>
+                    <span class="en">Parking space available</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <span class="result yellow">8</span>
+                <div class="label-area disabled">
+                  <div>
+                    <p class="label">장애인전용</p>
+                    <span class="en">Disabled parking lot</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .pk-info-wrap -->
+
+        <div class="pk-info-wrap">
+          <p class="tit arrow-top">5구역 전광판 14</p>
+          <div class="pk-info-area">
+            <ul class="pk-info-list">
+              <li>
+                <span class="result red">만차</span>
+                <div class="label-area">
+                  <div>
+                    <p class="label">주 차 가 능</p>
+                    <span class="en">Parking space available</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <span class="result yellow">8</span>
+                <div class="label-area electric">
+                  <div>
+                    <p class="label">전기차전용</p>
+                    <span class="en">EV Charging Station</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .pk-info-wrap -->
+
+        <div class="pk-info-wrap">
+          <p class="tit arrow-left">5구역 전광판 14</p>
+          <div class="pk-info-area">
+            <ul class="pk-info-list">
+              <li>
+                <span class="result green">56</span>
+                <div class="label-area">
+                  <div>
+                    <p class="label">주 차 가 능</p>
+                    <span class="en">Parking space available</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .pk-info-wrap -->
+      </div>
+
+      <div class="pk-example">
+        <div class="pk-info-wrap reverse">
+          <p class="tit arrow-left">5구역 전광판 14</p>
+          <div class="pk-info-area">
+            <ul class="pk-info-list">
+              <li>
+                <span class="result green">56</span>
+                <div class="label-area">
+                  <div>
+                    <p class="label">주 차 가 능</p>
+                    <span class="en">Parking space available</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <span class="result yellow">8</span>
+                <div class="label-area disabled">
+                  <div>
+                    <p class="label">장애인전용</p>
+                    <span class="en">Disabled parking lot</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .pk-info-wrap -->
+
+        <div class="pk-info-wrap reverse">
+          <p class="tit arrow-right">전기차 전용 (V3-구역2단)</p>
+          <div class="pk-info-area">
+            <ul class="pk-info-list">
+              <li>
+                <span class="result green">56</span>
+                <div class="label-area">
+                  <div>
+                    <p class="label">주 차 가 능</p>
+                    <span class="en">Parking space available</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <span class="result yellow">8</span>
+                <div class="label-area electric">
+                  <div>
+                    <p class="label">전기차전용</p>
+                    <span class="en">EV Charging Station</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .pk-info-wrap -->
+
+        <div class="pk-info-wrap reverse" style="width: 320px;">
+          <p class="tit arrow-right">5구역 전광판 14</p>
+          <div class="pk-info-area">
+            <ul class="pk-info-list">
+              <li>
+                <span class="result green">56</span>
+                <div class="label-area">
+                  <div>
+                    <p class="label">주 차 가 능</p>
+                    <span class="en">Parking space available</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .pk-info-wrap -->
+      </div>
+
+      <div class="pk-example">
+        <div class="pk-info-wrap entrance">
+          <p class="tit">입구 전광판 (V2)</p>
+          <div class="pk-info-area">
+            <p class="b-tit">예산 예당호 휴게소</p>
+            <p class="p-tit"><span>P</span> 주 차 가 능 대 수</p>
+            <ul class="pk-info-list w-full">
+              <li>
+                <span class="label">장애인</span>
+                <span class="result green">56</span>
+              </li>
+              <li>
+                <span class="label">일반</span>
+                <span class="result green">56</span>
+              </li>
+              <li>
+                <span class="label">대형</span>
+                <span class="result green">56</span>
+              </li>
+              <li>
+                <span class="label">전기차</span>
+                <span class="result red">만차</span>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .pk-info-wrap -->
+      </div>
+    </div>
+  </div><!-- #wrap -->
+  <script>
+    $('.pk-ico').on('click', function(){
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+      } else {
+        $(this).removeClass('on');
+      }
+    });
+  </script>
+</body>
+
+</html>
