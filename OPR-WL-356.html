@@ -757,7 +757,119 @@
         </div><!-- .footer -->
       </div><!-- .content -->
     </div><!-- .popup-report -->
+
+    <div class="popup-wrap z-anim mfp-hide" id="popup-vms-regist" style="max-width: 800px;">
+      <div class="con-wrap">
+        <h3 class="tit">VDS 수동 메시지 등록</h3>
+        <div class="vms-area">
+          <div class="item">
+            <div class="input-wrap vms">
+              <select class="select-base sm" style="width: 112px;">
+                <option value="0">오브젝트</option>
+                <option value="1">값1</option>
+                <option value="2">값2</option>
+                <option value="3">값3</option>
+              </select>
+              <div class="color-picker">
+                <a href="#" class="c-ffffff"><span></span></a>
+                <a href="#" class="c-000000"><span></span></a>
+                <a href="#" class="c-ff00ff"><span></span></a>
+                <a href="#" class="c-0000ff"><span></span></a>
+                <a href="#" class="c-00ffff "><span></span></a>
+                <a href="#" class="c-ffc000"><span></span></a>
+                <a href="#" class="c-00ff00"><span></span></a>
+                <a href="#" class="c-ff0000"><span></span></a>
+                <a href="#" class="c-signal"><span></span></a>
+              </div>
+            </div>
+            <div class="input-wrap vms">
+              <select class="select-base sm" style="width: 112px;">
+                <option value="0">고딕</option>
+                <option value="1">값1</option>
+                <option value="2">값2</option>
+                <option value="3">값3</option>
+              </select>
+              <select class="select-base sm" style="width: 78px;">
+                <option value="0">20</option>
+                <option value="1">값1</option>
+                <option value="2">값2</option>
+                <option value="3">값3</option>
+              </select>
+              <div class="font-picker">
+                <div class="item">
+                  <a href="#" class="f-bold"><span></span></a>
+                </div>
+                <span class="line"></span>
+                <div class="item">
+                  <a href="#" class="f-circle"><span></span></a>
+                  <a href="#" class="f-triangle"><span></span></a>
+                  <a href="#" class="f-square"><span></span></a>
+                  <a href="#" class="f-arrow"><span></span></a>
+                  <a href="#" class="f-circleline"><span></span></a>
+                  <a href="#" class="f-circleban"><span></span></a>
+                </div>
+              </div>
+              <span class="line"></span>
+              <div class="align-picker">
+                <div class="item">
+                  <a href="#" class="a-left"><span></span></a>
+                  <a href="#" class="a-middle"><span></span></a>
+                  <a href="#" class="a-right"><span></span></a>
+                  <a href="#" class="a-top"><span></span></a>
+                  <a href="#" class="a-middlelen"><span></span></a>
+                  <a href="#" class="a-bottom"><span></span></a>
+                  <a href="#" class="a-center"><span></span></a>
+                  <a href="#" class="a-verticality"><span></span></a>
+                  <a href="#" class="a-horizontal"><span></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="inner">
+            <div class="grid-list-wrap">
+              <ul class="grid-list type-2x10">
+                
+                <li><input type="text" /></li>
+                <li><input type="text" /></li>
+                <li><input type="text" /></li>
+                <li><input type="text" /></li>
+                <li><input type="text" /></li>
+                <li><input type="text" /></li>
+                <li><input type="text" /></li>
+                <li><input type="text" /></li>
+                <li><input type="text" /></li>
+                <li><input type="text" /></li>
+                
+                <li><input type="text" /></li>
+                <li><input type="text" /></li>
+                <li><input type="text" /></li>
+                <li><input type="text" /></li>
+                <li><input type="text" /></li>
+                <li><input type="text" /></li>
+                <li><input type="text" /></li>
+                <li><input type="text" /></li>
+                <li><input type="text" /></li>
+                <li><input type="text" /></li>
+              </ul>
+            </div><!-- .grid-list-wrap -->
+          </div>
+        </div>
+        <div class="btns-wrap center mt24">
+          <span class="btn-base gray b-mfp-close"><a href="#">취소</a></span>
+          <span class="btn-base b-mfp-close"><a href="#">등록</a></span>
+        </div>
+      </div>
+    </div>
   </div><!-- #wrap -->
+
+  <style>
+    /* S: VDS 수동 메시지 등록 팝업 */
+    #popup-vms-regist{border: solid 1px rgba(26, 194, 255, 0.25);border-radius:0;}
+    #popup-vms-regist .input-wrap.vms > .line{height:31px;width:1px;background-color:#34374c;display:block;}
+    #popup-vms-regist .grid-list.type-2x10 li{height:72px;}
+    #popup-vms-regist .vms-area > .inner{background:#34374c;padding:172px 16px;}
+    /* E: VDS 수동 메시지 등록 팝업 */
+  </style>
   
   <script src="js/ax5uiGridSample.js"></script>
   <script>
@@ -817,10 +929,12 @@
 
     var qpopup = $.urlParam('popup');
     var qprint = $.urlParam('print');
-    if (qpopup== 'search') {
+    if (qpopup == 'search') {
       setTimeout(() => {
         $.magnificPopup.open(getOptionsAnim('#popup-search', false));
       }, 250);
+    } else if (qpopup == 'vmsRegist') {
+      $.magnificPopup.open(getOptionsAnim2('#popup-vms-regist', false));
     }
     if (qprint == '1') {
       openPrintPopup('report1');
@@ -829,6 +943,8 @@
     } else if (qprint == '3') {
       openPrintPopup('report3');
     }
+
+
   </script>
 </body>
 </html>
