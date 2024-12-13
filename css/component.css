@@ -319,6 +319,8 @@
 .input-wrap.vms .align-picker a.a-top span{background:url(../img/icon-vms-align-top-def.png) 50% 50% no-repeat;}
 .input-wrap.vms .align-picker a.a-bottom span{background:url(../img/icon-vms-align-bottom-def.png) 50% 50% no-repeat;}
 .input-wrap.vms .align-picker a.a-center span{background:url(../img/icon-vms-align-center-def.png) 50% 50% no-repeat;}
+.input-wrap.vms .align-picker a.a-verticality span{background:url(../img/icon-vms-align-verticality-def.png) 50% 50% no-repeat;}
+.input-wrap.vms .align-picker a.a-horizontal span{background:url(../img/icon-vms-align-horizontal-def.png) 50% 50% no-repeat;}
 
 .auto-layer{position:absolute;left:0;top:40px;z-index:1;width:100%;background-color:#3e4157;padding:4px 0;box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25);border-radius:4px;}
 .auto-layer li{font-size:14px;line-height:1.5;}
