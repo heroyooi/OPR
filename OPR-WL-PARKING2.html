@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>서부내륙고속도로 통합운영단말</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+
+<body>
+  <div id="wrap" class="parking-wrap"><!-- .without-navi -->
+    <div class="parking-navi c-scrollbar">
+      <select class="select-base">
+        <option value="0">선택</option>
+        <option value="1">예산 예당호 휴게소(익산 방향)</option>
+        <option value="2" selected>예산 예당호 휴게소(평택 방향)</option>
+        <option value="3">평택호 휴게소(익산 방향)</option>
+        <option value="4">평택호 휴게소(평택 방향)</option>
+      </select>
+      <dl class="parking-status">
+        <dt>
+          <span class="label">주차 현황 (합계)</span>
+          <span class="count"><em>257</em> / 272</span>
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <span class="label">일반</span>
+              <span class="result">162 / 216</span>
+            </li>
+            <li>
+              <span class="label">대형</span>
+              <span class="result">28 / 34</span>
+            </li>
+            <li class="error">
+              <span class="label">장애인</span>
+              <span class="result">8 / 8</span>
+            </li>
+            <li>
+              <span class="label">전기차</span>
+              <span class="result">9 / 14</span>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+      <p class="parking-ctype">마스터 제어기: GW-A01</p>
+      <ul class="parking-clist">
+        <li class="blue">
+          <dl>
+            <dt>CC-A01</dt>
+            <dd style="background-image: url(https://placehold.co/385x207/111111/FFFFFF/png)"></dd>
+          </dl>
+        </li>
+        <li class="green">
+          <dl>
+            <dt>CC-A02</dt>
+            <dd style="background-image: url(https://placehold.co/385x207/111111/FFFFFF/png)"></dd>
+          </dl>
+        </li>
+        <li class="yellow">
+          <dl>
+            <dt>CC-A03</dt>
+            <dd>
+              <span class="error">CCTV Error</span>
+            </dd>
+          </dl>
+        </li>
+      </ul>
+    </div><!-- .parking-navi -->
+    <div class="parking-frame c-scrollbar">
+      <div class="parking-area type-2">
+        <div class="pk-group vertical" style="left: 75px; top: 96px;">
+          <span class="pk-obj blue sm horizon">271</span>
+          <span class="pk-obj blue sm horizon">272</span>
+        </div>
+
+        <div class="pk-group vertical" style="left: 75px; top: 242px;">
+          <span class="pk-obj blue sm horizon">273</span>
+          <span class="pk-obj blue sm horizon">274</span>
+          <span class="pk-obj blue sm horizon">275</span>
+          <span class="pk-obj blue sm horizon">276</span>
+          <span class="pk-obj blue sm horizon">277</span>
+          <span class="pk-obj blue sm horizon">278</span>
+          <span class="pk-obj blue sm horizon">279</span>
+          <span class="pk-obj blue sm horizon">280</span>
+          <span class="pk-obj blue sm horizon">281</span>
+          <span class="pk-obj blue sm horizon">282</span>
+          <span class="pk-obj blue sm horizon">283</span>
+          <span class="pk-obj blue sm horizon">284</span>
+          <span class="pk-obj blue sm horizon">285</span>
+          <span class="pk-obj blue sm horizon">286</span>
+        </div>
+
+        <div class="pk-group vertical" style="left: 219px; top: 308px;">
+          <span class="pk-obj blue sm horizon electric">287</span>
+          <span class="pk-obj blue sm horizon electric">288</span>
+          <span class="pk-obj blue sm horizon electric">289</span>
+          <span class="pk-obj blue sm horizon electric">290</span>
+          <span class="pk-obj blue sm horizon electric">291</span>
+          <span class="pk-obj blue sm horizon electric">292</span>
+          <span class="pk-obj blue sm horizon electric">293</span>
+          <span class="pk-obj blue sm horizon">294</span>
+          <span class="pk-obj blue sm horizon">295</span>
+          <span class="pk-obj blue sm horizon">296</span>
+          <span class="pk-obj blue sm horizon">297</span>
+          <span class="pk-obj blue sm horizon">298</span>
+        </div>
+
+        <div class="pk-group vertical" style="left: 300px; top: 308px;">
+          <span class="pk-obj blue sm horizon electric">299</span>
+          <span class="pk-obj blue sm horizon electric">300</span>
+          <span class="pk-obj blue sm horizon electric">301</span>
+          <span class="pk-obj blue sm horizon electric">302</span>
+          <span class="pk-obj blue sm horizon electric">303</span>
+          <span class="pk-obj blue sm horizon electric">304</span>
+          <span class="pk-obj blue sm horizon electric">305</span>
+          <span class="pk-obj blue sm horizon">306</span>
+          <span class="pk-obj blue sm horizon">307</span>
+          <span class="pk-obj blue sm horizon">308</span>
+          <span class="pk-obj blue sm horizon">309</span>
+          <span class="pk-obj blue sm horizon">310</span>
+        </div>
+
+        <div class="pk-group vertical" style="left: 444px; top: 308px;">
+          <span class="pk-obj blue sm horizon">311</span>
+          <span class="pk-obj blue sm horizon">312</span>
+          <span class="pk-obj blue sm horizon">313</span>
+          <span class="pk-obj blue sm horizon">314</span>
+          <span class="pk-obj blue sm horizon">315</span>
+          <span class="pk-obj blue sm horizon">316</span>
+          <span class="pk-obj blue sm horizon">317</span>
+          <span class="pk-obj blue sm horizon">318</span>
+          <span class="pk-obj blue sm horizon">319</span>
+          <span class="pk-obj blue sm horizon">320</span>
+          <span class="pk-obj blue sm horizon">321</span>
+          <span class="pk-obj blue sm horizon">322</span>
+        </div>
+
+        <div class="pk-group vertical" style="left: 525px; top: 308px;">
+          <span class="pk-obj blue sm horizon">323</span>
+          <span class="pk-obj blue sm horizon">324</span>
+          <span class="pk-obj blue sm horizon">325</span>
+          <span class="pk-obj blue sm horizon">326</span>
+          <span class="pk-obj blue sm horizon">327</span>
+          <span class="pk-obj blue sm horizon">328</span>
+          <span class="pk-obj blue sm horizon">329</span>
+          <span class="pk-obj blue sm horizon">330</span>
+          <span class="pk-obj blue sm horizon">331</span>
+          <span class="pk-obj blue sm horizon">332</span>
+          <span class="pk-obj blue sm horizon">333</span>
+          <span class="pk-obj blue sm horizon">334</span>
+        </div>
+
+        <div class="pk-group vertical" style="left: 669px; top: 237px;">
+          <span class="pk-obj blue sm horizon">335</span>
+          <span class="pk-obj blue sm horizon">336</span>
+          <span class="pk-obj blue sm horizon">337</span>
+          <span class="pk-obj blue sm horizon">338</span>
+          <span class="pk-obj blue sm horizon">339</span>
+          <span class="pk-obj blue sm horizon">340</span>
+          <span class="pk-obj blue sm horizon">341</span>
+          <span class="pk-obj blue sm horizon">342</span>
+          <span class="pk-obj blue sm horizon">343</span>
+          <span class="pk-obj blue sm horizon">344</span>
+          <span class="pk-obj blue sm horizon">345</span>
+          <span class="pk-obj blue sm horizon">346</span>
+          <span class="pk-obj blue sm horizon">347</span>
+          <span class="pk-obj blue sm horizon">348</span>
+        </div>
+
+        <div class="pk-group vertical" style="left: 750px; top: 237px;">
+          <span class="pk-obj blue sm horizon">349</span>
+          <span class="pk-obj blue sm horizon">350</span>
+          <span class="pk-obj blue sm horizon">351</span>
+          <span class="pk-obj blue sm horizon">352</span>
+          <span class="pk-obj blue sm horizon">353</span>
+          <span class="pk-obj blue sm horizon">354</span>
+          <span class="pk-obj blue sm horizon">355</span>
+          <span class="pk-obj blue sm horizon">356</span>
+          <span class="pk-obj blue sm horizon">357</span>
+          <span class="pk-obj blue sm horizon">358</span>
+          <span class="pk-obj blue sm horizon">359</span>
+          <span class="pk-obj blue sm horizon">360</span>
+        </div>
+
+        <div class="pk-group vertical" style="left: 894px; top: 237px;">
+          <span class="pk-obj blue sm horizon">361</span>
+          <span class="pk-obj blue sm horizon">362</span>
+          <span class="pk-obj blue sm horizon">363</span>
+          <span class="pk-obj blue sm horizon">364</span>
+          <span class="pk-obj blue sm horizon">365</span>
+          <span class="pk-obj blue sm horizon">366</span>
+          <span class="pk-obj blue sm horizon">367</span>
+          <span class="pk-obj blue sm horizon">368</span>
+          <span class="pk-obj blue sm horizon">369</span>
+          <span class="pk-obj blue sm horizon">370</span>
+          <span class="pk-obj blue sm horizon">371</span>
+          <span class="pk-obj blue sm horizon">372</span>
+          <span class="pk-obj blue sm horizon">373</span>
+        </div>
+
+        <div class="pk-group vertical" style="left: 75px; top: 821px;">
+          <span class="pk-obj blue sm horizon disabled">374</span>
+          <span class="pk-obj blue sm horizon disabled">375</span>
+          <span class="pk-obj blue sm horizon disabled">376</span>
+          <span class="pk-obj blue sm horizon disabled">377</span>
+          <span class="pk-obj blue sm horizon disabled">378</span>
+          <span class="pk-obj blue sm horizon disabled">379</span>
+          <span class="pk-obj blue sm horizon disabled">380</span>
+          <span class="pk-obj blue sm horizon disabled">381</span>
+        </div>
+
+        <div class="pk-group vertical" style="left: 75px; top: 1149px;">
+          <span class="pk-obj blue sm horizon">382</span>
+          <span class="pk-obj blue sm horizon">383</span>
+          <span class="pk-obj blue sm horizon">384</span>
+          <span class="pk-obj blue sm horizon">385</span>
+          <span class="pk-obj blue sm horizon">386</span>
+          <span class="pk-obj blue sm horizon">387</span>
+          <span class="pk-obj blue sm horizon">388</span>
+          <span class="pk-obj blue sm horizon">389</span>
+          <span class="pk-obj blue sm horizon">390</span>
+          <span class="pk-obj blue sm horizon">391</span>
+          <span class="pk-obj blue sm horizon">392</span>
+        </div>
+
+        <div class="pk-group vertical" style="left: 219px; top: 855px;">
+          <span class="pk-obj blue sm horizon">393</span>
+          <span class="pk-obj blue sm horizon">394</span>
+          <span class="pk-obj blue sm horizon">395</span>
+          <span class="pk-obj blue sm horizon">396</span>
+          <span class="pk-obj blue sm horizon">397</span>
+          <span class="pk-obj blue sm horizon">398</span>
+          <span class="pk-obj blue sm horizon">399</span>
+          <span class="pk-obj blue sm horizon">400</span>
+          <span class="pk-obj blue sm horizon">401</span>
+          <span class="pk-obj blue sm horizon">402</span>
+          <span class="pk-obj blue sm horizon">403</span>
+          <span class="pk-obj blue sm horizon">404</span>
+          <span class="pk-obj blue sm horizon">405</span>
+          <span class="pk-obj blue sm horizon">406</span>
+          <span class="pk-obj blue sm horizon">407</span>
+          <span class="pk-obj blue sm horizon">408</span>
+          <span class="pk-obj blue sm horizon">409</span>
+          <span class="pk-obj blue sm horizon">410</span>
+          <span class="pk-obj blue sm horizon">411</span>
+          <span class="pk-obj blue sm horizon">412</span>
+          <span class="pk-obj blue sm horizon">413</span>
+          <span class="pk-obj blue sm horizon">414</span>
+        </div>
+
+        <div class="pk-group vertical" style="left: 300px; top: 855px;">
+          <span class="pk-obj blue sm horizon">415</span>
+          <span class="pk-obj blue sm horizon">416</span>
+          <span class="pk-obj blue sm horizon">417</span>
+          <span class="pk-obj blue sm horizon">418</span>
+          <span class="pk-obj blue sm horizon">419</span>
+          <span class="pk-obj blue sm horizon">420</span>
+          <span class="pk-obj blue sm horizon">421</span>
+          <span class="pk-obj blue sm horizon">422</span>
+          <span class="pk-obj blue sm horizon">423</span>
+          <span class="pk-obj blue sm horizon">424</span>
+          <span class="pk-obj blue sm horizon">425</span>
+          <span class="pk-obj blue sm horizon">426</span>
+          <span class="pk-obj blue sm horizon">427</span>
+          <span class="pk-obj blue sm horizon">428</span>
+          <span class="pk-obj blue sm horizon">429</span>
+          <span class="pk-obj blue sm horizon">430</span>
+          <span class="pk-obj blue sm horizon">431</span>
+          <span class="pk-obj blue sm horizon">432</span>
+          <span class="pk-obj blue sm horizon">433</span>
+          <span class="pk-obj blue sm horizon">434</span>
+          <span class="pk-obj blue sm horizon">435</span>
+          <span class="pk-obj blue sm horizon">436</span>
+        </div>
+
+        <div class="pk-group vertical" style="left: 444px; top: 855px;">
+          <span class="pk-obj blue sm horizon">437</span>
+          <span class="pk-obj blue sm horizon">438</span>
+          <span class="pk-obj blue sm horizon">439</span>
+          <span class="pk-obj blue sm horizon">440</span>
+          <span class="pk-obj blue sm horizon">441</span>
+          <span class="pk-obj blue sm horizon">442</span>
+          <span class="pk-obj blue sm horizon">443</span>
+          <span class="pk-obj blue sm horizon">444</span>
+          <span class="pk-obj blue sm horizon">445</span>
+          <span class="pk-obj blue sm horizon">446</span>
+          <span class="pk-obj blue sm horizon">447</span>
+          <span class="pk-obj blue sm horizon">448</span>
+          <span class="pk-obj blue sm horizon">449</span>
+          <span class="pk-obj blue sm horizon">450</span>
+          <span class="pk-obj blue sm horizon">451</span>
+          <span class="pk-obj blue sm horizon">452</span>
+          <span class="pk-obj blue sm horizon">453</span>
+          <span class="pk-obj blue sm horizon">454</span>
+          <span class="pk-obj blue sm horizon">455</span>
+          <span class="pk-obj blue sm horizon">456</span>
+          <span class="pk-obj blue sm horizon">457</span>
+          <span class="pk-obj blue sm horizon">458</span>
+        </div>
+
+        <div class="pk-group vertical" style="left: 525px; top: 855px;">
+          <span class="pk-obj blue sm horizon">459</span>
+          <span class="pk-obj blue sm horizon">460</span>
+          <span class="pk-obj blue sm horizon">461</span>
+          <span class="pk-obj blue sm horizon">462</span>
+          <span class="pk-obj blue sm horizon">463</span>
+          <span class="pk-obj blue sm horizon">464</span>
+          <span class="pk-obj blue sm horizon">465</span>
+          <span class="pk-obj blue sm horizon">466</span>
+          <span class="pk-obj blue sm horizon">467</span>
+          <span class="pk-obj blue sm horizon">468</span>
+          <span class="pk-obj blue sm horizon">469</span>
+          <span class="pk-obj blue sm horizon">470</span>
+          <span class="pk-obj blue sm horizon">471</span>
+          <span class="pk-obj blue sm horizon">472</span>
+          <span class="pk-obj blue sm horizon">473</span>
+          <span class="pk-obj blue sm horizon">474</span>
+          <span class="pk-obj blue sm horizon">475</span>
+          <span class="pk-obj blue sm horizon">476</span>
+          <span class="pk-obj blue sm horizon">477</span>
+          <span class="pk-obj blue sm horizon">478</span>
+          <span class="pk-obj blue sm horizon">479</span>
+          <span class="pk-obj blue sm horizon">480</span>
+        </div>
+
+        <div class="pk-group reverse" style="left: 677px; top: 774px; transform: rotate(-46deg);">
+          <span class="pk-obj blue sm">481</span>
+          <span class="pk-obj blue sm">482</span>
+          <span class="pk-obj blue sm">483</span>
+          <span class="pk-obj blue sm">484</span>
+          <span class="pk-obj blue sm">485</span>
+          <span class="pk-obj blue sm">486</span>
+          <span class="pk-obj blue sm">487</span>
+          <span class="pk-obj blue sm">488</span>
+        </div>
+
+        <div class="pk-group vertical" style="left: 669px; top: 921px;">
+          <span class="pk-obj blue sm horizon">489</span>
+          <span class="pk-obj blue sm horizon">490</span>
+          <span class="pk-obj blue sm horizon">491</span>
+          <span class="pk-obj blue sm horizon">492</span>
+          <span class="pk-obj blue sm horizon">493</span>
+          <span class="pk-obj blue sm horizon">494</span>
+          <span class="pk-obj blue sm horizon">495</span>
+          <span class="pk-obj blue sm horizon">496</span>
+          <span class="pk-obj blue sm horizon">497</span>
+          <span class="pk-obj blue sm horizon">498</span>
+          <span class="pk-obj blue sm horizon">499</span>
+          <span class="pk-obj blue sm horizon">500</span>
+          <span class="pk-obj blue sm horizon">501</span>
+          <span class="pk-obj blue sm horizon">502</span>
+          <span class="pk-obj blue sm horizon">503</span>
+          <span class="pk-obj blue sm horizon">504</span>
+          <span class="pk-obj blue sm horizon">505</span>
+          <span class="pk-obj blue sm horizon">506</span>
+          <span class="pk-obj blue sm horizon">507</span>
+          <span class="pk-obj blue sm horizon">508</span>
+        </div>
+
+        <div class="pk-group vertical" style="left: 750px; top: 956px;">
+          <span class="pk-obj blue md horizon">509</span>
+          <span class="pk-obj blue md horizon">510</span>
+          <span class="pk-obj blue md horizon">511</span>
+          <span class="pk-obj blue md horizon">512</span>
+          <span class="pk-obj blue md horizon">513</span>
+          <span class="pk-obj blue md horizon">514</span>
+          <span class="pk-obj blue md horizon">515</span>
+          <span class="pk-obj blue md horizon">516</span>
+          <span class="pk-obj blue md horizon">517</span>
+          <span class="pk-obj blue md horizon">518</span>
+          <span class="pk-obj blue md horizon">519</span>
+        </div>
+
+        <div class="pk-group vertical" style="left: 1051px; top: 306px; gap: 24px 0;">
+          <span class="pk-obj blue md horizon">520</span>
+          <span class="pk-obj blue md horizon">521</span>
+          <span class="pk-obj blue md horizon">522</span>
+          <span class="pk-obj blue md horizon">523</span>
+          <span class="pk-obj blue md horizon">524</span>
+          <span class="pk-obj blue md horizon">525</span>
+          <span class="pk-obj blue md horizon">526</span>
+          <span class="pk-obj blue md horizon">527</span>
+          <span class="pk-obj blue md horizon">528</span>
+          <span class="pk-obj blue md horizon">529</span>
+          <span class="pk-obj blue md horizon">530</span>
+          <span class="pk-obj blue md horizon">531</span>
+          <span class="pk-obj blue md horizon">532</span>
+          <span class="pk-obj blue md horizon">533</span>
+          <span class="pk-obj blue md horizon">534</span>
+          <span class="pk-obj blue md horizon">535</span>
+          <span class="pk-obj blue md horizon">536</span>
+          <span class="pk-obj blue md horizon">537</span>
+          <span class="pk-obj blue md horizon">538</span>
+        </div>
+
+        <div class="pk-group vertical" style="left: 1225px; top: 306px; gap: 237px 0;">
+          <span class="pk-obj gray lg">539</span>
+          <span class="pk-obj gray lg">540</span>
+          <span class="pk-obj gray lg">541</span>
+          <span class="pk-obj gray lg">542</span>
+        </div>
+
+        <span class="pk-ico vms" data-id="disabled" style="left: 98px; top: 60px;"></span>
+        <div class="pk-info-wrap disabled" style="left: 130px; top: 24px;">
+          <p class="tit arrow-bottom">일반 및 장애인 차량용 (V3-구역2단)</p>
+          <div class="pk-info-area">
+            <ul class="pk-info-list">
+              <li>
+                <span class="result green">56</span>
+                <div class="label-area">
+                  <div>
+                    <p class="label">주 차 가 능</p>
+                    <span class="en">Parking space available</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <span class="result yellow">8</span>
+                <div class="label-area disabled">
+                  <div>
+                    <p class="label">장애인전용</p>
+                    <span class="en">Disabled parking lot</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .pk-info-wrap -->
+
+        <span class="pk-ico vms" data-id="electric" style="left: 312px; top: 262px;"></span>
+        <div class="pk-info-wrap reverse electric" style="left: 113px; top: 59px;">
+          <p class="tit arrow-bottom">일반 및 장애인 차량용 (V3-구역2단)</p>
+          <div class="pk-info-area">
+            <ul class="pk-info-list">
+              <li>
+                <span class="result green">56</span>
+                <div class="label-area">
+                  <div>
+                    <p class="label">주 차 가 능</p>
+                    <span class="en">Parking space available</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <span class="result yellow">8</span>
+                <div class="label-area electric">
+                  <div>
+                    <p class="label">전기차전용</p>
+                    <span class="en">EV Charging Station</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .pk-info-wrap -->
+
+        <span class="pk-ico vms" data-id="generalA" style="left: 534px; top: 262px;"></span>
+        <div class="pk-info-wrap reverse generalA" style="width: 320px; left: 374px; top: 124px;">
+          <p class="tit arrow-bottom">일반 차량용 (V4-구역용 1단)</p>
+          <div class="pk-info-area">
+            <ul class="pk-info-list">
+              <li>
+                <span class="result green">56</span>
+                <div class="label-area">
+                  <div>
+                    <p class="label">주 차 가 능</p>
+                    <span class="en">Parking space available</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .pk-info-wrap -->
+
+        <span class="pk-ico vms" data-id="generalB" style="left: 763px; top: 201px;"></span>
+        <div class="pk-info-wrap generalB" style="width: 320px; left: 747px; top: 63px;">
+          <p class="tit arrow-bottom">일반 차량용 (V4-구역용 1단)</p>
+          <div class="pk-info-area">
+            <ul class="pk-info-list">
+              <li>
+                <span class="result green">56</span>
+                <div class="label-area">
+                  <div>
+                    <p class="label">주 차 가 능</p>
+                    <span class="en">Parking space available</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .pk-info-wrap -->
+
+        <span class="pk-ico vms" data-id="generalC" style="left: 947px; top: 201px;"></span>
+        <div class="pk-info-wrap generalC" style="width: 320px; left: 979px; top: 148px;">
+          <p class="tit arrow-bottom">일반 차량용 (V4-구역용 1단)</p>
+          <div class="pk-info-area">
+            <ul class="pk-info-list">
+              <li>
+                <span class="result green">56</span>
+                <div class="label-area">
+                  <div>
+                    <p class="label">주 차 가 능</p>
+                    <span class="en">Parking space available</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .pk-info-wrap -->
+
+        <span class="pk-ico vms" data-id="entrance" style="left: 1162px; top: 202px;"></span>
+        <div class="pk-info-wrap entrance" style="left: 1006px; top: 234px;">
+          <p class="tit">입구 전광판 (V2)</p>
+          <div class="pk-info-area">
+            <p class="b-tit">예산 예당호 휴게소</p>
+            <p class="p-tit"><span>P</span> 주 차 가 능 대 수</p>
+            <ul class="pk-info-list w-full">
+              <li>
+                <span class="label">장애인</span>
+                <span class="result green">56</span>
+              </li>
+              <li>
+                <span class="label">일반</span>
+                <span class="result green">56</span>
+              </li>
+              <li>
+                <span class="label">대형</span>
+                <span class="result green">56</span>
+              </li>
+              <li>
+                <span class="label">전기차</span>
+                <span class="result red">만차</span>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .pk-info-wrap -->
+
+      </div>
+    </div><!-- .parking-frame -->
+  </div><!-- #wrap -->
+  <script>
+    $(window).on('load resize', function(){
+      if ($(window).height() > 930) {
+        var calH = ($(window).height() - $('.parking-clist').offset().top) / 3 - 60;
+        $('.parking-clist > li dd').css('height', calH);
+      }
+    });
+    $('.pk-ico').on('click', function(){
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+        $('.pk-info-wrap.' + $(this).data('id')).addClass('on');
+      } else {
+        $(this).removeClass('on');
+        $('.pk-info-wrap.' + $(this).data('id')).removeClass('on');
+      }
+    });
+
+    var qsample = $.urlParam('sample');
+    if (qsample) {
+      setTimeout(() => {
+        $(`[data-id=${qsample}]`).click();
+      }, 250);
+    }
+  </script>
+</body>
+
+</html>

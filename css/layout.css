@@ -164,7 +164,11 @@ body{width:100%;overflow:hidden;}
 
 .parking-wrap .parking-navi{position:fixed;left:0;top:0;width:428px;height:100%;padding:20px;z-index:10;min-height:930px;}
 .parking-wrap .parking-frame{padding-left:428px;height:100%;}
-.parking-wrap .parking-area.type-1{width:2580px;height:1080px;position: relative;background:url(../img/park/bg-yyi.png) 0 0 no-repeat;}
+.parking-wrap .parking-area{position: relative;}
+.parking-wrap .parking-area.type-1{width:2580px;height:1080px;background:url(../img/park/bg-yyi.png) 0 0 no-repeat;}
+.parking-wrap .parking-area.type-2{width:1492px;height:1790px;background:url(../img/park/bg-yyp.png) 0 0 no-repeat;}
+.parking-wrap .parking-area.type-3{width:2231px;height:1544px;background:url(../img/park/bg-pti.png) 0 0 no-repeat;}
+.parking-wrap .parking-area.type-4{width:1810px;height:1700px;background:url(../img/park/bg-ptp.png) 0 0 no-repeat;}
 
 .parking-status{margin-top:16px;border-radius:4px;overflow:hidden;}
 .parking-status dt{background-color:#3e4157;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;}
@@ -190,6 +194,9 @@ body{width:100%;overflow:hidden;}
 .parking-clist > li dd .error::before{content:'';display:block;width:52px;height:52px;background:url(../img/park/ico-standby.png) 50% 50% no-repeat;margin:0 auto 6px;}
 
 .pk-group{display:flex;position: absolute;gap:1px;}
+.pk-group.reverse{flex-direction: row-reverse;}
+.pk-group.vertical{flex-direction: column;}
+.pk-group.vertical.reverse{flex-direction: column-reverse;}
 .pk-obj{display:flex;justify-content: center;align-items: center;border-radius: 4px;font-size:12px;font-weight:bold;line-height:1.5;flex-direction:column;}
 .pk-obj.horizon{flex-direction:row;gap:2px;}
 .pk-obj.sm{width:32px;height:44px;}
@@ -209,7 +216,7 @@ body{width:100%;overflow:hidden;}
 .pk-ico.vms.on{background:url(../img/park/ico-parking-vms-act.png) 50% 50% no-repeat;}
 
 .pk-info-wrap{padding: 4px;border-radius: 4px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);background-color: rgba(33, 35, 50, 0.8);position: absolute;width: 340px;display: none;}
-.pk-info-wrap.on{display:block;}
+.pk-info-wrap.on{display:block;z-index:1;}
 .pk-info-wrap .tit{font-size:16px;color:rgba(255, 255, 255, 0.9);display:flex;align-items: center;justify-content: center;gap: 0 4px;padding:8px 0;line-height:1.5;}
 .pk-info-wrap .tit.arrow-left::before, .pk-info-wrap .tit.arrow-top::before, .pk-info-wrap .tit.arrow-bottom::before, .pk-info-wrap .tit.arrow-right::before,
 .pk-info-wrap.reverse .tit.arrow-left::after, .pk-info-wrap.reverse .tit.arrow-top::after, .pk-info-wrap.reverse .tit.arrow-bottom::after, .pk-info-wrap.reverse .tit.arrow-right::after{content:'';display:inline-block;width:20px;height:20px;}
@@ -237,8 +244,8 @@ body{width:100%;overflow:hidden;}
 .pk-info-wrap .pk-info-list > li .label-area.electric::before{background:url(../img/park/img-electric.png) 50% 50% no-repeat;}
 
 .pk-info-wrap .b-tit, .pk-info-wrap .p-tit{font-size:26px;font-weight:bold;line-height:1.5;color:#fff;text-align:center;}
-.pk-info-wrap .p-tit{display:flex;align-items: center;justify-content: center;gap:0 10px;}
-.pk-info-wrap .p-tit span{display:flex;width:32px;height:32px;background-color:#d9d9d9;border-radius:4px;font-size:26px;color:#1429c9;font-weight:800;justify-content:center;align-items: center;}
+.pk-info-wrap .p-tit{display:flex;align-items: center;justify-content: center;gap:0 10px;letter-spacing:5px;}
+.pk-info-wrap .p-tit span{display:flex;width:32px;height:32px;background-color:#fff;border-radius:4px;font-size:26px;line-height:1;color:#1429c9;font-weight:800;justify-content:center;align-items: center;text-align:center;}
 .pk-info-wrap .b-tit + .p-tit{margin-top:1.5px;}
 .pk-info-wrap .p-tit + .pk-info-list{margin-top:12.5px;}
 .pk-info-wrap .pk-info-list.w-full > li{padding:4px 8px;background-color: #000;border-radius:4px;justify-content: space-between;}

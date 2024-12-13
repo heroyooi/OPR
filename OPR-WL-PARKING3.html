@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>서부내륙고속도로 통합운영단말</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+
+<body>
+  <div id="wrap" class="parking-wrap"><!-- .without-navi -->
+    <div class="parking-navi c-scrollbar">
+      <select class="select-base">
+        <option value="0">선택</option>
+        <option value="1">예산 예당호 휴게소(익산 방향)</option>
+        <option value="2">예산 예당호 휴게소(평택 방향)</option>
+        <option value="3" selected>평택호 휴게소(익산 방향)</option>
+        <option value="4">평택호 휴게소(평택 방향)</option>
+      </select>
+      <dl class="parking-status">
+        <dt>
+          <span class="label">주차 현황 (합계)</span>
+          <span class="count"><em>257</em> / 272</span>
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <span class="label">일반</span>
+              <span class="result">162 / 216</span>
+            </li>
+            <li>
+              <span class="label">대형</span>
+              <span class="result">28 / 34</span>
+            </li>
+            <li class="error">
+              <span class="label">장애인</span>
+              <span class="result">8 / 8</span>
+            </li>
+            <li>
+              <span class="label">전기차</span>
+              <span class="result">9 / 14</span>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+      <p class="parking-ctype">마스터 제어기: GW-A01</p>
+      <ul class="parking-clist">
+        <li class="blue">
+          <dl>
+            <dt>CC-A01</dt>
+            <dd style="background-image: url(https://placehold.co/385x207/111111/FFFFFF/png)"></dd>
+          </dl>
+        </li>
+        <li class="green">
+          <dl>
+            <dt>CC-A02</dt>
+            <dd style="background-image: url(https://placehold.co/385x207/111111/FFFFFF/png)"></dd>
+          </dl>
+        </li>
+        <li class="yellow">
+          <dl>
+            <dt>CC-A03</dt>
+            <dd>
+              <span class="error">CCTV Error</span>
+            </dd>
+          </dl>
+        </li>
+      </ul>
+    </div><!-- .parking-navi -->
+    <div class="parking-frame c-scrollbar">
+      <div class="parking-area type-3">
+        <div class="pk-group" style="left: 361px; top: 171px; gap: 0 112px;">
+          <span class="pk-obj gray lg horizon">1</span>
+          <span class="pk-obj gray lg horizon">2</span>
+          <span class="pk-obj gray lg horizon">3</span>
+          <span class="pk-obj gray lg horizon">4</span>
+        </div>
+
+        <div class="pk-group" style="left: 402px; top: 305px;">
+          <span class="pk-obj blue md">5</span>
+          <span class="pk-obj blue md">6</span>
+          <span class="pk-obj blue md">7</span>
+          <span class="pk-obj blue md">8</span>
+          <span class="pk-obj blue md">9</span>
+          <span class="pk-obj blue md">10</span>
+          <span class="pk-obj blue md">11</span>
+          <span class="pk-obj blue md">12</span>
+          <span class="pk-obj blue md">13</span>
+          <span class="pk-obj blue md">14</span>
+          <span class="pk-obj blue md">15</span>
+          <span class="pk-obj blue md">16</span>
+          <span class="pk-obj blue md">17</span>
+          <span class="pk-obj blue md">18</span>
+          <span class="pk-obj blue md">19</span>
+          <span class="pk-obj blue md">20</span>
+          <span class="pk-obj blue md">21</span>
+          <span class="pk-obj blue md">22</span>
+          <span class="pk-obj blue md">23</span>
+        </div>
+
+        <div class="pk-group" style="left: 361px; top: 479px;">
+          <span class="pk-obj blue md">25</span>
+          <span class="pk-obj blue md">25</span>
+          <span class="pk-obj blue md">26</span>
+          <span class="pk-obj blue md">27</span>
+          <span class="pk-obj blue md">28</span>
+          <span class="pk-obj blue md">29</span>
+          <span class="pk-obj blue md">30</span>
+          <span class="pk-obj blue md">31</span>
+          <span class="pk-obj blue md">32</span>
+          <span class="pk-obj blue md">33</span>
+          <span class="pk-obj blue md">34</span>
+          <span class="pk-obj blue md">35</span>
+          <span class="pk-obj blue md">36</span>
+          <span class="pk-obj blue md">37</span>
+          <span class="pk-obj blue md">38</span>
+          <span class="pk-obj blue md">39</span>
+          <span class="pk-obj blue md">40</span>
+          <span class="pk-obj blue md">41</span>
+          <span class="pk-obj blue md">42</span>
+          <span class="pk-obj blue md">43</span>
+          <span class="pk-obj blue md">44</span>
+          <span class="pk-obj blue md">45</span>
+          <span class="pk-obj blue md">46</span>
+          <span class="pk-obj blue md">47</span>
+          <span class="pk-obj blue md">48</span>
+          <span class="pk-obj blue md">49</span>
+          <span class="pk-obj blue md">50</span>
+          <span class="pk-obj blue md">51</span>
+        </div>
+
+        <div class="pk-group" style="left: 108px; top: 515px;">
+          <span class="pk-obj blue sm">52</span>
+          <span class="pk-obj blue sm">53</span>
+          <span class="pk-obj blue sm">54</span>
+          <span class="pk-obj blue sm">55</span>
+          <span class="pk-obj blue sm">56</span>
+        </div>
+
+        <div class="pk-group" style="left: 108px; top: 590px;">
+          <span class="pk-obj blue sm">57</span>
+          <span class="pk-obj blue sm">58</span>
+          <span class="pk-obj blue sm">59</span>
+          <span class="pk-obj blue sm">60</span>
+          <span class="pk-obj blue sm">61</span>
+          <span class="pk-obj blue sm">62</span>
+          <span class="pk-obj blue sm">63</span>
+        </div>
+
+        <div class="pk-group" style="left: 108px; top: 736px;">
+          <span class="pk-obj blue sm">64</span>
+          <span class="pk-obj blue sm">65</span>
+          <span class="pk-obj blue sm">66</span>
+          <span class="pk-obj blue sm">67</span>
+          <span class="pk-obj blue sm">68</span>
+          <span class="pk-obj blue sm">69</span>
+          <span class="pk-obj blue sm">70</span>
+        </div>
+
+        <div class="pk-group" style="left: 108px; top: 811px;">
+          <span class="pk-obj blue sm">71</span>
+          <span class="pk-obj gray sm">72</span>
+          <span class="pk-obj gray sm">73</span>
+          <span class="pk-obj blue sm">74</span>
+          <span class="pk-obj red sm">75</span>
+          <span class="pk-obj blue sm">76</span>
+          <span class="pk-obj blue sm">77</span>
+        </div>
+
+        <div class="pk-group" style="left: 108px; top: 957px;">
+          <span class="pk-obj blue sm">78</span>
+          <span class="pk-obj blue sm">79</span>
+          <span class="pk-obj blue sm">80</span>
+          <span class="pk-obj blue sm">81</span>
+          <span class="pk-obj blue sm">82</span>
+          <span class="pk-obj blue sm">83</span>
+          <span class="pk-obj blue sm">84</span>
+        </div>
+
+        <div class="pk-group" style="left: 108px; top: 1032px;">
+          <span class="pk-obj blue sm">85</span>
+          <span class="pk-obj blue sm">86</span>
+          <span class="pk-obj blue sm">87</span>
+          <span class="pk-obj blue sm">88</span>
+          <span class="pk-obj blue sm">89</span>
+          <span class="pk-obj blue sm">90</span>
+          <span class="pk-obj blue sm">91</span>
+        </div>
+
+        <div class="pk-group" style="left: 108px; top: 1170px;">
+          <span class="pk-obj blue sm electric">92</span>
+          <span class="pk-obj blue sm electric">93</span>
+          <span class="pk-obj blue sm electric">94</span>
+          <span class="pk-obj blue sm electric">95</span>
+          <span class="pk-obj blue sm electric">96</span>
+          <span class="pk-obj blue sm electric">97</span>
+          <span class="pk-obj blue sm electric">98</span>
+        </div>
+
+        <div class="pk-group" style="left: 108px; top: 1245px;">
+          <span class="pk-obj blue sm electric">99</span>
+          <span class="pk-obj blue sm electric">100</span>
+          <span class="pk-obj blue sm electric">101</span>
+          <span class="pk-obj blue sm electric">102</span>
+          <span class="pk-obj blue sm electric">103</span>
+          <span class="pk-obj blue sm electric">104</span>
+          <span class="pk-obj blue sm electric">105</span>
+        </div>
+
+        <div class="pk-group" style="left: 108px; top: 1391px;">
+          <span class="pk-obj blue sm">106</span>
+          <span class="pk-obj blue sm">107</span>
+          <span class="pk-obj blue sm">108</span>
+          <span class="pk-obj blue sm">109</span>
+          <span class="pk-obj blue sm">110</span>
+          <span class="pk-obj blue sm">111</span>
+          <span class="pk-obj blue sm">112</span>
+        </div>
+
+        <div class="pk-group" style="left: 422px; top: 590px;">
+          <span class="pk-obj blue sm">113</span>
+          <span class="pk-obj blue sm">114</span>
+          <span class="pk-obj blue sm">115</span>
+          <span class="pk-obj blue sm">116</span>
+          <span class="pk-obj blue sm">117</span>
+          <span class="pk-obj blue sm">118</span>
+          <span class="pk-obj blue sm">119</span>
+          <span class="pk-obj blue sm">120</span>
+          <span class="pk-obj blue sm">121</span>
+          <span class="pk-obj blue sm">122</span>
+          <span class="pk-obj blue sm">123</span>
+          <span class="pk-obj blue sm">124</span>
+          <span class="pk-obj blue sm">125</span>
+          <span class="pk-obj blue sm">126</span>
+          <span class="pk-obj blue sm">127</span>
+        </div>
+
+        <div class="pk-group" style="left: 422px; top: 736px;">
+          <span class="pk-obj blue sm">128</span>
+          <span class="pk-obj blue sm">129</span>
+          <span class="pk-obj blue sm">130</span>
+          <span class="pk-obj blue sm">131</span>
+          <span class="pk-obj blue sm">132</span>
+          <span class="pk-obj blue sm">133</span>
+          <span class="pk-obj blue sm">134</span>
+          <span class="pk-obj blue sm">135</span>
+          <span class="pk-obj blue sm">136</span>
+          <span class="pk-obj blue sm">137</span>
+          <span class="pk-obj blue sm">138</span>
+          <span class="pk-obj blue sm">139</span>
+          <span class="pk-obj blue sm">140</span>
+          <span class="pk-obj blue sm">141</span>
+          <span class="pk-obj blue sm">142</span>
+        </div>
+
+        <div class="pk-group" style="left: 422px; top: 811px;">
+          <span class="pk-obj blue sm">143</span>
+          <span class="pk-obj blue sm">144</span>
+          <span class="pk-obj blue sm">145</span>
+          <span class="pk-obj blue sm">146</span>
+          <span class="pk-obj blue sm">147</span>
+          <span class="pk-obj blue sm">148</span>
+          <span class="pk-obj blue sm">149</span>
+          <span class="pk-obj blue sm">150</span>
+          <span class="pk-obj blue sm">151</span>
+          <span class="pk-obj blue sm">152</span>
+          <span class="pk-obj blue sm">153</span>
+          <span class="pk-obj blue sm">154</span>
+          <span class="pk-obj blue sm">155</span>
+          <span class="pk-obj blue sm">156</span>
+          <span class="pk-obj blue sm">157</span>
+        </div>
+
+        <div class="pk-group" style="left: 422px; top: 957px;">
+          <span class="pk-obj blue sm">158</span>
+          <span class="pk-obj blue sm">159</span>
+          <span class="pk-obj blue sm">160</span>
+          <span class="pk-obj blue sm">161</span>
+          <span class="pk-obj blue sm">162</span>
+          <span class="pk-obj blue sm">163</span>
+          <span class="pk-obj blue sm">164</span>
+          <span class="pk-obj blue sm">165</span>
+          <span class="pk-obj blue sm">166</span>
+          <span class="pk-obj blue sm">167</span>
+          <span class="pk-obj blue sm">168</span>
+          <span class="pk-obj blue sm">169</span>
+          <span class="pk-obj blue sm">170</span>
+          <span class="pk-obj blue sm">171</span>
+          <span class="pk-obj blue sm">172</span>
+        </div>
+
+        <div class="pk-group" style="left: 422px; top: 1032px;">
+          <span class="pk-obj blue sm">173</span>
+          <span class="pk-obj blue sm">174</span>
+          <span class="pk-obj blue sm">175</span>
+          <span class="pk-obj blue sm">176</span>
+          <span class="pk-obj blue sm">177</span>
+          <span class="pk-obj blue sm">178</span>
+          <span class="pk-obj blue sm">179</span>
+          <span class="pk-obj blue sm">180</span>
+          <span class="pk-obj blue sm">181</span>
+          <span class="pk-obj blue sm">182</span>
+          <span class="pk-obj blue sm">183</span>
+          <span class="pk-obj blue sm">184</span>
+          <span class="pk-obj blue sm">185</span>
+          <span class="pk-obj blue sm">186</span>
+          <span class="pk-obj blue sm">187</span>
+        </div>
+
+        <div class="pk-group" style="left: 422px; top: 1170px;">
+          <span class="pk-obj blue sm">188</span>
+          <span class="pk-obj blue sm">189</span>
+          <span class="pk-obj blue sm">190</span>
+          <span class="pk-obj blue sm">191</span>
+          <span class="pk-obj blue sm">192</span>
+          <span class="pk-obj blue sm">193</span>
+          <span class="pk-obj blue sm">194</span>
+          <span class="pk-obj blue sm">195</span>
+          <span class="pk-obj blue sm">196</span>
+          <span class="pk-obj blue sm">197</span>
+          <span class="pk-obj blue sm">198</span>
+          <span class="pk-obj blue sm">199</span>
+          <span class="pk-obj blue sm">200</span>
+          <span class="pk-obj blue sm">201</span>
+          <span class="pk-obj blue sm">202</span>
+        </div>
+
+        <div class="pk-group" style="left: 422px; top: 1245px;">
+          <span class="pk-obj blue sm">203</span>
+          <span class="pk-obj blue sm">204</span>
+          <span class="pk-obj blue sm">205</span>
+          <span class="pk-obj blue sm">206</span>
+          <span class="pk-obj blue sm">207</span>
+          <span class="pk-obj blue sm">208</span>
+          <span class="pk-obj blue sm">209</span>
+          <span class="pk-obj blue sm">210</span>
+          <span class="pk-obj blue sm">211</span>
+          <span class="pk-obj blue sm">212</span>
+          <span class="pk-obj blue sm">213</span>
+          <span class="pk-obj blue sm">214</span>
+          <span class="pk-obj blue sm">215</span>
+          <span class="pk-obj blue sm">216</span>
+          <span class="pk-obj blue sm">217</span>
+        </div>
+
+        <div class="pk-group" style="left: 422px; top: 1391px;">
+          <span class="pk-obj blue sm">218</span>
+          <span class="pk-obj blue sm">219</span>
+          <span class="pk-obj blue sm">220</span>
+          <span class="pk-obj blue sm">221</span>
+          <span class="pk-obj blue sm">222</span>
+          <span class="pk-obj blue sm">223</span>
+          <span class="pk-obj blue sm">224</span>
+          <span class="pk-obj blue sm">225</span>
+          <span class="pk-obj blue sm">226</span>
+          <span class="pk-obj blue sm">227</span>
+          <span class="pk-obj blue sm">228</span>
+          <span class="pk-obj blue sm">229</span>
+          <span class="pk-obj blue sm">230</span>
+          <span class="pk-obj blue sm">231</span>
+          <span class="pk-obj blue sm">232</span>
+        </div>
+
+
+
+        <div class="pk-group" style="left: 1003px; top: 590px;">
+          <span class="pk-obj blue sm">233</span>
+          <span class="pk-obj blue sm">234</span>
+          <span class="pk-obj blue sm">235</span>
+          <span class="pk-obj blue sm">236</span>
+          <span class="pk-obj blue sm">237</span>
+          <span class="pk-obj blue sm">238</span>
+          <span class="pk-obj blue sm">239</span>
+          <span class="pk-obj blue sm">240</span>
+          <span class="pk-obj blue sm">241</span>
+          <span class="pk-obj blue sm">242</span>
+          <span class="pk-obj blue sm">243</span>
+          <span class="pk-obj blue sm">244</span>
+          <span class="pk-obj blue sm">245</span>
+          <span class="pk-obj blue sm">246</span>
+          <span class="pk-obj blue sm">247</span>
+        </div>
+
+        <div class="pk-group" style="left: 1003px; top: 736px;">
+          <span class="pk-obj blue sm">248</span>
+          <span class="pk-obj blue sm">249</span>
+          <span class="pk-obj blue sm">250</span>
+          <span class="pk-obj blue sm">251</span>
+          <span class="pk-obj blue sm">252</span>
+          <span class="pk-obj blue sm">253</span>
+          <span class="pk-obj blue sm">254</span>
+          <span class="pk-obj blue sm">255</span>
+          <span class="pk-obj blue sm">256</span>
+          <span class="pk-obj blue sm">257</span>
+          <span class="pk-obj blue sm">258</span>
+          <span class="pk-obj blue sm">259</span>
+          <span class="pk-obj blue sm">260</span>
+          <span class="pk-obj blue sm">261</span>
+          <span class="pk-obj blue sm">262</span>
+        </div>
+
+        <div class="pk-group" style="left: 1003px; top: 811px;">
+          <span class="pk-obj blue sm">263</span>
+          <span class="pk-obj blue sm">264</span>
+          <span class="pk-obj blue sm">265</span>
+          <span class="pk-obj blue sm">266</span>
+          <span class="pk-obj blue sm">267</span>
+          <span class="pk-obj blue sm">268</span>
+          <span class="pk-obj blue sm">269</span>
+          <span class="pk-obj blue sm">270</span>
+          <span class="pk-obj blue sm">271</span>
+          <span class="pk-obj blue sm">272</span>
+          <span class="pk-obj blue sm">273</span>
+          <span class="pk-obj blue sm">274</span>
+          <span class="pk-obj blue sm">275</span>
+          <span class="pk-obj blue sm">276</span>
+          <span class="pk-obj blue sm">277</span>
+        </div>
+
+        <div class="pk-group" style="left: 1003px; top: 957px;">
+          <span class="pk-obj blue sm">278</span>
+          <span class="pk-obj blue sm">279</span>
+          <span class="pk-obj blue sm">280</span>
+          <span class="pk-obj blue sm">281</span>
+          <span class="pk-obj blue sm">282</span>
+          <span class="pk-obj blue sm">283</span>
+          <span class="pk-obj blue sm">284</span>
+          <span class="pk-obj blue sm">285</span>
+          <span class="pk-obj blue sm">286</span>
+          <span class="pk-obj blue sm">287</span>
+          <span class="pk-obj blue sm">288</span>
+          <span class="pk-obj blue sm">289</span>
+          <span class="pk-obj blue sm">290</span>
+          <span class="pk-obj blue sm">291</span>
+          <span class="pk-obj blue sm">292</span>
+        </div>
+
+        <div class="pk-group" style="left: 1003px; top: 1032px;">
+          <span class="pk-obj blue sm">293</span>
+          <span class="pk-obj blue sm">294</span>
+          <span class="pk-obj blue sm">295</span>
+          <span class="pk-obj blue sm">296</span>
+          <span class="pk-obj blue sm">297</span>
+          <span class="pk-obj blue sm">298</span>
+          <span class="pk-obj blue sm">299</span>
+          <span class="pk-obj blue sm">300</span>
+          <span class="pk-obj blue sm">301</span>
+          <span class="pk-obj blue sm">302</span>
+          <span class="pk-obj blue sm">303</span>
+          <span class="pk-obj blue sm">304</span>
+          <span class="pk-obj blue sm">305</span>
+          <span class="pk-obj blue sm">306</span>
+          <span class="pk-obj blue sm">307</span>
+        </div>
+
+        <div class="pk-group" style="left: 1003px; top: 1170px;">
+          <span class="pk-obj blue sm">308</span>
+          <span class="pk-obj blue sm">309</span>
+          <span class="pk-obj blue sm">310</span>
+          <span class="pk-obj blue sm">311</span>
+          <span class="pk-obj blue sm">312</span>
+          <span class="pk-obj blue sm">313</span>
+          <span class="pk-obj blue sm">314</span>
+          <span class="pk-obj blue sm">315</span>
+          <span class="pk-obj blue sm">316</span>
+          <span class="pk-obj blue sm">317</span>
+          <span class="pk-obj blue sm">318</span>
+          <span class="pk-obj blue sm">319</span>
+          <span class="pk-obj blue sm">320</span>
+          <span class="pk-obj blue sm">321</span>
+          <span class="pk-obj blue sm">322</span>
+        </div>
+
+        <div class="pk-group" style="left: 1003px; top: 1245px;">
+          <span class="pk-obj blue sm">323</span>
+          <span class="pk-obj blue sm">324</span>
+          <span class="pk-obj blue sm">325</span>
+          <span class="pk-obj blue sm">326</span>
+          <span class="pk-obj blue sm">327</span>
+          <span class="pk-obj blue sm">328</span>
+          <span class="pk-obj blue sm">329</span>
+          <span class="pk-obj blue sm">330</span>
+          <span class="pk-obj blue sm">331</span>
+          <span class="pk-obj blue sm">332</span>
+          <span class="pk-obj blue sm">333</span>
+          <span class="pk-obj blue sm">334</span>
+          <span class="pk-obj blue sm">335</span>
+          <span class="pk-obj blue sm">336</span>
+          <span class="pk-obj blue sm">337</span>
+        </div>
+
+        <div class="pk-group" style="left: 1003px; top: 1391px; gap: 0 10px;">
+          <span class="pk-obj blue sm disabled">338</span>
+          <span class="pk-obj blue sm disabled">339</span>
+          <span class="pk-obj blue sm disabled">340</span>
+          <span class="pk-obj blue sm disabled">341</span>
+          <span class="pk-obj blue sm disabled">342</span>
+          <span class="pk-obj blue sm disabled">343</span>
+          <span class="pk-obj blue sm disabled">344</span>
+          <span class="pk-obj blue sm disabled">345</span>
+          <span class="pk-obj blue sm disabled">346</span>
+          <span class="pk-obj blue sm disabled">347</span>
+          <span class="pk-obj blue sm disabled">348</span>
+          <span class="pk-obj blue sm disabled">349</span>
+        </div>
+
+        <div class="pk-group" style="left: 1580px; top: 590px;">
+          <span class="pk-obj blue sm">350</span>
+          <span class="pk-obj blue sm">351</span>
+          <span class="pk-obj blue sm">352</span>
+          <span class="pk-obj blue sm">353</span>
+          <span class="pk-obj blue sm">354</span>
+          <span class="pk-obj blue sm">355</span>
+        </div>
+
+        <div class="pk-group" style="left: 1580px; top: 736px;">
+          <span class="pk-obj blue sm">356</span>
+          <span class="pk-obj blue sm">357</span>
+          <span class="pk-obj blue sm">358</span>
+          <span class="pk-obj blue sm">359</span>
+          <span class="pk-obj blue sm">360</span>
+          <span class="pk-obj blue sm">361</span>
+        </div>
+
+        <div class="pk-group" style="left: 1580px; top: 811px;">
+          <span class="pk-obj blue sm">362</span>
+          <span class="pk-obj blue sm">363</span>
+          <span class="pk-obj blue sm">364</span>
+          <span class="pk-obj blue sm">365</span>
+          <span class="pk-obj blue sm">366</span>
+          <span class="pk-obj blue sm">367</span>
+        </div>
+
+        <div class="pk-group" style="left: 1580px; top: 957px;">
+          <span class="pk-obj blue sm">368</span>
+          <span class="pk-obj blue sm">369</span>
+          <span class="pk-obj blue sm">370</span>
+          <span class="pk-obj blue sm">371</span>
+          <span class="pk-obj blue sm">372</span>
+          <span class="pk-obj blue sm">373</span>
+        </div>
+
+        <div class="pk-group" style="left: 1580px; top: 1032px;">
+          <span class="pk-obj blue sm">374</span>
+          <span class="pk-obj blue sm">375</span>
+          <span class="pk-obj blue sm">376</span>
+          <span class="pk-obj blue sm">377</span>
+          <span class="pk-obj blue sm">378</span>
+          <span class="pk-obj blue sm">379</span>
+        </div>
+
+        <div class="pk-group" style="left: 1580px; top: 1170px;">
+          <span class="pk-obj blue sm">380</span>
+          <span class="pk-obj blue sm">381</span>
+          <span class="pk-obj blue sm">382</span>
+          <span class="pk-obj blue sm">383</span>
+          <span class="pk-obj blue sm">384</span>
+          <span class="pk-obj blue sm">385</span>
+        </div>
+
+        <div class="pk-group" style="left: 1580px; top: 1245px;">
+          <span class="pk-obj blue sm">386</span>
+          <span class="pk-obj blue sm">387</span>
+          <span class="pk-obj blue sm">388</span>
+          <span class="pk-obj blue sm">389</span>
+          <span class="pk-obj blue sm">390</span>
+          <span class="pk-obj blue sm">391</span>
+        </div>
+
+        <div class="pk-group" style="left: 1580px; top: 1391px;">
+          <span class="pk-obj blue sm">392</span>
+          <span class="pk-obj blue sm">393</span>
+          <span class="pk-obj blue sm">394</span>
+          <span class="pk-obj blue sm">395</span>
+          <span class="pk-obj blue sm">396</span>
+          <span class="pk-obj blue sm">397</span>
+        </div>
+
+        <span class="pk-ico vms" data-id="disabled" style="left: 1789px; top: 1399px;"></span>
+        <div class="pk-info-wrap disabled" style="left: 1821px; top: 1305px;">
+          <p class="tit arrow-left">일반 및 장애인 차량용 (V3-구역2단)</p>
+          <div class="pk-info-area">
+            <ul class="pk-info-list">
+              <li>
+                <span class="result green">56</span>
+                <div class="label-area">
+                  <div>
+                    <p class="label">주 차 가 능</p>
+                    <span class="en">Parking space available</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <span class="result yellow">8</span>
+                <div class="label-area disabled">
+                  <div>
+                    <p class="label">장애인전용</p>
+                    <span class="en">Disabled parking lot</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .pk-info-wrap -->
+
+        <span class="pk-ico vms" data-id="electric" style="left: 1789px; top: 1178px;"></span>
+        <div class="pk-info-wrap electric" style="left: 1821px; top: 1094px;">
+          <p class="tit arrow-left">전기차 전용 (V3-구역2단)</p>
+          <div class="pk-info-area">
+            <ul class="pk-info-list">
+              <li>
+                <span class="result red">만차</span>
+                <div class="label-area">
+                  <div>
+                    <p class="label">주 차 가 능</p>
+                    <span class="en">Parking space available</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <span class="result yellow">8</span>
+                <div class="label-area electric">
+                  <div>
+                    <p class="label">전기차전용</p>
+                    <span class="en">EV Charging Station</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .pk-info-wrap -->
+
+        <span class="pk-ico vms" data-id="generalA" style="left: 1712px; top: 493px;"></span>
+        <div class="pk-info-wrap generalA" style="width: 320px; left: 1744px; top: 395px;">
+          <p class="tit arrow-left">일반 차량용 (V4-구역용 1단)</p>
+          <div class="pk-info-area">
+            <ul class="pk-info-list">
+              <li>
+                <span class="result green">56</span>
+                <div class="label-area">
+                  <div>
+                    <p class="label">주 차 가 능</p>
+                    <span class="en">Parking space available</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .pk-info-wrap -->
+
+        <span class="pk-ico vms" data-id="generalB" style="left: 1789px; top: 744px;"></span>
+        <div class="pk-info-wrap generalB" style="width: 320px; left: 1821px; top: 648px;">
+          <p class="tit arrow-left">일반 차량용 (V4-구역용 1단)</p>
+          <div class="pk-info-area">
+            <ul class="pk-info-list">
+              <li>
+                <span class="result green">56</span>
+                <div class="label-area">
+                  <div>
+                    <p class="label">주 차 가 능</p>
+                    <span class="en">Parking space available</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .pk-info-wrap -->
+
+        <span class="pk-ico vms" data-id="generalC" style="left: 1789px; top: 964px;"></span>
+        <div class="pk-info-wrap generalC" style="width: 320px; left: 1821px; top: 867px;">
+          <p class="tit arrow-left">일반 차량용 (V4-구역용 1단)</p>
+          <div class="pk-info-area">
+            <ul class="pk-info-list">
+              <li>
+                <span class="result green">56</span>
+                <div class="label-area">
+                  <div>
+                    <p class="label">주 차 가 능</p>
+                    <span class="en">Parking space available</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .pk-info-wrap -->
+
+        <span class="pk-ico vms" data-id="entrance" style="left: 1104px; top: 41px;"></span>
+        <div class="pk-info-wrap entrance" style="left: 950px; top: 73px;">
+          <p class="tit">입구 전광판 (V2)</p>
+          <div class="pk-info-area">
+            <p class="b-tit">평택호  휴게소</p>
+            <p class="p-tit"><span>P</span> 주 차 가 능 대 수</p>
+            <ul class="pk-info-list w-full">
+              <li>
+                <span class="label">장애인</span>
+                <span class="result green">56</span>
+              </li>
+              <li>
+                <span class="label">일반</span>
+                <span class="result green">56</span>
+              </li>
+              <li>
+                <span class="label">대형</span>
+                <span class="result green">56</span>
+              </li>
+              <li>
+                <span class="label">전기차</span>
+                <span class="result red">만차</span>
+              </li>
+            </ul>
+          </div>
+        </div><!-- .pk-info-wrap -->
+
+      </div>
+    </div><!-- .parking-frame -->
+  </div><!-- #wrap -->
+  <script>
+    $(window).on('load resize', function(){
+      if ($(window).height() > 930) {
+        var calH = ($(window).height() - $('.parking-clist').offset().top) / 3 - 60;
+        $('.parking-clist > li dd').css('height', calH);
+      }
+    });
+    $('.pk-ico').on('click', function(){
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+        $('.pk-info-wrap.' + $(this).data('id')).addClass('on');
+      } else {
+        $(this).removeClass('on');
+        $('.pk-info-wrap.' + $(this).data('id')).removeClass('on');
+      }
+    });
+
+    var qsample = $.urlParam('sample');
+    if (qsample) {
+      setTimeout(() => {
+        if (qsample == 'all') {
+          $(`[data-id="electric"]`).click();
+          $(`[data-id="generalA"]`).click();
+          $(`[data-id="generalB"]`).click();
+          $(`[data-id="generalC"]`).click();
+          $(`[data-id="entrance"]`).click();
+        } else {
+          $(`[data-id=${qsample}]`).click();
+        }
+      }, 250);
+    }
+  </script>
+</body>
+
+</html>
