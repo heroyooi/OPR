@@ -163,12 +163,12 @@ body{width:100%;overflow:hidden;}
 #wrap.parking-wrap.without-navi .parking-frame{padding-left:0;}
 
 .parking-wrap .parking-navi{position:fixed;left:0;top:0;width:428px;height:100%;padding:20px;z-index:10;min-height:930px;}
-.parking-wrap .parking-frame{padding-left:428px;height:100%;}
+.parking-wrap .parking-frame{margin-left:428px;height:100%;}
 .parking-wrap .parking-area{position: relative;}
-.parking-wrap .parking-area.type-1{width:2580px;height:1080px;background:url(../img/park/bg-yyi.png) 0 0 no-repeat;}
-.parking-wrap .parking-area.type-2{width:1492px;height:1790px;background:url(../img/park/bg-yyp.png) 0 0 no-repeat;}
-.parking-wrap .parking-area.type-3{width:2231px;height:1544px;background:url(../img/park/bg-pti.png) 0 0 no-repeat;}
-.parking-wrap .parking-area.type-4{width:1810px;height:1700px;background:url(../img/park/bg-ptp.png) 0 0 no-repeat;}
+.parking-wrap .parking-area.type-1{width:2580px;height:1080px;background:url(../img/park/bg-yyi@2x.png) 0 0 no-repeat;background-size:2580px auto;}
+.parking-wrap .parking-area.type-2{width:1492px;height:1790px;background:url(../img/park/bg-yyp@2x.png) 0 0 no-repeat;background-size:1492px auto;}
+.parking-wrap .parking-area.type-3{width:2231px;height:1544px;background:url(../img/park/bg-pti@2x.png) 0 0 no-repeat;background-size:2231px auto;}
+.parking-wrap .parking-area.type-4{width:1810px;height:1700px;background:url(../img/park/bg-ptp@2x.png) 0 0 no-repeat;background-size:1810px auto;}
 
 .parking-status{margin-top:16px;border-radius:4px;overflow:hidden;}
 .parking-status dt{background-color:#3e4157;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;}

@@ -111,7 +111,7 @@
         </div>
 
         <div class="pk-group" style="left: 361px; top: 479px;">
-          <span class="pk-obj blue md">25</span>
+          <span class="pk-obj blue md">24</span>
           <span class="pk-obj blue md">25</span>
           <span class="pk-obj blue md">26</span>
           <span class="pk-obj blue md">27</span>
@@ -216,7 +216,7 @@
           <span class="pk-obj blue sm electric">102</span>
           <span class="pk-obj blue sm electric">103</span>
           <span class="pk-obj blue sm electric">104</span>
-          <span class="pk-obj blue sm electric">105</span>
+          <span class="pk-obj blue sm disabled">105</span>
         </div>
 
         <div class="pk-group" style="left: 108px; top: 1391px;">
@@ -735,6 +735,8 @@
     });
     $('.pk-ico').on('click', function(){
       if (!$(this).hasClass('on')) {
+        $('.pk-ico').removeClass('on');
+        $('.pk-info-wrap').removeClass('on');
         $(this).addClass('on');
         $('.pk-info-wrap.' + $(this).data('id')).addClass('on');
       } else {
@@ -746,15 +748,7 @@
     var qsample = $.urlParam('sample');
     if (qsample) {
       setTimeout(() => {
-        if (qsample == 'all') {
-          $(`[data-id="electric"]`).click();
-          $(`[data-id="generalA"]`).click();
-          $(`[data-id="generalB"]`).click();
-          $(`[data-id="generalC"]`).click();
-          $(`[data-id="entrance"]`).click();
-        } else {
-          $(`[data-id=${qsample}]`).click();
-        }
+        $(`[data-id=${qsample}]`).click();
       }, 250);
     }
   </script>
