@@ -560,6 +560,8 @@
     });
     $('.pk-ico').on('click', function(){
       if (!$(this).hasClass('on')) {
+        $('.pk-ico').removeClass('on');
+        $('.pk-info-wrap').removeClass('on');
         $(this).addClass('on');
         $('.pk-info-wrap.' + $(this).data('id')).addClass('on');
       } else {
@@ -567,7 +569,7 @@
         $('.pk-info-wrap.' + $(this).data('id')).removeClass('on');
       }
     });
-
+    
     var qsample = $.urlParam('sample');
     if (qsample) {
       setTimeout(() => {
