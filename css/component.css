@@ -1285,3 +1285,9 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);background-color: rgba(31, 61, 83, 0
 .popup-report .content .tb-wrap table td .pic-area{display:flex;flex-wrap:wrap;gap:8px 10px;}
 .popup-report .content .tb-wrap table td .pic-area .pic{width:calc(50% - 5px);background-color: #2a2d3e;display:flex;justify-content: center;align-items: center;}
 /* E: 2024-11 */
+
+/* S: 2024-12-18 */
+.btns-wrap.responsive .btn-base{flex-grow:1;}
+.s-ico.message{background-image:url(../img/ico-24-message-def.png);}
+.s-ico.selschedule{background-image:url(../img/ico-24-selschedule-def.png);}
+/* E: 2024-12-18 */

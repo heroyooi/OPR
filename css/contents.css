@@ -2472,3 +2472,26 @@
   height: 200px;
 }
 /* E: 2024-12 */
+
+/* S: 2024-12-18 */
+.monitor-list > li > dl > dd.cd{padding:10px 12px;}
+.monitor-list > li > dl > dd .cd-wrap{display:flex;gap:0 12px;}
+.monitor-list > li > dl > dd .cd-wrap .cd-thumb-area{width:313px;flex-shrink:0;background-color:#000;display:flex;align-items:center;border-radius:4px;}
+.monitor-list > li > dl > dd .cd-wrap .cd-list-area{flex-grow:1;}
+.monitor-list > li > dl > dd .cd-wrap .num-list > li .list li.on{padding-right:0;}
+.monitor-config{display:flex;}
+.monitor-config > li{flex:1;border-left:1px solid #212332;}
+.monitor-config > li:first-child{border-left:0;}
+.monitor-config > li .label{font-size:16px;line-height:1.5;color:#fff;font-weight:bold;padding:4px 12px;display:block;text-align:center;border-bottom:1px solid #212332;}
+
+.config-info{display:flex;}
+.config-info .config-obj{flex:1;border-left:1px solid #212332;}
+.config-info .config-obj:first-child{border-left:0;}
+.config-info .config-obj .item{}
+.config-info .config-obj .item .tit{font-size:14px;color:#fff;line-height:1.5;padding:8px 12px;display:flex;align-items:center;gap:0 2px;}
+.config-info .config-obj .item .tit .name{font-weight:600;margin-left:2px;}
+.config-info .config-obj .item .tit::before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;}
+.config-info .config-obj .item .tit.red::before{background-color:#ef4345;}
+.config-info .config-obj .item .tit.green::before{background-color:#0bbe35;}
+.config-info .config-obj .item .img{padding:8px;background-color:#000;}
+/* E: 2024-12-18 */

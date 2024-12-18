@@ -260,3 +260,18 @@ body{width:100%;overflow:hidden;}
 .pk-info-wrap.reverse .pk-info-list > li{flex-direction: row-reverse;}
 .pk-info-wrap.reverse .pk-info-list > li .label-area{flex-direction: row-reverse;text-align:right;}
 /* E: 2024-12 */
+
+/* S: 2024-12-18 */
+.content-area > .content-inner.w-full{padding:0;}
+.content-area > .content-inner.w-full .content-frame-wrap > .content-obj{margin-top:0;}
+.content-area > .content-inner.w-full .content-frame{margin-top:0;}
+.content-area > .content-inner.w-full .content-frame-wrap.type-3{padding:0;gap:0;}
+.content-area > .content-inner.w-full .tab-btn li.on a{background-color: #1ac2ff;}
+
+.content-frame-wrap.flex-2-1{display:flex;}
+.content-frame-wrap.flex-2-1 > .content-frame:nth-child(1){flex:2;}
+.content-frame-wrap.flex-2-1 > .content-frame:nth-child(2){flex:1;}
+.content-frame-wrap.flex-2-1 .monitor-list{background-color:#34374c;margin-top:16px;}
+.content-frame-wrap.flex-2-1 .monitor-list:first-child{margin-top:0;}
+.content-frame-wrap.flex-2-1 .monitor-list > li > dl > dd{padding:0;}
+/* E: 2024-12-18 */

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>서부내륙고속도로 통합운영단말</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+
+<body>
+  <div id="wrap" class="c-scrollbar">
+    <div id="header">
+      <h1><a href="#"><img src="img/wih-logo-io.png" alt=""></a></h1>
+      <div class="item-area">
+        <ul id="gnb" data-active="6">
+          <li><a href="#">시스템관리</a></li>
+          <li><a href="#">기초정보관리</a></li>
+          <li><a href="#">FTMS 제어</a></li>
+          <li><a href="#">운영관리</a></li>
+          <li><a href="#">상황관리</a></li>
+          <li><a href="#">모니터링</a></li>
+          <li><a href="#">이력조회</a></li>
+          <li><a href="#">통계조회</a></li>
+          <li><a href="#">현장장비 점검관리</a></li>
+          <li><a href="#">안전관리</a></li>
+          <li><a href="#">작업 및 유지보수 이력 관리</a></li>
+        </ul>
+        <ul id="utilmenu">
+          <li><a href="#" class="s-ico notify w-label new"><span>고윤정님</span></a></li>
+          <li><a href="#" class="s-ico bookmark"></a></li>
+          <li><a href="#" class="s-ico logout"></a></li>
+        </ul>
+        <div class="bookmark-area">
+          <ul>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">RWIS 제어기 기초정보관리</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기 최대 10개</span>
+              </a>
+            </li>
+          </ul>
+          <div class="bookmark-item">
+            <a href="#" class="btn-text">즐겨찾기 관리 <span class="s-ico arrow"></span></a>
+            <a href="#" class="s-ico close gray"></a>
+          </div>
+        </div><!-- .bookmark-area -->
+      </div>
+    </div><!--#header -->
+    <div id="container" class="ver-lnb">
+      <div class="left-wrap">
+        <h3 class="tit">모니터링</h3>
+        <ul class="lnb-list">
+          <li class="on">
+            <a href="#" class="menu">종합상황 모니터링</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">소통정보 모니터링</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">VMS 표출 메시지 모니터링</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">LCS 표출 메시지 모니터링</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">CCTV 영상모니터링</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">AVC 원시정보 모니터링</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">DSRC 작업 프로세스 모니터링</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">RWIS 수집 정보 모니터링</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">안개경고주의 모니터링</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">휴게소 주차정보 모니터링</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">FTMS 시설물 상태 모니터링</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">터널 환기/전력 모니터링</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">외부 연계정보 모니터링</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+        </ul>
+      </div><!-- .left-wrap -->
+      <div class="content-wrap">
+        <div class="content-top">
+          <div class="menu-area">
+            <a href="#" class="s-ico home"></a>
+            <div class="menu-swiper swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide on">
+                  <a href="#" class="label">종합상황 모니터링</a>
+                  <a href="#" class="s-ico close"></a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="label">돌방상황 관리</a>
+                  <a href="#" class="s-ico close"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="navi-area">
+            <a href="" class="s-ico arrow-l"></a>
+            <a href="" class="s-ico arrow-r"></a>
+          </div>
+          <a href="" class="s-ico reset tp2"></a>
+        </div><!-- .content-top -->
+        <div class="content-area">
+          <div class="content-inner w-full">
+            <div class="content-frame-wrap type-3">
+              <div class="content-frame c-scrollbar">
+                <div class="map-area" style="background-color: #000;">
+                  <ul class="tab-btn" style="position: absolute; left: 19px; top: 16px;">
+                    <li class="on"><a href="#">평택</a></li>
+                    <li><a href="#">부여</a></li>
+                  </ul>
+                  <div class="map-item-panel on" style="left: 19px; top: 64px;">
+                    <ul>
+                      <li class="cctv"><a href="#">CCTV</a></li>
+                      <li class="call"><a href="#">긴급전화</a></li>
+                      <li class="traffic"><a href="#">소통정보</a></li>
+                      <li class="vms"><a href="#">VMS</a></li>
+                      <li class="dsrc"><a href="#">DSRC</a></li>
+                      <li class="lcs"><a href="#">LCS</a></li>
+                      <li class="avc"><a href="#">AVC</a></li>
+                      <li class="vds"><a href="#">VDS</a></li>
+                      <li class="accident"><a href="#">돌발위치</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="map-navi">
+                    <a href="#" class="s-ico plus"></a>
+                    <a href="#" class="s-ico minus"></a>
+                  </div>
+                  <!-- <span class="compass"><img src="img/ima-compass.png" alt=""></span> -->
+                </div>
+              </div><!-- .content-frame -->
+              <div class="content-obj">
+                <ul class="monitor-list">
+                  <li>
+                    <dl>
+                      <dt>
+                        <span class="label">CCTV-0059</span>
+                      </dt>
+                      <dd class="cd">
+                        <div class="cd-wrap">
+                          <div class="cd-thumb-area">
+                            <img src="https://placehold.co/313x231/111111/FFFFFF/png" alt="">
+                          </div>
+                          <div class="cd-list-area">
+                            <ul class="num-list">
+                              <li class="full">
+                                <ul class="list">
+                                  <li class="on">
+                                    <span class="num">0</span>
+                                    <span class="value">디폴트</span>
+                                  </li>
+                                  <li class="on">
+                                    <span class="num">1</span>
+                                    <span class="value">긴급전화</span>
+                                  </li>
+                                  <li class="on">
+                                    <span class="num">2</span>
+                                    <span class="value">소화전</span>
+                                  </li>
+                                  <li class="on">
+                                    <span class="num">3</span>
+                                    <span class="value">CCTV 등록상태</span>
+                                  </li>
+                                  <li class="on">
+                                    <span class="num">4</span>
+                                    <span class="value">CCTV 호버/선택 상태</span>
+                                  </li>
+                                  <li>
+                                    <span class="num">5</span>
+                                    <span class="value"></span>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </dd>
+                      <dd class="cd">
+                        <div class="btns-wrap responsive">
+                          <span class="btn-base"><a href="javascript:;">VMS 긴급메시지 작성</a></span>
+                          <span class="btn-base"><a href="javascript:;">TLCS 긴급메시지 작성</a></span>
+                          <span class="btn-base"><a href="javascript:;">LCS 긴급메시지 선택</a></span>
+                        </div>
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>
+                        <span class="label">시설물상태</span>
+                      </dt>
+                      <dd class="no-padding content-frame c-scrollbar">
+                        <ul class="fac-info">
+                          <li>
+                            <span class="label">VDS</span>
+                            <span class="result">0/91</span>
+                          </li>
+                          <li>
+                            <span class="label">AVC</span>
+                            <span class="result">0/10</span>
+                          </li>
+                          <li>
+                            <span class="label">DSRC</span>
+                            <span class="result">0/91</span>
+                          </li>
+                          <li class="red">
+                            <span class="label">CCTV</span>
+                            <span class="result">3/229</span>
+                          </li>
+                          <li class="red">
+                            <span class="label">VMS</span>
+                            <span class="result">2/32</span>
+                          </li>
+                          <li>
+                            <span class="label">LCS</span>
+                            <span class="result">0/32</span>
+                          </li>
+                          <li>
+                            <span class="label">RWIS</span>
+                            <span class="result">0/2</span>
+                          </li>
+                          <li>
+                            <span class="label">RDO</span>
+                            <span class="result">0/10</span>
+                          </li>
+                          <li>
+                            <span class="label">FOGW</span>
+                            <span class="result">0/2</span>
+                          </li>
+                          <li>
+                            <span class="label">PRIS</span>
+                            <span class="result">0/2</span>
+                          </li>
+                          <li>
+                            <span class="label">긴급전화</span>
+                            <span class="result">0/48</span>
+                          </li>
+                          <li>
+                            <span class="label">갱구부 LED</span>
+                            <span class="result">0/2</span>
+                          </li>
+                          <li>
+                            <span class="label">터널 환기</span>
+                            <span class="result">0/0</span>
+                          </li>
+                          <li>
+                            <span class="label">터널 전력</span>
+                            <span class="result">0/0</span>
+                          </li>
+                        </ul>
+                      </dd>
+                    </dl>
+                  </li>
+                </ul>
+              </div>
+            </div><!-- .content-frame-wrap -->
+          </div><!-- .content-inner -->
+        </div><!-- .content-area -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+
+    <script>
+      $('.map-item-panel li a').on('click', function(e){
+        e.preventDefault();
+        var $target = $(this).closest('li');
+        if (!$target.hasClass('on')) {
+          $target.addClass('on');
+        } else {
+          $target.removeClass('on');
+        }
+      });
+    </script>
+  </div><!-- #wrap -->
+</body>
+
+</html>
