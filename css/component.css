@@ -1315,4 +1315,14 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);background-color: rgba(31, 61, 83, 0
 .tb-dotum table td.pic:first-child{border-left:0;}
 .tb-dotum table td.car{overflow:hidden;}
 .tb-dotum table td.car [class*=car_]{display:block;white-space: nowrap;text-overflow: ellipsis;width:100%;}
+
+.popup-report .tit-approval{display:flex;justify-content: space-between;}
+.popup-report .tit-approval .tit{padding-top:15px;font-weight:600;}
+.popup-report .approval-area{display:flex;border:1px solid #212332;}
+.popup-report .approval-area > li{display:flex;align-items:center;border-left:1px solid #212332;font-size:12px;text-align:center;width:80px;}
+.popup-report .approval-area > li.label{padding:0 5.5px;border-left:0;width:23px;}
+.popup-report .approval-area > li dl{flex-grow:1;}
+.popup-report .approval-area > li dt{padding:3px 0;}
+.popup-report .approval-area > li dd{border-top:1px solid #212332;height:60px;width:100%;display:flex;justify-content:center;align-items: center;}
+.popup-report .tx-report{margin-top:20px;font-size:14px;color:#212332;}
 /* E: 2024-12-25 */
