@@ -77,3 +77,7 @@ body,input,select,textarea,button{font:14px/1 "Pretendard", "Malgun Gothic", "ë§
 .t-right{text-align:right !important;}
 
 .w-auto{width: auto !important;}
+
+/* S: 2024-12-25 */
+.mt20{margin-top:20px !important;}
+/* E: 2024-12-25 */

@@ -1292,3 +1292,27 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);background-color: rgba(31, 61, 83, 0
 .s-ico.message{background-image:url(../img/ico-24-message-def.png);}
 .s-ico.selschedule{background-image:url(../img/ico-24-selschedule-def.png);}
 /* E: 2024-12-18 */
+
+/* S: 2024-12-25 */
+.popup-report.ver-dotum .content{font-family:'Dotum';}
+.popup-report.ver-dotum .content .top{margin-bottom:25px;font-size:12px;}
+.popup-report.ver-dotum .content .tit{font-family:'Pretendard';margin-bottom:20px;font-weight:bold;letter-spacing: 1.68px;font-size:24px;}
+.popup-report.ver-dotum .content .footer{margin-top:8px;justify-content:flex-end;}
+.popup-report.ver-dotum .content .footer p{font-size:12px;color:#212332;}
+
+.tb-dotum{border:1px solid #7e7e7e;}
+.tb-dotum.prev{border-bottom:0;}
+.tb-dotum.next{border-top:1px solid #b7b7b7;}
+.tb-dotum table{table-layout:fixed;width:100%;}
+.tb-dotum table tr:first-child th, .tb-dotum table tr:first-child td{border-top:
+0;}
+.tb-dotum table th, .tb-dotum table td{font-size:14px;line-height:1.2;color:#212332;border-top:1px solid #b7b7b7;border-left:1px solid #b7b7b7;padding:1px 4px;height:25px;vertical-align:middle;text-align:center;font-weight:400;}
+.tb-dotum table th:first-child{border-left:0;}
+.tb-dotum table th.bl, .tb-dotum table td.bl{border-left:1px solid #b7b7b7;}
+.tb-dotum table td .count-list{display:flex;justify-content:flex-start;gap:0 2px;}
+.tb-dotum table td.description{height:129px;}
+.tb-dotum table td.pic{height:237px;font-size:14px;color:#898988;}
+.tb-dotum table td.pic:first-child{border-left:0;}
+.tb-dotum table td.car{overflow:hidden;}
+.tb-dotum table td.car [class*=car_]{display:block;white-space: nowrap;text-overflow: ellipsis;width:100%;}
+/* E: 2024-12-25 */
