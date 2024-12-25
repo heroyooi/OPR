@@ -144,45 +144,7 @@
         </div><!-- .content-top -->
         <div class="content-area">
           <div class="content-inner">
-            <div class="tit-area">
-              <p class="tit">교통사고 관리 상세 조회</p>
-              <div class="btns-wrap">
-                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico modify"></span>수정</em></a></span>
-                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico view2"></span>내부 보고서</em></a></span>
-                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico view2"></span>국토부 보고서</em></a></span>
-                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico list"></span>목록</em></a></span>
-              </div>
-            </div><!-- .tit-area -->
-            <div class="content-frame c-scrollbar">
-              <div class="tb-wrap">
-                <table summary="VDS 파라미터 편집 등록" class="tb-input">
-                  <colgroup>
-                    <col width="13%" />
-                    <col width="37%" />
-                    <col width="13%" />
-                    <col width="*" />
-                  </colgroup>
-                  <tbody>
-                    <tr>
-                      <th scope="row">사고 ID</th>
-                      <td colspan="3">20241025-00001</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">사고 일시</th>
-                      <td>2022024-10-25 (금) 14:38:45</td>
-                      <th scope="row">기상</th>
-                      <td>맑음</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">사고 구간</th>
-                      <td>예산JCT - 예당호(휴)IC</td>
-                      <th scope="row">기상</th>
-                      <td>맑음</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div><!-- .content-frame -->
+            
           </div><!-- .content-inner -->
         </div><!-- .content-area -->
       </div><!-- .content-wrap -->
@@ -821,7 +783,7 @@
             </li>
             <li>
               <dl>
-                <dt>팀장장</dt>
+                <dt>팀장</dt>
                 <dd>홍길동</dd>
               </dl>
             </li>
@@ -833,7 +795,7 @@
             </li>
           </ul>
         </div>
-        <p class="tx-report">2024년 00월 00일 (0요일) 기상(맑음) 근무자: OOO, OOO, OOO, OOO, OOO, OOO, OOO, OOO, OOO, OOO, OOO, OOO, OOO, OOO</p>
+        <p class="tx-report"><strong>2024년 00월 00일 (0요일) 기상(맑음)</strong> 근무자: OOO, OOO, OOO, OOO, OOO, OOO, OOO, OOO, OOO, OOO, OOO, OOO, OOO, OOO</p>
         <p class="s-tit">사건 개요</p>
         <div class="tb-wrap">
           <table summary="고장/수리 보고서 요약">
@@ -871,39 +833,158 @@
               <tr>
                 <th scope="row">교통차단</th>
                 <td>OO IC 1,2 차로</td>
-                <th scope="row">상황종료시간간</th>
+                <th scope="row">상황종료시간</th>
                 <td>2024-00-00 00:00</td>
               </tr>
             </tbody>
           </table>
         </div><!-- .tb-wrap -->
-        <p class="s-tit">이상내역</p>
+        <p class="s-tit">사고 차량</p>
         <div class="tb-wrap">
-          <table summary="이상내역 요약">
+          <table summary="사고 차량 요약" class="list">
             <colgroup>
-              <col width="135" />
+              <col width="72" />
+              <col width="100" />
+              <col width="72" />
+              <col width="72" />
+              <col width="120" />
               <col width="*" />
+              <col width="72" />
             </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">성명</th>
+                <th scope="col">차량번호</th>
+                <th scope="col">차종</th>
+                <th scope="col">주민번호</th>
+                <th scope="col">연락처</th>
+                <th scope="col">주소</th>
+                <th scope="col">피해정도</th>
+              </tr>
+            </thead>
             <tbody>
               <tr>
-                <th scope="row">상세 설명</th>
-                <td>통신상태 이상으로 가나다라 마바사 아자차카 타파하 일이삼사 오륙칠팔구십 통신상태 이상으로 가나다라 마바사 아자차카 타파하 일이삼사 오륙칠팔구십 통신상태 이상으로 가나다라 마바사 아자차카 타파하 일이삼사 오륙칠팔구십 통신상태 이상으로 가나다라 마바사 아자차카 타파하 일이삼사 오륙칠팔구십 통신상태 이상으로 가나다라 마바사 아자차카 타파하 일이삼사 오륙칠팔구십 통신상태 이상으로 가나다라 마바사 아자차카 타파하 일이삼사 오륙칠팔구십 통신상태 이상으로 가나다라 마바사 아자차카 타파하 일이삼사 오륙칠팔구십 통신상태 이상으로 가나다라 마바</td>
+                <td>김ㅇㅇ</td>
+                <td>경기12바1234</td>
+                <td>대형화물</td>
+                <td>000000</td>
+                <td>010-0000-0000</td>
+                <td>경기도 평택시 OO읍</td>
+                <td>없음</td>
+              </tr>
+              <tr>
+                <td>김ㅇㅇ</td>
+                <td>경기12바1234</td>
+                <td>대형화물</td>
+                <td>000000</td>
+                <td>010-0000-0000</td>
+                <td>경기도 평택시 OO읍</td>
+                <td>없음</td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- .tb-wrap -->
+        <p class="s-tit">시설물 피해</p>
+        <div class="tb-wrap">
+          <table summary="시설물 피해 요약" class="list">
+            <colgroup>
+              <col width="127" />
+              <col width="127" />
+              <col width="68" />
+              <col width="72" />
+              <col width="72" />
+              <col width="120" />
+              <col width="" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">시설명</th>
+                <th scope="col">주소</th>
+                <th scope="col">수량</th>
+                <th scope="col">가해자</th>
+                <th scope="col">주민번호</th>
+                <th scope="col">연락처</th>
+                <th scope="col">차량번호</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>시설물명 text <br />시설물명 text</td>
+                <td>경기도 평택시 OO읍</td>
+                <td>000</td>
+                <td>김OO</td>
+                <td>000000</td>
+                <td>010-0000-0000</td>
+                <td>경기12바1234</td>
+              </tr>
+              <tr>
+                <td>김OO</td>
+                <td>경기도 평택시 OO읍</td>
+                <td>000</td>
+                <td>김OO</td>
+                <td>000000</td>
+                <td>010-0000-0000</td>
+                <td>경기12바1234</td>
               </tr>
             </tbody>
           </table>
         </div><!-- .tb-wrap -->
 
-        <p class="s-tit">조치 결과 : 부품 교체 / 고장 수리</p>
+        <p class="s-tit">조치사항</p>
         <div class="tb-wrap">
-          <table summary="조치 결과 : 부품 교체 / 고장 수리 요약">
+          <table summary="조치사항 요약" class="list">
+            <colgroup>
+              <col width="88" />
+              <col width="" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">조치시간</th>
+                <th scope="col">조치 내용</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>00:00</td>
+                <td class="t-left">CCTV 사고 현장 확인</td>
+              </tr>
+              <tr>
+                <td>00:00</td>
+                <td class="t-left">CCTV 사고 현장 확인</td>
+              </tr>
+              <tr>
+                <td>00:00</td>
+                <td class="t-left">피해 시설물 침범으로 진입 1차로 차단 <br />피해 시설물 침범으로 진입 1차로 차단</td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- .tb-wrap -->
+
+        <div class="tb-wrap mt24">
+          <table summary="사고경위 요약">
             <colgroup>
               <col width="135" />
               <col width="*" />
             </colgroup>
             <tbody>
               <tr>
-                <th scope="row">상세 설명</th>
-                <td>통신상태 이상으로 가나다라 마바사 아자차카 타파하 일이삼사 오륙칠팔구십 통신상태 이상으로 가나다라 마바사 아자차카 타파하 일이삼사 오륙칠팔구십 통신상태 이상으로 가나다라 마바사 아자차카 타파하 일이삼사 오륙칠팔구십 통신상태 이상으로 가나다라 마바사 아자차카 타파하 일이삼사 오륙칠팔구십 통신상태 이상으로 가나다라 마바사 아자차카 타파하 일이삼사 오륙칠팔구십 통신상태 이상으로 가나다라 마바사 아자차카 타파하 일이삼사 오륙칠팔구십 통신상태 이상으로 가나다라 마바사 아자차카 타파하 일이삼사 오륙칠팔구십 통신상태 이상으로 가나다라 마바</td>
+                <th scope="row">사고경위</th>
+                <td>부여방향 text text text 123가4567 차량이 전방주시태만으로 인해 경기12바1234차량과 충돌 후 통합차로제어기 외 시설물 n종을 충격 후 멈춰선 차대차 사고</td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- .tb-wrap -->
+
+        <div class="tb-wrap mt24">
+          <table summary="비고 요약">
+            <colgroup>
+              <col width="135" />
+              <col width="*" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">비고</th>
+                <td>비고비고비고</td>
               </tr>
             </tbody>
           </table>
@@ -912,28 +993,371 @@
         <p class="s-tit">사진 첨부</p>
         <div class="tb-wrap">
           <table summary="사진 첨부 요약">
-            <colgroup>
-              <col width="135" />
-              <col width="*" />
-            </colgroup>
             <tbody>
               <tr>
-                <th scope="row">수리 전</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">수리 후</th>
                 <td>
-                  <p><img src="https://placehold.co/262x162/EEE/31343C" alt=""></p>
+                  <ul class="pics">
+                    <li><img src="https://placehold.co/322x198/EEE/31343C" alt=""></li>
+                    <li><img src="https://placehold.co/123x199/EEE/31343C" alt=""></li>
+                    <li><img src="https://placehold.co/322x198/EEE/31343C" alt=""></li>
+                  </ul>
                 </td>
               </tr>
             </tbody>
           </table>
         </div><!-- .tb-wrap -->
-        <div class="footer">
+        <div class="footer right">
           <span class="logo"><img src="img/wih-logo-color.png" alt="서부내륙고속도로" /></span>
-          <span class="date">2024년 04월11일</span>
         </div><!-- .footer -->
+      </div><!-- .content -->
+    </div><!-- .popup-report -->
+
+    <div class="popup-report ver-dotum" id="report4">
+      <div class="header">
+        <ul>
+          <li><a href="javascript:void(0);" class="print" onclick="window.print();"></a></li>
+          <li><a href="javascript:void(0);" class="pdf"></a></li>
+          <li><a href="javascript:void(0);" class="cancel"></a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="tit-approval">
+          <p class="tit">교통순찰일지</p>
+          <ul class="approval-area">
+            <li class="label">결<br />재</li>
+            <li>
+              <dl>
+                <dt>담당</dt>
+                <dd>홍길동</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>팀장</dt>
+                <dd>홍길동</dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+        <p class="tx-report">2024년 00월 00일 (0요일) 기상(맑음)</p>
+        <p class="s-tit">순찰차 주행 거리(누적)</p>
+        <div class="tb-dotum">
+          <table summary="순찰차 주행 거리(누적) 요약">
+            <colgroup>
+              <col width="95" />
+              <col width="" />
+              <col width="" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="col">순찰차량</th>
+                <th scope="col">누적 주행거리</th>
+                <th scope="col">비고</th>
+              </tr>
+              <tr>
+                <th scope="row">1호차</th>
+                <td class="t-left">000km</td>
+                <td class="t-left">입력된 비고내용</td>
+              </tr>
+              <tr>
+                <th scope="row">2호차</th>
+                <td class="t-left"></td>
+                <td class="t-left"></td>
+              </tr>
+              <tr>
+                <th scope="row">3호차</th>
+                <td class="t-left"></td>
+                <td class="t-left"></td>
+              </tr>
+              <tr>
+                <th scope="row">4호차</th>
+                <td class="t-left"></td>
+                <td class="t-left"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="s-tit">근무자</p>
+        <div class="tb-dotum">
+          <table summary="근무자 요약">
+            <colgroup>
+              <col width="95" />
+              <col width="" />
+              <col width="" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="col">근무자 구분</th>
+                <th scope="col">상황실</th>
+                <th scope="col">순찰원</th>
+              </tr>
+              <tr>
+                <th scope="row">주간</th>
+                <td class="t-left">김OO. 이OO, 박OO, 유OO</td>
+                <td class="t-left">김OO. 이OO, 박OO, 유OO</td>
+              </tr>
+              <tr>
+                <th scope="row">야간</th>
+                <td class="t-left"></td>
+                <td class="t-left"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="s-tit">일간 순찰 내역</p>
+        <div class="tb-dotum">
+          <table summary="일간 순찰 내역 요약">
+            <colgroup>
+              <col width="40" />
+              <col width="56" />
+              <col width="171" />
+              <col width="62" />
+              <col width="66" />
+              <col width="171" />
+              <col width="" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="col">순번</th>
+                <th scope="col">시각</th>
+                <th scope="col">구간</th>
+                <th scope="col">방향</th>
+                <th scope="col">이정</th>
+                <th scope="col">발견 및 조치사항</th>
+                <th scope="col">상세내용</th>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>00:00</td>
+                <td class="car"><span class="car_period">현덕JCT - 안중IC</span></td>
+                <td>평택</td>
+                <td>126.08</td>
+                <td class="car"><span class="car_reason">단순사고 후방지원</span></td>
+                <td>0194호2231</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>00:00</td>
+                <td class="car"><span class="car_period">현덕JCT - 안중IC 길어지면  짤림</span></td>
+                <td>평택</td>
+                <td>126.08</td>
+                <td class="car"><span class="car_reason">단순사고 후방지원 길어지면짤림</span></td>
+                <td>0194호2231</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td></td>
+                <td class="car"><span class="car_period"></span></td>
+                <td></td>
+                <td></td>
+                <td class="car"><span class="car_reason"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td></td>
+                <td class="car"><span class="car_period"></span></td>
+                <td></td>
+                <td></td>
+                <td class="car"><span class="car_reason"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td></td>
+                <td class="car"><span class="car_period"></span></td>
+                <td></td>
+                <td></td>
+                <td class="car"><span class="car_reason"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td></td>
+                <td class="car"><span class="car_period"></span></td>
+                <td></td>
+                <td></td>
+                <td class="car"><span class="car_reason"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td></td>
+                <td class="car"><span class="car_period"></span></td>
+                <td></td>
+                <td></td>
+                <td class="car"><span class="car_reason"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">8</th>
+                <td></td>
+                <td class="car"><span class="car_period"></span></td>
+                <td></td>
+                <td></td>
+                <td class="car"><span class="car_reason"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">9</th>
+                <td></td>
+                <td class="car"><span class="car_period"></span></td>
+                <td></td>
+                <td></td>
+                <td class="car"><span class="car_reason"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">10</th>
+                <td></td>
+                <td class="car"><span class="car_period"></span></td>
+                <td></td>
+                <td></td>
+                <td class="car"><span class="car_reason"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">11</th>
+                <td></td>
+                <td class="car"><span class="car_period"></span></td>
+                <td></td>
+                <td></td>
+                <td class="car"><span class="car_reason"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">12</th>
+                <td></td>
+                <td class="car"><span class="car_period"></span></td>
+                <td></td>
+                <td></td>
+                <td class="car"><span class="car_reason"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">13</th>
+                <td></td>
+                <td class="car"><span class="car_period"></span></td>
+                <td></td>
+                <td></td>
+                <td class="car"><span class="car_reason"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">14</th>
+                <td></td>
+                <td class="car"><span class="car_period"></span></td>
+                <td></td>
+                <td></td>
+                <td class="car"><span class="car_reason"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">15</th>
+                <td></td>
+                <td class="car"><span class="car_period"></span></td>
+                <td></td>
+                <td></td>
+                <td class="car"><span class="car_reason"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">16</th>
+                <td></td>
+                <td class="car"><span class="car_period"></span></td>
+                <td></td>
+                <td></td>
+                <td class="car"><span class="car_reason"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">17</th>
+                <td></td>
+                <td class="car"><span class="car_period"></span></td>
+                <td></td>
+                <td></td>
+                <td class="car"><span class="car_reason"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">18</th>
+                <td></td>
+                <td class="car"><span class="car_period"></span></td>
+                <td></td>
+                <td></td>
+                <td class="car"><span class="car_reason"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">19</th>
+                <td></td>
+                <td class="car"><span class="car_period"></span></td>
+                <td></td>
+                <td></td>
+                <td class="car"><span class="car_reason"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">20</th>
+                <td></td>
+                <td class="car"><span class="car_period"></span></td>
+                <td></td>
+                <td></td>
+                <td class="car"><span class="car_reason"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">21</th>
+                <td></td>
+                <td class="car"><span class="car_period"></span></td>
+                <td></td>
+                <td></td>
+                <td class="car"><span class="car_reason"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">22</th>
+                <td></td>
+                <td class="car"><span class="car_period"></span></td>
+                <td></td>
+                <td></td>
+                <td class="car"><span class="car_reason"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">23</th>
+                <td></td>
+                <td class="car"><span class="car_period"></span></td>
+                <td></td>
+                <td></td>
+                <td class="car"><span class="car_reason"></span></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">24</th>
+                <td></td>
+                <td class="car"><span class="car_period"></span></td>
+                <td></td>
+                <td></td>
+                <td class="car"><span class="car_reason"></span></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="tb-tail">- 외 00건 -</p>
+        <p class="s-tit">전달사항</p>
+        <div class="tb-dotum">
+          <table summary="전달사항 요약">
+            <tbody>
+              <tr>
+                <td class="message">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div><!-- .content -->
     </div><!-- .popup-report -->
 
@@ -943,6 +1367,14 @@
     function openPrintPopup(id) {
       $('.popup-dimm, .popup-report#' + id).show();
     }
+    $('.popup-dimm').on('click', function(){
+      $('.popup-dimm, .popup-report').hide();
+    });
+    $('.popup-report .cancel').on('click', function(e){
+      e.preventDefault();
+      $('.popup-dimm').hide();
+      $(this).closest('.popup-report').hide();
+    })
     var qprint = $.urlParam('print');
     if (qprint == '1') {
       openPrintPopup('report1');
@@ -950,6 +1382,8 @@
       openPrintPopup('report2');
     } else if (qprint == '3') {
       openPrintPopup('report3');
+    } else if (qprint == '4') {
+      openPrintPopup('report4');
     }
   </script>
   

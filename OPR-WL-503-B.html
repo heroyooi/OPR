@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>서부내륙고속도로 통합운영단말</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+
+<body>
+  <div id="wrap" class="c-scrollbar">
+    <div id="header">
+      <h1><a href="#"><img src="img/wih-logo-io.png" alt=""></a></h1>
+      <div class="item-area">
+        <ul id="gnb" data-active="7">
+          <li><a href="#">시스템관리</a></li>
+          <li><a href="#">모니터링</a></li>
+          <li><a href="#">운영관리</a></li>
+          <li><a href="#">상황관리</a></li>
+          <li><a href="#">FTMS 제어</a></li>
+          <li><a href="#">현장장비 점검관리</a></li>
+          <li><a href="#">도로운영관리</a></li>
+          <li><a href="#">통계조회</a></li>
+          <li><a href="#">이력조회</a></li>
+          <li><a href="#">기초정보관리</a></li>
+          <li><a href="#">터널 환기/전력</a></li>
+        </ul>
+        <ul id="utilmenu">
+          <li><a href="#" class="s-ico notify w-label new"><span>고윤정님</span></a></li>
+          <li><a href="#" class="s-ico bookmark"></a></li>
+          <li><a href="#" class="s-ico logout"></a></li>
+        </ul>
+        <div class="bookmark-area">
+          <ul>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">RWIS 제어기 기초정보관리</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="s-ico star on"></span>
+                <span class="label">즐겨찾기 최대 10개</span>
+              </a>
+            </li>
+          </ul>
+          <div class="bookmark-item">
+            <a href="#" class="btn-text">즐겨찾기 관리 <span class="s-ico arrow"></span></a>
+            <a href="#" class="s-ico close gray"></a>
+          </div>
+        </div><!-- .bookmark-area -->
+      </div>
+    </div><!--#header -->
+    <div id="container" class="ver-lnb">
+      <div class="left-wrap">
+        <h3 class="tit">도로이용관리</h3>
+        <ul class="lnb-list">
+          <li class="on">
+            <a href="#" class="menu">교통사고 관리</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+          <li>
+            <a href="#" class="menu">순찰일지</a>
+            <a href="#" class="s-ico star"></a>
+          </li>
+        </ul>
+      </div><!-- .left-wrap -->
+      <div class="content-wrap">
+        <div class="content-top">
+          <div class="menu-area">
+            <a href="#" class="s-ico home"></a>
+            <div class="menu-swiper swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide on">
+                  <a href="#" class="label">교통사고 관리</a>
+                  <a href="#" class="s-ico close"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="navi-area">
+            <a href="" class="s-ico arrow-l"></a>
+            <a href="" class="s-ico arrow-r"></a>
+          </div>
+        </div><!-- .content-top -->
+        <div class="content-area">
+          <div class="content-inner">
+            <div class="tit-area">
+              <p class="tit">교통사고 관리 등록</p>
+              <div class="btns-wrap">
+                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico modify"></span>수정</em></a></span>
+                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico view2"></span>내부 보고서</em></a></span>
+                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico view2"></span>국토부 보고서</em></a></span>
+                <span class="btn-base btn-ico"><a href="#"><em><span class="s-ico list"></span>목록</em></a></span>
+              </div>
+            </div><!-- .tit-area -->
+            <div class="content-frame c-scrollbar">
+              <div class="tb-wrap">
+                <table summary="교통사고 관리 등록" class="tb-input">
+                  <colgroup>
+                    <col width="10%" />
+                    <col width="40%" />
+                    <col width="10%" />
+                    <col width="*" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">사고 ID</th>
+                      <td colspan="3">20241025-00001</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">사고 발생일시 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td>
+                        <div class="input-wrap select-group">
+                          <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom" style="width: 160px;">
+                            <input id="datepicker-input" type="text" aria-label="Date">
+                            <span class="tui-ico-date"></span>
+                            <div class="date_wrapper" id="general" style="margin-left: -1px;"></div>
+                          </div>
+                          <div class="custom-select active" style="width: 110px;">
+                            <select>
+                              <option value="0">선택하세요</option>
+                              <option value="1" selected>금요일</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                          </div>
+                          <div class="custom-select active" style="width: 110px;">
+                            <select>
+                              <option value="0">선택하세요</option>
+                              <option value="1" selected>04시</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                          </div>
+                          <div class="custom-select active" style="width: 110px;">
+                            <select>
+                              <option value="0">선택하세요</option>
+                              <option value="1" selected>37분</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                          </div>
+                        </div>
+                      </td>
+                      <th scope="row">기상 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td>
+                        <div class="custom-select active" style="width: 110px;">
+                          <select>
+                            <option value="0">선택하세요</option>
+                            <option value="1" selected>맑음</option>
+                            <option value="2">값2</option>
+                            <option value="3">값3</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">방향/사고 구간 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td colspan="3">
+                        <div class="input-wrap select-group">
+                          <div class="custom-select active" style="width: 140px;">
+                            <select>
+                              <option value="0">선택하세요</option>
+                              <option value="1" selected>평택방향</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                          </div>
+                          <div class="custom-select active" style="width: 480px;">
+                            <select>
+                              <option value="0">선택하세요</option>
+                              <option value="1" selected>예산JCT - 예당호(휴)IC</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">사고 장소/이정 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td colspan="3">
+                        <div class="input-wrap">
+                          <div class="input-btn shrink">
+                            <input type="text" class="input-base" placeholder="사고장소 입력" style="width: 627px;">
+                            <input type="text" class="input-base" value="43.5" style="width: 200px;">
+                            <span class="btn-base" style="width: 108px;"><a href="#">지도에서 선택</a></span>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">사고 유형 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td>
+                        <div class="custom-select active" style="width: 200px;">
+                          <select>
+                            <option value="0">선택하세요</option>
+                            <option value="1" selected>차대차</option>
+                            <option value="2">값2</option>
+                            <option value="3">값3</option>
+                          </select>
+                        </div>
+                      </td>
+                      <th scope="row">사고 원인 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td>
+                        <div class="input-wrap select-group">
+                          <div class="custom-select active">
+                            <select>
+                              <option value="0">선택하세요</option>
+                              <option value="1" selected>안전운전불이행</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                          </div>
+                          <div class="custom-select">
+                            <select>
+                              <option value="0" selected>상세분류 선택</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table summary="교통사고 관리 등록" class="tb-input next">
+                  <colgroup>
+                    <col width="10%" />
+                    <col width="" />
+                    <col width="10%" />
+                    <col width="" />
+                    <col width="10%" />
+                    <col width="*" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">사고등급 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td>
+                        <div class="custom-select" style="width: 200px;">
+                          <select>
+                            <option value="0" selected>사고등급 선택</option>
+                            <option value="1">값1</option>
+                            <option value="2">값2</option>
+                            <option value="3">값3</option>
+                          </select>
+                        </div>
+                      </td>
+                      <th scope="row">보고자 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" placeholder="보고자명 입력" />
+                        </div>
+                      </td>
+                      <th scope="row">교통제한 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td>
+                        <div class="input-wrap input-select-btn">
+                          <div class="custom-select active" style="width: 200px;">
+                            <select>
+                              <option value="0">사고등급 선택</option>
+                              <option value="1" selected>전면통제</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                          </div>
+                          <input type="text" class="input-base t-center" value="1" style="width: 80px;" />
+                          <span class="s-label" style="margin: 0;">차로</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">인명피해/인원 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td colspan="5">
+                        <div class="input-wrap chk-label-input">
+                          <ul class="radio-list">
+                            <li>
+                              <span class="radio-base">
+                                <input type="radio" id="radio-normal-1" name="radio-normal" checked="">
+                                <label for="radio-normal-1">있음</label>
+                              </span>
+                            </li>
+                            <li>
+                              <span class="radio-base">
+                                <input type="radio" id="radio-normal-2" name="radio-normal">
+                                <label for="radio-normal-2">없음</label>
+                              </span>
+                            </li>
+                          </ul>
+                          <span class="s-label">사망</span>
+                          <input type="text" class="input-base t-center" value="1" style="width: 80px;">
+                          <span class="s-label">증상</span>
+                          <input type="text" class="input-base t-center" value="1" style="width: 80px;">
+                          <span class="s-label">경상</span>
+                          <input type="text" class="input-base t-center" value="1" style="width: 80px;">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table summary="교통사고 관리 등록" class="tb-input next ver-list">
+                  <colgroup>
+                    <col width="309" />
+                    <col width="309" />
+                    <col width="120" />
+                    <col width="160" />
+                    <col width="140" />
+                    <col width="300" />
+                    <col width="*" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row" colspan="7">
+                        <div class="label-btn">
+                          <span></span>
+                          <p>시설 피해 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></p>
+                          <span class="btn-base" id="event-target-1"><a href="#">항목추가</a></span>
+                        </div>
+                      </th>
+                    </tr>
+                    <tr>
+                      <th scope="col">시설명</th>
+                      <th scope="col">위치</th>
+                      <th scope="col">수량</th>
+                      <th scope="col">가해자</th>
+                      <th scope="col">주민번호</th>
+                      <th scope="col">연락처</th>
+                      <th scope="col">차량번호</th>
+                    </tr>
+                    <tr class="event-target-1">
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" placeholder="시설명 입력">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" placeholder="위치 입력">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base t-center" value="1">
+                        </div>  
+                      </td>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" placeholder="이름 입력">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" placeholder="앞자리 입력">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap input-select-btn">
+                          <div class="custom-select active shrink" style="width: 92px;">
+                            <select>
+                              <option value="0">선선택</option>
+                              <option value="1" selected>010</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                          </div>
+                          <input type="text" class="input-base" placeholder="번호 입력 (‘-’제외)" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap input-select-btn">
+                          <input type="text" class="input-base" placeholder="차량번호 입력">
+                          <a href="#" class="btn-item delete"></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="event-target-1">
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" placeholder="시설명 입력">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" placeholder="위치 입력">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base t-center" value="1">
+                        </div>  
+                      </td>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" placeholder="이름 입력">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" placeholder="앞자리 입력">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap input-select-btn">
+                          <div class="custom-select active shrink" style="width: 92px;">
+                            <select>
+                              <option value="0">선선택</option>
+                              <option value="1" selected>010</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                          </div>
+                          <input type="text" class="input-base" placeholder="번호 입력 (‘-’제외)" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap input-select-btn">
+                          <input type="text" class="input-base" placeholder="차량번호 입력">
+                          <a href="#" class="btn-item delete"></a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table summary="교통사고 관리 등록" class="tb-input next">
+                  <colgroup>
+                    <col width="10%" />
+                    <col width="40%" />
+                    <col width="10%" />
+                    <col width="*" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">피해 금액</th>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" placeholder="피해 금액 입력">
+                        </div>
+                      </td>
+                      <th scope="row">복구일자</th>
+                      <td>
+                        <div class="tui-datepicker-input tui-datetime-input tui-has-focus tui-custom" style="width: 160px;">
+                          <input id="datepicker-input2" type="text" aria-label="Date">
+                          <span class="tui-ico-date"></span>
+                          <div class="date_wrapper" id="general2" style="margin-left: -1px;"></div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">사고 내용 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td colspan="3">
+                        <textarea class="textarea-base" placeholder="사고 내용 입력" style="height: 120px;"></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">대응 내용 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td colspan="3">
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" value="현장출동 및 견인업체 호출 / 112 신고 및 119 구조 차량 신고">
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">현장 조치 내용 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td colspan="3">
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" value="차로 통제, 도로 정리">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table summary="교통사고 관리 등록" class="tb-input next ver-list">
+                  <colgroup>
+                    <col width="60" />
+                    <col width="*" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row" colspan="2">
+                        <div class="label-btn">
+                          <span></span>
+                          <p>조시 사항 상세</p>
+                          <span class="btn-base" id="event-target-2"><a href="#">항목추가</a></span>
+                        </div>
+                      </th>
+                    </tr>
+                    <tr class="event-target-2">
+                      <td>1</td>
+                      <td>
+                        <div class="input-wrap input-select-btn">
+                          <input type="text" class="input-base" placeholder="시간 입력" style="width: 140px;">
+                          <input type="text" class="input-base" placeholder="조치사항 입력">
+                          <a href="#" class="btn-item delete disabled"></a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table summary="교통사고 관리 등록" class="tb-input next">
+                  <colgroup>
+                    <col width="160" />
+                    <col width="" />
+                    <col width="160" />
+                    <col width="" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">접보상황 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" value="차로 통제, 도로 정리">
+                        </div>
+                      </td>
+                      <th scope="row">접보상황 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td>
+                        <div class="input-wrap input-time">
+                          <input type="text" class="input-base" placeholder="00">
+                          <span class="time">:</span>
+                          <input type="text" class="input-base" placeholder="00">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table summary="교통사고 관리 등록" class="tb-input next ver-list">
+                  <tbody>
+                    <tr>
+                      <th scope="row" colspan="8">현장도착 및 처리시간</th>
+                    </tr>
+                    <tr>
+                      <th scope="col">고객지원반</th>
+                      <th scope="col">119</th>
+                      <th scope="col">112</th>
+                      <th scope="col">견인차량</th>
+                      <th scope="col">환자이송</th>
+                      <th scope="col">견인완료</th>
+                      <th scope="col">정상소통</th>
+                      <th scope="col">상황 종료 시간</th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="input-wrap input-time">
+                          <input type="text" class="input-base" placeholder="00">
+                          <span class="time">:</span>
+                          <input type="text" class="input-base" placeholder="00">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap input-time">
+                          <input type="text" class="input-base" placeholder="00">
+                          <span class="time">:</span>
+                          <input type="text" class="input-base" placeholder="00">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap input-time">
+                          <input type="text" class="input-base" placeholder="00">
+                          <span class="time">:</span>
+                          <input type="text" class="input-base" placeholder="00">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap input-time">
+                          <input type="text" class="input-base" placeholder="00">
+                          <span class="time">:</span>
+                          <input type="text" class="input-base" placeholder="00">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap input-time">
+                          <input type="text" class="input-base" placeholder="00">
+                          <span class="time">:</span>
+                          <input type="text" class="input-base" placeholder="00">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap input-time">
+                          <input type="text" class="input-base" placeholder="00">
+                          <span class="time">:</span>
+                          <input type="text" class="input-base" placeholder="00">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap input-time">
+                          <input type="text" class="input-base" placeholder="00">
+                          <span class="time">:</span>
+                          <input type="text" class="input-base" placeholder="00">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap input-time">
+                          <input type="text" class="input-base" placeholder="00">
+                          <span class="time">:</span>
+                          <input type="text" class="input-base" placeholder="00">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table summary="교통사고 관리 등록" class="tb-input next">
+                  <colgroup>
+                    <col width="10%" />
+                    <col width="" />
+                    <col width="10%" />
+                    <col width="" />
+                    <col width="10%" />
+                    <col width="*" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">방책시설</th>
+                      <td>
+                        <ul class="chk-list">
+                          <li>
+                            <span class="chk-base">
+                              <input type="checkbox" id="chk-enable-1">
+                              <label for="chk-enable-1">중분대</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="chk-base">
+                              <input type="checkbox" id="chk-enable-2">
+                              <label for="chk-enable-2">갓길</label>
+                            </span>
+                          </li>
+                        </ul>
+                      </td>
+                      <th scope="row">포장 상태 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" placeholder="포장상태 입력" />
+                        </div>
+                      </td>
+                      <th scope="row">노면상태태 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" placeholder="노면상태 입력" />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table summary="교통사고 관리 등록" class="tb-input next ver-list">
+                  <colgroup>
+                    <col width="110" />
+                    <col width="110" />
+                    <col width="110" />
+                    <col width="314" />
+                    <col width="314" />
+                    <col width="180" />
+                    <col width="120" />
+                    <col width="120" />
+                    <col width="200" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="col" colspan="9">
+                        <div class="label-btn">
+                          <span></span>
+                          <p>사고차량</p>
+                          <span class="btn-base" id="event-target-3"><a href="#">항목추가</a></span>
+                        </div>
+                      </th>
+                    </tr>
+                    <tr>
+                      <th scope="col" colspan="3">피해 구분</th>
+                      <th scope="col" rowspan="2">차량 번호</th>
+                      <th scope="col" rowspan="2">차종</th>
+                      <th scope="col" colspan="4">운전자</th>
+                    </tr>
+                    <tr>
+                      <th scope="col">사망</th>
+                      <th scope="col">부상</th>
+                      <th scope="col">차량</th>
+                      <th scope="col">성명</th>
+                      <th scope="col">성별</th>
+                      <th scope="col">연령</th>
+                      <th scope="col">상태</th>
+                    </tr>
+                    <tr class="event-target-3">
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base t-center" placeholder="00" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base t-center" placeholder="00" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base t-center" placeholder="00" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" placeholder="차량번호 입력" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" placeholder="차종 입력" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" placeholder="운전자 성명 입력" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="custom-select t-left">
+                          <select>
+                            <option value="0" selected>선택</option>
+                            <option value="1">값1</option>
+                            <option value="2">값2</option>
+                            <option value="3">값3</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base t-center" placeholder="연령 입력" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap input-select-btn">
+                          <div class="custom-select t-left" style="flex-grow: 1;">
+                            <select>
+                              <option value="0" selected>상태 선택</option>
+                              <option value="1">값1</option>
+                              <option value="2">값2</option>
+                              <option value="3">값3</option>
+                            </select>
+                          </div>
+                          <a href="#" class="btn-item delete disabled"></a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table summary="교통사고 관리 등록" class="tb-input next ver-list">
+                  <colgroup>
+                    <col width="180" />
+                    <col width="120" />
+                    <col width="120" />
+                    <col width="240" />
+                    <col width="" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="col" colspan="5">
+                        <div class="label-btn">
+                          <span></span>
+                          <p>사망자 정보</p>
+                          <span class="btn-base" id="event-target-4"><a href="#">항목추가</a></span>
+                        </div>
+                      </th>
+                    </tr>
+                    <tr>
+                      <th scope="col">성명</th>
+                      <th scope="col">성별</th>
+                      <th scope="col">연령</th>
+                      <th scope="col">후송병원</th>
+                      <th scope="col">기타</th>
+                    </tr>
+                    <tr class="event-target-4">
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" placeholder="사망자 성명 입력" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="custom-select t-left">
+                          <select>
+                            <option value="0" selected>선택</option>
+                            <option value="1">값1</option>
+                            <option value="2">값2</option>
+                            <option value="3">값3</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base t-center" placeholder="연령 입력" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" placeholder="병원 이름 입력" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap input-select-btn">
+                          <input type="text" class="input-base" placeholder="기타 사항 입력" />
+                          <a href="#" class="btn-item delete"></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="event-target-4">
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" placeholder="사망자 성명 입력" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="custom-select t-left">
+                          <select>
+                            <option value="0" selected>선택</option>
+                            <option value="1">값1</option>
+                            <option value="2">값2</option>
+                            <option value="3">값3</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base t-center" placeholder="연령 입력" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" placeholder="병원 이름 입력" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="input-wrap input-select-btn">
+                          <input type="text" class="input-base" placeholder="기타 사항 입력" />
+                          <a href="#" class="btn-item delete"></a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table summary="교통사고 관리 등록" class="tb-input next">
+                  <colgroup>
+                    <col width="10%">
+                    <col width="*">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">사진 등록</th>
+                      <td>
+                        <div class="input-wrap">
+                          <div class="input-btn input-file">
+                            <input type="text" class="input-base" placeholder="필수항목 장당 50MB, 최대 6개 업로드" readonly />
+                            <input type="file" accept="image/*" />
+                            <span class="btn-base auto"><a href="#">이미지찾기</a></span>
+                          </div>
+                        </div>
+                        <ul class="file-box"></ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">사고경위</th>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" placeholder="사고 경위 입력">
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">근무자</th>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" placeholder="근무자 입력 (여러 명 입력 시 쉼표(,)로 구분하여 입력)">
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">비고</th>
+                      <td>
+                        <div class="input-wrap">
+                          <input type="text" class="input-base" placeholder="비고 입력">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div><!-- .content-frame -->
+          </div><!-- .content-inner -->
+        </div><!-- .content-area -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+  </div><!-- #wrap -->
+  <script>
+    tui.DatePicker.localeTexts['customKey'] = {
+      titles: {
+          // days
+          DD: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+          // daysShort
+          D: ['일', '월', '화', '수', '목', '금', '토'],
+          // months
+          MMMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+          // monthsShort
+          MMM: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+      },
+      titleFormat: 'yyyy.MMM',
+      todayFormat: '오늘 : yyyy.MMMM.dd',
+      date: 'Date',
+      time: 'Time'
+    };
+
+    var datepicker = new tui.DatePicker('.date_wrapper#general', {
+      language: 'customKey',
+      date: new Date(),
+      input: {
+        element: '#datepicker-input',
+        format: 'YYYY-MM-dd',
+      }
+    });
+
+    var datepicker = new tui.DatePicker('.date_wrapper#general2', {
+      language: 'customKey',
+      date: new Date(),
+      input: {
+        element: '#datepicker-input2',
+        format: 'YYYY-MM-dd',
+      }
+    });
+    customSbox();
+
+    var mock_evt_target1 = `<tr class="event-target-1"><td><div class="input-wrap"><input type="text" class="input-base" placeholder="시설명 입력"></div></td><td><div class="input-wrap"><input type="text" class="input-base" placeholder="위치 입력"></div></td><td><div class="input-wrap"><input type="text" class="input-base t-center is-value" value="1"></div></td><td><div class="input-wrap"><input type="text" class="input-base" placeholder="이름 입력"></div></td><td><div class="input-wrap"><input type="text" class="input-base" placeholder="앞자리 입력"></div></td><td><div class="input-wrap input-select-btn"><div class="custom-select active shrink" style="width: 92px;"><select><option value="0">선선택</option><option value="1" selected="">010</option><option value="2">값2</option><option value="3">값3</option></select><div class="select-selected">010</div><div class="select-items select-hide"><div>선선택</div><div>010</div><div>값2</div><div>값3</div></div></div><input type="text" class="input-base" placeholder="번호 입력 (‘-’제외)"></div></td><td><div class="input-wrap input-select-btn"><input type="text" class="input-base" placeholder="차량번호 입력"><a href="#" class="btn-item delete"></a></div></td></tr>`;
+
+    $('#event-target-1').on('click', function() {
+      $('.event-target-1:last-child').after(mock_evt_target1);
+    });
+
+    var mock_evt_target2 = `<tr class="event-target-2"><td>1</td><td><div class="input-wrap input-select-btn"><input type="text" class="input-base" placeholder="시간 입력" style="width: 140px;"><input type="text" class="input-base" placeholder="조치사항 입력"><a href="#" class="btn-item delete"></a></div></td></tr>`;
+
+    $('#event-target-2').on('click', function() {
+      $('.event-target-2:last-child').after(mock_evt_target2);
+      $('.event-target-2').each(function(index){
+        $(this).find('td:first-child').text(index + 1);
+      });
+      $('.event-target-2:eq(0)').find('.btn-item.disabled').removeClass('disabled');
+    });
+
+    var mock_evt_target3 = `<tr class="event-target-3"><td><div class="input-wrap"><input type="text" class="input-base t-center" placeholder="00"></div></td><td><div class="input-wrap"><input type="text" class="input-base t-center" placeholder="00"></div></td><td><div class="input-wrap"><input type="text" class="input-base t-center" placeholder="00"></div></td><td><div class="input-wrap"><input type="text" class="input-base" placeholder="차량번호 입력"></div></td><td><div class="input-wrap"><input type="text" class="input-base" placeholder="차종 입력"></div></td><td><div class="input-wrap"><input type="text" class="input-base" placeholder="운전자 성명 입력"></div></td><td><div class="custom-select t-left"><select><option value="0" selected="">선택</option><option value="1">값1</option><option value="2">값2</option><option value="3">값3</option></select><div class="select-selected">선택</div><div class="select-items select-hide"><div>선택</div><div>값1</div><div>값2</div><div>값3</div></div></div></td><td><div class="input-wrap"><input type="text" class="input-base t-center" placeholder="연령 입력"></div></td><td><div class="input-wrap input-select-btn"><div class="custom-select t-left" style="flex-grow: 1;"><select><option value="0" selected="">상태 선택</option><option value="1">값1</option><option value="2">값2</option><option value="3">값3</option></select><div class="select-selected">상태 선택</div><div class="select-items select-hide"><div>상태 선택</div><div>값1</div><div>값2</div><div>값3</div></div></div><a href="#" class="btn-item delete"></a></div></td></tr>`;
+    $('#event-target-3').on('click', function() {
+      $('.event-target-3:last-child').after(mock_evt_target3);
+      $('.event-target-3').each(function(index){
+        $(this).find('td:first-child').text(index + 1);
+        $('.event-target-3:eq(0)').find('.btn-item.disabled').removeClass('disabled');
+      });
+    });
+
+    var mock_evt_target4 = `<tr class="event-target-4"><td><div class="input-wrap"><input type="text" class="input-base" placeholder="사망자 성명 입력" /></div></td><td><div class="custom-select t-left"><select><option value="0" selected="">선택</option><option value="1">값1</option><option value="2">값2</option><option value="3">값3</option></select><div class="select-selected">선택</div><div class="select-items select-hide"><div>선택</div><div>값1</div><div>값2</div><div>값3</div></div></div></td><td><div class="input-wrap"><input type="text" class="input-base t-center" placeholder="연령 입력" /></div></td><td><div class="input-wrap"><input type="text" class="input-base" placeholder="병원 이름 입력" /></div></td><td><div class="input-wrap input-select-btn"><input type="text" class="input-base" placeholder="기타 사항 입력" /><a href="#" class="btn-item delete"></a></div></td></tr>`;
+    $('#event-target-4').on('click', function() {
+      $('.event-target-4:last-child').after(mock_evt_target4);
+      $('.event-target-4:eq(0)').find('.btn-item.disabled').removeClass('disabled');
+    });
+
+    $('.input-file input[type="file"]').on('change', function(e){
+      var fileBox = $(this).closest('.input-wrap').next('.file-box');
+      // var fileValue = this.value.split('\\');  
+      // $(this).closest('.input-file').find('.input-base').val(fileValue[fileValue.length-1]);
+      var reader = new FileReader();
+      reader.onload = function(event) {
+        if (fileBox.find('li').length < 6) {
+          fileBox.append('<li style="background-image:url(' + event.target.result + ')"><a href="#" class="btn-delete"></a></li>');
+        } else {
+          alert('최대 6개까지 업로드가 가능합니다.');
+        }
+      };
+      reader.readAsDataURL(event.target.files[0]); 
+    });
+    $('.file-box').on('click', '.btn-delete', function(e){
+      e.preventDefault();
+      $(this).closest('li').remove();
+    });
+  </script>
+</body>
+
+</html>
