@@ -1358,3 +1358,15 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);background-color: rgba(31, 61, 83, 0
 .popup-report .content .tb-tail{margin-top:4px;text-align:center;font-size:14px;color:#212332;line-height:1.57;}
 .input-wrap.select-group.align-center{align-items: center;}
 /* E: 2024-12-25 */
+
+/* S: 2024-12-26 */
+/* .multi-selectbox{margin-top:10px;} */
+.selectize-control.single .selectize-input{background-color: #3e4157;background-image:none;border:1px solid #495367;box-shadow:none;padding:10px 16px;color:#b2bbce;}
+.selectize-control.single .selectize-input.input-active{background-color: #3e4157;}
+.selectize-dropdown{border:0;box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15), 0 4px 4px 0 rgba(0, 0, 0, 0.25);background-color: #3e4157;}
+.selectize-dropdown [data-selectable].option{padding:6.5px 16px;font-size:14px;line-height:21px;color:#778298;}
+.selectize-dropdown .active:not(.selected){background-color:transparent;}
+.selectize-dropdown [data-selectable].option.selected,
+.selectize-dropdown [data-selectable].option:hover {background-color: #2e69d1;color: #fff;}
+.selectize-dropdown-content{max-height:136px;}
+/* E: 2024-12-26 */

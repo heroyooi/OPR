@@ -15,6 +15,7 @@
   <script src="js/aos.js"></script>
   <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
   <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+  <script type="text/javascript" src="js/selectize.min.js"></script>
   <script src="js/ui.js"></script>
 </head>
 <body>
@@ -144,7 +145,25 @@
         </div><!-- .content-top -->
         <div class="content-area">
           <div class="content-inner">
-            
+            <div class="custom-select">
+              <select>
+                <option value="0" selected>항목 분류 입력</option>
+                <option value="1">값1</option>
+                <option value="2">값2</option>
+                <option value="3">값3</option>
+              </select>
+            </div>
+
+            <!-- https://selectize.dev/docs/plugins/select-on-focus -->
+            <select class="multi-selectbox">
+              <option value="1">Awesome</option>
+              <option value="2">Beast</option>
+              <option value="3">Compatible</option>
+              <option value="4">Thomas Edison</option>
+              <option value="5">Nikola</option>
+              <option value="6">Selectize</option>
+              <option value="7">Javascript</option>
+            </select>
           </div><!-- .content-inner -->
         </div><!-- .content-area -->
       </div><!-- .content-wrap -->
@@ -1364,6 +1383,8 @@
   </div><!-- #wrap -->
 
   <script>
+    customSbox();
+    
     function openPrintPopup(id) {
       $('.popup-dimm, .popup-report#' + id).show();
     }
