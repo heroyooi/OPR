@@ -16,6 +16,7 @@
   <script src="js/aos.js"></script>
   <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.min.js"></script>
   <script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.min.js"></script>
+  <script type="text/javascript" src="js/selectize.min.js"></script>
   <script src="js/ui.js"></script>
 </head>
 
@@ -173,35 +174,29 @@
                             <span class="tui-ico-date"></span>
                             <div class="date_wrapper" id="general" style="margin-left: -1px;"></div>
                           </div>
-                          <div class="custom-select active" style="width: 110px;">
-                            <select>
-                              <option value="0">선택하세요</option>
-                              <option value="1" selected>금요일</option>
-                              <option value="2">값2</option>
-                              <option value="3">값3</option>
-                            </select>
-                          </div>
+                          <select class="multi-selectbox" style="width: 110px;">
+                            <option value="0">선택</option>
+                            <option value="1" selected>금요일</option>
+                            <option value="2">값2</option>
+                            <option value="3">값3</option>
+                          </select>
                         </div>
                       </td>
                       <th scope="row">시각 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
                       <td>
                         <div class="input-wrap select-group">
-                          <div class="custom-select active" style="width: 110px;">
-                            <select>
-                              <option value="0">선택하세요</option>
-                              <option value="1" selected>04시</option>
-                              <option value="2">값2</option>
-                              <option value="3">값3</option>
-                            </select>
-                          </div>
-                          <div class="custom-select active" style="width: 110px;">
-                            <select>
-                              <option value="0">선택하세요</option>
-                              <option value="1" selected>37분</option>
-                              <option value="2">값2</option>
-                              <option value="3">값3</option>
-                            </select>
-                          </div>
+                          <select class="multi-selectbox" style="width: 110px;">
+                            <option value="0">선택</option>
+                            <option value="1" selected>04시</option>
+                            <option value="2">값2</option>
+                            <option value="3">값3</option>
+                          </select>
+                          <select class="multi-selectbox" style="width: 110px;">
+                            <option value="0">선택</option>
+                            <option value="1" selected>37분</option>
+                            <option value="2">값2</option>
+                            <option value="3">값3</option>
+                          </select>
                         </div>
                       </td>
                     </tr>
@@ -214,14 +209,12 @@
                       </td>
                       <th scope="row">방향 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
                       <td>
-                        <div class="custom-select active" style="width: 140px;">
-                          <select>
-                            <option value="0">선택하세요</option>
-                            <option value="1" selected>평택방향</option>
-                            <option value="2">값2</option>
-                            <option value="3">값3</option>
-                          </select>
-                        </div>
+                        <select class="multi-selectbox" style="width: 140px;">
+                          <option value="0">선택</option>
+                          <option value="1" selected>평택방향</option>
+                          <option value="2">값2</option>
+                          <option value="3">값3</option>
+                        </select>
                       </td>
                     </tr>
                     <tr>
@@ -238,47 +231,39 @@
                             <input type="checkbox" id="chk-1">
                             <label for="chk-1">교대</label>
                           </span>
-                          <div class="custom-select active" style="width: 110px;">
-                            <select>
-                              <option value="0">선택하세요</option>
-                              <option value="1" selected>04시</option>
-                              <option value="2">값2</option>
-                              <option value="3">값3</option>
-                            </select>
-                          </div>
-                          <div class="custom-select active" style="width: 110px;">
-                            <select>
-                              <option value="0">선택하세요</option>
-                              <option value="1" selected>37분</option>
-                              <option value="2">값2</option>
-                              <option value="3">값3</option>
-                            </select>
-                          </div>
+                          <select class="multi-selectbox" style="width: 110px;">
+                            <option value="0">선택</option>
+                            <option value="1" selected>04시</option>
+                            <option value="2">값2</option>
+                            <option value="3">값3</option>
+                          </select>
+                          <select class="multi-selectbox" style="width: 110px;">
+                            <option value="0">선택</option>
+                            <option value="1" selected>37분</option>
+                            <option value="2">값2</option>
+                            <option value="3">값3</option>
+                          </select>
                         </div>
                       </td>
                     </tr>
                     <tr>
                       <th scope="row">기상</th>
                       <td colspan="2">
-                        <div class="custom-select" style="width: 200px;">
-                          <select>
-                            <option value="0" selected>선택</option>
-                            <option value="1">값1</option>
-                            <option value="2">값2</option>
-                            <option value="3">값3</option>
-                          </select>
-                        </div>
+                        <select class="multi-selectbox" style="width: 200px;">
+                          <option value="0">선택</option>
+                          <option value="1" selected>37분</option>
+                          <option value="2">값2</option>
+                          <option value="3">값3</option>
+                        </select>
                       </td>
                       <th scope="row">순찰차 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
                       <td>
-                        <div class="custom-select" style="width: 140px;">
-                          <select>
-                            <option value="0" selected>순찰차 선택</option>
-                            <option value="1">값1</option>
-                            <option value="2">값2</option>
-                            <option value="3">값3</option>
-                          </select>
-                        </div>
+                        <select class="multi-selectbox" style="width: 140px;">
+                          <option value="0" selected>순찰차 선택</option>
+                          <option value="1">값1</option>
+                          <option value="2">값2</option>
+                          <option value="3">값3</option>
+                        </select>
                       </td>
                     </tr>
                     <tr>
@@ -303,14 +288,12 @@
                     <tr>
                       <th scope="row">발견사항 및 <br />조치 내용 <em class="ico"><img src="img/ico-badge-require.png" alt=""></em></th>
                       <td>
-                        <div class="custom-select">
-                          <select>
-                            <option value="0" selected>항목 분류 입력</option>
-                            <option value="1">값1</option>
-                            <option value="2">값2</option>
-                            <option value="3">값3</option>
-                          </select>
-                        </div>
+                        <select class="multi-selectbox" style="width: 100%;">
+                          <option value="0" selected>항목 분류 입력</option>
+                          <option value="1">값1</option>
+                          <option value="2">값2</option>
+                          <option value="3">값3</option>
+                        </select>
                       </td>
                       <td colspan="3">
                         <div class="input-wrap">
