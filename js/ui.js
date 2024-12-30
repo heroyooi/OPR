@@ -371,9 +371,11 @@ var GUI = window.GUI || (function(){
         }
       });
 
-      $(".multi-selectbox").selectize({
-        plugins: ["restore_on_backspace"]
-      });
+      if ($(".multi-selectbox").length) {
+        $(".multi-selectbox").selectize({
+          plugins: ["restore_on_backspace"]
+        });
+      }
     },
     gnbMenu: function(){
       var $areaMenu = $('.menu-wrap');

@@ -2495,3 +2495,7 @@
 .config-info .config-obj .item .tit.green::before{background-color:#0bbe35;}
 .config-info .config-obj .item .img{padding:8px;background-color:#000;}
 /* E: 2024-12-18 */
+
+/* S: 2024-12-30 */
+.chart-area .s-ico.expand{position: absolute;right: 8px;top: 8px;}
+/* E: 2024-12-30 */
