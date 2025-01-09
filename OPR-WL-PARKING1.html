@@ -524,6 +524,24 @@
 
       </div>
     </div><!-- .parking-frame -->
+    <div class="parking-legend">
+      <ul>
+        <li>
+          <span class="index blue">001</span>
+          <span class="label">주차 가능</span>
+        </li>
+        <li>
+          <span class="index gray">001</span>
+          <span class="label">주차 중</span>
+        </li>
+        <li>
+          <span class="index red">001</span>
+          <span class="label">센서 오류</span>
+        </li>
+      </ul>
+      <span class="s-legend">주차 범례</span>
+      <a href="" class="btn-toggle"></a>
+    </div>
   </div><!-- #wrap -->
   <script>
     $(window).on('load resize', function(){
@@ -542,6 +560,11 @@
         $(this).removeClass('on');
         $('.pk-info-wrap.' + $(this).data('id')).removeClass('on');
       }
+    });
+
+    $('.parking-legend .btn-toggle').on('click', function(e){
+      e.preventDefault();
+      $(this).closest('.parking-legend').toggleClass('on');
     });
 
     var qsample = $.urlParam('sample');

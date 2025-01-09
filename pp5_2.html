@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>서부내륙고속도로 통합운영단말 - 프린트 팝업</title>
+  
+  <style>
+/* reset */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,
+blockquote,pre,abbr,address,cite,code,del,dfn,em,img,
+ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,footer,header,
+menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0}
+table{border:0;border-spacing:0;border-collapse:collapse;}
+ul,ol,li,dl,dd,dt{list-style:none}
+img,fieldset,iframe{border:0 none}
+img{vertical-align:top;max-width:100%;}
+textarea{resize:none}
+input,select,textarea,button{font-size:100%;vertical-align:top;outline:none;-webkit-appearance:none;-webkit-border-radius:0px;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+address,strong,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:"";content:none}
+body{-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0)}
+
+/* box-sizing */
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+
+/* base - IE8~7 */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+
+/* base - input */
+input{color:#000}
+input:checked[type="checkbox"]{background-color:#666;-webkit-appearance:checkbox}
+input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none}
+/* input[type="password"]{font-family:dotum,'돋움',sans-serif;} */
+/* input[type="password"]::-webkit-input-placeholder{font-family:'Noto Sans KR';} */
+button{border:0;background-color:transparent;padding:0;cursor:pointer}
+input[type="radio"] {-webkit-appearance:radio;}
+input[type="checkbox"] {-webkit-appearance:checkbox;}
+input[type=file], input[type=file]::-webkit-file-upload-button{cursor:pointer;}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0;}/* Chrome, Safari, Edge, Opera */
+input[type=number]{-moz-appearance:textfield;}/* Firefox */
+
+/* placeholder */
+::-webkit-input-placeholder{color:#778298;font-weight:500;}
+::-moz-placeholder{color:#778298;font-weight:500;}
+:-ms-input-placeholder{color:#778298;font-weight:500;}
+:-moz-placeholder{color:#778298;font-weight:500;}
+
+/* base - a */
+a{color:#000}
+a,a:link{text-decoration:none;}
+a:visited{text-decoration:none}
+a:hover,a:focus{ text-decoration:none;}
+a:active{text-decoration:none}
+
+/* base - body */
+body{-webkit-font-smoothing: antialiased;}
+body,input,select,textarea,button{font:14px/1 "Pretendard", "Malgun Gothic", "맑은 고딕", "돋움", sans-serif;color:#000;letter-spacing:-.5px;font-weight:400;}
+
+/* common */
+.t-left{text-align:left !important;}
+.t-center{text-align:center !important;}
+.t-right{text-align:right !important;}
+
+.mt8{margin-top:8px !important;}
+.mt20{margin-top:20px !important;}
+.mt10{margin-top:10px !important;}
+
+@media print {
+  body, div{position: relative;}
+  #wrap{background-color:#fff !important;height:auto !important;}
+  #header, .content-wrap{background-color: #fff;}
+  #header, #container, .popup-wrap, .popup-dimm, .left-wrap, .content-wrap{display:none;}
+  .popup-report{margin-left:0;left:0;top:0;width:1077px;position:relative;}
+  .popup-report .header{display:none;}
+  .popup-report *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+
+
+.popup-report{position:relative;width:760px;z-index:10;}
+.popup-report .header{display:flex;justify-content:flex-end;padding:8px 16px;background-color:#34374c;}
+.popup-report .header ul{display:flex;gap:0 16px;}
+.popup-report .header ul li a{display:block;width:24px;height:24px;}
+.popup-report .header ul li .print{background:url(../img/ico-24-print.png)}
+.popup-report .header ul li .pdf{background:url(../img/ico-24-pdf.png)}
+.popup-report .header ul li .cancel{background:url(../img/ico-24-cancel.png)}
+.popup-report .content{padding:30px 40px;background-color:#fff;}
+.popup-report .content .tit{font-size:22px;line-height:1.5;color:#212332;text-align:center;margin-bottom:30px;}
+.popup-report .content .tb-wrap{border:2px solid #212332;border-radius:8px;}
+.popup-report .content .tb-wrap table{table-layout:fixed;width:100%;}
+.popup-report .content .tb-wrap table th, .popup-report .content .tb-wrap table td{font-size:12px;line-height:1.5;border-top:1px solid #212332;}
+.popup-report .content .tb-wrap table tr:first-child th,
+.popup-report .content .tb-wrap table tr:first-child td{border-top:0;}
+.popup-report .content .tb-wrap table th{color:#34374c;background-color:#f4f6f9;padding:12px;font-weight:400;text-align:left;}
+.popup-report .content .tb-wrap table td{padding:12px 10px;font-weight:bold;color:#212332;}
+.popup-report .content .tb-wrap table td.red{color:#ef4345;}
+.popup-report .content .tb-wrap table td span{font-weight:normal;}
+.popup-report .content .s-tit{font-size:14px;line-height:1.5;font-weight:500;color:#212332;margin:20px 0 10px;}
+.popup-report .content .footer{display:flex;justify-content:space-between;align-items:center;margin-top:30px;}
+.popup-report .content .footer .date{font-size:14px;line-height:1.5;color:#212332;}
+
+.popup-report .content .tb-wrap table.list th, .popup-report .content .tb-wrap table.list td{text-align:center;border-left:1px solid #212332;}
+.popup-report .content .tb-wrap table.list th:first-child, .popup-report .content .tb-wrap table.list td:first-child{border-left:0;}
+.popup-report .content .tb-wrap table td{height:42px;}
+.popup-report .content .tb-wrap table td .pic-area{display:flex;flex-wrap:wrap;gap:8px 10px;}
+.popup-report .content .tb-wrap table td .pic-area .pic{width:calc(50% - 5px);background-color: #2a2d3e;display:flex;justify-content: center;align-items: center;}
+
+.popup-report.ver-dotum .content{font-family:'Dotum';}
+.popup-report.ver-dotum .content .top{margin-bottom:25px;font-size:12px;}
+.popup-report.ver-dotum .content .tit{font-family:'Pretendard';margin-bottom:20px;font-weight:bold;letter-spacing: 1.68px;font-size:24px;line-height:1;}
+.popup-report.ver-dotum .content .footer{margin-top:8px;justify-content:flex-end;}
+.popup-report.ver-dotum .content .footer p{font-size:12px;color:#212332;}
+.popup-report.ver-dotum .content .s-tit{margin-bottom:4px;}
+
+.tb-dotum{border:1px solid #7e7e7e;}
+.tb-dotum.prev{border-bottom:0;}
+.tb-dotum.next{border-top:1px solid #b7b7b7;}
+.tb-dotum table{table-layout:fixed;width:100%;}
+.tb-dotum table tr:first-child th, .tb-dotum table tr:first-child td{border-top:
+0;}
+.tb-dotum table th, .tb-dotum table td{font-size:14px;/*line-height:1.2;*/color:#212332;border-top:1px solid #b7b7b7;border-left:1px solid #b7b7b7;padding:1px 4px;height:25px;vertical-align:middle;text-align:center;font-weight:400;}
+.tb-dotum table th:first-child{border-left:0;}
+.tb-dotum table th.bl, .tb-dotum table td.bl{border-left:1px solid #b7b7b7;}
+.tb-dotum table td .count-list{display:flex;justify-content:flex-start;gap:0 2px;}
+.tb-dotum table td .count-list li{margin-left:10px;}
+.tb-dotum table td .count-list li:first-child{margin-left:0;}
+.tb-dotum table td .count-list li em{min-width:26px;display:inline-block;}
+.tb-dotum table td.description{height:129px;}
+.tb-dotum table td.pic{height:237px;font-size:14px;color:#898988;}
+.tb-dotum table td.pic:first-child{border-left:0;}
+.tb-dotum table td.car{overflow:hidden;}
+.tb-dotum table td.car [class*=car_]{display:block;white-space: nowrap;text-overflow: ellipsis;width:100%;}
+.tb-dotum table td.message{text-align:left;border-left:0;padding:8px;}
+
+.popup-report .tit-approval{display:flex;justify-content: space-between;}
+.popup-report .tit-approval .tit{padding-top:15px;font-weight:600;}
+.popup-report .approval-area{display:flex;border:1px solid #212332;font-family:'Pretendard';}
+.popup-report .approval-area > li{display:flex;align-items:center;border-left:1px solid #212332;font-size:12px;text-align:center;width:80px;}
+.popup-report .approval-area > li.label{padding:0 5.5px;border-left:0;width:23px;}
+.popup-report .approval-area > li dl{flex-grow:1;}
+.popup-report .approval-area > li dt{padding:3px 0;}
+.popup-report .approval-area > li dd{border-top:1px solid #212332;height:60px;width:100%;display:flex;justify-content:center;align-items: center;}
+.popup-report .tx-report{margin-top:20px;font-size:14px;color:#212332;}
+.popup-report .tx-report strong{font-weight:600;}
+.popup-report .content .tb-wrap .pics{display:flex;gap:8px 10px;flex-wrap:wrap;}
+.popup-report .content .tb-wrap .pics > li{width:calc(50% - 5px);display:flex;justify-content: center;align-items: center;}
+.popup-report .content .footer.right{flex-direction:row-reverse;}
+.popup-report .content .tb-tail{margin-top:4px;text-align:center;font-size:14px;color:#212332;line-height:1.57;}
+
+.popup-report.renew .tit-approval .tit{padding:8px 0;font-weight:600;text-align:center;width:340px;background-color:#efefef;font-size:28px;margin-bottom:0;align-self: flex-start;}
+.popup-report.renew .approval-area > li{font-size:13px;color:#212332;font-weight:700;}
+.popup-report.renew .tb-dotum table th{background-color:#f2f2f2;font-weight:700;}
+.popup-report.renew .tb-dotum table th, .popup-report.renew .tb-dotum table td{border-color:#7e7e7e;}
+.popup-report.renew .tb-dotum table th.fw-normal{font-weight:normal;}
+.popup-report.renew .tb-dotum table td:first-child{border-left:0;font-weight:bold;}
+.popup-report.renew .tb-dotum table td.message{font-weight:normal;}
+.popup-report.renew .s-tit{line-height:1.2;margin-top:14px;font-weight:bold;}
+.popup-report.renew .flex-area{display:flex;justify-content: space-between;gap:0 16px;margin-top:17px;}
+.popup-report.renew .flex-area .s-tit{margin-top:0;}
+.popup-report.renew .content .tb-tail{font-weight:bold;}
+.popup-report.renew .tx-report{margin-top:17px;font-weight:bold;}
+.popup-report.renew .tx-report + .flex-area{margin-top:4px;}
+.popup-report.renew .f-logo{text-align:right;margin-top:8px;}
+.popup-report.renew .tb-dotum.th-blue table th{background-color: #ebf0f6;}
+.popup-report.renew .tb-dotum table thead + tbody tr:first-child td{border-top:1px solid #7e7e7e;}
+.tb-dotum table th.bl0, .tb-dotum table td.bl0{border-left:0;}
+.tb-dotum-flex{display:flex;justify-content: space-between;gap:0 2px;border:1px solid #7e7e7e;}
+.tb-dotum-flex .tb-dotum{flex:1;border:0;}
+.tb-dotum-flex .tb-dotum:first-child{border-right:1px solid #7e7e7e;}
+.tb-dotum-flex .tb-dotum:last-child{border-left:1px solid #7e7e7e;}
+  </style>
+</head>
+<body>
+  <div class="popup-report ver-dotum" id="report5_2">
+    <div class="header">
+      <ul>
+        <li><a href="javascript:void(0);" class="print" onclick="window.print();"></a></li>
+        <li><a href="javascript:void(0);" class="pdf"></a></li>
+        <li><a href="javascript:void(0);" class="cancel"></a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <p class="top">■ 민자도로의 유지‧관리 및 운영 기준 [별지 제10호 서식] &lt;제정 2019.1.17.&gt;</p>
+      <p class="tit">사고처리결과대장</p>
+      <div class="tb-dotum prev">
+        <table summary="사고처리결과대장 요약">
+          <colgroup>
+            <col width="95" />
+            <col width="165" />
+            <col width="79" />
+            <col width="143" />
+            <col width="84" />
+            <col width="*" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">사고일시</th>
+              <td>2024년 6월 24일 14:44</td>
+              <th scope="row">기상</th>
+              <td colspan="3">맑음</td>
+            </tr>
+            <tr>
+              <th scope="row">사고장소</th>
+              <td colspan="5">성복터널 (용인) 5.1K</td>
+            </tr>
+            <tr>
+              <th scope="row">사고유형</th>
+              <td>차대차</td>
+              <th scope="row">사고원인</th>
+              <td>기타(원인불명)</td>
+              <th scope="row">사고급수</th>
+              <td>C</td>
+            </tr>
+            <tr>
+              <th scope="row">보고자</th>
+              <td>OOO</td>
+              <th scope="row">보고구분</th>
+              <td></td>
+              <th scope="row">교통제한</th>
+              <td>3차로 차단</td>
+            </tr>
+            <tr>
+              <th scope="row">인명피해</th>
+              <td colspan="5">
+                <ul class="count-list">
+                  <li>사망자수 : <em>100</em>명,</li>
+                  <li>중상자수 : <em>100</em>명,</li>
+                  <li>경상자수 : <em>100</em>명</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">시설피해</th>
+              <td></td>
+              <th scope="row">피해금액</th>
+              <td></td>
+              <th scope="row">복구일자</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">사고내용</th>
+              <td colspan="5" class="description t-left">
+                <p style="line-height: 1.57;">서울방향 금토TG 상7차로 진입 중 전방주시태만으로 인해 선행차량 후미를 추돌후 연이어 충격흡수시설을 충격하고 상7차로에 멈춰 선 2중 추돌 및 대물사고</p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">조치사항</th>
+              <td colspan="5" class="t-left">VMS∙LCS 표출 / 내용 표출</td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- .tb-dotum -->
+      <div class="tb-dotum next">
+        <table summary="사고처리결과대장 요약">
+          <colgroup>
+            <col width="95" />
+            <col width="94" />
+            <col width="89" />
+            <col width="89" />
+            <col width="77" />
+            <col width="77" />
+            <col width="77" />
+            <col width="*" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">접보사항</th>
+              <th scope="row">접보방법</th>
+              <td colspan="2">고순대제보</td>
+              <th scope="row">접보시간</th>
+              <td colspan="3" class="t-left">14:44</td>
+            </tr>
+            <tr>
+              <th scope="row" rowspan="2">현장도착 <br />및 <br />처리시간</th>
+              <th scope="row">고객지원반</th>
+              <td scope="row">119</td>
+              <th scope="row">112</th>
+              <th scope="row">견인차량</th>
+              <th scope="row">환자이송</th>
+              <th scope="row">견인완료</th>
+              <th scope="row">정상소통</th>
+            </tr>
+            <tr>
+              <td>14:44</td>
+              <td>14:44</td>
+              <td>14:44</td>
+              <td>14:44</td>
+              <td>14:44</td>
+              <td>14:44</td>
+              <td>14:44</td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- .tb-dotum -->
+
+      <div class="tb-dotum mt20">
+        <table summary="사고처리결과대장 요약">
+          <colgroup>
+            <col width="95" />
+            <col width="97" />
+            <col width="97" />
+            <col width="193" />
+            <col width="*" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row" rowspan="3">도로현황</th>
+              <th scope="col" colspan="2">방책시설</th>
+              <th scope="col">포장상태</th>
+              <th scope="row">노면상태</th>
+            </tr>
+            <tr>
+              <th scope="col" class="bl">중분대</th>
+              <th scope="col">갓길</th>
+              <td rowspan="2">양호</td>
+              <td rowspan="2">건조</td>
+            </tr>
+            <tr>
+              <td>O</td>
+              <td>O</td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- .tb-dotum -->
+
+      <div class="tb-dotum mt20">
+        <table summary="사고처리결과대장 요약">
+          <colgroup>
+            <col width="95" />
+            <col width="51" />
+            <col width="51" />
+            <col width="51" />
+            <col width="117" />
+            <col width="76" />
+            <col width="61" />
+            <col width="52" />
+            <col width="48" />
+            <col width="*" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row" rowspan="8">사고차량</th>
+              <th scope="col" colspan="3">피해구분</th>
+              <th scope="col" rowspan="2">차량번호</th>
+              <th scope="col" rowspan="2">차종종</th>
+              <th scope="col" colspan="4">운전자</th>
+            </tr>
+            <tr>
+              <th scope="col" class="bl">사망</th>
+              <th scope="col">부상</th>
+              <th scope="col">차량</th>
+              <th scope="col">성명</th>
+              <th scope="col">성별</th>
+              <th scope="col">연령</th>
+              <th scope="col">상태</th>
+            </tr>
+            <tr>
+              <td>00</td>
+              <td>00</td>
+              <td>00</td>
+              <td class="car"><span class="car_number">경기 수원가 2468</span></td>
+              <td class="car"><span class="car_type">오토바이</span></td>
+              <td>최이박</td>
+              <td>남</td>
+              <td>00</td>
+              <td>경상</td>
+            </tr>
+            <tr>
+              <td>00</td>
+              <td>00</td>
+              <td>00</td>
+              <td class="car"><span class="car_number">내용이 길어지면 짤림</span></td>
+              <td class="car"><span class="car_type">내용이 길어지면 짤림</span></td>
+              <td>최이박</td>
+              <td>남</td>
+              <td>00</td>
+              <td>경상</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="car"><span class="car_number"></span></td>
+              <td class="car"><span class="car_type"></span></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="car"><span class="car_number"></span></td>
+              <td class="car"><span class="car_type"></span></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="car"><span class="car_number"></span></td>
+              <td class="car"><span class="car_type"></span></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="car"><span class="car_number"></span></td>
+              <td class="car"><span class="car_type"></span></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- .tb-dotum -->
+
+      <div class="tb-dotum mt20">
+        <table summary="사고처리결과대장 요약">
+          <colgroup>
+            <col width="95" />
+            <col width="102" />
+            <col width="61" />
+            <col width="56" />
+            <col width="109" />
+            <col width="*" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row" rowspan="2">사망자정보</th>
+              <th scope="col">성명</th>
+              <th scope="col">성별</th>
+              <th scope="col">연령</th>
+              <th scope="col">후송병원</th>
+              <th scope="col">기타</th>
+            </tr>
+            <tr>
+              <td>14:44</td>
+              <td>14:44</td>
+              <td>14:44</td>
+              <td>14:44</td>
+              <td>14:44</td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- .tb-dotum -->
+
+      <div class="tb-dotum mt20">
+        <table summary="사고처리결과대장 요약">
+          <colgroup>
+            <col width="50%" />
+            <col width="*" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <td class="pic">
+                <img src="http://via.placeholder.com/322x198" alt="" />
+              </td>
+              <td class="pic">
+                <img src="http://via.placeholder.com/322x198" alt="" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- .tb-dotum -->
+
+      <div class="footer">
+        <p>210㎜x297㎜[인쇄용지 60g/㎡]</p>
+      </div><!-- .footer -->
+    </div><!-- .content -->
+  </div><!-- .popup-report --> 
+</body>
+</html>

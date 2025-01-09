@@ -3124,6 +3124,8 @@ var data1_25 = [
   },
 ];
 
+
+
 var columns1 = [
   // checkColumns,
   {
@@ -5515,6 +5517,302 @@ var data5 = [
   },
 ];
 
+// S: 2025-01
+var data1_26 = [
+  {
+    isChecked: 'N',
+    column1: '50',
+    column2: '이벤트',
+    column3: '고장차량',
+    column4: '고장차량 2차로 정지 정체유발',
+    column5: '익산',
+    column6: '4차로',
+    column7: '2024-10-25 14:23:35',
+  },
+  {
+    isChecked: 'N',
+    column1: '49',
+    column2: '돌발',
+    column3: '고장차량',
+    column4: '고장차량 2차로 정지 정체유발',
+    column5: '익산',
+    column6: '4차로',
+    column7: '2024-10-25 14:23:35',
+  },
+  {
+    isChecked: 'N',
+    column1: '48',
+    column2: '돌발',
+    column3: '고장차량',
+    column4: '3중 추돌 교통사고',
+    column5: '익산',
+    column6: '4차로',
+    column7: '2024-10-25 14:23:35',
+  },
+  {
+    isChecked: 'N',
+    column1: '47',
+    column2: '돌발',
+    column3: '고장차량',
+    column4: '3중 추돌 교통사고',
+    column5: '익산',
+    column6: '4차로',
+    column7: '2024-10-25 14:23:35',
+  },
+  {
+    isChecked: 'N',
+    column1: '46',
+    column2: '돌발',
+    column3: '고장차량',
+    column4: '3중 추돌 교통사고',
+    column5: '익산',
+    column6: '4차로',
+    column7: '2024-10-25 14:23:35',
+  },
+  {
+    isChecked: 'N',
+    column1: '45',
+    column2: '돌발',
+    column3: '사고',
+    column4: '3중 추돌 교통사고',
+    column5: '평택',
+    column6: '4차로',
+    column7: '2024-10-25 14:23:35',
+  },
+  {
+    isChecked: 'N',
+    column1: '44',
+    column2: '돌발',
+    column3: '사고',
+    column4: '3중 추돌 교통사고',
+    column5: '평택',
+    column6: '4차로',
+    column7: '2024-10-25 14:23:35',
+  },
+  {
+    isChecked: 'N',
+    column1: '43',
+    column2: '돌발',
+    column3: '사고',
+    column4: '3중 추돌 교통사고',
+    column5: '평택',
+    column6: '4차로',
+    column7: '2024-10-25 14:23:35',
+  },
+
+  {
+    isChecked: 'N',
+    column1: '42',
+    column2: '돌발',
+    column3: '사고',
+    column4: '3중 추돌 교통사고',
+    column5: '평택',
+    column6: '4차로',
+    column7: '2024-10-25 14:23:35',
+  },
+  {
+    isChecked: 'N',
+    column1: '41',
+    column2: '돌발',
+    column3: '사고',
+    column4: '3중 추돌 교통사고',
+    column5: '평택',
+    column6: '4차로',
+    column7: '2024-10-25 14:23:35',
+  },
+];
+var columns1_26 = [
+  // checkColumns,
+  {
+    key: 'column1',
+    label: '순번',
+    width: 60,
+    align: 'center',
+    sortable: true,
+  },
+  {
+    key: 'column2',
+    label: '구분',
+    width: 80,
+    align: 'center',
+    sortable: true,
+  },
+  {
+    key: 'column3',
+    label: '유형',
+    width: 80,
+    align: 'center',
+    sortable: true,
+  },
+  {
+    key: 'column4',
+    label: '돌발내용',
+    width: 200,
+    align: 'left',
+    sortable: true,
+  },
+  {
+    key: 'column5',
+    label: '방향',
+    width: 100,
+    align: 'center',
+    sortable: true,
+  },
+  {
+    key: 'column6',
+    label: '이정',
+    width: 100,
+    align: 'center',
+    sortable: true,
+  },
+  {
+    key: 'column7',
+    label: '설치 일시',
+    width: 200,
+    align: 'center',
+    sortable: true,
+  },
+];
+
+var data1_27 = [
+  {
+    isChecked: 'N',
+    column1: '50',
+    column2: '2024-10-25 14:23:35',
+    column3: '청양졸음쉼터 - 청양IC',
+    column4: 'OOO',
+    column5: 'OOO',
+    column6: 'OOO',
+  },
+  {
+    isChecked: 'N',
+    column1: '49',
+    column2: '2024-10-25 14:23:35',
+    column3: '청양졸음쉼터 - 청양IC',
+    column4: 'OOO',
+    column5: 'OOO',
+    column6: 'OOO',
+  },
+  {
+    isChecked: 'N',
+    column1: '48',
+    column2: '2024-10-25 14:23:35',
+    column3: '청양졸음쉼터 - 청양IC',
+    column4: 'OOO',
+    column5: 'OOO',
+    column6: 'OOO',
+  },
+  {
+    isChecked: 'N',
+    column1: '47',
+    column2: '2024-10-25 14:23:35',
+    column3: '청양졸음쉼터 - 청양IC',
+    column4: 'OOO',
+    column5: 'OOO',
+    column6: 'OOO',
+  },
+  {
+    isChecked: 'N',
+    column1: '46',
+    column2: '2024-10-25 14:23:35',
+    column3: '청양졸음쉼터 - 청양IC',
+    column4: 'OOO',
+    column5: 'OOO',
+    column6: 'OOO',
+  },
+  {
+    isChecked: 'N',
+    column1: '45',
+    column2: '2024-10-25 14:23:35',
+    column3: '청양졸음쉼터 - 청양IC',
+    column4: 'OOO',
+    column5: 'OOO',
+    column6: 'OOO',
+  },
+  {
+    isChecked: 'N',
+    column1: '44',
+    column2: '2024-10-25 14:23:35',
+    column3: '청양졸음쉼터 - 청양IC',
+    column4: 'OOO',
+    column5: 'OOO',
+    column6: 'OOO',
+  },
+  {
+    isChecked: 'N',
+    column1: '43',
+    column2: '2024-10-25 14:23:35',
+    column3: '청양졸음쉼터 - 청양IC',
+    column4: 'OOO',
+    column5: 'OOO',
+    column6: 'OOO',
+  },
+  {
+    isChecked: 'N',
+    column1: '42',
+    column2: '2024-10-25 14:23:35',
+    column3: '청양졸음쉼터 - 청양IC',
+    column4: 'OOO',
+    column5: 'OOO',
+    column6: 'OOO',
+  },
+  {
+    isChecked: 'N',
+    column1: '41',
+    column2: '2024-10-25 14:23:35',
+    column3: '청양졸음쉼터 - 청양IC',
+    column4: 'OOO',
+    column5: 'OOO',
+    column6: 'OOO',
+  },
+];
+var columns1_27 = [
+  // checkColumns,
+  {
+    key: 'column1',
+    label: '순번',
+    width: 60,
+    align: 'center',
+    sortable: true,
+  },
+  {
+    key: 'column2',
+    label: '수집일시',
+    width: 200,
+    align: 'center',
+    sortable: true,
+  },
+  {
+    key: 'column3',
+    label: '구간명',
+    width: 300,
+    align: 'left',
+    sortable: true,
+  },
+  {
+    key: 'column4',
+    label: '통행시간',
+    width: 140,
+    align: 'center',
+    sortable: true,
+  },
+  {
+    key: 'column5',
+    label: '통행속도',
+    width: 140,
+    align: 'center',
+    sortable: true,
+  },
+  {
+    key: 'column6',
+    label: '교통량',
+    width: 140,
+    align: 'center',
+    sortable: true,
+  },
+];
+// E: 2025-01
+
 $(document.body).ready(function () {
   var $grid1 = $('[data-ax5grid="grid1"]');
   var $grid1_2 = $('[data-ax5grid="grid1_2"]');
@@ -5541,6 +5839,9 @@ $(document.body).ready(function () {
   var $grid1_23 = $('[data-ax5grid="grid1_23"]');
   var $grid1_24 = $('[data-ax5grid="grid1_24"]');
   var $grid1_25 = $('[data-ax5grid="grid1_25"]');
+
+  var $grid1_26 = $('[data-ax5grid="grid1_26"]');
+  var $grid1_27 = $('[data-ax5grid="grid1_27"]');
 
   var $grid2 = $('[data-ax5grid="grid2"]');
   var $grid3 = $('[data-ax5grid="grid3"]');
@@ -5577,7 +5878,9 @@ $(document.body).ready(function () {
     $grid1_22.length ||
     $grid1_23.length ||
     $grid1_24.length ||
-    $grid1_25.length
+    $grid1_25.length ||
+    $grid1_26.length ||
+    $grid1_27.length
   ) {
     if ($grid1.length) {
       new ax5.ui.grid(getOptions($grid1, columns1)).setData(data1);
@@ -5629,6 +5932,10 @@ $(document.body).ready(function () {
       new ax5.ui.grid(getOptions($grid1_24, columns1_24)).setData(data1_24); // 2024-11
     } else if ($grid1_25.length) {
       new ax5.ui.grid(getOptions($grid1_25, columns1_25)).setData(data1_25); // 2024-11
+    } else if ($grid1_26.length) {
+      new ax5.ui.grid(getOptions($grid1_26, columns1_26)).setData(data1_26); // 2025-01
+    } else if ($grid1_27.length) {
+      new ax5.ui.grid(getOptions($grid1_27, columns1_27)).setData(data1_27); // 2025-01
     }
 
     $(document).on('click', '#chk-all', function () {

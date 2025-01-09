@@ -1320,7 +1320,7 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);background-color: rgba(31, 61, 83, 0
 /* S: 2024-12-25 */
 .popup-report.ver-dotum .content{font-family:'Dotum';}
 .popup-report.ver-dotum .content .top{margin-bottom:25px;font-size:12px;}
-.popup-report.ver-dotum .content .tit{font-family:'Pretendard';margin-bottom:20px;font-weight:bold;letter-spacing: 1.68px;font-size:24px;}
+.popup-report.ver-dotum .content .tit{font-family:'Pretendard';margin-bottom:20px;font-weight:bold;letter-spacing: 1.68px;font-size:24px;line-height:1;}
 .popup-report.ver-dotum .content .footer{margin-top:8px;justify-content:flex-end;}
 .popup-report.ver-dotum .content .footer p{font-size:12px;color:#212332;}
 .popup-report.ver-dotum .content .s-tit{margin-bottom:4px;}
@@ -1331,10 +1331,13 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);background-color: rgba(31, 61, 83, 0
 .tb-dotum table{table-layout:fixed;width:100%;}
 .tb-dotum table tr:first-child th, .tb-dotum table tr:first-child td{border-top:
 0;}
-.tb-dotum table th, .tb-dotum table td{font-size:14px;line-height:1.2;color:#212332;border-top:1px solid #b7b7b7;border-left:1px solid #b7b7b7;padding:1px 4px;height:25px;vertical-align:middle;text-align:center;font-weight:400;}
+.tb-dotum table th, .tb-dotum table td{font-size:14px;/*line-height:1.2;*/color:#212332;border-top:1px solid #b7b7b7;border-left:1px solid #b7b7b7;padding:1px 4px;height:25px;vertical-align:middle;text-align:center;font-weight:400;}
 .tb-dotum table th:first-child{border-left:0;}
 .tb-dotum table th.bl, .tb-dotum table td.bl{border-left:1px solid #b7b7b7;}
 .tb-dotum table td .count-list{display:flex;justify-content:flex-start;gap:0 2px;}
+.tb-dotum table td .count-list li{margin-left:10px;}
+.tb-dotum table td .count-list li:first-child{margin-left:0;}
+.tb-dotum table td .count-list li em{min-width:26px;display:inline-block;}
 .tb-dotum table td.description{height:129px;}
 .tb-dotum table td.pic{height:237px;font-size:14px;color:#898988;}
 .tb-dotum table td.pic:first-child{border-left:0;}
@@ -1383,3 +1386,58 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);background-color: rgba(31, 61, 83, 0
 color:#fff;}
 .selectize-input.dropdown-active::before{display:none;}
 /* E: 2024-12-26 */
+
+/* S: 2025-01-08 */
+.ms-parent{width:160px !important;}
+.ms-choice{height:40px;border:1px solid #495367;background-color: #3e4157;color:#b2bbce;width:160px;background-image:url(../img/ico-24-arrow-on.png);background-repeat:no-repeat;background-position:calc(100% - 8px) 50%;}
+.ms-choice:hover, .ms-choice:focus{border-color:#00bbfe;}
+.ms-choice>span.ms-placeholder{color:#778298;}
+.ms-drop{background-color: #3e4157;border-radius: 4px;box-shadow:0 2px 8px 0 rgba(0, 0, 0, 0.15), 0 4px 4px 0 rgba(0, 0, 0, 0.25);border:0;}
+.ms-drop .ms-select-all{height:34px;background-color:transparent;border-bottom:1px solid #34374c;font-size:14px;font-weight:600;padding:0;}
+.ms-drop .ms-select-all.highlighted{background-color: transparent;}
+.ms-drop .ms-select-all:hover{background-color:rgba(46, 105, 209, 0.35);}
+.ms-drop .ms-select-all label{margin-bottom:0;color:#b2bbce;padding:6px 12px;}
+.ms-drop.bottom{margin-top:2px;}
+.ms-parent .ms-select-all .icon-checkbox-container,
+.ms-drop li:not(.hide-radio) .icon-checkbox-container{width:20px;height:20px;background:url(../img/check-def.png) 0 0 no-repeat;border:0;}
+.ms-parent .ms-icon, .ms-drop .ms-icon{width:20px;height:20px;background-color:transparent;}
+.ms-icon-check, .ms-icon-minus{--ms-icon-check-icon-svg:none;mask:none;}
+.ms-icon-check{background:url(../img/check-sel.png) 0 0 no-repeat;}
+.ms-icon-minus{background:url(../img/check-sel2.png) 0 0 no-repeat;}
+.ms-drop ul{scrollbar-color:unset;max-height:272px;}
+.ms-drop ul::-webkit-scrollbar{border-radius:4px;background:transparent;width:8px;}
+.ms-drop ul::-webkit-scrollbar-track{background:#34374c;} 
+.ms-drop ul::-webkit-scrollbar-thumb{background-color:#495367;border-radius:4px;background-clip:padding-box;border:1px solid transparent;}
+.ms-drop ul::-webkit-scrollbar-thumb:hover{background-color:#778298;}
+.ms-drop ul>li{padding:7px 12px;}
+.ms-drop ul>li.highlighted, .ms-drop ul>li:hover{background-color:rgba(46, 105, 209, 0.35);}
+.ms-drop ul>li label{font-size:14px;font-weight:600;color:#b2bbce;padding:0;}
+.ms-drop ul>li label.optgroup{color:#b2bbce;}
+/* .ms-parent .ms-select-all .icon-checkbox-container div, .ms-parent li:not(.hide-radio) .
+icon-checkbox-container div, .ms-drop .ms-select-all .icon-checkbox-container div, .ms-drop li:not(.hide-radio) .icon-checkbox-container div{display:none;} */
+
+.radio-list.search-time{display:inline-flex;margin-left:20px;}
+.s-ico.dsrc{width:26px;height:31px;background:url(../img/ico-poi-dsrc-def.png) 50% 50% no-repeat;cursor:pointer;}
+
+.popup-report.renew .tit-approval .tit{padding:8px 0;font-weight:600;text-align:center;width:340px;background-color:#efefef;font-size:28px;margin-bottom:0;align-self: flex-start;}
+.popup-report.renew .approval-area > li{font-size:13px;color:#212332;font-weight:700;}
+.popup-report.renew .tb-dotum table th{background-color:#f2f2f2;font-weight:700;}
+.popup-report.renew .tb-dotum table th, .popup-report.renew .tb-dotum table td{border-color:#7e7e7e;}
+.popup-report.renew .tb-dotum table th.fw-normal{font-weight:normal;}
+.popup-report.renew .tb-dotum table td:first-child{border-left:0;font-weight:bold;}
+.popup-report.renew .tb-dotum table td.message{font-weight:normal;}
+.popup-report.renew .s-tit{line-height:1.2;margin-top:14px;font-weight:bold;}
+.popup-report.renew .flex-area{display:flex;justify-content: space-between;gap:0 16px;margin-top:17px;}
+.popup-report.renew .flex-area .s-tit{margin-top:0;}
+.popup-report.renew .content .tb-tail{font-weight:bold;}
+.popup-report.renew .tx-report{margin-top:17px;font-weight:bold;}
+.popup-report.renew .tx-report + .flex-area{margin-top:4px;}
+.popup-report.renew .f-logo{text-align:right;margin-top:8px;}
+.popup-report.renew .tb-dotum.th-blue table th{background-color: #ebf0f6;}
+.popup-report.renew .tb-dotum table thead + tbody tr:first-child td{border-top:1px solid #7e7e7e;}
+.tb-dotum table th.bl0, .tb-dotum table td.bl0{border-left:0;}
+.tb-dotum-flex{display:flex;justify-content: space-between;gap:0 2px;border:1px solid #7e7e7e;}
+.tb-dotum-flex .tb-dotum{flex:1;border:0;}
+.tb-dotum-flex .tb-dotum:first-child{border-right:1px solid #7e7e7e;}
+.tb-dotum-flex .tb-dotum:last-child{border-left:1px solid #7e7e7e;}
+/* E: 2025-01-08 */
